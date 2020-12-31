@@ -1,0 +1,16 @@
+{
+  "CarouselData": [
+    {
+      "imageUrl": "https://Example1.gg/",
+      "text": "Sabias que? Casi el 65% de Perros y gatos sufren en las calles de sudamerica. \n Es hora de cambiar eso y darles un hogar!! "
+    },
+    {
+      "imageUrl": "https://Example2.gg/",
+      "text": "En esta aplicacion, podras descubir y dar en adopcion a increibles animales listos para hacerte felix y acompanarte en tu hogar."
+    },
+    {
+      "imageUrl": "https://Example3.gg/",
+      "text": "Podras conversar con albergues y ademas de ello conocer perritos y gatitos listos para alegrarte el dia.\nRecuerda que ellos son una extension de nosotros y no hay algo mas fiel que ellos. "
+    }
+  ]
+}

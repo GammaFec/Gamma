@@ -7,7 +7,7 @@ import AppRouter from './routes/AppRouter';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppRouter/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );

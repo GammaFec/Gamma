@@ -1,0 +1,12 @@
+
+.carousel{
+  display: none;
+  transition-duration: 1s ease;
+
+}
+.active {
+  transition-duration: 1s;
+  transform: scale(1.08);
+  display: block;
+}
+

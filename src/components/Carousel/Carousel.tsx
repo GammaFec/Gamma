@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import DotSlider from './DotsSlider/DotsSlider';
 import Jsondata from './CarouselData.json';
-import './Carousel.css'
 
+import StyledSection from './Styled/StyledSection/StyledSection';
 
+// import './Carousel.css'
 
 const Carousel = () => {
   const carouselData = Jsondata.CarouselData;
@@ -16,14 +17,20 @@ const Carousel = () => {
 
   const buildJsx = carouselData.map((dataObj, index) => {
     return (
-      <section key={index} className={index === activeTabIndex ? 'carousel active' : 'carousel'}>
+      <StyledSection
+        key={index}
+        active={activeTabIndex === index ? true : null}>
         <img src={dataObj.imageUrl}></img>
         <p>{dataObj.text}</p>
-        {carouselData.length-1 === index ? (<button>CONTINUE</button>): null}
-      </section>
+      </StyledSection>
+
+      // <section key={index} className={index === activeTabIndex ? 'carousel active' : 'carousel'}>
+      //   <img src={dataObj.imageUrl}></img>
+      //   <p>{dataObj.text}</p>
+      //   {carouselData.length-1 === index ? (<button>CONTINUE</button>): null}
+      // </section>
     );
   });
-
 
   // return (
   //   <section className= 'carousel active' >
@@ -37,7 +44,7 @@ const Carousel = () => {
   // )
 
   return (
-    <main id='Carousel'>
+    <main id='carousel'>
       {buildJsx}
       <DotSlider
         click={changeActiveTabHandler}

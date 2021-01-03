@@ -1,15 +1,18 @@
 import React from 'react';
-import Dot from './Dot/Dot';
+
+import StyledUl from '../Styled/StyledUl/StyledUl'
+import Dot from '../Styled/StyledDot/StyledDot';
+
 
 const DotsSlider = ({ amountOfDots, click }) => {
   let dotsJsx = [];
 
   for (let i = 0; i < amountOfDots; i++) {
-    const newDot = <Dot key={i} click={event => click(i)}></Dot>;
+    const newDot = <Dot key={i} onClick={event => click(i)}></Dot>;
     dotsJsx.push(newDot);
   }
 
-  return <ul>{dotsJsx}</ul>;
+  return <StyledUl>{dotsJsx}</StyledUl>;
 }; 
 
 export default DotsSlider;

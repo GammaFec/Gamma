@@ -4,11 +4,11 @@ import StyledUl from '../Styled/StyledUl/StyledUl'
 import Dot from '../Styled/StyledDot/StyledDot';
 
 
-const DotsSlider = ({ amountOfDots, click }) => {
+const DotsSlider = ({ amountOfDots, click , activeTabIndex}) => {
   let dotsJsx = [];
 
   for (let i = 0; i < amountOfDots; i++) {
-    const newDot = <Dot key={i} onClick={event => click(i)}></Dot>;
+    const newDot = <Dot key={i} active={activeTabIndex === i ? true: false} onClick={event => click(i)}></Dot>;
     dotsJsx.push(newDot);
   }
 

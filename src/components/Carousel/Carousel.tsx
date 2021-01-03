@@ -3,6 +3,7 @@ import DotSlider from './DotsSlider/DotsSlider';
 import Jsondata from './CarouselData.json';
 
 import StyledSection from './Styled/StyledSection/StyledSection';
+import StyledButton from './Styled/StyledButton/StyledButton';
 
 // import './Carousel.css'
 
@@ -47,9 +48,11 @@ const Carousel = () => {
     <main id='carousel'>
       {buildJsx}
       <DotSlider
+        activeTabIndex={activeTabIndex}
         click={changeActiveTabHandler}
         amountOfDots={carouselData.length}
       />
+      {activeTabIndex === carouselData.length-1 ? <StyledButton>Hellos</StyledButton> : null}
     </main>
   );
 };

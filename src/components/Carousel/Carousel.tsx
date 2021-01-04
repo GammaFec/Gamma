@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import DotSlider from './DotsSlider/DotsSlider';
 import Jsondata from './CarouselData.json';
 
+// Styled Components 
+
 import StyledSection from './Styled/StyledSection/StyledSection';
 import StyledButton from './Styled/StyledButton/StyledButton';
 
-// import './Carousel.css'
 
 const Carousel = () => {
   const carouselData = Jsondata.CarouselData;
@@ -16,7 +17,7 @@ const Carousel = () => {
     return setActiveTabIndex(index);
   };
 
-  const buildJsx = carouselData.map((dataObj, index) => {
+  const carouselDataMapped = carouselData.map((dataObj, index) => {
     return (
       <StyledSection
         key={index}
@@ -24,35 +25,18 @@ const Carousel = () => {
         <img src={dataObj.imageUrl}></img>
         <p>{dataObj.text}</p>
       </StyledSection>
-
-      // <section key={index} className={index === activeTabIndex ? 'carousel active' : 'carousel'}>
-      //   <img src={dataObj.imageUrl}></img>
-      //   <p>{dataObj.text}</p>
-      //   {carouselData.length-1 === index ? (<button>CONTINUE</button>): null}
-      // </section>
     );
   });
 
-  // return (
-  //   <section className= 'carousel active' >
-  //       <img src={carouselData[activeTabIndex].imageUrl}></img>
-  //       <p>{carouselData[activeTabIndex].text}</p>
-  //       <DotSlider
-  //       click={changeActiveTabHandler}
-  //       amountOfDots={carouselData.length}
-  //     />
-  //   </section>
-  // )
-
   return (
     <main id='carousel'>
-      {buildJsx}
+      {carouselDataMapped}
       <DotSlider
         activeTabIndex={activeTabIndex}
         click={changeActiveTabHandler}
         amountOfDots={carouselData.length}
       />
-      {activeTabIndex === carouselData.length-1 ? <StyledButton>Hellos</StyledButton> : null}
+      {activeTabIndex === carouselData.length-1 ? <StyledButton>Continuar</StyledButton> : null}
     </main>
   );
 };

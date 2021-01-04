@@ -7,8 +7,19 @@ const StyledSection = styled.section`
   position: absolute;
 
   width: 100%;
-  height: 25rem;
+  height: 30rem;
   top: 0;
+
+  & > img {
+    width: 70%;
+    max-width:300px;
+    height: auto;
+    padding: 1rem;
+  }
+
+  & > p {
+    margin: 2rem 2rem;
+  }
 `;
 
 export default StyledSection;

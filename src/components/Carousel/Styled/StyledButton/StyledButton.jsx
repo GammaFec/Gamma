@@ -8,6 +8,8 @@ const StyledButton = styled.button`
   height: 55px;
   padding: 0;
   left: 0rem;
+  cursor: pointer;
+
 `;
 
 export default StyledButton;

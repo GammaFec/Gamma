@@ -21,7 +21,7 @@ const Carousel = () => {
     return (
       <StyledSection
         key={index}
-        active={activeTabIndex === index ? true : null}>
+        active={activeTabIndex === index ? true : false}>
         <img src={dataObj.imageUrl}></img>
         <p>{dataObj.text}</p>
       </StyledSection>

@@ -21,7 +21,6 @@ const Layout = () => {
   return (
     <>
       <Suspense fallback="cargando pa">
-        Common components
         <Switch>
           {getRoutes(Routes)}
         </Switch>

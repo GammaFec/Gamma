@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 import Routes from '../routes/routes';
 
 const Layout = () => {
-
   const getRoutes = (routes: any): ReactNode => {
     return routes.map((route: any) => {
       return (
@@ -17,13 +16,11 @@ const Layout = () => {
     });
   };
 
-
   return (
     <>
       <Suspense fallback="cargando pa">
-        <Switch>
-          {getRoutes(Routes)}
-        </Switch>
+        Common components
+                <Switch>{getRoutes(Routes)}</Switch>
       </Suspense>
     </>
   );

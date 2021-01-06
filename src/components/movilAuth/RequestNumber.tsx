@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import firebase from 'firebase';
 import Form from '../forms/Form';
 import PhoneNumber from './PhoneNumber';
 
 interface Props {
   handleSubmit?: Function;
   phoneNumber: string;
+  buttonId?: string;
 }
 
 const StyledButtonContinue = styled.button`
@@ -13,7 +15,7 @@ const StyledButtonContinue = styled.button`
   margin: 1rem auto;
 `;
 
-const RequestNumber: React.FC<Props> = ({ handleSubmit, phoneNumber }): JSX.Element => {
+const RequestNumber: React.FC<Props> = ({ handleSubmit, phoneNumber, buttonId }): JSX.Element => {
 
   const [statePhoneNumber, setStatePhoneNumber] = useState<string>(phoneNumber);
 
@@ -23,7 +25,7 @@ const RequestNumber: React.FC<Props> = ({ handleSubmit, phoneNumber }): JSX.Elem
     <Form handleSubmit={submit} isContentCentered>
       <h3>Mi numero es:</h3>
       <PhoneNumber handleChange={setStatePhoneNumber} value={statePhoneNumber} />
-      <StyledButtonContinue type="submit">Enviar codigo</StyledButtonContinue>
+      <StyledButtonContinue type="submit" id={buttonId}>Enviar codigo</StyledButtonContinue>
     </Form>
   );
 };

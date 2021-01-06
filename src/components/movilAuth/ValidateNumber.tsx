@@ -5,9 +5,9 @@ import CodeVerification from './CodeVerification';
 
 interface Props {
   phoneNumber: string;
-  handleError: () => void;
-  handleValidNumber: Function;
   goBack: () => void;
+  buttonId?: string;
+  handleSubmit: (code: string) => void;
 }
 
 const StyledForm = styled(Form)`
@@ -20,19 +20,17 @@ const StyledButtonContinue = styled.button`
   width: 85%;
 `;
 
-const ValidateNumber: React.FC<Props> = ({ phoneNumber, goBack }): JSX.Element => {
+const ValidateNumber: React.FC<Props> = ({ phoneNumber, goBack, buttonId, handleSubmit }): JSX.Element => {
   const [code, setCode] = useState<string>("");
 
-  const submit = () => {
-    console.log(code);
-  }
+  const submit = () => handleSubmit(code);
 
   return (
     <StyledForm handleSubmit={submit} isContentCentered>
       <h3>Mi codigo es:</h3>
       <button type="button" onClick={goBack}>{phoneNumber}</button><button>Volver a mandar</button>
       <CodeVerification handleChange={setCode} />
-      <StyledButtonContinue type="submit">Identificarme</StyledButtonContinue>
+      <StyledButtonContinue type="submit" id={buttonId}>Identificarme</StyledButtonContinue>
     </StyledForm>
   );
 };

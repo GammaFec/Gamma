@@ -5,6 +5,7 @@ import PhoneNumber from './PhoneNumber';
 
 interface Props {
   handleSubmit?: Function;
+  phoneNumber: string;
 }
 
 const StyledButtonContinue = styled.button`
@@ -12,16 +13,16 @@ const StyledButtonContinue = styled.button`
   margin: 1rem auto;
 `;
 
-const RequestNumber: React.FC<Props> = ({ handleSubmit }): JSX.Element => {
+const RequestNumber: React.FC<Props> = ({ handleSubmit, phoneNumber }): JSX.Element => {
 
-  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [statePhoneNumber, setStatePhoneNumber] = useState<string>(phoneNumber);
 
-  const submit = (event: React.FormEvent) => handleSubmit && handleSubmit(phoneNumber);
+  const submit = (event: React.FormEvent) => handleSubmit && handleSubmit(statePhoneNumber);
 
   return (
-    <Form handleSubmit={submit}>
+    <Form handleSubmit={submit} isContentCentered>
       <h3>Mi numero es:</h3>
-      <PhoneNumber handleChange={setPhoneNumber} value={phoneNumber} />
+      <PhoneNumber handleChange={setStatePhoneNumber} value={statePhoneNumber} />
       <StyledButtonContinue type="submit">Enviar codigo</StyledButtonContinue>
     </Form>
   );

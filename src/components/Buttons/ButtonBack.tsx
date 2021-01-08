@@ -3,17 +3,17 @@ import { useHistory } from 'react-router-dom';
 import IconBack from '../icons/IconBack';
 
 const ButtonBack = () => {
-  const history = useHistory();
+    const history = useHistory();
 
-  const handleClick = () => {
-    history.goBack();
-  }
+    const handleClick = () => {
+        history.goBack();
+    };
 
-  return (
-    <button onClick={handleClick}>
-      <IconBack />
-    </button>
-  );
+    return (
+        <button onClick={handleClick}>
+            <IconBack />
+        </button>
+    );
 };
 
 export default ButtonBack;

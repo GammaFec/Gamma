@@ -6,7 +6,10 @@ interface Props {
     handleChange?: (value: string) => void;
 }
 
-const CodeVerification: React.FC<Props> = ({ handleComplete, handleChange }): JSX.Element => {
+const CodeVerification: React.FC<Props> = ({
+    handleComplete,
+    handleChange
+}: Props): JSX.Element => {
     return <ReactCodeInput onComplete={handleComplete} onChange={handleChange} />;
 };
 

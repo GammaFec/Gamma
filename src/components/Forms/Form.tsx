@@ -21,7 +21,7 @@ const Form: React.FC<Props> = ({
     children,
     className,
     isContentCentered
-}): JSX.Element => {
+}: Props): JSX.Element => {
     const submit = (event: React.FormEvent) => {
         event.preventDefault();
         handleSubmit && handleSubmit(event);

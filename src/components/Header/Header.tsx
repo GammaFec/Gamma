@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
     padding: 0 0.5rem;
 `;
 
-const Header: React.FC<Props> = ({ children, className }) => {
+const Header: React.FC<Props> = ({ children, className }: Props) => {
     return (
         <StyledHeader className={className}>
             <nav>{children}</nav>

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import firebase from 'firebase';
-import Form from '../forms/Form';
+import Form from '../Forms/Form';
 import PhoneNumber from './PhoneNumber';
 
 interface Props {
-    handleSubmit?: Function;
+    handleSubmit?: (phoneNumber: string) => void;
     phoneNumber: string;
     buttonId?: string;
 }
@@ -15,7 +14,11 @@ const StyledButtonContinue = styled.button`
     margin: 1rem auto;
 `;
 
-const RequestNumber: React.FC<Props> = ({ handleSubmit, phoneNumber, buttonId }): JSX.Element => {
+const RequestNumber: React.FC<Props> = ({
+    handleSubmit,
+    phoneNumber,
+    buttonId
+}: Props): JSX.Element => {
     const [statePhoneNumber, setStatePhoneNumber] = useState<string>(phoneNumber);
 
     const submit = (event: React.FormEvent) => handleSubmit && handleSubmit(statePhoneNumber);

@@ -5,7 +5,7 @@ import PrivateRoute from './PrivateRoute';
 
 const Login = React.lazy(() => import('../pages/Login'));
 
-const AppRouter = () => {
+const AppRouter = (): JSX.Element => {
     return (
         <>
             <Suspense fallback="Cargando pa">

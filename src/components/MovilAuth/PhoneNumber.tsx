@@ -4,11 +4,11 @@ import 'react-phone-input-2/lib/material.css';
 import React, { useState } from 'react';
 
 interface Props {
-    handleChange: Function;
+    handleChange: (value: string) => void;
     value: string;
 }
 
-const PhoneNumber: React.FC<Props> = ({ handleChange, value }) => {
+const PhoneNumber: React.FC<Props> = ({ handleChange, value }: Props) => {
     const change = (value: string) => {
         handleChange && handleChange(value);
     };

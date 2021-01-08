@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import ButtonBack from '../components/buttons/ButtonBack';
-import Header from '../components/header/Header';
-import PhoneNumber from '../components/movilAuth/PhoneNumber';
-import RequestNumber from '../components/movilAuth/RequestNumber';
-import ValidateNumber from '../components/movilAuth/ValidateNumber';
+import ButtonBack from '../components/Buttons/ButtonBack';
+import Header from '../components/Header/Header';
+import RequestNumber from '../components/MovilAuth/RequestNumber';
+import ValidateNumber from '../components/MovilAuth/ValidateNumber';
 import getRecaptcha from '../services/firebase/auth/getRecaptcha';
 import PhoneValidator from '../utils/PhoneValidator';
 import firebase from 'firebase';
@@ -28,7 +27,7 @@ const StyledMain = styled.main`
     }
 `;
 
-const MovilAuth = () => {
+const MovilAuth = (): JSX.Element => {
     const [phoneNumber, setPhoneNumber] = useState<string | null>(null);
     const [validating, setValidating] = useState<boolean>(false);
     const [recaptcha, setRecaptcha] = useState<firebase.auth.RecaptchaVerifier | null>();
@@ -78,12 +77,12 @@ const MovilAuth = () => {
                         handleSubmit={validateNumberFirebase}
                     />
                 ) : (
-                    <RequestNumber
-                        handleSubmit={openValidation}
-                        phoneNumber={phoneNumber ?? ''}
-                        buttonId={ID}
-                    />
-                )}
+                        <RequestNumber
+                            handleSubmit={openValidation}
+                            phoneNumber={phoneNumber ?? ''}
+                            buttonId={ID}
+                        />
+                    )}
             </StyledMain>
         </StyledContainer>
     );

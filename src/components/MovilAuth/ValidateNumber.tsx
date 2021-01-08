@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Form from '../forms/Form';
+import Form from '../Forms/Form';
 import CodeVerification from './CodeVerification';
 
 interface Props {
@@ -25,7 +25,7 @@ const ValidateNumber: React.FC<Props> = ({
     goBack,
     buttonId,
     handleSubmit
-}): JSX.Element => {
+}: Props): JSX.Element => {
     const [code, setCode] = useState<string>('');
 
     const submit = () => handleSubmit(code);

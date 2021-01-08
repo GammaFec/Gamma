@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import IconBack from '../icons/IconBack';
+import IconBack from '../Icons/IconBack';
 
 const ButtonBack = () => {
     const history = useHistory();

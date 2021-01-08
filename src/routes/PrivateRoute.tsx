@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Redirect, Route, RouteProps } from 'react-router-dom';
 
-export default function PrivateRoute({ children, ...rest }: RouteProps) {
+export default function PrivateRoute({ children, ...rest }: RouteProps): JSX.Element {
     const someLoginValidation = () => true;
 
     return (

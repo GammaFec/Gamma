@@ -4,35 +4,24 @@ import React, { useState } from 'react';
 
 import DotSlider from './DotsSlider/index';
 
-// Data
-
-import Jsondata from './CarouselData.json';
-
 // Styled Components
 
-import { StyledSection, StyledButton } from './styles';
+import { StyledButton } from './styles';
+
+//Utils
+
+import { carouselData, carouselDataMapped } from './utils';
 
 const Carousel: React.FC = () => {
-    const carouselData = Jsondata.CarouselData;
-
     const [activeTabIndex, setActiveTabIndex] = useState(0);
 
     const changeActiveTabHandler = (index: number) => {
         return setActiveTabIndex(index);
     };
 
-    const carouselDataMapped = carouselData.map((dataObj, index) => {
-        return (
-            <StyledSection key={index} active={activeTabIndex === index}>
-                <img alt="carousel" src={dataObj.imageUrl}></img>
-                <p>{dataObj.text}</p>
-            </StyledSection>
-        );
-    });
-
     return (
         <main id="carousel">
-            {carouselDataMapped}
+            {carouselDataMapped(activeTabIndex)}
             <DotSlider
                 activeTabIndex={activeTabIndex}
                 click={changeActiveTabHandler}

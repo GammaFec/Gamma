@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 
-const Home = React.lazy(() => import('../pages/Home'));
-const NotFound = React.lazy(() => import('../pages/NotFound'));
+const Home = React.lazy(() => import("../pages/Home"));
+const NotFound = React.lazy(() => import("../pages/NotFound"));
 
 const ROUTES = [
     {
-        path: '/',
+        path: "/",
         component: Home,
-        name: 'Home',
+        name: "Home",
         exact: true
     },
     {
         component: NotFound,
-        name: 'NotFound'
+        name: "NotFound"
     }
 ];
 

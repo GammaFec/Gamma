@@ -77,12 +77,12 @@ const MovilAuth = (): JSX.Element => {
                         handleSubmit={validateNumberFirebase}
                     />
                 ) : (
-                        <RequestNumber
-                            handleSubmit={openValidation}
-                            phoneNumber={phoneNumber ?? ''}
-                            buttonId={ID}
-                        />
-                    )}
+                    <RequestNumber
+                        handleSubmit={openValidation}
+                        phoneNumber={phoneNumber ?? ''}
+                        buttonId={ID}
+                    />
+                )}
             </StyledMain>
         </StyledContainer>
     );

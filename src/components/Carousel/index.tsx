@@ -12,12 +12,12 @@ import Jsondata from './CarouselData.json';
 
 import { StyledSection, StyledButton } from './styles';
 
-const Carousel = () => {
+const Carousel: React.FC = () => {
     const carouselData = Jsondata.CarouselData;
 
     const [activeTabIndex, setActiveTabIndex] = useState(0);
 
-    const changeActiveTabHandler = (index) => {
+    const changeActiveTabHandler = (index: number) => {
         return setActiveTabIndex(index);
     };
 

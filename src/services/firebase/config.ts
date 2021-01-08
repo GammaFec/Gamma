@@ -1,5 +1,9 @@
 import firebase from 'firebase';
 
+/**
+ * This class contains the config of firebase application 
+ * and can generate an instance for access to firebase data.
+ */
 class FirebaseApp {
   private static firebaseConfig = {
     apiKey: "AIzaSyCI7h9mwvNDVY4C0qoXXcNzKAXmpILuDMc",

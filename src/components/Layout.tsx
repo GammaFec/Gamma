@@ -1,6 +1,6 @@
-import React, { ReactNode, Suspense } from 'react';
-import { Switch, Route } from 'react-router-dom';
-import Routes from '../routes/routes';
+import React, { ReactNode, Suspense } from "react";
+import { Switch, Route } from "react-router-dom";
+import Routes from "../routes/routes";
 
 const Layout = () => {
     const getRoutes = (routes: any): ReactNode => {

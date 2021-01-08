@@ -1,6 +1,17 @@
 import styled from 'styled-components';
 
-const StyledSection = styled.section`
+const StyledButton = styled.button`
+    position: fixed;
+    bottom: 0%;
+    z-index: 100;
+    width: 100%;
+    height: 55px;
+    padding: 0;
+    left: 0rem;
+    cursor: pointer;
+`;
+
+const StyledSection = styled.section<{ active: boolean }>`
     z-index: ${(props) => (props.active ? '10' : '-10')};
     opacity: ${(props) => (props.active ? 1 : 0)};
     transition: ${(props) => (props.active ? '2s' : '1s')} ease;
@@ -22,4 +33,4 @@ const StyledSection = styled.section`
     }
 `;
 
-export default StyledSection;
+export { StyledButton, StyledSection };

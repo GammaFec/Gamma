@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
-import DotSlider from './DotsSlider/DotsSlider';
+
+//Components
+
+import DotSlider from './DotsSlider/index';
+
+// Data
+
 import Jsondata from './CarouselData.json';
 
 // Styled Components
 
-import StyledSection from './Styled/StyledSection/StyledSection';
-import StyledButton from './Styled/StyledButton/StyledButton';
+import { StyledSection, StyledButton } from './styles';
 
 const Carousel = () => {
     const carouselData = Jsondata.CarouselData;
 
     const [activeTabIndex, setActiveTabIndex] = useState(0);
 
-    const changeActiveTabHandler = (index = 0) => {
+    const changeActiveTabHandler = (index) => {
         return setActiveTabIndex(index);
     };
 

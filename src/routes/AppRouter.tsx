@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Layout from "../components/Layout";
+import LoginUser from "../components/login/LoginUser";
 import PrivateRoute from "./PrivateRoute";
 
 const Login = React.lazy(() => import("../pages/Login"));
@@ -12,7 +13,7 @@ const AppRouter = () => {
                 <Router>
                     <Switch>
                         <Route path="/login" component={Login} />
-
+                        <Route path="/loginuser" component={LoginUser} />
                         <PrivateRoute path="/">
                             <Layout />
                         </PrivateRoute>

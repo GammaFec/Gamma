@@ -14,7 +14,7 @@ const carouselDataMapped = (activeTabIndex: number) =>
     carouselData.map((dataObj, index) => {
         return (
             <StyledSection key={index} active={activeTabIndex === index}>
-                <img alt="carousel" src={dataObj.imageUrl}></img>
+                <img alt={`carousel-${index}`} src={dataObj.imageUrl}></img>
                 <p>{dataObj.text}</p>
             </StyledSection>
         );

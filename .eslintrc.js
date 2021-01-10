@@ -1,16 +1,16 @@
 module.exports = {
-    parser: '@typescript-eslint/parser',
+    parser: "@typescript-eslint/parser",
     root: true, // Make sure eslint picks up the config at the root of the directory
     parserOptions: {
         ecmaVersion: 2020, // Use the latest ecmascript standard
-        sourceType: 'module', // Allows using import/export statements
+        sourceType: "module", // Allows using import/export statements
         ecmaFeatures: {
             jsx: true // Enable JSX since we're using React
         }
     },
     settings: {
         react: {
-            version: 'detect' // Automatically detect the react version
+            version: "detect" // Automatically detect the react version
         }
     },
     env: {
@@ -19,15 +19,15 @@ module.exports = {
         node: true // Enables Node.js global variables and Node.js scoping.
     },
     extends: [
-        'eslint:recommended',
-        'plugin:react/recommended',
-        'plugin:jsx-a11y/recommended',
-        'plugin:prettier/recommended',
-        'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended',
-        'prettier/@typescript-eslint'
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:prettier/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint"
     ],
     rules: {
-        'prettier/prettier': ['error', {}, { usePrettierrc: true }] // Use our .prettierrc file as source
+        "prettier/prettier": ["error", {}, { usePrettierrc: true }] // Use our .prettierrc file as source
     }
 };

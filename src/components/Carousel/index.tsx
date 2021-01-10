@@ -15,6 +15,8 @@ import { carouselData, carouselDataMapped } from "./utils";
 const Carousel: React.FC = () => {
     const [activeTabIndex, setActiveTabIndex] = useState(0);
 
+    /**Click Handler used on the Dots to change the state of activeTabIndex
+     */
     const changeActiveTabHandler = (index: number) => {
         return setActiveTabIndex(index);
     };

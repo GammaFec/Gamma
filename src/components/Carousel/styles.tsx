@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledButton = styled.button`
     position: fixed;
@@ -12,9 +12,9 @@ const StyledButton = styled.button`
 `;
 
 const StyledSection = styled.section<{ active: boolean }>`
-    z-index: ${(props) => (props.active ? '10' : '-10')};
+    z-index: ${(props) => (props.active ? "10" : "-10")};
     opacity: ${(props) => (props.active ? 1 : 0)};
-    transition: ${(props) => (props.active ? '2s' : '1s')} ease;
+    transition: ${(props) => (props.active ? "2s" : "1s")} ease;
     position: absolute;
 
     width: 100%;

@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 //Components
 
-import DotSlider from './DotsSlider/index';
+import DotSlider from "./DotsSlider/index";
 
 // Styled Components
 
-import { StyledButton } from './styles';
+import { StyledButton } from "./styles";
 
 //Utils
 
-import { carouselData, carouselDataMapped } from './utils';
+import { carouselData, carouselDataMapped } from "./utils";
 
 const Carousel: React.FC = () => {
     const [activeTabIndex, setActiveTabIndex] = useState(0);

@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
 // Data
 
-import Jsondata from './CarouselData.json';
+import Jsondata from "./CarouselData.json";
 
 // Styled Components
 
-import { StyledSection } from './styles';
+import { StyledSection } from "./styles";
 
 const carouselData = Jsondata.CarouselData;
 

@@ -1,10 +1,6 @@
 import React from "react";
 
-// Data
-
 import Jsondata from "./CarouselData.json";
-
-// Styled Components
 
 import { StyledSection } from "./styles";
 

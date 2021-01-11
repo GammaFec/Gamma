@@ -9,16 +9,6 @@ const DotsSlider: React.FC<IDotsSlider> = ({
     click,
     activeTabIndex
 }: IDotsSlider) => {
-    // const dotsJsx = [];
-
-    // for (let i = 0; i < amountOfDots; i++) {
-    //     const newDot = (
-    //         <StyledDot key={i} active={activeTabIndex === i} onClick={() => click(i)}></StyledDot>
-    //     );
-    //     dotsJsx.push(newDot);
-    // }
-    // console.log(carouselData);
-
     return (
         <StyledUl>
             {carouselData.map((eachObj, index) => {

@@ -1,12 +1,8 @@
 import React from "react";
 
-import Jsondata from "./CarouselData.json";
-
 import { StyledLi } from "./styles";
 
 import { ICarouselData } from "./types";
-
-// const carouselData = Jsondata.CarouselData;
 
 /**Map the Data used in the carousel to build as many Tabs as nedded.
  * It is included the Img and P Tabs and they are fill with the data that we fetch from the Data (Json).

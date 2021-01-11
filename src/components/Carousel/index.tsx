@@ -4,9 +4,11 @@ import DotSlider from "./DotsSlider/index";
 
 import { StyledButton } from "./styles";
 
-import { carouselData, carouselDataMapped } from "./utils";
+import { carouselDataMapped } from "./utils";
 
-const Carousel: React.FC = () => {
+import { ICarousel } from "./types";
+
+const Carousel: React.FC<ICarousel> = ({ click, carouselData }: ICarousel) => {
     const [activeTabIndex, setActiveTabIndex] = useState(0);
 
     const changeActiveTabHandler = (index: number) => {
@@ -19,10 +21,10 @@ const Carousel: React.FC = () => {
             <DotSlider
                 activeTabIndex={activeTabIndex}
                 click={changeActiveTabHandler}
-                amountOfDots={carouselData.length}
+                amountOfDots={carouselData}
             />
             {activeTabIndex === carouselData.length - 1 ? (
-                <StyledButton>Continuar</StyledButton>
+                <StyledButton onClick={() => click()}>Continuar</StyledButton>
             ) : null}
         </main>
     );

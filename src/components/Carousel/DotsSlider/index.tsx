@@ -21,7 +21,14 @@ const DotsSlider: React.FC<IDotsSlider> = ({
 
     return (
         <StyledUl>
-            <StyledDot key={1} active={activeTabIndex === 1} onClick={() => click(1)}></StyledDot>
+            {carouselData.map((eachObj, index) => {
+                return (
+                    <StyledDot
+                        key={eachObj.id}
+                        active={activeTabIndex === index}
+                        onClick={() => click(index)}></StyledDot>
+                );
+            })}
         </StyledUl>
     );
 };

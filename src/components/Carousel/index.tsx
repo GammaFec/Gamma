@@ -21,7 +21,7 @@ const Carousel: React.FC<ICarousel> = ({ click, carouselData }: ICarousel) => {
             <DotSlider
                 activeTabIndex={activeTabIndex}
                 click={changeActiveTabHandler}
-                amountOfDots={carouselData}
+                carouselData={carouselData}
             />
             {activeTabIndex === carouselData.length - 1 ? (
                 <StyledButton onClick={() => click()}>Continuar</StyledButton>

@@ -12,8 +12,8 @@ const carouselData = Jsondata.CarouselData;
 const carouselDataMapped = (activeTabIndex: number) =>
     carouselData.map((dataObj, index) => {
         return (
-            <StyledLi key={index} active={activeTabIndex === index}>
-                <img alt={`carousel-${index}`} src={dataObj.imageUrl} />
+            <StyledLi key={dataObj.id} active={activeTabIndex === index}>
+                <img alt={dataObj.imageAlt} src={dataObj.imageUrl} />
                 <p>{dataObj.text}</p>
             </StyledLi>
         );

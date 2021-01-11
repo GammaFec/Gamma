@@ -1,5 +1,5 @@
 export interface IDotsSlider {
-    amountOfDots: Array<{ id: number; imageUrl: string; text: string }>;
+    carouselData: Array<{ id: number; imageUrl: string; imageAlt: string; text: string }>;
     click: (index: number) => void;
     activeTabIndex: number;
     children?: JSX.Element;

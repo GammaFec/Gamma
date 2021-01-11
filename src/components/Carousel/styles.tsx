@@ -11,7 +11,7 @@ const StyledButton = styled.button`
     cursor: pointer;
 `;
 
-const StyledSection = styled.section<{ active: boolean }>`
+const StyledLi = styled.li<{ active: boolean }>`
     z-index: ${(props) => (props.active ? "10" : "-10")};
     opacity: ${(props) => (props.active ? 1 : 0)};
     transition: ${(props) => (props.active ? "2s" : "1s")} ease;
@@ -33,4 +33,4 @@ const StyledSection = styled.section<{ active: boolean }>`
     }
 `;
 
-export { StyledButton, StyledSection };
+export { StyledButton, StyledLi };

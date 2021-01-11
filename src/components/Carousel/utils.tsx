@@ -2,7 +2,7 @@ import React from "react";
 
 import Jsondata from "./CarouselData.json";
 
-import { StyledSection } from "./styles";
+import { StyledLi } from "./styles";
 
 const carouselData = Jsondata.CarouselData;
 
@@ -12,10 +12,10 @@ const carouselData = Jsondata.CarouselData;
 const carouselDataMapped = (activeTabIndex: number) =>
     carouselData.map((dataObj, index) => {
         return (
-            <StyledSection key={index} active={activeTabIndex === index}>
-                <img alt={`carousel-${index}`} src={dataObj.imageUrl}></img>
+            <StyledLi key={index} active={activeTabIndex === index}>
+                <img alt={`carousel-${index}`} src={dataObj.imageUrl} />
                 <p>{dataObj.text}</p>
-            </StyledSection>
+            </StyledLi>
         );
     });
 

@@ -17,6 +17,7 @@ const StyledLi = styled.li<{ active: boolean }>`
     transition: ${(props) => (props.active ? "2s" : "1s")} ease;
     position: absolute;
 
+    list-style: none;
     width: 100%;
     height: 30rem;
     top: 0;

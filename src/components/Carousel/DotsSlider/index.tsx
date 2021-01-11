@@ -1,10 +1,6 @@
 import React from "react";
 
-//Types
-
 import { props } from "./types";
-
-// Styled Components
 
 import { StyledDot, StyledUl } from "./styles";
 

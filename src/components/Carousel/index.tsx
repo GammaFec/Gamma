@@ -1,22 +1,14 @@
 import React, { useState } from "react";
 
-//Components
-
 import DotSlider from "./DotsSlider/index";
 
-// Styled Components
-
 import { StyledButton } from "./styles";
-
-//Utils
 
 import { carouselData, carouselDataMapped } from "./utils";
 
 const Carousel: React.FC = () => {
     const [activeTabIndex, setActiveTabIndex] = useState(0);
 
-    /**Click Handler used on the Dots to change the state of activeTabIndex
-     */
     const changeActiveTabHandler = (index: number) => {
         return setActiveTabIndex(index);
     };

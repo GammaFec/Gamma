@@ -17,7 +17,7 @@ const DotsSlider: React.FC<IDotsSlider> = ({
     //     );
     //     dotsJsx.push(newDot);
     // }
-    console.log(carouselData);
+    // console.log(carouselData);
 
     return (
         <StyledUl>

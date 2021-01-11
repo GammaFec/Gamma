@@ -17,7 +17,7 @@ const Carousel: React.FC<ICarousel> = ({ click, carouselData }: ICarousel) => {
 
     return (
         <main id="carousel">
-            {carouselDataMapped(activeTabIndex)}
+            {carouselDataMapped(carouselData, activeTabIndex)}
             <DotSlider
                 activeTabIndex={activeTabIndex}
                 click={changeActiveTabHandler}

@@ -1,5 +1,5 @@
 export interface ICarousel {
-    carouselData: Array<ICarouselData>;
+    carouselData: ICarouselData[];
     click: () => void;
     children?: JSX.Element;
 }

@@ -1,6 +1,6 @@
 import React, { ReactNode, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
-import Home from "../pages/Home";
+import Splash from "../pages/Splash";
 import Routes from "../routes/routes";
 
 const Layout = () => {
@@ -19,7 +19,7 @@ const Layout = () => {
 
     return (
         <>
-            <Suspense fallback={Home}>
+            <Suspense fallback={Splash}>
                 <Switch>{getRoutes(Routes)}</Switch>
             </Suspense>
         </>

@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../img/Logo.jpg";
 import { GlobalStyle, StyledImg, StyledP } from "./Styles";
 
-const Home = () => {
+const Splash = () => {
     return (
         <>
             <GlobalStyle />
@@ -14,4 +14,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Splash;

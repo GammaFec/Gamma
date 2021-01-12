@@ -4,10 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AppRouter from "./routes/AppRouter";
+import ButtonSocial from "./components/ButtonSocial";
 
 ReactDOM.render(
     <React.StrictMode>
         <AppRouter />
+        <ButtonSocial
+            text="O via social media"
+            buttonsName={["bxl-google", "bxl-facebook-circle", "bxl-twitter"]}
+        />
     </React.StrictMode>,
     document.getElementById("root")
 );

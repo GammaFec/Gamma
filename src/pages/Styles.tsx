@@ -24,7 +24,7 @@ export const StyledImg = styled.img`
     margin: auto;
 `;
 
-export const StyledP = styled.p`
+export const StyledParagraph = styled.p`
     text-align: center;
     margin-top: 30px;
     font-weight: 900;

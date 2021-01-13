@@ -1,12 +1,8 @@
 import React from "react";
 import { StyledButton } from "./styles";
-import { ButtonProps } from "./types";
+import { IButton } from "./types";
 
-const Button: React.FunctionComponent<ButtonProps> = ({
-    children,
-    variant,
-    styles
-}: ButtonProps) => {
+const Button: React.FunctionComponent<IButton> = ({ children, variant, styles }: IButton) => {
     return (
         <StyledButton variant={variant} styles={styles}>
             {children}

@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
-import { ButtonProps } from "./types";
+import { IButton } from "./types";
 import { theme, fontSizes, colors } from "../../common/styles";
 
-export const StyledButton = styled.button<ButtonProps>`
+export const StyledButton = styled.button<IButton>`
     font-size: ${fontSizes.font10};
     font-family: ${theme.fontPrimary};
     color: ${colors.darkGray};

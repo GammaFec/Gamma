@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import DotSlider from "./DotsSlider/index";
 
-import { StyledButton } from "./styles";
+import { StyledButton, StyledUl } from "./styles";
 
 import { carouselDataMapped } from "./utils";
 
@@ -17,7 +17,7 @@ const Carousel: React.FC<ICarousel> = ({ click, carouselData }: ICarousel) => {
 
     return (
         <main id="carousel">
-            {carouselDataMapped(carouselData, activeTabIndex)}
+            <StyledUl>{carouselDataMapped(carouselData, activeTabIndex)}</StyledUl>
             <DotSlider
                 activeTabIndex={activeTabIndex}
                 click={changeActiveTabHandler}

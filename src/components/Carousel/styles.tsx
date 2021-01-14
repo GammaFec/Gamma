@@ -14,11 +14,11 @@ const StyledButton = styled.button`
 const StyledLi = styled.li<{ active: boolean }>`
     z-index: ${(props) => (props.active ? "10" : "-10")};
     opacity: ${(props) => (props.active ? 1 : 0)};
-    transition: ${(props) => (props.active ? "2s" : "1s")} ease;
-    position: absolute;
+    transition: 1s ease;
+    overflow: hidden;
 
     list-style: none;
-    width: 100%;
+    width: ${(props) => (props.active ? "100%" : "0")};
     height: 30rem;
     top: 0;
 
@@ -33,5 +33,12 @@ const StyledLi = styled.li<{ active: boolean }>`
         margin: 2rem 2rem;
     }
 `;
+//
+//
 
-export { StyledButton, StyledLi };
+const StyledUl = styled.ul`
+    display: flex;
+    padding: 0;
+`;
+
+export { StyledButton, StyledLi, StyledUl };

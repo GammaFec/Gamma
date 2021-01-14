@@ -12,9 +12,6 @@ const StyledDot = styled.button<{ active: boolean }>`
 `;
 
 const StyledUl = styled.ul`
-    position: fixed;
-    top: 32rem;
-    z-index: 100;
     width: 100%;
     padding: 0;
 `;

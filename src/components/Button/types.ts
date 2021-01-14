@@ -1,5 +1,7 @@
+import { PRIMARY, SECONDARY } from "../../common/constants";
+
 export interface IButton {
     children: React.ReactNode;
-    variant: "primary" | "secondary";
+    variant: typeof PRIMARY | typeof SECONDARY;
     styles?: string;
 }

@@ -33,4 +33,4 @@ We will code in Typescript. All the types and interfaces should be in a separate
 The interfaces and types should be named in PascalCase with an Capital I followd by a descriptive name, .i.e. `ICarousel`.
 
 ## Styled Components
-We will use Styled Components to style the app. We should agreed on how to name the styled components.
+We will use Styled Components to style the app. We should name the styled components in PascalCase with the word "Styled" followed by a descriptive name, i.e. StyledTitle, StyledContainer, StyledButton, etc.

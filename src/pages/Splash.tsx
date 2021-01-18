@@ -1,16 +1,15 @@
 import React from "react";
 import Logo from "../img/Logo.jpg";
-import { GlobalStyle, StyledImg, StyledParagraph } from "./Styles";
+import { StyledContainer, StyledImg, StyledParagraph } from "./Styles";
 
 const Splash = () => {
     return (
-        <>
-            <GlobalStyle />
+        <StyledContainer>
             <div>
                 <StyledImg src={Logo} alt="Logo de adoptemos" />
                 <StyledParagraph>Adogtemos</StyledParagraph>
             </div>
-        </>
+        </StyledContainer>
     );
 };
 

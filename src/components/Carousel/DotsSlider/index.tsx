@@ -6,7 +6,7 @@ import { StyledDot, StyledUl } from "./styles";
 
 const DotsSlider: React.FC<IDotsSlider> = ({
     carouselData,
-    click,
+    handleClick,
     activeTabIndex
 }: IDotsSlider) => {
     return (
@@ -16,7 +16,7 @@ const DotsSlider: React.FC<IDotsSlider> = ({
                     <StyledDot
                         key={eachObj.id}
                         active={activeTabIndex === index}
-                        onClick={() => click(index)}></StyledDot>
+                        onClick={() => handleClick(index)}></StyledDot>
                 );
             })}
         </StyledUl>

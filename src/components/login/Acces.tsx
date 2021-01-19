@@ -10,12 +10,12 @@ import { PRIMARY, SECONDARY } from "../../common/constants";
 const Acces = (): ReactElement => {
     const history = useHistory();
 
-    /** @function Esta funcion lleva al usuario a esta ruta /movil-auth/useId para que se autentique y pueda ingresar a su cuenta*/
+    /** @function this function go to /movil-auth/useId and here the users can loggin with its account*/
     const handleGoToMovilAuth = () => {
         history.push("/movil-auth/useId");
     };
 
-    /** @function Esta funcion lleva al usuario a esta ruta /Register para que luego se registre*/
+    /** @function E this function go to /Register and here the users can to register*/
     const handleGoToRegister = () => {
         history.push("/Register");
     };

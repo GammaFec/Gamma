@@ -11,7 +11,7 @@ import Acces from "./acces";
 const LoginMain = (): ReactElement => {
     return (
         <Container>
-            <Image src={"https://www.imagen.com"} alt={"perro"} />
+            <Image src={"https://www.imagen.com"} alt={"imagen del perrx gatx"} />
             <Message />
             <Acces />
         </Container>

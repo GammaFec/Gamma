@@ -1,12 +1,12 @@
 import React, { ReactElement } from "react";
 
 // Styled-components
-import { Container } from "./Styles";
+import { Container } from "./styles";
 
 // Components
-import Image from "./Image";
-import Message from "./Message";
-import Acces from "./Acces";
+import Image from "./image";
+import Message from "./message";
+import Acces from "./acces";
 
 const LoginMain = (): ReactElement => {
     return (

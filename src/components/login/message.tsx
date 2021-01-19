@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
 
 // Components
-import Paragraph from "./Paragraph";
-import Title from "./Title";
+import Paragraph from "./paragraph";
+import Title from "./title";
 
 const Mess = (): ReactElement => {
     return (

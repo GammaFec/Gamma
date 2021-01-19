@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 
 // Styled-components
-import { ImageResonsive } from "./Styles";
+import { ImageResonsive } from "./styles";
 
 // Others
 import { IImage } from "./types";

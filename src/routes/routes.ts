@@ -1,8 +1,8 @@
 import React from "react";
-import MovilAuth from "../pages/MovilAuth";
 
 const Home = React.lazy(() => import("../pages/Home"));
 const NotFound = React.lazy(() => import("../pages/NotFound"));
+const MovilAuth = React.lazy(() => import("../pages/MovilAuth"));
 
 const ROUTES = [
     {
@@ -12,9 +12,9 @@ const ROUTES = [
         exact: true
     },
     {
-        path: '/movil-auth/:userId',
+        path: "/movil-auth/:userId",
         component: MovilAuth,
-        name: 'MovilAuth'
+        name: "MovilAuth"
     },
     {
         component: NotFound,

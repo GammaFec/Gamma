@@ -1,5 +1,5 @@
-import FirebaseApp from '../config';
-import firebase from 'firebase';
+import FirebaseApp from "../config";
+import firebase from "firebase";
 
 /**
  * Generate a Firebase recaptcha for an HTML element
@@ -9,7 +9,7 @@ const getRecaptcha = (elementId: string): firebase.auth.RecaptchaVerifier => {
     const firebaseApp = FirebaseApp.getInstance();
 
     return new firebaseApp.auth.RecaptchaVerifier(elementId, {
-        size: 'invisible'
+        size: "invisible"
     });
 };
 

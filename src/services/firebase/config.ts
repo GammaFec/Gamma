@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import firebase from "firebase";
 
 /**
  * This class contains the config of firebase application
@@ -6,12 +6,12 @@ import firebase from 'firebase';
  */
 class FirebaseApp {
     private static firebaseConfig = {
-        apiKey: 'AIzaSyCI7h9mwvNDVY4C0qoXXcNzKAXmpILuDMc',
-        authDomain: 'fec-gamma.firebaseapp.com',
-        projectId: 'fec-gamma',
-        storageBucket: 'fec-gamma.appspot.com',
-        messagingSenderId: '102173076494',
-        appId: '1:102173076494:web:a7fd70cecd0e7ea862e05f'
+        apiKey: "AIzaSyCI7h9mwvNDVY4C0qoXXcNzKAXmpILuDMc",
+        authDomain: "fec-gamma.firebaseapp.com",
+        projectId: "fec-gamma",
+        storageBucket: "fec-gamma.appspot.com",
+        messagingSenderId: "102173076494",
+        appId: "1:102173076494:web:a7fd70cecd0e7ea862e05f"
     };
 
     static instance: typeof firebase;

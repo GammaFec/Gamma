@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactCodeInput from 'react-verification-code-input';
+import React from "react";
+import ReactCodeInput from "react-verification-code-input";
 
 interface Props {
     handleComplete?: (value: string) => void;

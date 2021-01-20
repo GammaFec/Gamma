@@ -1,33 +1,18 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import ButtonBack from "../components/Buttons/ButtonBack";
-import Header from "../components/Header/Header";
-import RequestNumber from "../components/MovilAuth/RequestNumber";
-import ValidateNumber from "../components/MovilAuth/ValidateNumber";
-import getRecaptcha from "../services/firebase/auth/getRecaptcha";
-import PhoneValidator from "../utils/PhoneValidator";
 import firebase from "firebase";
-import sendSMSCode from "../services/firebase/auth/sendSMSCode";
-import verifyCode from "../services/firebase/auth/verifyCode";
 
-const StyledContainer = styled.div`
-    min-height: 100vh;
-    width: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr;
-`;
+import ButtonBack from "../../components/Buttons/ButtonBack";
+import Header from "../../components/Header/Header";
+import RequestNumber from "../../components/MovilAuth/RequestNumber";
+import ValidateNumber from "../../components/MovilAuth/ValidateNumber";
+import getRecaptcha from "../../services/firebase/auth/getRecaptcha";
+import PhoneValidator from "../../utils/PhoneValidator";
+import sendSMSCode from "../../services/firebase/auth/sendSMSCode";
+import verifyCode from "../../services/firebase/auth/verifyCode";
 
-const StyledMain = styled.main`
-    align-self: flex-end;
-    display: grid;
-    justify-content: center;
-    padding-bottom: 40vh;
-    & > * {
-        margin-bottom: 1.5rem;
-    }
-`;
+import { StyledContainer, StyledMain } from "./styles";
 
-const MovilAuth = (): JSX.Element => {
+export default function index() {
     const [phoneNumber, setPhoneNumber] = useState<string | null>(null);
     const [validating, setValidating] = useState<boolean>(false);
     const [recaptcha, setRecaptcha] = useState<firebase.auth.RecaptchaVerifier | null>();
@@ -86,6 +71,4 @@ const MovilAuth = (): JSX.Element => {
             </StyledMain>
         </StyledContainer>
     );
-};
-
-export default MovilAuth;
+}

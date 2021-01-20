@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import Form from '../Forms/Form';
-import PhoneNumber from './PhoneNumber';
+import React, { useState } from "react";
+import styled from "styled-components";
+import Form from "../Forms/Form";
+import PhoneNumber from "./PhoneNumber";
 
 interface Props {
     handleSubmit?: (phoneNumber: string) => void;

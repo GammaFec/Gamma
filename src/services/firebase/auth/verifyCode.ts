@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import firebase from "firebase";
 
 /**
  * Validate a code to authenticate a phone number

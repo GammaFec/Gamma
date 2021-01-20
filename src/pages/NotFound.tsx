@@ -7,6 +7,10 @@ const NotFound = () => {
         NotFound
         
         
+
+
+
+        
         
         
         </div>;

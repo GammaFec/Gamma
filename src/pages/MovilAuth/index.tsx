@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 
-import ButtonBack from "../../components/Buttons/ButtonBack";
-import Header from "../../components/Header/Header";
+import ButtonBack from "../../components/ButtonBack";
+import Header from "../../components/Header";
 import RequestNumber from "../../components/MovilAuth/RequestNumber";
 import ValidateNumber from "../../components/MovilAuth/ValidateNumber";
 import getRecaptcha from "../../services/firebase/auth/getRecaptcha";

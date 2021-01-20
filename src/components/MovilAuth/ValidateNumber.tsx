@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Form from "../Forms/Form";
+import Form from "../Form";
 import CodeVerification from "./CodeVerification";
 
 interface Props {

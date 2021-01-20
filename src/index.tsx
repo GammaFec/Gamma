@@ -9,10 +9,6 @@ import ButtonSocial from "./components/ButtonSocial";
 ReactDOM.render(
     <React.StrictMode>
         <AppRouter />
-        <ButtonSocial
-            text="O via social media"
-            buttonsName={["bxl-google", "bxl-facebook-circle", "bxl-twitter"]}
-        />
     </React.StrictMode>,
     document.getElementById("root")
 );

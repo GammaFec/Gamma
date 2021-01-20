@@ -1,36 +1,26 @@
-import React, { Fragment } from "react";
-import { Paragraph, List, ItemList, Facebook, Google, Twitter } from "./styles";
+import React from "react";
+import { StyledParagraph, StyledList, StyledItemList, StyledSvg } from "./styles";
+import { Icons } from "./icon";
 
-interface Props {
-    text: string;
-    buttonsName: string[];
-}
-
-export const ButtonSocial = (props: Props) => {
+export const SocialLogins = ({ text }: any) => {
     return (
-        <Fragment>
-            <Paragraph>{props.text}</Paragraph>
-            <List>
-                {props.buttonsName.map((button, index) => {
+        <>
+            <StyledParagraph>{text}</StyledParagraph>
+            <StyledList>
+                {Icons.map((icon) => {
                     return (
-                        <ItemList key={index}>
-                            <a href="www.google.com">
-                                {button.includes("facebook") ? (
-                                    <Facebook className={`bx ${button}`}></Facebook>
-                                ) : null}
-                                {button.includes("google") ? (
-                                    <Google className={`bx ${button}`}></Google>
-                                ) : null}
-                                {button.includes("twitter") ? (
-                                    <Twitter className={`bx ${button}`}></Twitter>
-                                ) : null}
+                        <StyledItemList key={icon.name}>
+                            <a href={icon.url}>
+                                <StyledSvg style={{ background: `${icon.color}` }}>
+                                    <path d={icon.image}></path>
+                                </StyledSvg>
                             </a>
-                        </ItemList>
+                        </StyledItemList>
                     );
                 })}
-            </List>
-        </Fragment>
+            </StyledList>
+        </>
     );
 };
 
-export default ButtonSocial;
+export default SocialLogins;

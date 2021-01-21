@@ -1,13 +1,19 @@
 import React from "react";
 
-const Home = React.lazy(() => import("../pages/Home"));
+const Splash = React.lazy(() => import("../pages/Splash"));
 const NotFound = React.lazy(() => import("../pages/NotFound"));
 
 const ROUTES = [
+    // {
+    //     path: "/",
+    //     component: Home,
+    //     name: "Home",
+    //     exact: true
+    // },
     {
-        path: "/",
-        component: Home,
-        name: "Home",
+        path: "/Splash",
+        component: Splash,
+        name: "Splash",
         exact: true
     },
     {

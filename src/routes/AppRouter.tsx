@@ -14,7 +14,7 @@ const AppRouter = () => {
                         <Route path="/login" component={Login} />
 
                         <PrivateRoute path="/">
-                                            <Layout />
+                            <Layout />
                         </PrivateRoute>
                     </Switch>
                 </Router>

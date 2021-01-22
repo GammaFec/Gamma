@@ -7,8 +7,8 @@ import Title from "./title";
 const Mess = (): ReactElement => {
     return (
         <>
-            <Title title={"hola"} />
-            <Paragraph text={"parrafo"} />
+            <Title title="hola" />
+            <Paragraph text="parrafo" />
         </>
     );
 };

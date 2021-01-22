@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Container = styled.div`
+const StyledContainer = styled.div`
     width: 100%;
     min-height: 100vh;
     display: grid;
@@ -9,9 +9,9 @@ const Container = styled.div`
     justify-content: center;
 `;
 
-const ImageResonsive = styled.img`
+const StyledImageResponsive = styled.img`
     display: block;
     max-width: 100%;
 `;
 
-export { Container, ImageResonsive };
+export { StyledContainer, StyledImageResponsive };

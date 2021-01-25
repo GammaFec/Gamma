@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Splash from "../pages/Splash";
 import LoginUser from "../components/login/LoginUser";
 import PrivateRoute from "./PrivateRoute";
+import index from "../components/HomeScreen";
 
 const Login = React.lazy(() => import("../pages/Login"));
 
@@ -14,7 +15,7 @@ const AppRouter = (): JSX.Element => {
                 <Router>
                     <Switch>
                         <Route path="/login" component={Login} />
-                        <Route path="/loginuser" component={LoginUser} />
+                        <Route path="/homescreen" component={index} />
                         <PrivateRoute path="/">
                             <Layout />
                         </PrivateRoute>

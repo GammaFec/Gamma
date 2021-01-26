@@ -43,6 +43,7 @@ export default function index() {
     const validateNumberFirebase = async (code: string): Promise<boolean> => {
         if (verificationResult) {
             const result = await verifyCode(code, verificationResult);
+            if (result) alert("Logueadisimo!");
             return result;
         }
 

@@ -1,14 +1,10 @@
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/material.css";
 
-import React, { useState } from "react";
+import React from "react";
+import iPhoneNumber from "./types";
 
-interface Props {
-    handleChange: (value: string) => void;
-    value: string;
-}
-
-const PhoneNumber: React.FC<Props> = ({ handleChange, value }: Props) => {
+const PhoneNumber: React.FC<iPhoneNumber> = ({ handleChange, value }: iPhoneNumber) => {
     const change = (value: string) => {
         handleChange && handleChange(value);
     };

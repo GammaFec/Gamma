@@ -1,24 +1,14 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import Form from "../Form";
-import PhoneNumber from "./PhoneNumber";
+import Form from "../../Form";
+import PhoneNumber from "../PhoneNumber";
+import { StyledButtonContinue } from "./styles";
+import iRequestNumber from "./types";
 
-interface Props {
-    handleSubmit?: (phoneNumber: string) => void;
-    phoneNumber: string;
-    buttonId?: string;
-}
-
-const StyledButtonContinue = styled.button`
-    width: 85%;
-    margin: 1rem auto;
-`;
-
-const RequestNumber: React.FC<Props> = ({
+const RequestNumber: React.FC<iRequestNumber> = ({
     handleSubmit,
     phoneNumber,
     buttonId
-}: Props): JSX.Element => {
+}: iRequestNumber): JSX.Element => {
     const [statePhoneNumber, setStatePhoneNumber] = useState<string>(phoneNumber);
 
     const submit = (event: React.FormEvent) => handleSubmit && handleSubmit(statePhoneNumber);

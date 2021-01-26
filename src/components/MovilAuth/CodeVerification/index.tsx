@@ -1,15 +1,11 @@
 import React from "react";
 import ReactCodeInput from "react-verification-code-input";
+import iCodeVerification from "./types";
 
-interface Props {
-    handleComplete?: (value: string) => void;
-    handleChange?: (value: string) => void;
-}
-
-const CodeVerification: React.FC<Props> = ({
+const CodeVerification: React.FC<iCodeVerification> = ({
     handleComplete,
     handleChange
-}: Props): JSX.Element => {
+}: iCodeVerification): JSX.Element => {
     return <ReactCodeInput onComplete={handleComplete} onChange={handleChange} />;
 };
 

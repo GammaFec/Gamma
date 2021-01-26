@@ -1,31 +1,14 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import Form from "../Form";
-import CodeVerification from "./CodeVerification";
+import CodeVerification from "../CodeVerification";
+import { StyledButtonContinue, StyledForm } from "./styles";
+import iValidateNumber from "./types";
 
-interface Props {
-    phoneNumber: string;
-    goBack: () => void;
-    buttonId?: string;
-    handleSubmit: (code: string) => void;
-}
-
-const StyledForm = styled(Form)`
-    button {
-        margin: 1rem 0.25rem;
-    }
-`;
-
-const StyledButtonContinue = styled.button`
-    width: 85%;
-`;
-
-const ValidateNumber: React.FC<Props> = ({
+const ValidateNumber: React.FC<iValidateNumber> = ({
     phoneNumber,
     goBack,
     buttonId,
     handleSubmit
-}: Props): JSX.Element => {
+}: iValidateNumber): JSX.Element => {
     const [code, setCode] = useState<string>("");
 
     const submit = () => handleSubmit(code);

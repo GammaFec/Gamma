@@ -1,13 +1,13 @@
 import React from "react";
 import { StyledForm } from "./styles";
-import { FormProps } from "./types";
+import iForm from "./types";
 
-const Form: React.FC<FormProps> = ({
+const Form: React.FC<iForm> = ({
     handleSubmit,
     children,
     className,
     isContentCentered
-}: FormProps): JSX.Element => {
+}: iForm): JSX.Element => {
     const submit = (event: React.FormEvent) => {
         event.preventDefault();
         handleSubmit && handleSubmit(event);

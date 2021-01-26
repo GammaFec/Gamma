@@ -1,9 +1,9 @@
 import React from "react";
 
 import { StyledHeader } from "./styles";
-import { HeaderProps } from "./types";
+import iHeader from "./types";
 
-const Header: React.FC<HeaderProps> = ({ children, className }: HeaderProps) => {
+const Header: React.FC<iHeader> = ({ children, className }: iHeader) => {
     return (
         <StyledHeader className={className}>
             <nav>{children}</nav>

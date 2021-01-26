@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface HeaderProps {
+export default interface iHeader {
     children: ReactNode;
     className?: string;
 }

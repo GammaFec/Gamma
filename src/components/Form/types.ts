@@ -1,6 +1,6 @@
 import { FormEvent, ReactNode } from "react";
 
-export interface FormProps {
+export default interface iForm {
     handleSubmit?: (event: FormEvent) => void;
     children: ReactNode;
     className?: string;

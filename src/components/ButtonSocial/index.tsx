@@ -22,5 +22,4 @@ const SocialLogins = ({ text }: any) => {
         </>
     );
 };
-
 export default SocialLogins;

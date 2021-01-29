@@ -7,7 +7,7 @@ import Button from "../Button";
 // Others
 import { PRIMARY, SECONDARY } from "../../common/constants";
 
-const Acces = (): ReactElement => {
+const ContainerLoginSignUp = (): ReactElement => {
     const history = useHistory();
 
     const handleGoToMovilAuth = () => {
@@ -30,4 +30,4 @@ const Acces = (): ReactElement => {
     );
 };
 
-export default Acces;
+export default ContainerLoginSignUp;

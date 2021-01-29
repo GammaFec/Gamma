@@ -1,12 +1,7 @@
-export interface IImage {
-    alt: string;
-    src: string;
-}
-
-export interface IParagraph{
+export interface IParagraph {
     text: string;
 }
 
-export interface ITitle{
+export interface ITitle {
     title: string;
 }

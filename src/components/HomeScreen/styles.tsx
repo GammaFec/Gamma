@@ -9,9 +9,4 @@ const StyledContainer = styled.div`
     justify-content: center;
 `;
 
-const StyledImageResponsive = styled.img`
-    display: block;
-    max-width: 100%;
-`;
-
-export { StyledContainer, StyledImageResponsive };
+export { StyledContainer };

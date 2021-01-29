@@ -10,12 +10,10 @@ import { PRIMARY, SECONDARY } from "../../common/constants";
 const Acces = (): ReactElement => {
     const history = useHistory();
 
-    /** @function this function go to /movil-auth/useId and here the users can loggin with its account*/
     const handleGoToMovilAuth = () => {
         history.push("/movil-auth/useId");
     };
 
-    /** @function E this function go to /Register and here the users can to register*/
     const handleGoToRegister = () => {
         history.push("/Register");
     };

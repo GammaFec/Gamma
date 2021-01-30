@@ -4,7 +4,7 @@ import React, { ReactElement } from "react";
 import { StyledContainer } from "./styles";
 
 // Components
-import Message from "./message";
+import Message from "./containerWelcomeMessege";
 import ContainerLoginSignUp from "./containerLoginSignUp";
 import Image from "../Image/index";
 

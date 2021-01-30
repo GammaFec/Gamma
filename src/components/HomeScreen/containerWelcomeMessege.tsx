@@ -4,7 +4,7 @@ import React, { ReactElement } from "react";
 import Title from "../Title";
 import Paragraph from "../Paragraph";
 
-const Mess = (): ReactElement => {
+const Message = (): ReactElement => {
     return (
         <>
             <Title title="hola" />
@@ -13,4 +13,4 @@ const Mess = (): ReactElement => {
     );
 };
 
-export default Mess;
+export default Message;

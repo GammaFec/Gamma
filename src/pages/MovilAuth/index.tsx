@@ -52,9 +52,7 @@ export default function index() {
 
     return (
         <StyledContainer>
-            <Header>
-                <ButtonBack />
-            </Header>
+            <Header>{/* <ButtonBack /> */}</Header>
             <StyledMain>
                 {validating ? (
                     <ValidateNumber

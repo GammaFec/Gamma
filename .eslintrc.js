@@ -28,6 +28,7 @@ module.exports = {
         "prettier/@typescript-eslint"
     ],
     rules: {
+        "react/jsx-sort-props": 2,
         "prettier/prettier": ["error", {}, { usePrettierrc: true }] // Use our .prettierrc file as source
     }
 };

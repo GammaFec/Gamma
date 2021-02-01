@@ -6,7 +6,7 @@ const Splash = () => {
     return (
         <StyledContainer>
             <div>
-                <StyledImg src={Logo} alt="Logo de adoptemos" />
+                <StyledImg alt="Logo de adoptemos" src={Logo} />
                 <StyledParagraph>Adogtemos</StyledParagraph>
             </div>
         </StyledContainer>

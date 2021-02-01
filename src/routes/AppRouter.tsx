@@ -14,8 +14,8 @@ const AppRouter = (): JSX.Element => {
             <Suspense fallback={Splash}>
                 <Router>
                     <Switch>
-                        <Route path="/login" component={Login} />
-                        <Route path="/homescreen" component={index} />
+                        <Route component={Login} path="/login" />
+
                         <PrivateRoute path="/">
                             <Layout />
                         </PrivateRoute>

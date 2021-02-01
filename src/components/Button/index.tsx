@@ -4,7 +4,7 @@ import { IButton } from "./types";
 
 const Button: React.FunctionComponent<IButton> = ({ children, variant, styles }: IButton) => {
     return (
-        <StyledButton variant={variant} styles={styles}>
+        <StyledButton styles={styles} variant={variant}>
             {children}
         </StyledButton>
     );

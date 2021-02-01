@@ -11,7 +11,7 @@ const RequestNumber: React.FC<iRequestNumber> = ({
 }: iRequestNumber): JSX.Element => {
     const [statePhoneNumber, setStatePhoneNumber] = useState<string>(phoneNumber);
 
-    const submit = (event: React.FormEvent) => handleSubmit && handleSubmit(statePhoneNumber);
+    const submit = () => handleSubmit?.(statePhoneNumber);
 
     return (
         <Form handleSubmit={submit} isContentCentered>

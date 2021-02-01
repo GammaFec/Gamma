@@ -5,9 +5,7 @@ import React from "react";
 import iPhoneNumber from "./types";
 
 const PhoneNumber: React.FC<iPhoneNumber> = ({ handleChange, value }: iPhoneNumber) => {
-    const change = (value: string) => {
-        handleChange && handleChange(value);
-    };
+    const change = (value: string) => handleChange?.(value);
 
     return (
         <div>

@@ -1,6 +1,6 @@
 import React from "react";
-import { AiFillCaretLeft } from "react-icons/ai";
 
-const IconBack = () => <AiFillCaretLeft />;
+//TODO
+const IconBack = () => "Atras";
 
 export default IconBack;

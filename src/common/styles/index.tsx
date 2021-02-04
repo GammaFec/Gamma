@@ -2,7 +2,9 @@
 export const colors = {
     gray: "#c4c4c4",
     darkGray: "#303030",
-    white: "#FFFFFF"
+    white: "#FFFFFF",
+    orange: "#FF7B28",
+    green: "#00A59E"
 };
 
 //fonts
@@ -20,7 +22,8 @@ export const fontSizes = {
 
 //theme
 export const theme = {
-    colorPrimary: colors.gray,
+    colorPrimary: colors.orange,
     colorSecondary: colors.white,
+    ghostButton: colors.green,
     fontPrimary: fonts.roboto
 };

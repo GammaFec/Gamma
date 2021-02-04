@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-
 import Button from "../../components/Button/index";
 import { InputIsValid } from "./utils";
-
 import Logo from "../../img/Logo-con-colores.svg";
-
 import { StyledMainWrapper, StyledP } from "./styles";
 
-const LoginPage = () => {
+const LoginPage: React.FC = () => {
     const [inputAccountObj, setInputAccountValue] = useState({
         value: "",
         valid: false
@@ -41,7 +38,7 @@ const LoginPage = () => {
     const loginButtonCLicked = () => {
         if (inputAccountObj.valid && inputPasswordObj.valid) {
             //do something with the form Data
-            console.log("clicked!!! El usuario y la Contraseña ES valida");
+            console.log("clicked!!! El usuario y la Contraseña SON validos");
         } else {
             return console.log("clicked!! El usuario o la Contraseña NO ES valida");
         }
@@ -56,11 +53,11 @@ const LoginPage = () => {
             <form onSubmit={(event) => event.preventDefault}>
                 <input
                     value={inputAccountObj.value}
-                    onChange={(event) => AccountInputHandler(event)}
+                    onChange={AccountInputHandler}
                     placeholder="Ingresa Tu Cuenta"></input>
                 <input
                     value={inputPasswordObj.value}
-                    onChange={(event) => PasswordInputHandler(event)}
+                    onChange={PasswordInputHandler}
                     placeholder="Contraseña"></input>
             </form>
             <Button variant={"primary"} onClick={() => loginButtonCLicked()}>

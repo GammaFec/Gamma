@@ -2,12 +2,13 @@ import { log } from "console";
 import React, { useState } from "react";
 
 import Button from "../../components/Button/index";
+import { InputIsValid } from "./utils";
 
 import Logo from "../../img/Logo-con-colores.svg";
 
 import { StyledMainWrapper, StyledP } from "./styles";
 
-const LoginPage = (props: any) => {
+const LoginPage = () => {
     const [inputAccountObj, setInputAccountValue] = useState({
         value: "",
         valid: false
@@ -38,28 +39,12 @@ const LoginPage = (props: any) => {
         });
     };
 
-    const InputIsValid = (value: any, isEmail: any = false) => {
-        if (value === "") {
-            return false;
-        }
-        if (value.length < 6 && !isEmail) {
-            return false;
-        }
-        if (isEmail) {
-            const redgex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            console.log(redgex.test(value));
-            return redgex.test(value);
-        }
-
-        return true;
-    };
-
     const loginButtonCLicked = () => {
-        console.log("clicked!!!");
         if (inputAccountObj.valid && inputPasswordObj.valid) {
-            //do something with the form
+            //do something with the form Data
+            console.log("clicked!!! El usuario o la Contraseña ES valida");
         } else {
-            return alert("Usuario o Contraseña invalida");
+            return console.log("clicked!! El usuario o la Contraseña NO ES valida");
         }
     };
 

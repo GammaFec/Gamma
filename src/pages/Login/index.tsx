@@ -41,7 +41,7 @@ const LoginPage = () => {
     const loginButtonCLicked = () => {
         if (inputAccountObj.valid && inputPasswordObj.valid) {
             //do something with the form Data
-            console.log("clicked!!! El usuario o la Contraseña ES valida");
+            console.log("clicked!!! El usuario y la Contraseña ES valida");
         } else {
             return console.log("clicked!! El usuario o la Contraseña NO ES valida");
         }

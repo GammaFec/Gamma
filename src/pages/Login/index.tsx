@@ -1,4 +1,7 @@
+import { log } from "console";
 import React, { useState } from "react";
+
+import Button from "../../components/Button/index";
 
 import Logo from "../../img/Logo-con-colores.svg";
 
@@ -16,41 +19,47 @@ const LoginPage = (props: any) => {
     });
 
     const AccountInputHandler = (event: any) => {
-        const newValue = event.target.value;
+        const newValue = event.target.value.trim();
 
         return setInputAccountValue({
             ...inputAccountObj,
             value: newValue,
-            valid: InputisValid(newValue)
+            valid: InputIsValid(newValue, true)
         });
     };
 
     const PasswordInputHandler = (event: any) => {
-        const newValue = event.target.value;
+        const newValue = event.target.value.trim();
 
         return setInputPasswordValue({
             ...inputPasswordObj,
             value: newValue,
-            valid: InputisValid(newValue)
+            valid: InputIsValid(newValue)
         });
     };
 
-    const InputisValid = (value: any) => {
-        if (value.trim() === "") {
+    const InputIsValid = (value: any, isEmail: any = false) => {
+        if (value === "") {
             return false;
         }
-        if (value.trim().length < 6) {
+        if (value.length < 6 && !isEmail) {
             return false;
         }
+        if (isEmail) {
+            const redgex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            console.log(redgex.test(value));
+            return redgex.test(value);
+        }
+
         return true;
     };
 
     const loginButtonCLicked = () => {
         console.log("clicked!!!");
         if (inputAccountObj.valid && inputPasswordObj.valid) {
-            //do something whith the form
+            //do something with the form
         } else {
-            return;
+            return alert("Usuario o Contraseña invalida");
         }
     };
 
@@ -70,7 +79,9 @@ const LoginPage = (props: any) => {
                     onChange={(event) => PasswordInputHandler(event)}
                     placeholder="Contraseña"></input>
             </form>
-            <button onClick={() => loginButtonCLicked()}>Ingresar</button>
+            <Button variant={"primary"} onClick={() => loginButtonCLicked()}>
+                Ingresar
+            </Button>
         </StyledMainWrapper>
     );
 };

@@ -2,9 +2,14 @@ import React from "react";
 import { StyledButton } from "./styles";
 import { IButton } from "./types";
 
-const Button: React.FunctionComponent<IButton> = ({ children, variant, styles }: IButton) => {
+const Button: React.FunctionComponent<IButton> = ({
+    children,
+    variant,
+    styles,
+    onClick
+}: IButton) => {
     return (
-        <StyledButton variant={variant} styles={styles}>
+        <StyledButton onClick={onClick} variant={variant} styles={styles}>
             {children}
         </StyledButton>
     );

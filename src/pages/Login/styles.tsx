@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { fontSizes, fonts } from "../../common/styles/index";
 
 const StyledMainWrapper = styled.main`
-    font-family: ${fonts.roboto}
+    font-family: ${fonts.roboto};
     margin: auto;
     padding: 4rem 1rem 0px;
     text-align: center;

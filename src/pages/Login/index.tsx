@@ -2,20 +2,31 @@ import React from "react";
 
 import Logo from "../../img/Logo-con-colores.svg";
 
-import { StyledMainWrapper } from "./styles";
+import { StyledMainWrapper, StyledP } from "./styles";
 
-const LoginPage = () => {
+const LoginPage = ({
+    loginButtonCLicked,
+    inputOnChange,
+    inputAccountValue,
+    inputPasswordValue
+}: any) => {
     return (
         <StyledMainWrapper>
             <div>
                 <img alt="logo" src={Logo}></img>
-                <h2>Encuentra tu companero ideal</h2>
+                <StyledP>Encuentra tu companero ideal</StyledP>
             </div>
-            <form>
-                <input placeholder="Cuenta"></input>
-                <input placeholder="Password"></input>
+            <form onSubmit={(event) => event.preventDefault}>
+                <input
+                    value={inputAccountValue}
+                    onChange={(event) => inputOnChange(event)}
+                    placeholder="Cuenta"></input>
+                <input
+                    value={inputPasswordValue}
+                    onChange={(event) => inputOnChange(event)}
+                    placeholder="Password"></input>
             </form>
-            <button>Ingresar</button>
+            <button onClick={() => loginButtonCLicked()}>Ingresar</button>
         </StyledMainWrapper>
     );
 };

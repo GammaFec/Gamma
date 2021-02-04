@@ -17,22 +17,24 @@ const LoginPage: React.FC = () => {
 
     const AccountInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value.trim();
-
-        return setInputAccountValue({
+        const newState = {
             ...inputAccountObj,
             value: newValue,
             valid: InputIsValid(newValue, true)
-        });
+        };
+
+        return setInputAccountValue(newState);
     };
 
     const PasswordInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value.trim();
-
-        return setInputPasswordValue({
+        const newState = {
             ...inputPasswordObj,
             value: newValue,
             valid: InputIsValid(newValue)
-        });
+        };
+
+        return setInputPasswordValue(newState);
     };
 
     const loginButtonCLicked = () => {

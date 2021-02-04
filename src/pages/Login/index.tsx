@@ -1,4 +1,3 @@
-import { strict } from "assert";
 import React, { useState } from "react";
 
 import Logo from "../../img/Logo-con-colores.svg";
@@ -6,26 +5,53 @@ import Logo from "../../img/Logo-con-colores.svg";
 import { StyledMainWrapper, StyledP } from "./styles";
 
 const LoginPage = (props: any) => {
-    const [inputAccountValue, setInputAccountValue] = useState({ value: "" });
+    const [inputAccountObj, setInputAccountValue] = useState({
+        value: "",
+        valid: false
+    });
 
-    const [inputPasswordValue, setInputPasswordValue] = useState({ value: "" });
-
-    const loginButtonCLicked = () => {
-        console.log("clicked!!!");
-    };
+    const [inputPasswordObj, setInputPasswordValue] = useState({
+        value: "",
+        valid: false
+    });
 
     const AccountInputHandler = (event: any) => {
         const newValue = event.target.value;
-        console.log(newValue);
 
-        return setInputAccountValue({ value: newValue });
+        return setInputAccountValue({
+            ...inputAccountObj,
+            value: newValue,
+            valid: InputisValid(newValue)
+        });
     };
 
     const PasswordInputHandler = (event: any) => {
         const newValue = event.target.value;
-        console.log(newValue);
 
-        return setInputPasswordValue({ value: newValue });
+        return setInputPasswordValue({
+            ...inputPasswordObj,
+            value: newValue,
+            valid: InputisValid(newValue)
+        });
+    };
+
+    const InputisValid = (value: any) => {
+        if (value.trim() === "") {
+            return false;
+        }
+        if (value.trim().length < 6) {
+            return false;
+        }
+        return true;
+    };
+
+    const loginButtonCLicked = () => {
+        console.log("clicked!!!");
+        if (inputAccountObj.valid && inputPasswordObj.valid) {
+            //do something whith the form
+        } else {
+            return;
+        }
     };
 
     return (
@@ -36,11 +62,11 @@ const LoginPage = (props: any) => {
             </div>
             <form onSubmit={(event) => event.preventDefault}>
                 <input
-                    value={inputAccountValue.value}
+                    value={inputAccountObj.value}
                     onChange={(event) => AccountInputHandler(event)}
                     placeholder="Ingresa Tu Cuenta"></input>
                 <input
-                    value={inputPasswordValue.value}
+                    value={inputPasswordObj.value}
                     onChange={(event) => PasswordInputHandler(event)}
                     placeholder="Contraseña"></input>
             </form>

@@ -1,4 +1,3 @@
-import { log } from "console";
 import React, { useState } from "react";
 
 import Button from "../../components/Button/index";
@@ -19,7 +18,7 @@ const LoginPage = () => {
         valid: false
     });
 
-    const AccountInputHandler = (event: any) => {
+    const AccountInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value.trim();
 
         return setInputAccountValue({
@@ -29,7 +28,7 @@ const LoginPage = () => {
         });
     };
 
-    const PasswordInputHandler = (event: any) => {
+    const PasswordInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value.trim();
 
         return setInputPasswordValue({

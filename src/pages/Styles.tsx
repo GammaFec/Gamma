@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledContainer = styled.div`
     width: 100%;
-    background-color: #ff8000;
     min-height: 100vh;
     display: flex;
     align-items: center;

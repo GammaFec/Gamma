@@ -23,7 +23,7 @@ export const fontSizes = {
 //theme
 export const theme = {
     colorPrimary: colors.orange,
-    colorSecondary: colors.white,
-    ghostButton: colors.green,
+    colorSecondary: colors.green,
+    colorWhite: colors.white,
     fontPrimary: fonts.roboto
 };

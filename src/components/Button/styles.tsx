@@ -13,22 +13,23 @@ export const StyledButton = styled.button<IButton>`
     width: 243px;
     height: 48px;
     cursor: pointer;
-    &:hover {
-        opacity: 0.6;
-    }
     ${({ variant }) => variants[variant]}
     ${({ styles }) => styles}
+     
+      &:hover {
+        opacity: 0.6;
+    }
 `;
 
 export const variants = {
     primary: css`
         background-color: ${theme.colorPrimary};
         border: ${theme.colorPrimary} solid 2px;
-        color: white;
+        color: ${theme.colorWhite};
     `,
     secondary: css`
-        background-color: ${theme.colorSecondary};
-        border: ${theme.ghostButton} solid 2px;
-        color: ${theme.ghostButton};
+        background-color: ${theme.colorWhite};
+        border: ${theme.colorSecondary} solid 2px;
+        color: ${theme.colorSecondary};
     `
 };

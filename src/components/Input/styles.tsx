@@ -40,7 +40,7 @@ export const StyledInput = styled.input<IInput>`
     :-webkit-autofill:focus,
     :-webkit-autofill:active {
         box-shadow: none;
-        -webkit-box-shadow: 0 0 0px 1000px ${colors.lightGray} inset !important;
+        -webkit-box-shadow: 0 0 0px 1000px ${colors.lightGray} inset;
     }
     :focus {
         outline: none;

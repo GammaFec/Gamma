@@ -8,10 +8,10 @@ const Layout = () => {
         return routes.map((route: any) => {
             return (
                 <Route
-                    path={route.path}
                     component={route.component}
                     exact={route.exact && route.exact}
                     key={route.name}
+                    path={route.path}
                 />
             );
         });

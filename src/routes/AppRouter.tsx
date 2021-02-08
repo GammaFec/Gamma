@@ -12,7 +12,7 @@ const AppRouter = () => {
             <Suspense fallback={Splash}>
                 <Router>
                     <Switch>
-                        <Route path="/login" component={Login} />
+                        <Route component={Login} path="/login" />
 
                         <PrivateRoute path="/">
                             <Layout />

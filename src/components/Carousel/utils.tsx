@@ -13,7 +13,7 @@ const carouselDataMapped = (
 ): React.ReactNode =>
     carouselData.map((dataObj, index) => {
         return (
-            <StyledLi key={dataObj.id} active={activeTabIndex === index}>
+            <StyledLi active={activeTabIndex === index} key={dataObj.id}>
                 <img alt={dataObj.imageAlt} src={dataObj.imageUrl} />
                 <p>{dataObj.text}</p>
             </StyledLi>

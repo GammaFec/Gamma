@@ -20,8 +20,8 @@ const Carousel: React.FC<ICarousel> = ({ click, carouselData }: ICarousel) => {
             <StyledUl>{carouselDataMapped(carouselData, activeTabIndex)}</StyledUl>
             <DotSlider
                 activeTabIndex={activeTabIndex}
-                handleClick={changeActiveTabHandler}
                 carouselData={carouselData}
+                handleClick={changeActiveTabHandler}
             />
             {activeTabIndex === carouselData.length - 1 ? (
                 <StyledButton onClick={() => click()}>Continuar</StyledButton>

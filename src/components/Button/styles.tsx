@@ -10,7 +10,7 @@ export const StyledButton = styled.button<IButton>`
     text-decoration: none;
     padding: 0.7rem 3rem;
     margin: 0.2rem;
-    width: 243px;
+    min-width: 243px;
     height: 48px;
     cursor: pointer;
     ${({ variant }) => variants[variant]}

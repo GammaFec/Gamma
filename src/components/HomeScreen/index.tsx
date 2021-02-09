@@ -4,8 +4,8 @@ import React, { ReactElement } from "react";
 import { StyledContainer } from "./styles";
 
 // Components
-import Message from "./containerWelcomeMessege";
-import ContainerLoginSignUp from "./containerLoginSignUp";
+import Message from "./ContainerWelcomeMessege/index";
+import ContainerLoginSignUp from "./ContainerLoginSignUp/index";
 import Image from "../Image/index";
 
 const LoginMain = (): ReactElement => {

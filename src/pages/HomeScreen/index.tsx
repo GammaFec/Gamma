@@ -6,7 +6,7 @@ import { StyledContainer } from "./styles";
 // Components
 import Message from "./ContainerWelcomeMessege/index";
 import ContainerLoginSignUp from "./ContainerLoginSignUp/index";
-import Image from "../Image/index";
+import Image from "../../components/Image/index";
 
 const LoginMain = (): ReactElement => {
     return (

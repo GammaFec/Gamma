@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import Splash from "../pages/Splash";
 import LoginUser from "../components/login/LoginUser";
 import PrivateRoute from "./PrivateRoute";
-import index from "../components/HomeScreen";
+import index from "../pages/HomeScreen";
 
 const Login = React.lazy(() => import("../pages/Login"));
 

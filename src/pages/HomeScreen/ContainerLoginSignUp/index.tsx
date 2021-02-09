@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { useHistory } from "react-router-dom";
 
 // Components
-import Button from "../../Button";
+import Button from "../../../components/Button";
 
 // Others
 import { PRIMARY, SECONDARY } from "../../../common/constants";

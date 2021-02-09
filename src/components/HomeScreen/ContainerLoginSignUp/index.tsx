@@ -2,10 +2,10 @@ import React, { ReactElement } from "react";
 import { useHistory } from "react-router-dom";
 
 // Components
-import Button from "../Button";
+import Button from "../../Button";
 
 // Others
-import { PRIMARY, SECONDARY } from "../../common/constants";
+import { PRIMARY, SECONDARY } from "../../../common/constants";
 
 const ContainerLoginSignUp = (): ReactElement => {
     const history = useHistory();

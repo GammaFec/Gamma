@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-const StyledButton = styled.button`
-    bottom: 0%;
-    z-index: 100;
-    width: 100%;
-    height: 55px;
-    padding: 0;
-    left: 0rem;
-    cursor: pointer;
-`;
-
 const StyledLi = styled.li<{ active: boolean }>`
     z-index: ${(props) => (props.active ? "10" : "-10")};
     opacity: ${(props) => (props.active ? 1 : 0)};
@@ -40,4 +30,4 @@ const StyledUl = styled.ul`
     padding: 0;
 `;
 
-export { StyledButton, StyledLi, StyledUl };
+export { StyledLi, StyledUl };

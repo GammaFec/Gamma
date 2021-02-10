@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import * as variantType from "../../common/constants/index";
 
 import DotSlider from "./DotsSlider/index";
+import Button from "../Button/index";
 
-import { StyledButton, StyledUl } from "./styles";
+import { StyledUl } from "./styles";
 
 import { carouselDataMapped } from "./utils";
 
@@ -24,7 +26,9 @@ const Carousel: React.FC<ICarousel> = ({ click, carouselData }: ICarousel) => {
                 handleClick={changeActiveTabHandler}
             />
             {activeTabIndex === carouselData.length - 1 ? (
-                <StyledButton onClick={() => click()}>Continuar</StyledButton>
+                <Button onClick={() => click()} variant={variantType.PRIMARY}>
+                    Continuar
+                </Button>
             ) : null}
         </main>
     );

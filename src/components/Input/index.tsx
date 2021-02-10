@@ -8,6 +8,8 @@ const Input: React.FunctionComponent<IInput> = ({
     id,
     icon,
     alt,
+    value,
+    ref,
     minlength,
     maxlength,
     placeholder,
@@ -24,6 +26,8 @@ const Input: React.FunctionComponent<IInput> = ({
                 type={type}
                 name={name}
                 id={id}
+                value={value}
+                ref={ref}
                 minlength={minlength}
                 maxlength={maxlength}
                 placeholder={placeholder}

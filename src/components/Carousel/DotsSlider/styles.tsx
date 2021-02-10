@@ -7,7 +7,7 @@ const StyledDot = styled.button<{ active: boolean }>`
     width: ${({ active }) => (active ? "30px" : "14px")};
     border-radius: 10px;
     border: none;
-    margin: 0 1.3rem;
+    margin: 0 20px;
     background-color: ${({ active }) => (active ? colors.orange : "#FFC7A3")};
     transition: ${({ active }) => (active ? "2s" : "1s")} ease;
     cursor: pointer;

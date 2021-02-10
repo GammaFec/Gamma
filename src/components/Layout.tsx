@@ -1,5 +1,6 @@
 import React, { ReactNode, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
+import Splash from "../pages/Splash";
 import Routes from "../routes/routes";
 
 const Layout = () => {
@@ -7,10 +8,10 @@ const Layout = () => {
         return routes.map((route: any) => {
             return (
                 <Route
-                    path={route.path}
                     component={route.component}
                     exact={route.exact && route.exact}
                     key={route.name}
+                    path={route.path}
                 />
             );
         });
@@ -18,8 +19,7 @@ const Layout = () => {
 
     return (
         <>
-            <Suspense fallback="cargando pa">
-                Common components
+            <Suspense fallback={Splash}>
                 <Switch>{getRoutes(Routes)}</Switch>
             </Suspense>
         </>

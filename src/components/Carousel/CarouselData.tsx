@@ -9,21 +9,20 @@ const data = {
             imageUrl: CarouselImg01,
             imageAlt: "First Image",
             text:
-                "Sabias que? Casi el 65% de Perros y gatos sufren en las calles de sudamerica. \n Es hora de cambiar eso y darles un hogar!! "
+                "Aquí el amor a primera vista si existe, descubre tu compañero perfecto y vive muchas historias junto a ellos."
         },
         {
             id: 2,
             imageUrl: CarouselImg02,
             imageAlt: "Second Image",
             text:
-                "En esta aplicacion, podras descubir y dar en adopcion a increibles animales listos para hacerte felix y acompanarte en tu hogar."
+                "Heroes sin capa día a día brindan atención, haz match con alguna de las mascotas listas en adopción y define el proceso de adopción."
         },
         {
             id: 3,
             imageUrl: CarouselImg03,
             imageAlt: "Third Image",
-            text:
-                "Podras conversar con albergues y ademas de ello conocer perritos y gatitos listos para alegrarte el dia.\nRecuerda que ellos son una extension de nosotros y no hay algo mas fiel que ellos. "
+            text: "Cuida, protege y dale amor a quien con solo verte se emociona sin límites."
         }
     ]
 };

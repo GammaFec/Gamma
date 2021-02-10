@@ -15,6 +15,7 @@ const carouselDataMapped = (
         return (
             <StyledLi active={activeTabIndex === index} key={dataObj.id}>
                 <img alt={dataObj.imageAlt} src={dataObj.imageUrl} />
+                <h2>{dataObj.titleOnPage}</h2>
                 <p>{dataObj.text}</p>
             </StyledLi>
         );

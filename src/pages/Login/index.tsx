@@ -17,6 +17,7 @@ const LoginPage: React.FC = () => {
 
     const AccountInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value.trim();
+        console.log(newValue);
         const newState = {
             ...inputAccountObj,
             value: newValue,
@@ -53,14 +54,8 @@ const LoginPage: React.FC = () => {
                 <StyledP>Encuentra tu companero ideal</StyledP>
             </div>
             <form onSubmit={(event) => event.preventDefault}>
-                <input
-                    value={inputAccountObj.value}
-                    onChange={AccountInputHandler}
-                    placeholder="Ingresa Tu Cuenta"></input>
-                <input
-                    value={inputPasswordObj.value}
-                    onChange={PasswordInputHandler}
-                    placeholder="Contraseña"></input>
+                <input onChange={AccountInputHandler} placeholder="Ingresa Tu Cuenta"></input>
+                <input onChange={PasswordInputHandler} placeholder="Contraseña"></input>
             </form>
             <Button variant={"primary"} onClick={() => loginButtonCLicked()}>
                 Ingresar

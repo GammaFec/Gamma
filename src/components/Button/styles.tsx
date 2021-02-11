@@ -3,7 +3,7 @@ import { IButton } from "./types";
 import { theme, fontSizes } from "../../common/styles";
 
 export const StyledButton = styled.button<IButton>`
-    font-size: ${fontSizes.font10};
+    font-size: ${fontSizes.font16};
     font-family: ${theme.fontPrimary};
     border-radius: 10px;
     text-align: center;

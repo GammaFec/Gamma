@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../../components/Button/index";
+import Input from "../../components/Input/index";
 import { InputIsValid } from "./utils";
 import Logo from "../../img/Logo-con-colores.svg";
 import { StyledMainWrapper, StyledP } from "./styles";
@@ -54,8 +55,20 @@ const LoginPage: React.FC = () => {
                 <StyledP>Encuentra tu companero ideal</StyledP>
             </div>
             <form onSubmit={(event) => event.preventDefault}>
-                <input onChange={AccountInputHandler} placeholder="Ingresa Tu Cuenta"></input>
-                <input onChange={PasswordInputHandler} placeholder="Contraseña"></input>
+                <Input
+                    id="LoginUser"
+                    name="LoginUser"
+                    onChange={(event) => AccountInputHandler(event)}
+                    placeholder="Ingresa Tu Cuenta"
+                    type="text"
+                />
+                <Input
+                    id="LoginPassword"
+                    name="LoginPassword"
+                    onChange={PasswordInputHandler}
+                    placeholder="Contraseña"
+                    type="text"
+                />
             </form>
             <Button onClick={() => loginButtonCLicked()} variant={"primary"}>
                 Ingresar

@@ -10,7 +10,7 @@ const StyledMainWrapper = styled.main`
 `;
 
 const StyledP = styled.p`
-    font-size: ${fontSizes.font16};
+    font-size: ${fontSizes.font21};
     font-weight: bold;
     padding: 5px;
     width: 80%;

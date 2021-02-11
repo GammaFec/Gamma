@@ -1,6 +1,7 @@
 //colors
 export const colors = {
-    gray: "#c4c4c4",
+    gray: "#A9A9A9",
+    lightGray: "#EAEAEA",
     darkGray: "#303030",
     white: "#FFFFFF",
     orange: "#FF7B28",
@@ -14,10 +15,13 @@ export const fonts = {
 
 //font-sizes
 export const fontSizes = {
-    font10: "1rem",
-    font12: "1.2rem",
-    font14: "1.4rem",
-    font16: "1.6rem"
+    font10: "10px",
+    font12: "12px",
+    font14: "14px",
+    font16: "16px",
+    font18: "18px",
+    font20: "20px",
+    font21: "21px"
 };
 
 //theme

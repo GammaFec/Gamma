@@ -5,6 +5,7 @@ import Splash from "../pages/Splash";
 import PrivateRoute from "./PrivateRoute";
 
 const Login = React.lazy(() => import("../pages/Login"));
+const index = React.lazy(() => import("../pages/HomeScreen"));
 
 const AppRouter = () => {
     return (
@@ -13,7 +14,7 @@ const AppRouter = () => {
                 <Router>
                     <Switch>
                         <Route component={Login} path="/login" />
-
+                        <Route component={index} path="/homescreen" />
                         <PrivateRoute path="/">
                             <Layout />
                         </PrivateRoute>

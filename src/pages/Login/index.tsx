@@ -57,7 +57,7 @@ const LoginPage: React.FC = () => {
                 <input onChange={AccountInputHandler} placeholder="Ingresa Tu Cuenta"></input>
                 <input onChange={PasswordInputHandler} placeholder="Contraseña"></input>
             </form>
-            <Button variant={"primary"} onClick={() => loginButtonCLicked()}>
+            <Button onClick={() => loginButtonCLicked()} variant={"primary"}>
                 Ingresar
             </Button>
         </StyledMainWrapper>

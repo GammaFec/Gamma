@@ -6,7 +6,7 @@ const StyledMainWrapper = styled.main`
     font-family: ${fonts.roboto};
     margin: auto;
     padding: 4rem 1rem 0px;
-    text-align: center;
+    max-width: 500px;
 `;
 
 const StyledP = styled.p`

@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "../img/Logo.svg";
-import { StyledContainer, StyledImg, StyledParagraph } from "./Styles";
+import Logo from "../../img/Logo.svg";
+import { StyledContainer, StyledImg, StyledParagraph } from "./styles";
 
 const Splash = () => {
     return (

@@ -18,7 +18,6 @@ const LoginPage: React.FC = () => {
 
     const AccountInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value.trim();
-        console.log(newValue);
         const newState = {
             ...inputAccountObj,
             value: newValue,
@@ -39,7 +38,7 @@ const LoginPage: React.FC = () => {
         return setInputPasswordValue(newState);
     };
 
-    const loginButtonCLicked = () => {
+    const loginButtonClicked = () => {
         if (inputAccountObj.valid && inputPasswordObj.valid) {
             //do something with the form Data
             console.log("clicked!!! El usuario y la Contraseña SON validos");
@@ -58,7 +57,7 @@ const LoginPage: React.FC = () => {
                 <Input
                     id="LoginUser"
                     name="LoginUser"
-                    onChange={(event) => AccountInputHandler(event)}
+                    onChange={AccountInputHandler}
                     placeholder="Ingresa Tu Cuenta"
                     type="text"
                 />
@@ -67,10 +66,10 @@ const LoginPage: React.FC = () => {
                     name="LoginPassword"
                     onChange={PasswordInputHandler}
                     placeholder="Contraseña"
-                    type="text"
+                    type="password"
                 />
             </form>
-            <Button onClick={() => loginButtonCLicked()} variant={"primary"}>
+            <Button onClick={() => loginButtonClicked()} variant={"primary"}>
                 Ingresar
             </Button>
         </StyledMainWrapper>

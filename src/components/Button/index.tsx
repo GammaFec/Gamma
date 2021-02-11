@@ -9,7 +9,7 @@ const Button: React.FunctionComponent<IButton> = ({
     onClick
 }: IButton) => {
     return (
-        <StyledButton onClick={onClick} variant={variant} styles={styles}>
+        <StyledButton onClick={onClick} styles={styles} variant={variant}>
             {children}
         </StyledButton>
     );

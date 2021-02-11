@@ -5,4 +5,5 @@ export interface IButton {
     variant: typeof PRIMARY | typeof SECONDARY;
     onClick?: () => void;
     styles?: string;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }

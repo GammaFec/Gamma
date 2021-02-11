@@ -15,7 +15,7 @@ const AppRouter = (): JSX.Element => {
                 <Router>
                     <Switch>
                         <Route component={Login} path="/login" />
-
+                        <Route component={index} path="/homescreen" />
                         <PrivateRoute path="/">
                             <Layout />
                         </PrivateRoute>

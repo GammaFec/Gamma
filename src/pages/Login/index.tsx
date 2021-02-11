@@ -52,7 +52,7 @@ const LoginPage: React.FC = () => {
         <StyledMainWrapper>
             <div>
                 <img alt="logo" src={Logo}></img>
-                <StyledP>Encuentra tu companero ideal</StyledP>
+                <StyledP>Encuentra tu compañero ideal</StyledP>
             </div>
             <form onSubmit={(event) => event.preventDefault}>
                 <Input

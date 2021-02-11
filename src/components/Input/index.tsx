@@ -19,19 +19,19 @@ const Input: React.FunctionComponent<IInput> = ({
         <StyledInputContainer>
             {icon && (
                 <StyledIconBox>
-                    <StyledImg src={icon} alt={alt} />
+                    <StyledImg alt={alt} src={icon} />
                 </StyledIconBox>
             )}
             <StyledInput
-                type={type}
-                name={name}
                 id={id}
-                value={value}
-                ref={ref}
-                minlength={minlength}
                 maxlength={maxlength}
-                placeholder={placeholder}
+                minlength={minlength}
+                name={name}
                 onChange={onChange}
+                placeholder={placeholder}
+                ref={ref}
+                type={type}
+                value={value}
             />
         </StyledInputContainer>
     );

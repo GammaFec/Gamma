@@ -7,7 +7,7 @@ import { StyledImageResponsive } from "./styles";
 import { IImage } from "./types";
 
 const Image: React.FunctionComponent<IImage> = ({ src, alt }: IImage) => {
-    return <StyledImageResponsive src={src} alt={alt} />;
+    return <StyledImageResponsive alt={alt} src={src} />;
 };
 
 export default Image;

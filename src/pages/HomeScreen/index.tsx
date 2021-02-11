@@ -22,14 +22,14 @@ const LoginMain = (): ReactElement => {
 
     return (
         <StyledContainer>
-            <Image src="https://www.imagen.com" alt="imagen del perrx gatx" />
+            <Image alt="imagen del perrx gatx" src="https://www.imagen.com" />
             <h1>Hola</h1>
             <p>parrafo</p>
             <div>
-                <Button variant={PRIMARY} onClick={handleGoToMovilAuth}>
+                <Button onClick={handleGoToMovilAuth} variant={PRIMARY}>
                     Login
                 </Button>
-                <Button variant={SECONDARY} onClick={handleGoToRegister}>
+                <Button onClick={handleGoToRegister} variant={SECONDARY}>
                     Sign up
                 </Button>
             </div>

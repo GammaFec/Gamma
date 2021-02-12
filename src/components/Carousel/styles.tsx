@@ -1,43 +1,38 @@
 import styled from "styled-components";
-
-const StyledButton = styled.button`
-    bottom: 0%;
-    z-index: 100;
-    width: 100%;
-    height: 55px;
-    padding: 0;
-    left: 0rem;
-    cursor: pointer;
-`;
+import { fonts } from "../../common/styles/index";
 
 const StyledLi = styled.li<{ active: boolean }>`
-    z-index: ${(props) => (props.active ? "10" : "-10")};
-    opacity: ${(props) => (props.active ? 1 : 0)};
-    transition: 0.7s cubic-bezier(0, 0.84, 0.81, 1.01);
+    z-index: ${(props) => (props.active ? "0" : "-10")};
+    opacity: ${(props) => (props.active ? "1" : "0")};
+    transition: 0.5s cubic-bezier(0, 0.84, 0.81, 1.01);
     overflow: hidden;
+    position: ${(props) => (props.active ? "relative" : "absolute")};
+    top: ${(props) => (props.active ? "0" : "-30px")};
 
     list-style: none;
-    width: ${(props) => (props.active ? "100%" : "0")};
-    height: 30rem;
-    top: 0;
+    width: 100%;
 
     & > img {
         width: 70%;
         max-width: 300px;
         height: auto;
-        padding: 1rem;
+        padding: 16px;
     }
 
     & > p {
-        margin: 2rem 2rem;
+        margin: 25px;
     }
 `;
-//
-//
 
 const StyledUl = styled.ul`
     display: flex;
-    padding: 0;
+    padding: 0 10px;
+    height: 450px;
+    font-family: ${fonts.roboto};
+
+    @media (min-width: 400px) {
+        height: 470px;
+    } ;
 `;
 
-export { StyledButton, StyledLi, StyledUl };
+export { StyledLi, StyledUl };

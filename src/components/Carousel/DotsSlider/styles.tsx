@@ -1,12 +1,14 @@
 import styled from "styled-components";
+import { colors } from "../../../common/styles/index";
 
 const StyledDot = styled.button<{ active: boolean }>`
-    margin-right: 1rem;
-    height: 25px;
-    width: 25px;
-    border-radius: 15px;
-    margin: 0 1rem;
-    background-color: ${({ active }) => (active ? "blue" : "grey")};
+    padding: 0;
+    height: ${({ active }) => (active ? "8px" : "12px")};
+    width: ${({ active }) => (active ? "30px" : "14px")};
+    border-radius: 10px;
+    border: none;
+    margin: 0 20px;
+    background-color: ${({ active }) => (active ? colors.orange : colors.lightOrange)};
     transition: ${({ active }) => (active ? "2s" : "1s")} ease;
     cursor: pointer;
 `;

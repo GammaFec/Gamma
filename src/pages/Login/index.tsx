@@ -53,7 +53,7 @@ const LoginPage: React.FC = () => {
                 <img alt="logo" src={Logo}></img>
                 <StyledP>Encuentra tu compañero ideal</StyledP>
             </div>
-            <form onSubmit={(event) => event.preventDefault}>
+            <form onSubmit={(event) => event.preventDefault()}>
                 <Input
                     id="LoginUser"
                     name="LoginUser"
@@ -70,10 +70,10 @@ const LoginPage: React.FC = () => {
                     type="password"
                     value={inputPasswordObj.value}
                 />
+                <Button onClick={() => loginButtonClicked()} variant={"primary"}>
+                    Ingresar
+                </Button>
             </form>
-            <Button onClick={() => loginButtonClicked()} variant={"primary"}>
-                Ingresar
-            </Button>
         </StyledMainWrapper>
     );
 };

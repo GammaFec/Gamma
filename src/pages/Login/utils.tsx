@@ -6,8 +6,8 @@ const InputIsValid = (value: string, isEmail = false): boolean => {
         return false;
     }
     if (isEmail) {
-        const redgex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return redgex.test(value);
+        const regexp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regexp.test(value);
     }
 
     return true;

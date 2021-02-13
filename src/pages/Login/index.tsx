@@ -6,7 +6,7 @@ import Logo from "../../img/Logo.svg";
 import { StyledMainWrapper, StyledP } from "./styles";
 
 const LoginPage: React.FC = () => {
-    const [userObj, setUserObj] = useState({
+    const [usernameObj, setUsernameObj] = useState({
         value: "",
         valid: false
     });
@@ -19,12 +19,12 @@ const LoginPage: React.FC = () => {
     const AccountInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value.trim();
         const newState = {
-            ...userObj,
+            ...usernameObj,
             value: newValue,
             valid: InputIsValid(newValue, true)
         };
 
-        return setUserObj(newState);
+        return setUsernameObj(newState);
     };
 
     const PasswordInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,7 +39,7 @@ const LoginPage: React.FC = () => {
     };
 
     const loginButtonClicked = () => {
-        if (userObj.valid && passwordObj.valid) {
+        if (usernameObj.valid && passwordObj.valid) {
             //do something with the form Data
             console.log("clicked!!! El usuario y la Contraseña SON validos");
         } else {
@@ -60,7 +60,7 @@ const LoginPage: React.FC = () => {
                     onChange={AccountInputHandler}
                     placeholder="Ingresa Tu Cuenta"
                     type="text"
-                    value={userObj.value}
+                    value={usernameObj.value}
                 />
                 <Input
                     id="LoginPassword"

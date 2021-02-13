@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "../../components/Button/index";
 import Input from "../../components/Input/index";
 import { InputIsValid } from "./utils";
-import Logo from "../../img/Logo-con-colores.svg";
+import Logo from "../../img/Logo.svg";
 import { StyledMainWrapper, StyledP } from "./styles";
 
 const LoginPage: React.FC = () => {

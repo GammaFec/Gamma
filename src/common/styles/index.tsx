@@ -1,3 +1,5 @@
+import "./importFont.css";
+
 //colors
 export const colors = {
     gray: "#A9A9A9",
@@ -11,7 +13,8 @@ export const colors = {
 
 //fonts
 export const fonts = {
-    roboto: "'Roboto', sans-serif"
+    roboto: "'Roboto', sans-serif",
+    poppins: "'Poppins', 'sans-serif'"
 };
 
 //font-sizes
@@ -30,5 +33,5 @@ export const theme = {
     colorPrimary: colors.orange,
     colorSecondary: colors.green,
     colorWhite: colors.white,
-    fontPrimary: fonts.roboto
+    fontPrimary: fonts.poppins
 };

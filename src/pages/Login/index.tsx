@@ -6,12 +6,12 @@ import Logo from "../../img/Logo.svg";
 import { StyledMainWrapper, StyledP } from "./styles";
 
 const LoginPage: React.FC = () => {
-    const [inputAccountObj, setInputAccountValue] = useState({
+    const [userObj, setUserObj] = useState({
         value: "",
         valid: false
     });
 
-    const [inputPasswordObj, setInputPasswordValue] = useState({
+    const [passwordObj, setPasswordObj] = useState({
         value: "",
         valid: false
     });
@@ -19,27 +19,27 @@ const LoginPage: React.FC = () => {
     const AccountInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value.trim();
         const newState = {
-            ...inputAccountObj,
+            ...userObj,
             value: newValue,
             valid: InputIsValid(newValue, true)
         };
 
-        return setInputAccountValue(newState);
+        return setUserObj(newState);
     };
 
     const PasswordInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value.trim();
         const newState = {
-            ...inputPasswordObj,
+            ...passwordObj,
             value: newValue,
             valid: InputIsValid(newValue)
         };
 
-        return setInputPasswordValue(newState);
+        return setPasswordObj(newState);
     };
 
     const loginButtonClicked = () => {
-        if (inputAccountObj.valid && inputPasswordObj.valid) {
+        if (userObj.valid && passwordObj.valid) {
             //do something with the form Data
             console.log("clicked!!! El usuario y la Contraseña SON validos");
         } else {
@@ -60,7 +60,7 @@ const LoginPage: React.FC = () => {
                     onChange={AccountInputHandler}
                     placeholder="Ingresa Tu Cuenta"
                     type="text"
-                    value={inputAccountObj.value}
+                    value={userObj.value}
                 />
                 <Input
                     id="LoginPassword"
@@ -68,7 +68,7 @@ const LoginPage: React.FC = () => {
                     onChange={PasswordInputHandler}
                     placeholder="Contraseña"
                     type="password"
-                    value={inputPasswordObj.value}
+                    value={passwordObj.value}
                 />
                 <Button onClick={() => loginButtonClicked()} variant={"primary"}>
                     Ingresar

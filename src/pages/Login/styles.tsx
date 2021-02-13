@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import { fontSizes, fonts } from "../../common/styles/index";
+import { fontSizes, theme } from "../../common/styles/index";
 
 const StyledMainWrapper = styled.main`
-    font-family: ${fonts.roboto};
+    font-family: ${theme.fontPrimary};
     margin: auto;
     padding: 4rem 1rem 0px;
     text-align: center;

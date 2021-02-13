@@ -24,6 +24,14 @@ After the PR is approved and you merged the `hotfix/really-important-fix` into `
 
 We should create a folder for each component in the components folder like this:
 
+### Page
+
+If we develop a component that has its own path, it must be in the pages folder using the same structure as the components.
+
+### Component
+
+We should create a folder for each component in the components folder like this:
+
 -   components
     -   ComponentName <- Using PascalCase
         -   index.tsx <- The component
@@ -40,3 +48,8 @@ The interfaces and types should be named in PascalCase with an Capital I followd
 ## Styled Components
 
 We will use Styled Components to style the app. We should name the styled components in PascalCase with the word "Styled" followed by a descriptive name, i.e. StyledTitle, StyledContainer, StyledButton, etc.
+
+## Styles
+
+-   We use all logos/images in SGV, no libraries for that
+-   We have common/styles file, in there we put all fontSizes, colors and all that are reusable in scss.

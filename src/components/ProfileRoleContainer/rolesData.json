@@ -1,0 +1,14 @@
+[
+    {
+        "id": "orange",
+        "name": "Adoptante",
+        "path": "/adoptante",
+        "variant": "primary"
+    },
+    {
+        "id": "green",
+        "name": "Albergue",
+        "path": "/albergue",
+        "variant": "secondary"
+    }
+]

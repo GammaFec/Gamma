@@ -6,6 +6,7 @@ import PrivateRoute from "./PrivateRoute";
 
 const Login = React.lazy(() => import("../pages/Login"));
 const index = React.lazy(() => import("../pages/HomeScreen"));
+const ChooseProfile = React.lazy(() => import("../pages/ChooseProfile"));
 
 const AppRouter = () => {
     return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
                     <Switch>
                         <Route component={Login} path="/login" />
                         <Route component={index} path="/homescreen" />
+                        <Route component={ChooseProfile} path="/chooseprofile" />
                         <PrivateRoute path="/">
                             <Layout />
                         </PrivateRoute>

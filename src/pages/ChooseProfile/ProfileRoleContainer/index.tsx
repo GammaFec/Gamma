@@ -19,21 +19,19 @@ const ProfileRoleContainer: React.FC = (): JSX.Element => {
         }
     };
 
-    const ProfileRoles = Data.map(({ id, path, variant, name }, i) => (
-        <ProfileRole
-            id={id}
-            key={i}
-            onClick={() => handleClick(id, path)}
-            selected={Selected?.id || null}
-            variant={variant}>
-            <p>{name}</p>
-        </ProfileRole>
-    ));
-
     return (
         <>
             <StyledProfileRoleContainer>
-                {ProfileRoles.map((Role) => Role)}
+                {Data.map(({ id, path, variant, name }, i) => (
+                    <ProfileRole
+                        id={id}
+                        key={i}
+                        onClick={() => handleClick(id, path)}
+                        selected={Selected?.id || null}
+                        variant={variant}>
+                        <p>{name}</p>
+                    </ProfileRole>
+                ))}
             </StyledProfileRoleContainer>
             <StyledButton
                 className={`${BotonDisabled && "disabled"}`}

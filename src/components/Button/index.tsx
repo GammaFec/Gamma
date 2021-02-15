@@ -8,7 +8,7 @@ const Button: React.FunctionComponent<IButton> = ({
     styles,
     onClick,
     className,
-    disabled
+    disabled = false
 }: IButton) => {
     return (
         <StyledButton

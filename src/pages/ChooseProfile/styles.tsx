@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const StyledMain = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,11 +8,11 @@ export const Container = styled.div`
     width: 100vw;
 `;
 
-export const Text = styled.p`
+export const StyledText = styled.p`
     line-height: 150%;
 `;
 
-export const ChooseContainer = styled.div`
+export const StyledContainer = styled.div`
     text-align: center;
     padding: 1rem;
     max-width: 90%;

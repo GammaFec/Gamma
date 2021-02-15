@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontSizes, colors } from "../../../common/styles";
+import { fontSizes, colors } from "../../../../common/styles";
 
 export const StyledProfileRole = styled.div`
     display: flex;

@@ -1,6 +1,6 @@
 import React from "react";
 
-import ProfileRoleContainer from "../../components/ProfileRoleContainer";
+import ProfileRoleContainer from "./ProfileRoleContainer";
 import { ChooseContainer, Container, Text } from "./styles";
 
 const ChooseProfile: React.FC = (): JSX.Element => {

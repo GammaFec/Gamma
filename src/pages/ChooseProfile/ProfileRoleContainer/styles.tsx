@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { fontSizes } from "../../common/styles";
-import Button from "../Button";
+import { fontSizes } from "../../../common/styles";
+import Button from "../../../components/Button";
 
 export const StyledProfileRoleContainer = styled.ul`
     width: 100%;

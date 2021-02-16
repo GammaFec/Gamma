@@ -7,19 +7,13 @@ const index = () => {
             <div>
                 <StyledTitle>Registrarse</StyledTitle>
                 <StyledContain>
-                    <StyledInput name="name" placeholder="Username" type="text"></StyledInput>
+                    <StyledInput name="name" placeholder="Username" type="text" />
                 </StyledContain>
                 <StyledContain>
-                    <StyledInput
-                        name="email"
-                        placeholder="Correo electronico"
-                        type="email"></StyledInput>
+                    <StyledInput name="email" placeholder="Correo electronico" type="email" />
                 </StyledContain>
                 <StyledContain>
-                    <StyledInput
-                        name="password"
-                        placeholder="Contraseña"
-                        type="password"></StyledInput>
+                    <StyledInput name="password" placeholder="Contraseña" type="password" />
                 </StyledContain>
                 <StyledButton>Registrarse</StyledButton>
             </div>

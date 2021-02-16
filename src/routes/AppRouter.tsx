@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Layout from "../components/Layout";
 import Splash from "../pages/Splash";
+import Register from "../components/Register";
 import PrivateRoute from "./PrivateRoute";
 
 const Login = React.lazy(() => import("../pages/Login"));
@@ -14,6 +15,7 @@ const AppRouter = () => {
                 <Router>
                     <Switch>
                         <Route component={Login} path="/login" />
+                        <Route component={Register} path="/Register" />
                         <Route component={index} path="/homescreen" />
                         <PrivateRoute path="/">
                             <Layout />

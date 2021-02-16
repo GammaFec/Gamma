@@ -1,8 +1,9 @@
 import React from "react";
 import { StyledParagraph, StyledList, StyledItemList, StyledSvg } from "./styles";
 import { Icons } from "./icon";
+import { ISocialLogins } from "./types";
 
-const SocialLogins = ({ text }: any) => {
+const SocialLogins: React.FunctionComponent<ISocialLogins> = (text: ISocialLogins) => {
     return (
         <>
             <StyledParagraph>{text}</StyledParagraph>

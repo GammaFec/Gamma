@@ -1,6 +1,6 @@
 import React from "react";
 
-export const SocialMedia = () => {
+export const SocialMedia: React.FunctionComponent = () => {
     return (
         <div className="social">
             <ul className="social__list">

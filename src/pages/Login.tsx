@@ -1,6 +1,6 @@
 import React from "react";
 
-const Login = () => {
+const Login: React.FunctionComponent = () => {
     return <>Login</>;
 };
 

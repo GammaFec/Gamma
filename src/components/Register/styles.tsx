@@ -1,14 +1,6 @@
 import styled from "styled-components";
 import { theme, fontSizes, colors } from "../../common/styles";
 
-export const StyledContainer = styled.div`
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
-
 export const StyledContain = styled.div`
     background-color: ${colors.lightGray};
     margin: 1.25rem 0;
@@ -41,7 +33,7 @@ export const StyledButton = styled.button`
     margin-top: 20px;
     transform: translateX(-50%);
     border: none;
-    background-color: #ff7b28;
+    background-color: ${colors.orange};
     color: white;
     padding: 15px;
     min-width: 243px;

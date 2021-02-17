@@ -1,5 +1,6 @@
 import React from "react";
-import { StyledInput, StyledContain, StyledTitle, StyledButton, StyledContainer } from "./styles";
+import { StyledContainer } from "../../pages/Splash/styles";
+import { StyledInput, StyledContain, StyledTitle, StyledButton } from "./styles";
 
 const index = () => {
     return (

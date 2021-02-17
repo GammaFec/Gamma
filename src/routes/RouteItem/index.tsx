@@ -9,8 +9,12 @@ function RouteItem({ component: Component, ...rest }: IRoute): JSX.Element {
     return (
         <Route
             {...rest}
-            render={({ location }) =>
-                someLoginValidation() ? <Component {...rest} /> : <Redirect to={PATHS.Login} />
+            render={() =>
+                Component && someLoginValidation() ? (
+                    <Component {...rest} />
+                ) : (
+                    <Redirect to={PATHS.Login} />
+                )
             }
         />
     );

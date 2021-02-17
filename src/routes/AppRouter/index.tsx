@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 import RouteItem from "../RouteItem";
 import ROUTES from "../routes";

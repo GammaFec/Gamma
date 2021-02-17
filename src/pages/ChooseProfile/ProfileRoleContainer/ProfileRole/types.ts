@@ -4,9 +4,8 @@ export interface IProfileRole {
     children: React.ReactNode;
     styles?: string;
     className?: string;
-    selected: string | null;
+    selected: boolean | null;
     key: number;
-    id: string | null | number;
-    onClick?: React.MouseEventHandler<HTMLDivElement>;
+    handleClick?: React.MouseEventHandler<HTMLDivElement>;
     variant: typeof PRIMARY | typeof SECONDARY | string;
 }

@@ -24,10 +24,9 @@ const ProfileRoleContainer: React.FC = (): JSX.Element => {
             <StyledProfileRoleContainer>
                 {Data.map(({ id, path, variant, name }, i) => (
                     <ProfileRole
-                        id={id}
+                        handleClick={() => handleClick(id, path)}
                         key={i}
-                        onClick={() => handleClick(id, path)}
-                        selected={Selected?.id || null}
+                        selected={Selected?.id === id}
                         variant={variant}>
                         <p>{name}</p>
                     </ProfileRole>

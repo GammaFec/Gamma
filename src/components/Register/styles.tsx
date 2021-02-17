@@ -3,7 +3,7 @@ import { theme, fontSizes, colors } from "../../common/styles";
 
 export const StyledContainer = styled.div`
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;

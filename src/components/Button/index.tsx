@@ -6,10 +6,10 @@ const Button: React.FunctionComponent<IButton> = ({
     children,
     variant,
     styles,
-    onClick
+    handleClick
 }: IButton) => {
     return (
-        <StyledButton onClick={onClick} styles={styles} variant={variant}>
+        <StyledButton onClick={handleClick} styles={styles} variant={variant}>
             {children}
         </StyledButton>
     );

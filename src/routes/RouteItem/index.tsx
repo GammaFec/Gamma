@@ -4,19 +4,12 @@ import { PATHS } from "../paths";
 import IRoute from "../types";
 
 function RouteItem({ component: Component, ...rest }: IRoute): JSX.Element {
-    const someLoginValidation = () => true;
+    const someLoginValidation = (): boolean => true;
 
-    return (
-        <Route
-            {...rest}
-            render={() =>
-                Component && someLoginValidation() ? (
-                    <Component {...rest} />
-                ) : (
-                    <Redirect to={PATHS.Login} />
-                )
-            }
-        />
+    return someLoginValidation() ? (
+        <Route {...rest} component={Component} />
+    ) : (
+        <Redirect to={PATHS.Login} />
     );
 }
 

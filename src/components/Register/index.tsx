@@ -5,7 +5,7 @@ const index = () => {
     return (
         <StyledContainer>
             <div>
-                <StyledTitle>Registrarse</StyledTitle>
+                <StyledTitle>Registrate</StyledTitle>
                 <StyledContain>
                     <StyledInput name="name" placeholder="Username" type="text" />
                 </StyledContain>

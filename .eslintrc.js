@@ -33,6 +33,16 @@ module.exports = {
         "prettier/prettier": ["error", {}, { usePrettierrc: true }], // Use our .prettierrc file as source
         "@typescript-eslint/explicit-module-boundary-types": ["error"],
         "@typescript-eslint/no-explicit-any": ["error"],
-        "@typescript-eslint/no-unused-vars": ["error"]
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "@typescript-eslint/explicit-function-return-type": [
+            "error",
+            {
+                allowExpressions: false,
+                allowTypedFunctionExpressions: true,
+                allowHigherOrderFunctions: true,
+                allowDirectConstAssertionInArrowFunctions: true,
+                allowConciseArrowFunctionExpressionsStartingWithVoid: true
+            }
+        ]
     }
 };

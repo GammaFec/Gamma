@@ -12,11 +12,11 @@ import { useHistory } from "react-router-dom";
 const LoginMain = (): ReactElement => {
     const history = useHistory();
 
-    const handleGoToMovilAuth = () => {
+    const handleGoToMovilAuth = (): void => {
         history.push("/movil-auth/useId");
     };
 
-    const handleGoToRegister = () => {
+    const handleGoToRegister = (): void => {
         history.push("/Register");
     };
 

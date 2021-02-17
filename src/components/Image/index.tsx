@@ -6,7 +6,7 @@ import { StyledImageResponsive } from "./styles";
 // Others
 import { IImage } from "./types";
 
-const Image: React.FunctionComponent<IImage> = ({ src, alt }: IImage) => {
+const Image: React.FC<IImage> = ({ src, alt }: IImage) => {
     return <StyledImageResponsive alt={alt} src={src} />;
 };
 

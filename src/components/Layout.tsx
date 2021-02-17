@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Splash from "../pages/Splash";
 import Routes from "../routes/routes";
 
-const Layout: React.FunctionComponent = () => {
+const Layout: React.FC = () => {
     // eslint-disable-next-line
     const getRoutes = (routes: any): ReactNode => {
         // eslint-disable-next-line

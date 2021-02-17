@@ -7,7 +7,7 @@ import PrivateRoute from "./PrivateRoute";
 const Login = React.lazy(() => import("../pages/Login"));
 const index = React.lazy(() => import("../pages/HomeScreen"));
 
-const AppRouter: React.FunctionComponent = () => {
+const AppRouter: React.FC = () => {
     return (
         <>
             <Suspense fallback={Splash}>

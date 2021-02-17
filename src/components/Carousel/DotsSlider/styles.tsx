@@ -3,13 +3,13 @@ import { colors } from "../../../common/styles/index";
 
 const StyledDot = styled.button<{ active: boolean }>`
     padding: 0;
-    height: ${({ active }) => (active ? "8px" : "12px")};
-    width: ${({ active }) => (active ? "30px" : "14px")};
+    height: ${({ active }): string => (active ? "8px" : "12px")};
+    width: ${({ active }): string => (active ? "30px" : "14px")};
     border-radius: 10px;
     border: none;
     margin: 0 20px;
-    background-color: ${({ active }) => (active ? colors.orange : colors.lightOrange)};
-    transition: ${({ active }) => (active ? "2s" : "1s")} ease;
+    background-color: ${({ active }): string => (active ? colors.orange : colors.lightOrange)};
+    transition: ${({ active }): string => (active ? "2s" : "1s")} ease;
     cursor: pointer;
 `;
 

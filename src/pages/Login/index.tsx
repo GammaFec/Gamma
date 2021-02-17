@@ -3,6 +3,7 @@ import Button from "../../components/Button/index";
 import Input from "../../components/Input/index";
 import { InputIsValid } from "./utils";
 import Logo from "../../img/Logo.svg";
+import * as variantType from "../../common/constants/index";
 import { StyledMainWrapper, StyledP } from "./styles";
 
 const LoginPage: React.FC = () => {
@@ -18,10 +19,11 @@ const LoginPage: React.FC = () => {
 
     const AccountInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value.trim();
+        const vadidInput = InputIsValid(newValue, true);
         const newState = {
             ...usernameObj,
             value: newValue,
-            valid: InputIsValid(newValue, true)
+            valid: vadidInput
         };
 
         return setUsernameObj(newState);
@@ -29,21 +31,24 @@ const LoginPage: React.FC = () => {
 
     const PasswordInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value.trim();
+        const vadidInput = InputIsValid(newValue);
         const newState = {
             ...passwordObj,
             value: newValue,
-            valid: InputIsValid(newValue)
+            valid: vadidInput
         };
 
         return setPasswordObj(newState);
     };
 
+    const submitHandler = (event: React.ChangeEvent<HTMLFormElement>) => event.preventDefault();
+
     const loginButtonClicked = () => {
         if (usernameObj.valid && passwordObj.valid) {
             //do something with the form Data
-            console.log("clicked!!! El usuario y la Contraseña SON validos");
+            console.log("clicked!!! The user and the password ARE valid");
         } else {
-            return console.log("clicked!! El usuario o la Contraseña NO ES valida");
+            return console.log("clicked!! The user OR the password IS NOT valid");
         }
     };
 
@@ -53,7 +58,7 @@ const LoginPage: React.FC = () => {
                 <img alt="logo" src={Logo}></img>
                 <StyledP>Encuentra tu compañero ideal</StyledP>
             </div>
-            <form onSubmit={(event) => event.preventDefault()}>
+            <form onSubmit={submitHandler}>
                 <Input
                     id="LoginUser"
                     name="LoginUser"
@@ -70,7 +75,7 @@ const LoginPage: React.FC = () => {
                     type="password"
                     value={passwordObj.value}
                 />
-                <Button onClick={() => loginButtonClicked()} variant={"primary"}>
+                <Button handleClick={() => loginButtonClicked()} variant={variantType.PRIMARY}>
                     Ingresar
                 </Button>
             </form>

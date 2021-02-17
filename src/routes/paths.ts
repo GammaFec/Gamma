@@ -1,6 +1,6 @@
 export enum PATHS {
     Splash = "/Splash",
-    HomeScreen = "/homescreen",
+    Home = "/home",
     Login = "/login",
     MovilAuth = "/movil-auth/:id"
 }

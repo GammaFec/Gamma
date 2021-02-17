@@ -5,7 +5,7 @@ import Route from "./types";
 const Splash = React.lazy(() => import("../pages/Splash"));
 const NotFound = React.lazy(() => import("../pages/NotFound"));
 const Login = React.lazy(() => import("../pages/Login"));
-const HomeScreen = React.lazy(() => import("../pages/HomeScreen"));
+const Home = React.lazy(() => import("../pages/Home"));
 
 const ROUTES: Route[] = [
     {
@@ -23,9 +23,9 @@ const ROUTES: Route[] = [
         isPrivate: false
     },
     {
-        path: PATHS.HomeScreen,
-        component: HomeScreen,
-        name: "HomeScreen",
+        path: PATHS.Home,
+        component: Home,
+        name: "Home",
         exact: true,
         isPrivate: false
     },

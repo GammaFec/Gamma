@@ -8,9 +8,12 @@ import Image from "../../components/Image/index";
 import Button from "../../components/Button";
 import { PRIMARY, SECONDARY } from "../../common/constants";
 import { useHistory } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import i18next, { TFunction } from "i18next";
 
 const LoginMain = (): ReactElement => {
     const history = useHistory();
+    const { t } = useTranslation();
 
     const handleGoToMovilAuth = (): void => {
         history.push("/movil-auth/useId");
@@ -27,12 +30,19 @@ const LoginMain = (): ReactElement => {
             <p>parrafo</p>
             <div>
                 <Button onClick={handleGoToMovilAuth} variant={PRIMARY}>
-                    Login
+                    {t("HomeScreen:Login")}
                 </Button>
                 <Button onClick={handleGoToRegister} variant={SECONDARY}>
-                    Sign up
+                    {t("HomeScreen:SignUp")}
                 </Button>
             </div>
+
+            <button onClick={(): Promise<TFunction> => i18next.changeLanguage("es")} type="button">
+                español
+            </button>
+            <button onClick={(): Promise<TFunction> => i18next.changeLanguage("en")} type="button">
+                ingles
+            </button>
         </StyledContainer>
     );
 };

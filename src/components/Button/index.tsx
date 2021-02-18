@@ -2,7 +2,7 @@ import React from "react";
 import { StyledButton } from "./styles";
 import { IButton } from "./types";
 
-const Button: React.FunctionComponent<IButton> = ({
+const Button: React.FC<IButton> = ({
     children,
     variant,
     styles,

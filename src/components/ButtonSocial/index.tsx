@@ -2,7 +2,7 @@ import React from "react";
 import { StyledParagraph, StyledList, StyledItemList, StyledSvg } from "./styles";
 import { Icons } from "./icon";
 
-const SocialLogins = ({ text }: any) => {
+const SocialLogins: React.FC<{ text: string }> = (text) => {
     return (
         <>
             <StyledParagraph>{text}</StyledParagraph>

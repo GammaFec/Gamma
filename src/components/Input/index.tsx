@@ -2,7 +2,7 @@ import React from "react";
 import { StyledInput, StyledImg, StyledInputContainer, StyledIconBox } from "./styles";
 import { IInput } from "./types";
 
-const Input: React.FunctionComponent<IInput> = ({
+const Input: React.FC<IInput> = ({
     type,
     name,
     id,

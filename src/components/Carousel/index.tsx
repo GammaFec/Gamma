@@ -13,9 +13,7 @@ import { ICarousel } from "./types";
 const Carousel: React.FC<ICarousel> = ({ click, carouselData }: ICarousel) => {
     const [activeTabIndex, setActiveTabIndex] = useState(0);
 
-    const changeActiveTabHandler = (index: number) => {
-        return setActiveTabIndex(index);
-    };
+    const changeActiveTabHandler = (index: number): void => setActiveTabIndex(index);
 
     return (
         <main id="carousel">
@@ -26,7 +24,7 @@ const Carousel: React.FC<ICarousel> = ({ click, carouselData }: ICarousel) => {
                 handleClick={changeActiveTabHandler}
             />
             {activeTabIndex === carouselData.length - 1 ? (
-                <Button onClick={() => click()} variant={variantType.PRIMARY}>
+                <Button onClick={(): void => click()} variant={variantType.PRIMARY}>
                     Continuar
                 </Button>
             ) : null}

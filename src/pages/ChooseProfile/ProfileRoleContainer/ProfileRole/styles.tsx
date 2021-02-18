@@ -5,7 +5,8 @@ export const StyledProfileRole = styled.div<{ color?: string }>`
     display: flex;
     width: 150px;
     height: 170px;
-    background-color: ${({ color }) => (color === "primary" ? colors.orange : colors.green)};
+    background-color: ${({ color }): string =>
+        color === "primary" ? colors.orange : colors.green};
     border-radius: 1rem;
     box-shadow: 1px 5px 20px -4px rgba(0, 0, 0, 0.67);
     align-items: flex-end;

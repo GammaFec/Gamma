@@ -24,7 +24,7 @@ const ProfileRoleContainer: React.FC = (): JSX.Element => {
             <StyledProfileRoleContainer>
                 {Data.map(({ id, path, variant, name }, i) => (
                     <ProfileRole
-                        handleClick={() => handleClick(id, path)}
+                        handleClick={(): void => handleClick(id, path)}
                         key={i}
                         selected={Selected?.id === id}
                         variant={variant}>
@@ -35,7 +35,7 @@ const ProfileRoleContainer: React.FC = (): JSX.Element => {
             <StyledButton
                 className={`${BotonDisabled && "disabled"}`}
                 disabled={BotonDisabled}
-                onClick={() => console.log(Selected)}
+                onClick={(): void => console.log(Selected)}
                 variant="primary">
                 Continuar
             </StyledButton>

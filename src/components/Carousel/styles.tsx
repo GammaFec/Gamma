@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { fonts } from "../../common/styles/index";
 
 const StyledLi = styled.li<{ active: boolean }>`
-    z-index: ${(props) => (props.active ? "0" : "-10")};
-    opacity: ${(props) => (props.active ? "1" : "0")};
+    z-index: ${(props): string => (props.active ? "0" : "-10")};
+    opacity: ${(props): string => (props.active ? "1" : "0")};
     transition: 0.5s cubic-bezier(0, 0.84, 0.81, 1.01);
     overflow: hidden;
-    position: ${(props) => (props.active ? "relative" : "absolute")};
-    top: ${(props) => (props.active ? "0" : "-30px")};
+    position: ${(props): string => (props.active ? "relative" : "absolute")};
+    top: ${(props): string => (props.active ? "0" : "-30px")};
 
     list-style: none;
     width: 100%;

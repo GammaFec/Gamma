@@ -9,5 +9,6 @@ export interface IInput {
     placeholder?: string;
     minlength?: string;
     maxlength?: string;
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    className?: string;
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }

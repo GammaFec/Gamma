@@ -16,7 +16,7 @@ const DotsSlider: React.FC<IDotsSlider> = ({
                     <StyledDot
                         active={activeTabIndex === index}
                         key={eachObj.id}
-                        onClick={() => handleClick(index)}></StyledDot>
+                        onClick={(): void => handleClick(index)}></StyledDot>
                 );
             })}
         </StyledUl>

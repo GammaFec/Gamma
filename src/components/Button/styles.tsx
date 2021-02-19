@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, FlattenSimpleInterpolation } from "styled-components";
 import { IButton } from "./types";
 import { theme, fontSizes } from "../../common/styles";
 
@@ -13,8 +13,8 @@ export const StyledButton = styled.button<IButton>`
     min-width: 243px;
     height: 48px;
     cursor: pointer;
-    ${({ variant }) => variants[variant]}
-    ${({ styles }) => styles}
+    ${({ variant }): FlattenSimpleInterpolation => variants[variant]}
+    ${({ styles }): string | undefined => styles}
      
       &:hover {
         opacity: 0.6;

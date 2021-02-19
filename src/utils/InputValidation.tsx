@@ -6,19 +6,20 @@ const InputIsValid = (value: string, isUserInput = false): boolean => {
         return false;
     }
     if (isUserInput) {
-        value.includes("@") ? regexpCheck(value) : userCheck(value);
+        value.includes("@") ? regexpEmailCheck(value) : regexpUserCheck(value);
     }
 
     return true;
 };
 
-const regexpCheck = (value: string): boolean => {
+const regexpEmailCheck = (value: string): boolean => {
     const regexp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regexp.test(value);
 };
 
-const userCheck = (value: string): boolean => {
-    return value ? true : false;
+const regexpUserCheck = (value: string): boolean => {
+    const regexp = /^(?=.{6,20}$)(?![@_.-])(?!.*[_.]{2})[a-zA-Z0-9._-]+(?<![_.-])$/;
+    return regexp.test(value);
 };
 
 export { InputIsValid };

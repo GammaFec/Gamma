@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Button from "../../components/Button/index";
-import Input from "../../components/Input/index";
+import Button from "../../components/Button";
+import Input from "../../components/Input";
 import { InputIsValid } from "./utils";
 import Logo from "../../img/Logo.svg";
-import * as variantType from "../../common/constants/index";
+import * as variantType from "../../common/constants";
 import { StyledMainWrapper, StyledP } from "./styles";
 
 const LoginPage: React.FC = () => {
@@ -17,7 +17,7 @@ const LoginPage: React.FC = () => {
         valid: false
     });
 
-    const AccountInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const AccountInputHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const newValue = event.target.value.trim();
         const vadidInput = InputIsValid(newValue, true);
         const newState = {
@@ -29,7 +29,7 @@ const LoginPage: React.FC = () => {
         return setUsernameObj(newState);
     };
 
-    const PasswordInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const PasswordInputHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const newValue = event.target.value.trim();
         const vadidInput = InputIsValid(newValue);
         const newState = {
@@ -41,9 +41,10 @@ const LoginPage: React.FC = () => {
         return setPasswordObj(newState);
     };
 
-    const submitHandler = (event: React.ChangeEvent<HTMLFormElement>) => event.preventDefault();
+    const submitHandler = (event: React.ChangeEvent<HTMLFormElement>): void =>
+        event.preventDefault();
 
-    const loginButtonClicked = () => {
+    const loginButtonClicked = (): void => {
         if (usernameObj.valid && passwordObj.valid) {
             //do something with the form Data
             console.log("clicked!!! The user and the password ARE valid");
@@ -75,7 +76,9 @@ const LoginPage: React.FC = () => {
                     type="password"
                     value={passwordObj.value}
                 />
-                <Button handleClick={() => loginButtonClicked()} variant={variantType.PRIMARY}>
+                <Button
+                    handleClick={(): void => loginButtonClicked()}
+                    variant={variantType.PRIMARY}>
                     Ingresar
                 </Button>
             </form>

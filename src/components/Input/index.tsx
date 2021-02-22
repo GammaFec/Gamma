@@ -13,6 +13,7 @@ const Input: React.FC<IInput> = ({
     minlength,
     maxlength,
     placeholder,
+    className,
     onChange
 }: IInput) => {
     return (
@@ -23,6 +24,7 @@ const Input: React.FC<IInput> = ({
                 </StyledIconBox>
             )}
             <StyledInput
+                className={className}
                 id={id}
                 maxlength={maxlength}
                 minlength={minlength}

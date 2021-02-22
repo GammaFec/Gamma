@@ -6,6 +6,7 @@ const Splash = React.lazy(() => import("../pages/Splash"));
 const NotFound = React.lazy(() => import("../pages/NotFound"));
 const Login = React.lazy(() => import("../pages/Login"));
 const Home = React.lazy(() => import("../pages/Home"));
+const Register = React.lazy(() => import("../pages/Register"));
 
 const ROUTES: Route[] = [
     {
@@ -26,6 +27,13 @@ const ROUTES: Route[] = [
         path: PATHS.Home,
         component: Home,
         name: "Home",
+        exact: true,
+        isPrivate: false
+    },
+    {
+        path: PATHS.Register,
+        component: Register,
+        name: "Register",
         exact: true,
         isPrivate: false
     },

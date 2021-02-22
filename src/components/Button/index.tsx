@@ -2,9 +2,9 @@ import React from "react";
 import { StyledButton } from "./styles";
 import { IButton } from "./types";
 
-const Button: React.FC<IButton> = ({ children, variant, styles }: IButton) => {
+const Button: React.FC<IButton> = ({ children, variant, styles, className }: IButton) => {
     return (
-        <StyledButton styles={styles} variant={variant}>
+        <StyledButton className={className} styles={styles} variant={variant}>
             {children}
         </StyledButton>
     );

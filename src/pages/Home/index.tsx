@@ -1,5 +1,8 @@
 import React, { ReactElement } from "react";
 
+//Translate - i18next
+import i18next from "i18next";
+
 // Styled-components
 import { StyledContainer } from "./styles";
 
@@ -22,15 +25,15 @@ const LoginMain = (): ReactElement => {
 
     return (
         <StyledContainer>
-            <Image alt="imagen del perrx gatx" src="https://www.imagen.com" />
-            <h1>Hola</h1>
-            <p>parrafo</p>
+            <Image alt={i18next.t("HomeScreen:ImageAlt")} src="https://www.imagen.com" />
+            <h1>{i18next.t("HomeScreen:Title")}</h1>
+            <p>{i18next.t("HomeScreen:Paragraph")}</p>
             <div>
                 <Button onClick={handleGoToMovilAuth} variant={PRIMARY}>
-                    Login
+                    {i18next.t("HomeScreen:SignUp")}
                 </Button>
                 <Button onClick={handleGoToRegister} variant={SECONDARY}>
-                    Sign up
+                    {i18next.t("HomeScreen:LogIn")}
                 </Button>
             </div>
         </StyledContainer>

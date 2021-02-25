@@ -6,7 +6,7 @@ const InputIsValid = (value: string, isUserInput = false): boolean => {
         return false;
     }
     if (isUserInput) {
-        value.includes("@") ? regexpEmailCheck(value) : regexpUserCheck(value);
+        return value.includes("@") ? regexpEmailCheck(value) : regexpUserCheck(value);
     }
 
     return true;

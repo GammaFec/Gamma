@@ -4,7 +4,7 @@ import Input from "../../components/Input";
 import { InputIsValid } from "../../utils/InputValidation";
 import Logo from "../../img/Logo.svg";
 import * as variantType from "../../common/constants";
-import { StyledMainWrapper, StyledP } from "./styles";
+import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
 
 const LoginPage: React.FC = () => {
     const [usernameObj, setUsernameObj] = useState({
@@ -59,7 +59,7 @@ const LoginPage: React.FC = () => {
                 <img alt="logo" src={Logo}></img>
                 <StyledP>Encuentra tu compañero ideal</StyledP>
             </div>
-            <form onSubmit={submitHandler}>
+            <StyledForm onSubmit={submitHandler}>
                 <Input
                     id="LoginUser"
                     name="LoginUser"
@@ -81,7 +81,7 @@ const LoginPage: React.FC = () => {
                     variant={variantType.PRIMARY}>
                     Ingresar
                 </Button>
-            </form>
+            </StyledForm>
         </StyledMainWrapper>
     );
 };

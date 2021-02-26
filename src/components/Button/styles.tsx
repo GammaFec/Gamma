@@ -6,6 +6,7 @@ export const StyledButton = styled.button<IButton>`
     font-size: ${fontSizes.font16};
     font-family: ${theme.fontPrimary};
     border-radius: 10px;
+    outline-style: none;
     text-align: center;
     text-decoration: none;
     padding: 0.7rem 3rem;

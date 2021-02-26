@@ -1,26 +1,34 @@
 import React, { useState } from "react";
 import Form from "../../Form";
 import PhoneNumber from "../PhoneNumber";
-import { StyledButtonContinue } from "./styles";
+import { StyledContainer, StyledSpan } from "./styles";
 import iRequestNumber from "./types";
 
 const RequestNumber: React.FC<iRequestNumber> = ({
     handleSubmit,
-    phoneNumber,
-    buttonId
+    phoneNumber
 }: iRequestNumber): JSX.Element => {
     const [statePhoneNumber, setStatePhoneNumber] = useState<string>(phoneNumber);
 
     const submit = () => handleSubmit?.(statePhoneNumber);
 
     return (
-        <Form handleSubmit={submit} isContentCentered>
-            <h3>Mi numero es:</h3>
-            <PhoneNumber handleChange={setStatePhoneNumber} value={statePhoneNumber} />
-            <StyledButtonContinue type="submit" id={buttonId}>
-                Enviar codigo
-            </StyledButtonContinue>
-        </Form>
+        <StyledContainer>
+            <h3>
+                Ingresa tu <br /> número de telefono
+            </h3>
+            <p>
+                Pensando en la integridad de las animales <br /> necesitaras un código de
+                verificación de
+                <StyledSpan> 4 digitos</StyledSpan>
+            </p>
+            <Form handleSubmit={submit} isContentCentered>
+                <PhoneNumber handleChange={setStatePhoneNumber} value={statePhoneNumber} />
+                {/* <StyledButtonContinue id={buttonId} type="submit" variant={PRIMARY}>
+                    Enviar codigo
+                </StyledButtonContinue> */}
+            </Form>
+        </StyledContainer>
     );
 };
 

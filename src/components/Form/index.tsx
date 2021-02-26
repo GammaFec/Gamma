@@ -14,7 +14,7 @@ const Form: React.FC<iForm> = ({
     };
 
     return (
-        <StyledForm onSubmit={submit} className={className} isContentCentered>
+        <StyledForm className={className} isContentCentered onSubmit={submit}>
             {children}
         </StyledForm>
     );

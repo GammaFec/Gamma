@@ -5,6 +5,7 @@ export const colors = {
     gray: "#A9A9A9",
     lightGray: "#EAEAEA",
     darkGray: "#303030",
+    lighDarkGray: "#606060",
     white: "#FFFFFF",
     orange: "#FF7B28",
     green: "#00A59E",
@@ -14,15 +15,17 @@ export const colors = {
 //fonts
 export const fonts = {
     roboto: "'Roboto', sans-serif",
-    poppins: "'Poppins', 'sans-serif'"
+    poppins: "Poppins, san-serif"
 };
 
 //font-sizes
 export const fontSizes = {
+    font09: "9px",
     font10: "10px",
     font12: "12px",
     font14: "14px",
     font16: "16px",
+    font17: "17px",
     font18: "18px",
     font20: "20px",
     font21: "21px"

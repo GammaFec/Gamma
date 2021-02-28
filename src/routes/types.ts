@@ -1,6 +1,6 @@
 import { PATHS } from "./paths";
 
-interface Route {
+interface IRoute {
     path?: PATHS;
     component?: React.LazyExoticComponent<React.FC<unknown>>;
     name?: string;
@@ -10,4 +10,4 @@ interface Route {
     redirectTo?: () => void;
 }
 
-export default Route;
+export default IRoute;

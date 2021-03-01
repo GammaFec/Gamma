@@ -6,12 +6,13 @@ import { StyledMain } from "./styles";
 
 const CarouselPage: React.FC = () => {
     const isAdopter = true; // useContext() To be determined, the logic was build using booleans
-
     const carrouselData = isAdopter ? data.adopterData : data.shelterData;
+
+    const clickOnContinue = (): void => console.log("clicked");
 
     return (
         <StyledMain>
-            <Carrousel carouselData={carrouselData} click={(): void => console.log("clicked")} />
+            <Carrousel carouselData={carrouselData} click={clickOnContinue} />
         </StyledMain>
     );
 };

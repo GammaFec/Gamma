@@ -26,15 +26,15 @@ const LoginMain = (): ReactElement => {
 
     return (
         <StyledContainer>
-            <Image alt={t("HomeScreen:ImageAlt")} src="https://www.imagen.com" />
-            <h1>{t("HomeScreen:Title")}</h1>
-            <p>{t("HomeScreen:Paragraph")}</p>
+            <Image alt={t("Home:ImageAlt")} src="https://www.imagen.com" />
+            <h1>{t("Home:Title")}</h1>
+            <p>{t("Home:Paragraph")}</p>
             <div>
-                <Button onClick={handleGoToMovilAuth} variant={PRIMARY}>
-                    {t("HomeScreen:SignUp")}
+                <Button handleClick={handleGoToMovilAuth} variant={PRIMARY}>
+                    {t("Home:SignUp")}
                 </Button>
-                <Button onClick={handleGoToRegister} variant={SECONDARY}>
-                    {t("HomeScreen:LogIn")}
+                <Button handleClick={handleGoToRegister} variant={SECONDARY}>
+                    {t("Home:LogIn")}
                 </Button>
             </div>
         </StyledContainer>

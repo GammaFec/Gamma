@@ -6,7 +6,7 @@ const Button: React.FC<IButton> = ({
     children,
     variant,
     styles,
-    onClick,
+    handleClick,
     className,
     disabled = false
 }: IButton) => {
@@ -14,7 +14,7 @@ const Button: React.FC<IButton> = ({
         <StyledButton
             className={className}
             disabled={disabled}
-            onClick={onClick}
+            onClick={handleClick}
             styles={styles}
             variant={variant}>
             {children}

@@ -1,9 +1,10 @@
-import { FC, LazyExoticComponent } from "react";
+import { LazyExoticComponent } from "react";
+import { RouteProps } from "react-router-dom";
 import { PATHS } from "./paths";
 
 interface Route {
     path?: PATHS;
-    component?: LazyExoticComponent<FC<unknown>>;
+    component?: LazyExoticComponent<React.FC<RouteProps>>;
     name?: string;
     exact?: boolean;
     // TODO: To implement private routes in the future

@@ -5,7 +5,8 @@ import { theme, fontSizes, colors } from "../../common/styles";
 export const StyledInputContainer = styled.div`
     background-color: ${colors.lightGray};
     margin: 20px 0;
-    width: 320px;
+    width: 100%;
+    box-sizing: border-box;
     height: 48px;
     display: flex;
     justify-content: space-between;

@@ -26,10 +26,10 @@ const LoginMain = (): ReactElement => {
             <h1>Hola</h1>
             <p>parrafo</p>
             <div>
-                <Button onClick={handleGoToMovilAuth} variant={PRIMARY}>
+                <Button handleClick={handleGoToMovilAuth} variant={PRIMARY}>
                     Login
                 </Button>
-                <Button onClick={handleGoToRegister} variant={SECONDARY}>
+                <Button handleClick={handleGoToRegister} variant={SECONDARY}>
                     Sign up
                 </Button>
             </div>

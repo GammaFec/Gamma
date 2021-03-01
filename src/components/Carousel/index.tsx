@@ -24,7 +24,7 @@ const Carousel: React.FC<ICarousel> = ({ click, carouselData }: ICarousel) => {
                 handleClick={changeActiveTabHandler}
             />
             {activeTabIndex === carouselData.length - 1 ? (
-                <Button onClick={(): void => click()} variant={variantType.PRIMARY}>
+                <Button handleClick={(): void => click()} variant={variantType.PRIMARY}>
                     Continuar
                 </Button>
             ) : null}

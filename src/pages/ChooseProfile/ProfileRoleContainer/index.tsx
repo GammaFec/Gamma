@@ -35,7 +35,7 @@ const ProfileRoleContainer: React.FC = (): JSX.Element => {
             <StyledButton
                 className={`${BotonDisabled && "disabled"}`}
                 disabled={BotonDisabled}
-                onClick={(): void => console.log(Selected)}
+                handleClick={(): void => console.log(Selected)}
                 variant="primary">
                 Continuar
             </StyledButton>

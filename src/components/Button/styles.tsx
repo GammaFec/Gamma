@@ -3,10 +3,13 @@ import { IButton } from "./types";
 import { theme, fontSizes } from "../../common/styles";
 
 export const StyledButton = styled.button<IButton>`
+    align-items: center;
     font-size: ${fontSizes.font16};
     font-family: ${theme.fontPrimary};
     border-radius: 10px;
-    text-align: center;
+    display: flex;
+    line-height: 24px;
+    justify-content: center;
     text-decoration: none;
     padding: 0.7rem 3rem;
     margin: 0.2rem;

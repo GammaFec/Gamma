@@ -12,7 +12,7 @@ const data = {
             imageAlt: "First Image",
             titleOnPage: "Elige tu compañero ideal",
             text:
-                "Aquí el amor a primera vista si existe, descubre tu compañero perfecto y vive muchas historias junto a ellos."
+                "Aquí el amor a primera vista si existe. Descubre tu compañero perfecto y vive muchas historias junto a ellos."
         },
         {
             id: 2,
@@ -37,7 +37,7 @@ const data = {
             imageAlt: "First Image",
             titleOnPage: "Elige tu compañero ideal",
             text:
-                "Aquí el amor a primera vista si existe, descubre tu compañero perfecto y vive muchas historias junto a ellos."
+                "Aquí el amor a primera vista si existe. Descubre tu compañero perfecto y vive muchas historias junto a ellos."
         },
         {
             id: 2,

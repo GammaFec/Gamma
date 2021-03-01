@@ -3,8 +3,8 @@ import { fontSizes, colors } from "../../../../common/styles";
 
 export const StyledProfileRole = styled.div<{ color?: string }>`
     display: flex;
-    width: 150px;
-    height: 170px;
+    width: 148px;
+    height: 153px;
     background-color: ${({ color }): string =>
         color === "primary" ? colors.orange : colors.green};
     border-radius: 1rem;
@@ -27,7 +27,7 @@ export const StyledProfileRole = styled.div<{ color?: string }>`
         width: 100%;
         background-color: rgba(0, 0, 0, 0.2);
         color: ${colors.white};
-        font-size: ${fontSizes.font18};
+        font-size: ${fontSizes.font12};
         font-weight: bolder;
     }
 

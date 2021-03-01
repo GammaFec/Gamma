@@ -10,7 +10,7 @@ export const StyledProfileRoleContainer = styled.ul`
     justify-content: center;
     display: flex;
     padding: 0;
-    gap: 3rem;
+    gap: 24px;
     flex-wrap: wrap;
 `;
 

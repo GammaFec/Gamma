@@ -5,10 +5,9 @@ import data from "../../components/Carousel/CarouselData";
 import { StyledMain } from "./styles";
 
 const CarouselPage: React.FC = () => {
-    let carrouselData;
-    if (!carrouselData) {
-        carrouselData = data.CarouselData;
-    }
+    const isAdopter = true; // useContext() To be determined, the logic was build using booleans
+
+    const carrouselData = isAdopter ? data.adopterData : data.shelterData;
 
     return (
         <StyledMain>

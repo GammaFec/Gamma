@@ -36,3 +36,10 @@ export const theme = {
     colorWhite: colors.white,
     fontPrimary: fonts.poppins
 };
+
+//breakpoints
+export const breakpoints = {
+    desktop: "1024px",
+    tablet: "720px",
+    mobile: "520px"
+};

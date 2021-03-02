@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontSizes } from "../../common/styles";
+import { fontSizes, breakpoints } from "../../common/styles";
 
 export const StyledMain = styled.main`
     align-items: center;
@@ -20,7 +20,7 @@ export const StyledTitle = styled.h1`
     line-height: 31.5px;
     margin-bottom: 20px;
 
-    @media (min-width: 720px) {
+    @media (min-width: ${breakpoints.tablet}) {
         font-size: ${fontSizes.font30};
     }
 `;
@@ -30,7 +30,7 @@ export const StyledText = styled.p`
     line-height: 18px;
     margin-bottom: 45px;
 
-    @media (min-width: 720px) {
+    @media (min-width: ${breakpoints.tablet}) {
         font-size: ${fontSizes.font16};
     }
 `;

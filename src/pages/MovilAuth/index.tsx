@@ -11,7 +11,7 @@ import verifyCode from "../../services/firebase/auth/verifyCode";
 
 import { StyledContainer, StyledMain } from "./styles";
 
-function MovilAuth(): JSX.Element {
+const MovilAuth = (): JSX.Element => {
     const [phoneNumber, setPhoneNumber] = useState<string | null>(null);
     const [validating, setValidating] = useState<boolean>(false);
     const [recaptcha, setRecaptcha] = useState<firebase.auth.RecaptchaVerifier | null>();
@@ -69,6 +69,6 @@ function MovilAuth(): JSX.Element {
             </StyledMain>
         </StyledContainer>
     );
-}
+};
 
 export default MovilAuth;

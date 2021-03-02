@@ -32,6 +32,9 @@ export const StyledProfileRole = styled.div<{ color?: string }>`
     }
 
     &.selected {
-        transform: scale(0.9);
+        transform: scale(1.05);
+    }
+    &:not(.selected) {
+        opacity: 0.9;
     }
 `;

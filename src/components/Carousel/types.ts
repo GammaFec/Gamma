@@ -8,5 +8,6 @@ export interface ICarouselData {
     id: number;
     imageUrl: string;
     imageAlt: string;
+    titleOnPage: string;
     text: string;
 }

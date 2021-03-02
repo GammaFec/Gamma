@@ -1,12 +1,12 @@
 import React from "react";
-import Logo from "../img/Logo.jpg";
-import { StyledContainer, StyledImg, StyledParagraph } from "./Styles";
+import Logo from "../../img/Logo.svg";
+import { StyledContainer, StyledImg, StyledParagraph } from "./styles";
 
-const Splash = () => {
+const Splash: React.FC = () => {
     return (
         <StyledContainer>
             <div>
-                <StyledImg src={Logo} alt="Logo de adoptemos" />
+                <StyledImg alt="Logo de adoptemos" src={Logo} />
                 <StyledParagraph>Adogtemos</StyledParagraph>
             </div>
         </StyledContainer>

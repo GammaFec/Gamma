@@ -27,7 +27,22 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "prettier/@typescript-eslint"
     ],
+    plugins: ["@typescript-eslint"],
     rules: {
-        "prettier/prettier": ["error", {}, { usePrettierrc: true }] // Use our .prettierrc file as source
+        "react/jsx-sort-props": 2,
+        "prettier/prettier": ["error", {}, { usePrettierrc: true }], // Use our .prettierrc file as source
+        "@typescript-eslint/explicit-module-boundary-types": ["error"],
+        "@typescript-eslint/no-explicit-any": ["error"],
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "@typescript-eslint/explicit-function-return-type": [
+            "error",
+            {
+                allowExpressions: false,
+                allowTypedFunctionExpressions: true,
+                allowHigherOrderFunctions: true,
+                allowDirectConstAssertionInArrowFunctions: true,
+                allowConciseArrowFunctionExpressionsStartingWithVoid: true
+            }
+        ]
     }
 };

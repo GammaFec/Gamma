@@ -3,22 +3,23 @@ import { fontSizes } from "../../../common/styles";
 import Button from "../../../components/Button";
 
 export const StyledProfileRoleContainer = styled.ul`
-    width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    list-style: none;
-    justify-content: center;
     display: flex;
-    padding: 0;
-    gap: 24px;
     flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 30px;
+    margin-top: 1rem;
+    padding: 0;
+    width: 100%;
 `;
 
 export const StyledButton = styled(Button)`
-    width: 100%;
-    max-width: 600px;
-    font-weight: lighter;
     font-size: ${fontSizes.font18};
+    font-weight: lighter;
+    margin: auto;
+    max-width: 600px;
+    width: 100%;
 
     &.disabled {
         cursor: not-allowed;

@@ -7,7 +7,7 @@ export const StyledProfileRole = styled.div<{ color?: string }>`
     height: 153px;
     background-color: ${({ color }): string =>
         color === "primary" ? colors.orange : colors.green};
-    border-radius: 1rem;
+    border-radius: 7px;
     box-shadow: 1px 5px 20px -4px rgba(0, 0, 0, 0.67);
     align-items: flex-end;
     justify-content: center;

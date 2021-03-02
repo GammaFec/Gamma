@@ -2,25 +2,35 @@ import styled from "styled-components";
 import { fontSizes } from "../../common/styles";
 
 export const StyledMain = styled.main`
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
     min-height: 100vh;
     width: 100vw;
 `;
 
 export const StyledContainer = styled.div`
-    text-align: center;
-    padding: 1rem;
     max-width: 90%;
+    padding: 1rem;
+    text-align: center;
 `;
 
 export const StyledTitle = styled.h1`
     font-size: ${fontSizes.font21};
     line-height: 31.5px;
+    margin-bottom: 20px;
+
+    @media (min-width: 720px) {
+        font-size: ${fontSizes.font30};
+    }
 `;
 
 export const StyledText = styled.p`
-    line-height: 18px;
     font-size: ${fontSizes.font12};
+    line-height: 18px;
+    margin-bottom: 45px;
+
+    @media (min-width: 720px) {
+        font-size: ${fontSizes.font16};
+    }
 `;

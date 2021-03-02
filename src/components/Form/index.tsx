@@ -8,13 +8,13 @@ const Form: React.FC<iForm> = ({
     className,
     isContentCentered
 }: iForm): JSX.Element => {
-    const submit = (event: React.FormEvent) => {
+    const submit = (event: React.FormEvent): void => {
         event.preventDefault();
         handleSubmit && handleSubmit(event);
     };
 
     return (
-        <StyledForm onSubmit={submit} className={className} isContentCentered>
+        <StyledForm className={className} isContentCentered={isContentCentered} onSubmit={submit}>
             {children}
         </StyledForm>
     );

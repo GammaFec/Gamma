@@ -6,7 +6,7 @@ const CodeVerification: React.FC<iCodeVerification> = ({
     handleComplete,
     handleChange
 }: iCodeVerification): JSX.Element => {
-    return <ReactCodeInput onComplete={handleComplete} onChange={handleChange} />;
+    return <ReactCodeInput onChange={handleChange} onComplete={handleComplete} />;
 };
 
 export default CodeVerification;

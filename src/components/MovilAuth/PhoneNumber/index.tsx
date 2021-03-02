@@ -5,18 +5,18 @@ import React from "react";
 import iPhoneNumber from "./types";
 
 const PhoneNumber: React.FC<iPhoneNumber> = ({ handleChange, value }: iPhoneNumber) => {
-    const change = (value: string) => handleChange?.(value);
+    const change = (value: string): void => handleChange?.(value);
 
     return (
         <div>
             <PhoneInput
                 country={"us"}
-                value={value}
+                enableLongNumbers={true}
+                masks={{ ar: "... ...-...." }}
                 onChange={change}
                 preferredCountries={["ar"]}
                 prefix="+"
-                enableLongNumbers={true}
-                masks={{ ar: "... ...-...." }}
+                value={value}
             />
         </div>
     );

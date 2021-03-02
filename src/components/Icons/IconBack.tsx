@@ -1,6 +1,6 @@
 import React from "react";
 
 //TODO
-const IconBack = () => "Atras";
+const IconBack = (): React.ReactNode => "Atras";
 
 export default IconBack;

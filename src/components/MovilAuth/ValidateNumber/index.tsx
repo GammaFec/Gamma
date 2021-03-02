@@ -11,17 +11,17 @@ const ValidateNumber: React.FC<iValidateNumber> = ({
 }: iValidateNumber): JSX.Element => {
     const [code, setCode] = useState<string>("");
 
-    const submit = () => handleSubmit(code);
+    const submit = (): void => handleSubmit(code);
 
     return (
         <StyledForm handleSubmit={submit} isContentCentered>
             <h3>Mi codigo es:</h3>
-            <button type="button" onClick={goBack}>
+            <button onClick={goBack} type="button">
                 {phoneNumber}
             </button>
             <button>Volver a mandar</button>
             <CodeVerification handleChange={setCode} />
-            <StyledButtonContinue type="submit" id={buttonId}>
+            <StyledButtonContinue id={buttonId} type="submit">
                 Identificarme
             </StyledButtonContinue>
         </StyledForm>

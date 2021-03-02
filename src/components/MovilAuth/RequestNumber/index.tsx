@@ -11,13 +11,13 @@ const RequestNumber: React.FC<iRequestNumber> = ({
 }: iRequestNumber): JSX.Element => {
     const [statePhoneNumber, setStatePhoneNumber] = useState<string>(phoneNumber);
 
-    const submit = () => handleSubmit?.(statePhoneNumber);
+    const submit = (): void => handleSubmit?.(statePhoneNumber);
 
     return (
         <Form handleSubmit={submit} isContentCentered>
             <h3>Mi numero es:</h3>
             <PhoneNumber handleChange={setStatePhoneNumber} value={statePhoneNumber} />
-            <StyledButtonContinue type="submit" id={buttonId}>
+            <StyledButtonContinue id={buttonId} type="submit">
                 Enviar codigo
             </StyledButtonContinue>
         </Form>

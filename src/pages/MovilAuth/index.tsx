@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 
-import ButtonBack from "../../components/ButtonBack";
 import Header from "../../components/Header";
 import RequestNumber from "../../components/MovilAuth/RequestNumber";
 import ValidateNumber from "../../components/MovilAuth/ValidateNumber";
@@ -12,7 +11,7 @@ import verifyCode from "../../services/firebase/auth/verifyCode";
 
 import { StyledContainer, StyledMain } from "./styles";
 
-export default function index() {
+function MovilAuth(): JSX.Element {
     const [phoneNumber, setPhoneNumber] = useState<string | null>(null);
     const [validating, setValidating] = useState<boolean>(false);
     const [recaptcha, setRecaptcha] = useState<firebase.auth.RecaptchaVerifier | null>();
@@ -26,9 +25,9 @@ export default function index() {
         setRecaptcha(getRecaptcha(ID));
     }, []);
 
-    const closeValidation = () => setValidating(false);
+    const closeValidation = (): void => setValidating(false);
 
-    const openValidation = (formPhoneNumber: string) => {
+    const openValidation = (formPhoneNumber: string): void => {
         if (PhoneValidator(formPhoneNumber) && recaptcha) {
             setPhoneNumber(formPhoneNumber);
             sendSMSCode(formPhoneNumber, recaptcha).then(
@@ -56,18 +55,20 @@ export default function index() {
             <StyledMain>
                 {validating ? (
                     <ValidateNumber
-                        phoneNumber={phoneNumber ?? ""}
                         goBack={closeValidation}
                         handleSubmit={validateNumberFirebase}
+                        phoneNumber={phoneNumber ?? ""}
                     />
                 ) : (
                     <RequestNumber
+                        buttonId={ID}
                         handleSubmit={openValidation}
                         phoneNumber={phoneNumber ?? ""}
-                        buttonId={ID}
                     />
                 )}
             </StyledMain>
         </StyledContainer>
     );
 }
+
+export default MovilAuth;

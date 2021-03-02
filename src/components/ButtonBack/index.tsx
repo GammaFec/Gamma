@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 const ButtonBack = (): JSX.Element => {
     const history = useHistory();
 
-    const handleClick = () => {
+    const handleClick = (): void => {
         history.goBack();
     };
 

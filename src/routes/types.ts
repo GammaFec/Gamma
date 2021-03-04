@@ -1,8 +1,9 @@
+import { RouteProps } from "react-router-dom";
 import { PATHS } from "./paths";
 
-interface Route {
+interface IRoute {
     path?: PATHS;
-    component?: React.LazyExoticComponent<React.FC<unknown>>;
+    component?: React.LazyExoticComponent<React.FC<RouteProps>>;
     name?: string;
     exact?: boolean;
     // TODO: To implement private routes in the future
@@ -10,4 +11,4 @@ interface Route {
     redirectTo?: () => void;
 }
 
-export default Route;
+export default IRoute;

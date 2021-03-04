@@ -15,7 +15,8 @@ const StyledLi = styled.li<{ active: boolean }>`
 
     & > h2 {
         font-size: ${fontSizes.font21};
-        margin: 11px;
+        margin: 0;
+        margin-bottom: 21px;
     }
 
     & > img {
@@ -23,13 +24,13 @@ const StyledLi = styled.li<{ active: boolean }>`
         max-width: 202px;
         height: auto;
         padding: 16px;
+        margin-bottom: 11px;
     }
 
     & > p {
         font-size: ${fontSizes.font12};
-        max-width: 260px;
+        max-width: 272px;
         margin: auto;
-        padding-top: 10px;
     }
 `;
 

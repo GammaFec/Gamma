@@ -11,23 +11,26 @@ const data = {
             imageUrl: CarouselImg01,
             imageAlt: "First Image",
             titleOnPage: "Elige tu compañero ideal",
-            text:
-                "Aquí el amor a primera vista si existe. Descubre tu compañero perfecto y vive muchas historias junto a ellos."
+            text: [
+                "Aquí el amor a primera vista si existe",
+                "Descubre tu compañero perfecto y vive muchas historias junto a ellos."
+            ]
         },
         {
             id: 2,
             imageUrl: CarouselImg02,
             imageAlt: "Second Image",
             titleOnPage: "Conversa con Albergues",
-            text:
+            text: [
                 "Heroes sin capa día a día brindan atención, haz match con alguna de las mascotas listas en adopción y define el proceso de adopción."
+            ]
         },
         {
             id: 3,
             imageUrl: CarouselImg03,
             imageAlt: "Third Image",
             titleOnPage: "Recuerda siempre",
-            text: "Cuida, protege y dale amor a quien con solo verte se emociona sin límites."
+            text: ["Cuida, protege y dale amor a quien con solo verte se emociona sin límites."]
         }
     ],
     shelterData: [
@@ -36,23 +39,26 @@ const data = {
             imageUrl: CarouselImg01,
             imageAlt: "First Image",
             titleOnPage: "Elige tu compañero ideal",
-            text:
-                "Aquí el amor a primera vista si existe. Descubre tu compañero perfecto y vive muchas historias junto a ellos."
+            text: [
+                "Aquí el amor a primera vista si existe",
+                "Descubre tu compañero perfecto y vive muchas historias junto a ellos."
+            ]
         },
         {
             id: 2,
             imageUrl: CarouselImg02,
             imageAlt: "Second Image",
             titleOnPage: "Conversa con Albergues",
-            text:
+            text: [
                 "Heroes sin capa día a día brindan atención, haz match con alguna de las mascotas listas en adopción y define el proceso de adopción."
+            ]
         },
         {
             id: 3,
             imageUrl: CarouselImg03,
             imageAlt: "Third Image",
             titleOnPage: "Recuerda siempre",
-            text: "Cuida, protege y dale amor a quien con solo verte se emociona sin límites."
+            text: ["Cuida, protege y dale amor a quien con solo verte se emociona sin límites."]
         }
     ]
 };

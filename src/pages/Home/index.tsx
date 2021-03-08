@@ -1,10 +1,10 @@
 import React, { ReactElement } from "react";
 
 // Styled-components
-import { StyledContainer } from "./styles";
+import { StyledHome, StyledContSup, StyledContInf, StyledImg, StyledH1 } from "./styles";
 
 // Components
-import Image from "../../components/Image/index";
+import Logo from "../../img/Logo.svg";
 import Button from "../../components/Button";
 import { PRIMARY, SECONDARY } from "../../common/constants";
 import { useHistory } from "react-router-dom";
@@ -21,19 +21,20 @@ const LoginMain = (): ReactElement => {
     };
 
     return (
-        <StyledContainer>
-            <Image alt="imagen del perrx gatx" src="https://www.imagen.com" />
-            <h1>Hola</h1>
-            <p>parrafo</p>
-            <div>
+        <StyledHome>
+            <StyledContSup>
+                <StyledImg alt="Logo" src={Logo} />
+                <StyledH1>Encuentra a tu compañero ideal</StyledH1>
+            </StyledContSup>
+            <StyledContInf>
                 <Button handleClick={handleGoToMovilAuth} variant={PRIMARY}>
-                    Login
+                    Ingresar
                 </Button>
                 <Button handleClick={handleGoToRegister} variant={SECONDARY}>
-                    Sign up
+                    Registrate
                 </Button>
-            </div>
-        </StyledContainer>
+            </StyledContInf>
+        </StyledHome>
     );
 };
 

@@ -11,7 +11,6 @@ export const StyledMain = styled.main`
 
 export const StyledContainer = styled.div`
     max-width: 90%;
-    padding: 1rem;
     text-align: center;
 `;
 

@@ -1,5 +1,5 @@
 export enum PATHS {
-    Splash = "/Splash",
+    Splash = "/splash",
     Home = "/home",
     Login = "/login",
     ChooseProfile = "/choose-profile",

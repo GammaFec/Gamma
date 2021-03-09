@@ -7,15 +7,15 @@ import { IRoleData, ISelectedRol } from "./types";
 const ProfileRoleContainer: React.FC = (): JSX.Element => {
     const Data: IRoleData[] = rolesData;
     const [Selected, setSelected] = useState<ISelectedRol | null>(null);
-    const [BotonDisabled, setBotonDisabled] = useState(true);
+    const [ButtonDisabled, setButtonDisabled] = useState(true);
 
     const handleClick = (id: string, path: string): void => {
         if (id === Selected?.id) {
             setSelected(null);
-            setBotonDisabled(true);
+            setButtonDisabled(true);
         } else {
             setSelected({ id, path });
-            setBotonDisabled(false);
+            setButtonDisabled(false);
         }
     };
 
@@ -33,8 +33,8 @@ const ProfileRoleContainer: React.FC = (): JSX.Element => {
                 ))}
             </StyledProfileRoleContainer>
             <StyledButton
-                className={`${BotonDisabled && "disabled"}`}
-                disabled={BotonDisabled}
+                className={`${ButtonDisabled && "disabled"}`}
+                disabled={ButtonDisabled}
                 handleClick={(): void => console.log(Selected)}
                 variant="primary">
                 Continuar

@@ -20,9 +20,4 @@ export const StyledButton = styled(Button)`
     margin: auto;
     max-width: 600px;
     width: 100%;
-
-    &.disabled {
-        cursor: not-allowed;
-        opacity: 0.6;
-    }
 `;

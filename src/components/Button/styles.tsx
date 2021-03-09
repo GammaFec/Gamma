@@ -18,8 +18,16 @@ export const StyledButton = styled.button<IButton>`
     cursor: pointer;
     ${({ variant }): FlattenSimpleInterpolation => variants[variant]}
     ${({ styles }): string | undefined => styles}
-     
-      &:hover {
+    ${({ disabled }): FlattenSimpleInterpolation | false | undefined =>
+        disabled &&
+        css`
+            &.disabled {
+                cursor: not-allowed;
+                opacity: 0.6;
+            }
+        `}
+
+    &:hover {
         opacity: 0.6;
     }
 `;

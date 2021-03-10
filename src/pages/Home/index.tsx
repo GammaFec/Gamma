@@ -1,5 +1,8 @@
 import React, { ReactElement } from "react";
 
+//Translate - i18next
+import { useTranslation } from "react-i18next";
+
 // Styled-components
 import { StyledHome, StyledContSup, StyledContInf, StyledImg, StyledH1 } from "./styles";
 
@@ -11,6 +14,7 @@ import { useHistory } from "react-router-dom";
 
 const LoginMain = (): ReactElement => {
     const history = useHistory();
+    const { t } = useTranslation();
 
     const handleGoToMovilAuth = (): void => {
         history.push("/movil-auth/useId");
@@ -24,14 +28,14 @@ const LoginMain = (): ReactElement => {
         <StyledHome>
             <StyledContSup>
                 <StyledImg alt="Logo" src={Logo} />
-                <StyledH1>Encuentra a tu compañero ideal</StyledH1>
+                <StyledH1>{t("Home:Title")}</StyledH1>
             </StyledContSup>
             <StyledContInf>
                 <Button handleClick={handleGoToMovilAuth} variant={PRIMARY}>
-                    Ingresar
+                    {t("Home:SignUp")}
                 </Button>
                 <Button handleClick={handleGoToRegister} variant={SECONDARY}>
-                    Registrate
+                    {t("Home:LogIn")}
                 </Button>
             </StyledContInf>
         </StyledHome>

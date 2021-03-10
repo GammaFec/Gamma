@@ -12,9 +12,11 @@ import Menu from "../Menu/index";
 const Nav: React.FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
+    const handleClick = (): void => setIsOpen(!isOpen);
+
     return (
         <StyledNav>
-            <StyledIcon alt="Menu button" onClick={(): void => setIsOpen(!isOpen)} src={MenuBtn} />
+            <StyledIcon alt="Menu button" onClick={handleClick} src={MenuBtn} />
             <Menu isOpen={isOpen} />
             <Link to="/">
                 <StyledIcon alt="Logo" src={Logo} />

@@ -9,7 +9,7 @@ const data = {
         {
             id: 1,
             imageUrl: CarouselImg01,
-            imageAlt: "First Image",
+            imageAlt: "Person with a cat",
             titleOnPage: "Elige tu compañero ideal",
             text: [
                 "Aquí el amor a primera vista si existe",
@@ -19,7 +19,7 @@ const data = {
         {
             id: 2,
             imageUrl: CarouselImg02,
-            imageAlt: "Second Image",
+            imageAlt: "Person with a dog",
             titleOnPage: "Conversa con Albergues",
             text: [
                 "Heroes sin capa día a día brindan atención, haz match con alguna de las mascotas listas en adopción y define el proceso de adopción."
@@ -28,7 +28,7 @@ const data = {
         {
             id: 3,
             imageUrl: CarouselImg03,
-            imageAlt: "Third Image",
+            imageAlt: "Person with a bird",
             titleOnPage: "Recuerda siempre",
             text: ["Cuida, protege y dale amor a quien con solo verte se emociona sin límites."]
         }
@@ -37,7 +37,7 @@ const data = {
         {
             id: 1,
             imageUrl: CarouselImg01,
-            imageAlt: "First Image",
+            imageAlt: "Person with a cat",
             titleOnPage: "Elige tu compañero ideal",
             text: [
                 "Aquí el amor a primera vista si existe",
@@ -47,7 +47,7 @@ const data = {
         {
             id: 2,
             imageUrl: CarouselImg02,
-            imageAlt: "Second Image",
+            imageAlt: "Person with a dog",
             titleOnPage: "Conversa con Albergues",
             text: [
                 "Heroes sin capa día a día brindan atención, haz match con alguna de las mascotas listas en adopción y define el proceso de adopción."
@@ -56,7 +56,7 @@ const data = {
         {
             id: 3,
             imageUrl: CarouselImg03,
-            imageAlt: "Third Image",
+            imageAlt: "Person with a bird",
             titleOnPage: "Recuerda siempre",
             text: ["Cuida, protege y dale amor a quien con solo verte se emociona sin límites."]
         }

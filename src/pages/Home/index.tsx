@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 
 // Styled-components
-import { StyledHome, StyledContSup, StyledContInf, StyledImg, StyledH1 } from "./styles";
+import { StyledHome, StyledHeader, StyledMain, StyledImg, StyledH1 } from "./styles";
 
 // Components
 import Logo from "../../img/Logo.svg";
@@ -22,18 +22,18 @@ const LoginMain = (): ReactElement => {
 
     return (
         <StyledHome>
-            <StyledContSup>
+            <StyledHeader>
                 <StyledImg alt="Logo" src={Logo} />
                 <StyledH1>Encuentra a tu compañero ideal</StyledH1>
-            </StyledContSup>
-            <StyledContInf>
+            </StyledHeader>
+            <StyledMain>
                 <Button handleClick={handleGoToMovilAuth} variant={PRIMARY}>
                     Ingresar
                 </Button>
                 <Button handleClick={handleGoToRegister} variant={SECONDARY}>
                     Registrate
                 </Button>
-            </StyledContInf>
+            </StyledMain>
         </StyledHome>
     );
 };

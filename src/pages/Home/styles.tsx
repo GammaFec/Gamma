@@ -13,14 +13,14 @@ const StyledHome = styled.section`
     padding: 69px 16px;
 `;
 
-const StyledContSup = styled.header`
+const StyledHeader = styled.header`
     max-width: 250px;
     text-align: center;
     box-sizing: border-box;
     width: 80vw;
 `;
 
-const StyledContInf = styled.div`
+const StyledMain = styled.div`
     box-sizing: border-box;
     width: 80vw;
     height: 148px;
@@ -41,4 +41,4 @@ const StyledH1 = styled.h1`
     letter-spacing: -0.44px;
 `;
 
-export { StyledHome, StyledContSup, StyledContInf, StyledImg, StyledH1 };
+export { StyledHome, StyledHeader, StyledMain, StyledImg, StyledH1 };

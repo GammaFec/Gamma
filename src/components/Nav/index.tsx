@@ -17,7 +17,7 @@ const Nav: React.FC = () => {
     return (
         <StyledNav>
             <StyledIcon alt="Menu button" onClick={handleClick} src={MenuBtn} />
-            <Menu isOpen={isOpen} />
+            <Menu handleClick={handleClick} isOpen={isOpen} />
             <Link to="/">
                 <StyledIcon alt="Logo" src={Logo} />
             </Link>

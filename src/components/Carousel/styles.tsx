@@ -39,10 +39,6 @@ const StyledUl = styled.ul`
     padding: 0 10px;
     height: 435px;
     font-family: ${theme.fontPrimary};
-
-    @media (min-width: 400px) {
-        height: 470px;
-    } ;
 `;
 
 export { StyledLi, StyledUl };

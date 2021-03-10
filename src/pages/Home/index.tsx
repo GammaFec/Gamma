@@ -27,7 +27,7 @@ const LoginMain = (): ReactElement => {
     return (
         <StyledHome>
             <StyledHeader>
-                <StyledImg alt="Logo" src={Logo} />
+                <StyledImg alt={t("Home:ImageAlt")} src={Logo} />
                 <StyledH1>{t("Home:Title")}</StyledH1>
             </StyledHeader>
             <StyledMain>

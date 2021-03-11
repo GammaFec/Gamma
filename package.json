@@ -11,8 +11,11 @@
         "@types/react": "^16.9.53",
         "@types/react-dom": "^16.9.8",
         "firebase": "8.0.2",
+        "i18next": "^19.9.0",
+        "i18next-browser-languagedetector": "^6.0.1",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
+        "react-i18next": "^11.8.8",
         "react-router-dom": "^5.2.0",
         "react-scripts": "4.0.1",
         "styled-components": "^5.2.1",
@@ -48,6 +51,7 @@
     "devDependencies": {
         "@types/react-router-dom": "^5.1.6",
         "@types/styled-components": "^5.1.7",
+        "@types/webpack-env": "^1.16.0",
         "@typescript-eslint/eslint-plugin": "^4.11.1",
         "@typescript-eslint/parser": "^4.11.1",
         "eslint": "^7.17.0",
@@ -66,7 +70,7 @@
         }
     },
     "lint-staged": {
-        "*.{js,jsx,ts,tsx,md,html}": [
+        "*.{js,jsx,ts,tsx,html}": [
             "eslint --cache --fix",
             "prettier --write"
         ]

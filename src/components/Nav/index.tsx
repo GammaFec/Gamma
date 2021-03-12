@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 import { StyledNav, StyledIcon } from "./styles";
 //images
 import Logo from "../../img/Logo.svg";
-import MenuBtn from "../../img/gg_menu-left.png";
-import MsgBtn from "../../img/bx-message.png";
+import MenuBtn from "../../assets/gg_menu-left.png";
+import MsgBtn from "../../assets/bx-message.png";
 
 const Nav: React.FC = () => {
     const { t } = useTranslation();

@@ -47,9 +47,9 @@ const LoginPage: React.FC = () => {
     const loginButtonClicked = (): void => {
         if (usernameObj.valid && passwordObj.valid) {
             //do something with the form Data
-            console.log("clicked!!! The user and the password ARE valid");
+            alert("clicked!!! The user and the password ARE valid");
         } else {
-            return console.log("clicked!! The user OR the password IS NOT valid");
+            return alert("clicked!! The user OR the password IS NOT valid");
         }
     };
 

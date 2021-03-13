@@ -8,7 +8,7 @@ const CarouselPage: React.FC = () => {
     const isAdopter = true; // useContext() To be determined, the logic was build using booleans
     const carrouselData = isAdopter ? data.adopterData : data.shelterData;
 
-    const clickOnContinue = (): void => console.log("clicked!!");
+    const clickOnContinue = (): void => alert("clicked!!");
 
     return (
         <StyledMain>

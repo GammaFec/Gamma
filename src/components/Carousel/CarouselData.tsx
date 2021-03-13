@@ -1,6 +1,6 @@
-import CarouselImg01 from "../../img/CarouselImage01.svg";
-import CarouselImg02 from "../../img/CarouselImage02.svg";
-import CarouselImg03 from "../../img/CarouselImage03.svg";
+import CarouselImg01 from "../../assets/img/CarouselImage01.svg";
+import CarouselImg02 from "../../assets/img/CarouselImage02.svg";
+import CarouselImg03 from "../../assets/img/CarouselImage03.svg";
 
 // The images that correspond to a Shelter User are still to be determinated
 

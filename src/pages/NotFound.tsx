@@ -1,8 +1,7 @@
 import React from "react";
-import Menu from "../components/Menu/index";
 
 const NotFound: React.FC = () => {
-    return <Menu isOpen={true} />;
+    return <div>Not Found</div>;
 };
 
 export default NotFound;

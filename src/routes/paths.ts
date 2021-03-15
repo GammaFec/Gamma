@@ -7,7 +7,6 @@ export enum PATHS {
     Onboarding = "/onboarding",
     Match = "/match",
     GiveUp = "/give-up",
-    Messages = "/messages",
     Favorites = "/favorites",
     Config = "/configuration"
 }

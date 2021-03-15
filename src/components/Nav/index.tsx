@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { PATHS } from "../../routes/paths";
 //Translate - i18next
 import { useTranslation } from "react-i18next";
 //styled components
@@ -10,17 +11,22 @@ import MenuBtn from "../../assets/img/gg_menu-left.png";
 import MsgBtn from "../../assets/img/bx-message.png";
 
 const Nav: React.FC = () => {
+    const history = useHistory();
     const { t } = useTranslation();
+
+    const handleGoToSplash = (): void => {
+        history.push(PATHS.Splash);
+    };
+
+    const handleGoToMessages = (): void => {
+        history.push(PATHS.Messages);
+    };
 
     return (
         <StyledNav>
             <StyledIcon alt={t("Nav:MenuAlt")} src={MenuBtn} />
-            <Link to="/">
-                <StyledIcon alt={t("Nav:LogoAlt")} src={Logo} />
-            </Link>
-            <Link to="/">
-                <StyledIcon alt={t("Nav:MessagesAlt")} src={MsgBtn} />
-            </Link>
+            <StyledIcon alt={t("Nav:LogoAlt")} onClick={handleGoToSplash} src={Logo} />
+            <StyledIcon alt={t("Nav:MessagesAlt")} onClick={handleGoToMessages} src={MsgBtn} />
         </StyledNav>
     );
 };

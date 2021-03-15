@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { StyledHome, StyledHeader, StyledMain, StyledImg, StyledH1 } from "./styles";
 
 // Components
-import Logo from "../../img/Logo.svg";
+import Logo from "../../assets/img/Logo.svg";
 import Button from "../../components/Button";
 import { PRIMARY, SECONDARY } from "../../common/constants";
 import { useHistory } from "react-router-dom";

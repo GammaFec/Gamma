@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Logo from "../../img/Logo.svg";
+import Logo from "../../assets/img/Logo.svg";
 import { StyledContainer, StyledImg, StyledParagraph } from "./styles";
 
 const Splash: React.FC = () => {

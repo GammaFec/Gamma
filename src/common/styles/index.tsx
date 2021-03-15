@@ -20,6 +20,7 @@ export const fonts = {
 //font-sizes
 export const fontSizes = {
     font10: "10px",
+    font11: "11px",
     font12: "12px",
     font14: "14px",
     font16: "16px",

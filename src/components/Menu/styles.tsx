@@ -11,36 +11,67 @@ export const StyledMenu = styled.nav<IMenu>`
     color: ${colors.white};
     width: 100%;
     position: fixed;
-    z-index: 100;
-    height: calc(100vh - 64px);
-    top: 64px;
+    z-index: 1;
+    height: 100vh;
+    top: 0;
     right: 0;
-    transform: ${(props): string => (props.isOpen ? "translateX(0)" : "translateX(-100%)")};
-    transition: 1s cubic-bezier(0.03, 0.95, 0.11, 1.09);
 
     a {
         text-decoration: none;
         color: ${colors.white};
         font-size: ${fontSizes.font14};
+        display: flex;
+        align-items: center;
     }
 `;
 
 export const StyledDiv = styled.div`
     box-sizing: border-box;
     display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+
+    img {
+        width: 68px;
+        height: 68px;
+        margin-right: 10px;
+    }
+
+    button {
+        width: 50px;
+        background-color: transparent;
+        position: absolute;
+        top: 13px;
+        right: -20px;
+        border: none;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
 `;
 
-export const StyledUserImg = styled.img`
-    width: 68px;
-    border-radius: 50%;
-    margin-right: 10px;
-    margin-bottom: 31px;
-`;
-
-export const StyledUserName = styled.h3`
+export const StyledUser = styled.div`
     font-family: ${theme.fontPrimary};
-    font-weight: 400;
-    font-size: ${fontSizes.font16};
+
+    h3 {
+        font-weight: 400;
+        font-size: ${fontSizes.font16};
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: ${fontSizes.font11};
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
 `;
 
 export const StyledUl = styled.ul`
@@ -51,15 +82,25 @@ export const StyledUl = styled.ul`
     margin-block-start: 0;
     margin-block-end: 0;
     padding-inline-start: 0;
-`;
 
-export const StyledLi = styled.li`
-    margin: 15px 0;
+    li {
+        margin: 35px 0;
+
+        img {
+            width: 21px;
+            margin-right: 12px;
+        }
+    }
 `;
 
 export const StyledLink = styled.span`
     box-sizing: border-box;
     position: absolute;
-    bottom: 77px;
+    bottom: 135px;
     left: 62px;
+
+    img {
+        width: 21px;
+        margin-right: 12px;
+    }
 `;

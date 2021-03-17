@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fonts } from "../../common/styles/index";
+import { theme, fontSizes } from "../../common/styles/index";
 
 const StyledLi = styled.li<{ active: boolean }>`
     z-index: ${(props): string => (props.active ? "0" : "-10")};
@@ -11,28 +11,34 @@ const StyledLi = styled.li<{ active: boolean }>`
 
     list-style: none;
     width: 100%;
+    letter-spacing: -0.44px;
+
+    & > h2 {
+        font-size: ${fontSizes.font21};
+        margin: 0;
+        margin-bottom: 21px;
+    }
 
     & > img {
         width: 70%;
-        max-width: 300px;
+        max-width: 202px;
         height: auto;
         padding: 16px;
+        margin-bottom: 11px;
     }
 
     & > p {
-        margin: 25px;
+        font-size: ${fontSizes.font12};
+        max-width: 272px;
+        margin: auto;
     }
 `;
 
 const StyledUl = styled.ul`
     display: flex;
     padding: 0 10px;
-    height: 450px;
-    font-family: ${fonts.roboto};
-
-    @media (min-width: 400px) {
-        height: 470px;
-    } ;
+    height: 435px;
+    font-family: ${theme.fontPrimary};
 `;
 
 export { StyledLi, StyledUl };

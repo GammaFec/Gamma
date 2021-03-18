@@ -6,8 +6,8 @@ const StyledImg = styled.img`
 
 const StyledDiv = styled.div`
     height: 63px;
-    width:63px;
-    margin 0 10px;
+    width: 63px;
+    margin: 0 10px;
 `;
 
 const StyledWrapper = styled.div`

@@ -2,9 +2,9 @@ import React from "react";
 
 import { StyledImg, StyledDiv, StyledWrapper } from "./styles";
 
-import { IFilterTab } from "./types";
+import { IFilterData } from "../types";
 
-const FilterTab: React.FC<IFilterTab> = ({ filterTitle, imgSrc, imgAlt }: IFilterTab) => {
+const FilterTab: React.FC<IFilterData> = ({ filterTitle, imgSrc, imgAlt }: IFilterData) => {
     return (
         <StyledWrapper>
             <StyledDiv>

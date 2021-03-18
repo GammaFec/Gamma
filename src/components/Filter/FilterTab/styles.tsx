@@ -6,12 +6,12 @@ const StyledImg = styled.img`
     margin: 0 auto;
 `;
 
-const StyledDiv = styled.div<{ active: boolean }>`
+const StyledDiv = styled.div<{ activeFilter: boolean }>`
     height: 63px;
     width: 63px;
     margin: 0 10px 6px 10px;
-    background-color: ${({ active }): string =>
-        active ? theme.colorPrimary : theme.colorSecondary};
+    background-color: ${({ activeFilter }): string =>
+        activeFilter ? theme.colorPrimary : theme.colorSecondary};
     border-radius: 7px;
     align-items: center;
     display: flex;

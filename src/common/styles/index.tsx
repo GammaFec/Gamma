@@ -3,6 +3,8 @@ import "./importFont.css";
 //colors
 export const colors = {
     gray: "#A9A9A9",
+    mercury: "#E8E8E8",
+    tundora: "#4E4E4E",
     lightGray: "#EAEAEA",
     darkGray: "#303030",
     white: "#FFFFFF",
@@ -20,6 +22,7 @@ export const fonts = {
 //font-sizes
 export const fontSizes = {
     font10: "10px",
+    font11: "11px",
     font12: "12px",
     font14: "14px",
     font16: "16px",

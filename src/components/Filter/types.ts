@@ -1,4 +1,5 @@
 export interface IFilterData {
+    id: number;
     filterTitle: string;
     imgSrc: string;
     imgAlt: string;
@@ -6,11 +7,11 @@ export interface IFilterData {
 
 export interface IFilter {
     data: IFilterData[];
-    clickHandler: () => void;
+    clickHandler: (id: number) => void;
 }
 
 export interface IFilterDataMapped {
     filterData: IFilterData[];
-    active: boolean;
-    clickHandler: () => void;
+    activeFilter: boolean;
+    clickHandler: (id: number) => void;
 }

@@ -8,25 +8,29 @@ const Data = [
         id: 1,
         filterTitle: "Perros",
         imgSrc: FilterTabDog,
-        imgAlt: "Un perro sentado"
+        imgAlt: "Un perro sentado",
+        activeFilter: false
     },
     {
         id: 2,
         filterTitle: "Gatos",
         imgSrc: FilterTabCat,
-        imgAlt: "Un gato sentado"
+        imgAlt: "Un gato sentado",
+        activeFilter: false
     },
     {
         id: 3,
         filterTitle: "Cachorros",
         imgSrc: FilterTabPuppyDog,
-        imgAlt: "Un perro cachorro de pie"
+        imgAlt: "Un perro cachorro de pie",
+        activeFilter: false
     },
     {
         id: 4,
         filterTitle: "Adultos",
         imgSrc: FilterTabAdultDog,
-        imgAlt: "Un perro adulto de pie"
+        imgAlt: "Un perro adulto de pie",
+        activeFilter: false
     }
 ];
 

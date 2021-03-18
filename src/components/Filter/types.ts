@@ -6,4 +6,11 @@ export interface IFilterData {
 
 export interface IFilter {
     data: IFilterData[];
+    clickHandler: () => void;
+}
+
+export interface IFilterDataMapped {
+    filterData: IFilterData[];
+    active: boolean;
+    clickHandler: () => void;
 }

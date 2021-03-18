@@ -9,13 +9,12 @@ import { IFilterData } from "./types";
  */
 const filterDataMapped = (
     filterData: IFilterData[],
-    activeFilter: boolean,
     clickHandler: (is: number) => void
 ): React.ReactNode =>
     filterData.map((EachDataObj) => {
         return (
             <FilterTab
-                activeFilter={activeFilter}
+                activeFilter={EachDataObj.activeFilter}
                 clickHandler={(): void => clickHandler(EachDataObj.id)}
                 data={EachDataObj}
                 key={EachDataObj.imgAlt}

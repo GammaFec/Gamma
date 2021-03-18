@@ -5,24 +5,24 @@ import FilterTabPuppyDog from "../../assets/img/FilterTabPuppyDog.svg";
 
 const Data = [
     {
-        filterName: "Perros",
-        filterImageSrc: FilterTabDog,
-        filterImageAlt: "Un perro sentado"
+        filterTitle: "Perros",
+        imgSrc: FilterTabDog,
+        imgAlt: "Un perro sentado"
     },
     {
-        filterName: "Gatos",
-        filterImageSrc: FilterTabCat,
-        filterImageAlt: "Un gato sentado"
+        filterTitle: "Gatos",
+        imgSrc: FilterTabCat,
+        imgAlt: "Un gato sentado"
     },
     {
-        filterName: "Cachorros",
-        filterImageSrc: FilterTabPuppyDog,
-        filterImageAlt: "Un perro cachorro de pie"
+        filterTitle: "Cachorros",
+        imgSrc: FilterTabPuppyDog,
+        imgAlt: "Un perro cachorro de pie"
     },
     {
-        filterName: "Adultos",
-        filterImageSrc: FilterTabAdultDog,
-        filterImageAlt: "Un perro adulto de pie"
+        filterTitle: "Adultos",
+        imgSrc: FilterTabAdultDog,
+        imgAlt: "Un perro adulto de pie"
     }
 ];
 

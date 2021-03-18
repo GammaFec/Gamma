@@ -1,13 +1,16 @@
 import React from "react";
+
 import { StyledImg, StyledDiv, StyledWrapper } from "./styles";
 
-const FilterTab: React.FC = () => {
+import { IFilterTab } from "./types";
+
+const FilterTab: React.FC<IFilterTab> = ({ filterTitle, imgSrc, imgAlt }: IFilterTab) => {
     return (
         <StyledWrapper>
             <StyledDiv>
-                <StyledImg alt="Hola" src="local/" />
+                <StyledImg alt={imgAlt} src={imgSrc} />
             </StyledDiv>
-            <p></p>
+            <p>{filterTitle}</p>
         </StyledWrapper>
     );
 };

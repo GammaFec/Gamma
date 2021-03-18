@@ -7,9 +7,20 @@ import { IFilterData } from "./types";
 /**
  * Map the Data used in the Filter to build as many Tabs as nedded.
  */
-const filterDataMapped = (filterData: IFilterData[]): React.ReactNode =>
+const filterDataMapped = (
+    filterData: IFilterData[],
+    active: boolean,
+    clickHandler: () => void
+): React.ReactNode =>
     filterData.map((EachDataObj) => {
-        return <FilterTab {...EachDataObj} key={EachDataObj.imgAlt} />;
+        return (
+            <FilterTab
+                active={active}
+                clickHandler={clickHandler}
+                data={EachDataObj}
+                key={EachDataObj.imgAlt}
+            />
+        );
     });
 
 export { filterDataMapped };

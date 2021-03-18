@@ -4,9 +4,9 @@ import { StyledImg, StyledDiv, StyledWrapper } from "./styles";
 
 import { IFilterTab } from "./types";
 
-const FilterTab: React.FC<IFilterTab> = ({ data, active }: IFilterTab) => {
+const FilterTab: React.FC<IFilterTab> = ({ data, active, clickHandler }: IFilterTab) => {
     return (
-        <StyledWrapper>
+        <StyledWrapper onClick={clickHandler}>
             <StyledDiv active={active}>
                 <StyledImg alt={data.imgAlt} src={data.imgSrc} />
             </StyledDiv>

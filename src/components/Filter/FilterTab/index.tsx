@@ -2,15 +2,15 @@ import React from "react";
 
 import { StyledImg, StyledDiv, StyledWrapper } from "./styles";
 
-import { IFilterData } from "../types";
+import { IFilterTab } from "./types";
 
-const FilterTab: React.FC<IFilterData> = ({ filterTitle, imgSrc, imgAlt }: IFilterData) => {
+const FilterTab: React.FC<IFilterTab> = ({ data, active }: IFilterTab) => {
     return (
         <StyledWrapper>
-            <StyledDiv>
-                <StyledImg alt={imgAlt} src={imgSrc} />
+            <StyledDiv active={active}>
+                <StyledImg alt={data.imgAlt} src={data.imgSrc} />
             </StyledDiv>
-            <p>{filterTitle}</p>
+            <p>{data.filterTitle}</p>
         </StyledWrapper>
     );
 };

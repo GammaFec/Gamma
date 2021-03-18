@@ -6,13 +6,15 @@ const StyledImg = styled.img`
     margin: 0 auto;
 `;
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.div<{ active: boolean }>`
     height: 63px;
     width: 63px;
     margin: 0 10px 6px 10px;
-    background-color: ${theme.colorPrimary};
+    background-color: ${({ active }): string =>
+        active ? theme.colorPrimary : theme.colorSecondary};
     border-radius: 7px;
-    text-align: center;
+    align-items: center;
+    display: flex;
 `;
 
 const StyledWrapper = styled.div`

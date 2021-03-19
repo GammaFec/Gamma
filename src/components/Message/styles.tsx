@@ -11,11 +11,20 @@ export const StyledMessageContainer = styled.div`
     gap: 8px;
 
     border-top: 1px solid ${colors.mercury};
+
+    cursor: pointer;
 `;
 
-export const StyledUserAvatar = styled(userAvatar)`
+export const StyledDefaultAvatar = styled(userAvatar)`
     min-width: 50px;
     min-height: 50px;
+`;
+
+export const StyledUserAvatar = styled.img`
+    min-width: 50px;
+    min-height: 50px;
+
+    border-radius: 999px;
 `;
 
 export const StyledTextContainer = styled.div`

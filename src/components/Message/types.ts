@@ -4,4 +4,6 @@ export interface IMessage {
     timeago: string;
     numberofmessage: number;
     isread: boolean;
+    handleClick?: () => void;
+    src?: string;
 }

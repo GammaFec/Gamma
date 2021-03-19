@@ -4,10 +4,11 @@ import {
     StyledMessageText,
     StyledTextContainer,
     StyledName,
-    StyledUserAvatar,
+    StyledDefaultAvatar,
     StyledDetails,
     StyledTimeAgo,
-    StyledNumberOfMessage
+    StyledNumberOfMessage,
+    StyledUserAvatar
 } from "./styles";
 
 import { IMessage } from "./types";
@@ -17,11 +18,13 @@ const Message: React.FC<IMessage> = ({
     text,
     timeago,
     numberofmessage,
-    isread
+    isread,
+    handleClick,
+    src
 }: IMessage): JSX.Element => {
     return (
-        <StyledMessageContainer>
-            <StyledUserAvatar />
+        <StyledMessageContainer onClick={handleClick}>
+            {src ? <StyledUserAvatar alt={name} src={src} /> : <StyledDefaultAvatar />}
             <StyledTextContainer>
                 <StyledName>{name}</StyledName>
                 <StyledMessageText>{text}</StyledMessageText>

@@ -15,9 +15,9 @@ import { IMessage } from "./types";
 const Message: React.FC<IMessage> = ({
     name,
     text,
-    timeAgo,
-    NumberOfMessage,
-    isRead
+    timeago,
+    numberofmessage,
+    isread
 }: IMessage): JSX.Element => {
     return (
         <StyledMessageContainer>
@@ -27,8 +27,8 @@ const Message: React.FC<IMessage> = ({
                 <StyledMessageText>{text}</StyledMessageText>
             </StyledTextContainer>
             <StyledDetails>
-                <StyledTimeAgo className={`${isRead && "isRead"}`}>{timeAgo}</StyledTimeAgo>
-                {!isRead && <StyledNumberOfMessage>{NumberOfMessage}</StyledNumberOfMessage>}
+                <StyledTimeAgo className={`${!isread && "isRead"}`}>{timeago}</StyledTimeAgo>
+                {!isread && <StyledNumberOfMessage>{numberofmessage}</StyledNumberOfMessage>}
             </StyledDetails>
         </StyledMessageContainer>
     );

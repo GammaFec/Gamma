@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { ReactComponent as userAvatar } from "../../assets/img/user_avatar.svg";
-import { colors, fontSizes, fonts } from "../../common/styles";
+import { colors, fontSizes, theme } from "../../common/styles";
 
 export const StyledMessageContainer = styled.div`
-    font-family: ${fonts.poppins};
+    font-family: ${theme.fontPrimary};
+
     padding-top: 20px;
     padding-bottom: 20px;
 
@@ -16,13 +17,13 @@ export const StyledMessageContainer = styled.div`
 `;
 
 export const StyledDefaultAvatar = styled(userAvatar)`
-    min-width: 50px;
-    min-height: 50px;
+    width: 50px;
+    height: 50px;
 `;
 
 export const StyledUserAvatar = styled.img`
-    min-width: 50px;
-    min-height: 50px;
+    width: 50px;
+    height: 50px;
 
     border-radius: 999px;
 `;
@@ -46,6 +47,11 @@ export const StyledMessageText = styled.p`
     font-size: ${fontSizes.font12};
     line-height: 18px;
     font-weight: 400;
+
+    width: 204px;
+    height: 36px;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
 `;
 
 export const StyledDetails = styled.div`
@@ -54,7 +60,8 @@ export const StyledDetails = styled.div`
 `;
 
 export const StyledTimeAgo = styled.p`
-    color: ${(props): string => (props.className === "isRead" ? colors.green : colors.gray)};
+    color: ${(props): string =>
+        props.className === "isRead" ? theme.colorSecondary : colors.gray};
     font-size: ${fontSizes.font11};
     font-weight: 500;
     line-height: 16.5px;
@@ -66,11 +73,11 @@ export const StyledTimeAgo = styled.p`
 `;
 
 export const StyledNumberOfMessage = styled.p`
-    background-color: ${colors.green};
+    background-color: ${theme.colorSecondary};
     font-size: ${fontSizes.font12};
     font-weight: 600;
     line-height: 18.5px;
-    color: ${colors.white};
+    color: ${theme.colorWhite};
 
     border-radius: 999px;
     margin: 0;

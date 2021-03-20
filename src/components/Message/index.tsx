@@ -12,26 +12,33 @@ import {
 } from "./styles";
 
 import { IMessage } from "./types";
+import { TimeAgo } from "./utils";
 
 const Message: React.FC<IMessage> = ({
     name,
     text,
-    timeago,
-    numberofmessage,
-    isread,
+    creationDate,
+    count,
+    isRead,
     handleClick,
-    src
+    profileIcon
 }: IMessage): JSX.Element => {
     return (
         <StyledMessageContainer onClick={handleClick}>
-            {src ? <StyledUserAvatar alt={name} src={src} /> : <StyledDefaultAvatar />}
+            {profileIcon ? (
+                <StyledUserAvatar alt={name} src={profileIcon} />
+            ) : (
+                <StyledDefaultAvatar />
+            )}
             <StyledTextContainer>
                 <StyledName>{name}</StyledName>
                 <StyledMessageText>{text}</StyledMessageText>
             </StyledTextContainer>
             <StyledDetails>
-                <StyledTimeAgo className={`${!isread && "isRead"}`}>{timeago}</StyledTimeAgo>
-                {!isread && <StyledNumberOfMessage>{numberofmessage}</StyledNumberOfMessage>}
+                <StyledTimeAgo className={`${isRead && "isRead"}`}>
+                    {TimeAgo(creationDate)}
+                </StyledTimeAgo>
+                {!isRead && <StyledNumberOfMessage>{count}</StyledNumberOfMessage>}
             </StyledDetails>
         </StyledMessageContainer>
     );

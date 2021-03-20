@@ -25,7 +25,7 @@ export const StyledUserAvatar = styled.img`
     width: 50px;
     height: 50px;
 
-    border-radius: 999px;
+    border-radius: 100%;
 `;
 
 export const StyledTextContainer = styled.div`
@@ -46,7 +46,6 @@ export const StyledMessageText = styled.p`
     margin: 0;
     font-size: ${fontSizes.font12};
     line-height: 18px;
-    font-weight: 400;
 
     width: 204px;
     height: 36px;
@@ -60,8 +59,11 @@ export const StyledDetails = styled.div`
 `;
 
 export const StyledTimeAgo = styled.p`
-    color: ${(props): string =>
-        props.className === "isRead" ? theme.colorSecondary : colors.gray};
+    color: ${theme.colorSecondary};
+    &.isRead {
+        color: ${colors.gray};
+    }
+
     font-size: ${fontSizes.font11};
     font-weight: 500;
     line-height: 16.5px;
@@ -79,7 +81,7 @@ export const StyledNumberOfMessage = styled.p`
     line-height: 18.5px;
     color: ${theme.colorWhite};
 
-    border-radius: 999px;
+    border-radius: 100%;
     margin: 0;
 
     display: flex;

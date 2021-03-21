@@ -11,13 +11,15 @@ const filterDataMapped = (
     filterData: IFilterData[],
     clickHandler: (id: number) => void
 ): React.ReactNode =>
-    filterData.map((EachDataObj) => {
+    filterData.map(({ active, id, imgAlt, imgSrc, filterTitle }) => {
         return (
             <FilterTab
-                active={EachDataObj.active}
-                clickHandler={(): void => clickHandler(EachDataObj.id)}
-                data={EachDataObj}
-                key={EachDataObj.id}
+                active={active}
+                clickHandler={(): void => clickHandler(id)}
+                filterTitle={filterTitle}
+                imgAlt={imgAlt}
+                imgSrc={imgSrc}
+                key={id}
             />
         );
     });

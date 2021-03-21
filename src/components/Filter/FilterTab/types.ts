@@ -1,7 +1,7 @@
-import { IFilterData } from "../types";
-
 export interface IFilterTab {
-    data: IFilterData;
     active: boolean;
+    imgAlt: string;
+    imgSrc: string;
+    filterTitle: string;
     clickHandler: () => void;
 }

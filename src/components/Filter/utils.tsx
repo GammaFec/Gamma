@@ -14,7 +14,7 @@ const filterDataMapped = (
     filterData.map((EachDataObj) => {
         return (
             <FilterTab
-                activeFilter={EachDataObj.activeFilter}
+                active={EachDataObj.active}
                 clickHandler={(): void => clickHandler(EachDataObj.id)}
                 data={EachDataObj}
                 key={EachDataObj.imgAlt}

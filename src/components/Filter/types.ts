@@ -3,7 +3,7 @@ export interface IFilterData {
     filterTitle: string;
     imgSrc: string;
     imgAlt: string;
-    activeFilter: boolean;
+    active: boolean;
 }
 
 export interface IFilter {

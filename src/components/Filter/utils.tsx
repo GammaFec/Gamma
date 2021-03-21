@@ -9,7 +9,7 @@ import { IFilterData } from "./types";
  */
 const filterDataMapped = (
     filterData: IFilterData[],
-    clickHandler: (is: number) => void
+    clickHandler: (id: number) => void
 ): React.ReactNode =>
     filterData.map((EachDataObj) => {
         return (

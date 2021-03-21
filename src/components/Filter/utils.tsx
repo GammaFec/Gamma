@@ -17,7 +17,7 @@ const filterDataMapped = (
                 active={EachDataObj.active}
                 clickHandler={(): void => clickHandler(EachDataObj.id)}
                 data={EachDataObj}
-                key={EachDataObj.imgAlt}
+                key={EachDataObj.id}
             />
         );
     });

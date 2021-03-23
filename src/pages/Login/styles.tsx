@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { fontSizes, theme } from "../../common/styles/index";
+import { fontSizes, theme } from "../../common/styles/variables";
 
 const StyledMainWrapper = styled.main`
     font-family: ${theme.fontPrimary};

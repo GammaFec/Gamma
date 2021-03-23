@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { colors } from "../../common/styles";
+import { colors } from "../../common/styles/variables";
 
 export const StyledNav = styled.header`
-    box-sizing: border-box;
     background-color: ${colors.white};
     display: flex;
     justify-content: space-between;

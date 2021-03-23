@@ -1,7 +1,13 @@
 import React from "react";
+import Menu from "../components/Menu/index";
 
 const NotFound: React.FC = () => {
-    return <div>Not Found</div>;
+    return (
+        <>
+            <Menu isOpen userName="Sebastian Gonzales" userType="Adoptante" />
+            <div>Not Found</div>
+        </>
+    );
 };
 
 export default NotFound;

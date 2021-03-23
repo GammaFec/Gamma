@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { IMenu } from "./types";
 import { theme, fontSizes, colors } from "../../common/styles";
 
-export const StyledMenu = styled.nav<IMenu>`
+export const StyledMenu = styled.nav<{ isOpen: boolean }>`
     box-sizing: border-box;
     background-color: ${colors.orange};
     padding: 34px 43px;
@@ -15,6 +14,7 @@ export const StyledMenu = styled.nav<IMenu>`
     height: 100vh;
     top: 0;
     right: 0;
+    display: ${(props): string => (props.isOpen ? "block" : "none")};
 
     a {
         text-decoration: none;
@@ -74,7 +74,7 @@ export const StyledUser = styled.div`
     }
 `;
 
-export const StyledUl = styled.ul`
+export const StyledOptions = styled.ul`
     box-sizing: border-box;
     margin: 31px 19px;
     text-align: left;
@@ -91,16 +91,7 @@ export const StyledUl = styled.ul`
             margin-right: 12px;
         }
     }
-`;
-
-export const StyledLink = styled.span`
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 135px;
-    left: 62px;
-
-    img {
-        width: 21px;
-        margin-right: 12px;
+    li:last-of-type {
+        margin-top: 75px;
     }
 `;

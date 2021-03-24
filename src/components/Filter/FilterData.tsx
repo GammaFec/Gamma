@@ -6,28 +6,28 @@ import FilterTabPuppyDog from "../../assets/img/FilterTabPuppyDog.svg";
 const Data = [
     {
         id: 1,
-        filterTitle: "Perros",
+        title: "Perros",
         imgSrc: FilterTabDog,
         imgAlt: "Un perro sentado",
         active: false
     },
     {
         id: 2,
-        filterTitle: "Gatos",
+        title: "Gatos",
         imgSrc: FilterTabCat,
         imgAlt: "Un gato sentado",
         active: false
     },
     {
         id: 3,
-        filterTitle: "Cachorros",
+        title: "Cachorros",
         imgSrc: FilterTabPuppyDog,
         imgAlt: "Un perro cachorro de pie",
         active: false
     },
     {
         id: 4,
-        filterTitle: "Adultos",
+        title: "Adultos",
         imgSrc: FilterTabAdultDog,
         imgAlt: "Un perro adulto de pie",
         active: false

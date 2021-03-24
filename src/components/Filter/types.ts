@@ -1,6 +1,6 @@
 export interface IFilterData {
     id: number;
-    filterTitle: string;
+    title: string;
     imgSrc: string;
     imgAlt: string;
     active: boolean;

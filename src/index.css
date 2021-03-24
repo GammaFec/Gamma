@@ -1,6 +1,0 @@
-/* bring in normalize.css styles */
-@import-normalize;
-
-* {
-    box-sizing: border-box;
-}

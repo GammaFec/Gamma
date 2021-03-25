@@ -1,12 +1,8 @@
-import dayjs from "dayjs";
-import relativeTime from "dayjs/plugin/relativeTime";
+import moment from "moment";
 import i18next from "i18next";
-import "dayjs/locale/en";
-import "dayjs/locale/es";
-
-dayjs.extend(relativeTime);
+import "moment/locale/es";
 
 export function TimeAgo(date: Date): string {
-    dayjs.locale(i18next.language);
-    return dayjs().to(dayjs(date));
+    moment.locale(i18next.language);
+    return moment(date).fromNow();
 }

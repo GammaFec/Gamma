@@ -4,15 +4,11 @@ import { colors, fontSizes, theme } from "../../common/styles";
 
 export const StyledMessageContainer = styled.div`
     font-family: ${theme.fontPrimary};
-
     padding-top: 20px;
     padding-bottom: 20px;
-
     display: flex;
     gap: 8px;
-
     border-top: 1px solid ${colors.mercury};
-
     cursor: pointer;
 `;
 
@@ -46,7 +42,6 @@ export const StyledMessageText = styled.p`
     margin: 0;
     font-size: ${fontSizes.font12};
     line-height: 18px;
-
     width: 204px;
     height: 36px;
     text-overflow: ellipsis;
@@ -68,7 +63,6 @@ export const StyledTimeAgo = styled.p`
     font-weight: 500;
     line-height: 16.5px;
     margin: 0;
-
     margin-top: -10px;
     margin-right: 7px;
     margin-bottom: 10px;
@@ -80,15 +74,12 @@ export const StyledNumberOfMessage = styled.p`
     font-weight: 600;
     line-height: 18.5px;
     color: ${theme.colorWhite};
-
     border-radius: 100%;
     margin: 0;
-
     display: flex;
     height: 24px;
     width: 24px;
     align-items: center;
     justify-content: center;
-
     margin-left: 7px;
 `;

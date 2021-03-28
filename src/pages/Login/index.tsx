@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 import { InputIsValid } from "../../utils/InputValidation";
-import Logo from "../../img/Logo.svg";
+import Logo from "../../assets/img/Logo.svg";
 import * as variantType from "../../common/constants";
 import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
 
@@ -47,9 +47,9 @@ const LoginPage: React.FC = () => {
     const loginButtonClicked = (): void => {
         if (usernameObj.valid && passwordObj.valid) {
             //do something with the form Data
-            console.log("clicked!!! The user and the password ARE valid");
+            alert("clicked!!! The user and the password ARE valid");
         } else {
-            return console.log("clicked!! The user OR the password IS NOT valid");
+            return alert("clicked!! The user OR the password IS NOT valid");
         }
     };
 

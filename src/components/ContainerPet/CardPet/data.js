@@ -22,7 +22,7 @@ export const animal = [
         breed: "Criollo",
         age: "1",
         type: "dog",
-        genre: "famale",
+        genre: "female",
         distance: "1,2 km",
         dateOfBirth: "20200105"
     },
@@ -33,7 +33,7 @@ export const animal = [
         breed: "Schnauzer",
         age: "1",
         type: "dog",
-        genre: "famale",
+        genre: "female",
         distance: "2,2 km",
         dateOfBirth: "20210210"
     }

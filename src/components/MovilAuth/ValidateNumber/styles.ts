@@ -5,7 +5,8 @@ import Form from "../../Form";
 
 export const StyledForm = styled(Form)`
     margin-top: 116px;
-
+    text-align: center;
+    font-family: ${fonts.poppins};
     button {
         margin: 1rem 0.25rem;
     }

@@ -21,7 +21,7 @@ const ValidateNumber: React.FC<iValidateNumber> = ({
 }: iValidateNumber): JSX.Element => {
     const [code, setCode] = useState<string>("");
 
-    const submit = (): void => handleSubmit(code);
+    // const submit = (): void => handleSubmit(code);
 
     return (
         <StyledForm>

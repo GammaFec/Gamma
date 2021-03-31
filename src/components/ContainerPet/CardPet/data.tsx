@@ -1,8 +1,9 @@
 import Rocky from "../../../assets/img/Rocky.svg";
 import Chikorita from "../../../assets/img/Chikorita.svg";
 import Sasha from "../../../assets/img/Sasha.svg";
+import { ICardPet } from "./types";
 
-export const animal = [
+export const animal: ICardPet[] = [
     {
         name: "Roky",
         imageUrl: Rocky,

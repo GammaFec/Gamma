@@ -9,7 +9,7 @@ import { StyledHome, StyledHeader, StyledMain, StyledImg, StyledH1 } from "./sty
 // Components
 import Logo from "../../assets/img/Logo.svg";
 import Button from "../../components/Button";
-import { PRIMARY, SECONDARY } from "../../common/constants";
+import { PRIMARY, SECONDARY } from "../../common/styles/constants";
 import { useHistory } from "react-router-dom";
 
 const LoginMain = (): ReactElement => {

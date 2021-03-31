@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as variantType from "../../common/constants/index";
+import * as variantType from "../../common/styles/constants";
 
 import DotSlider from "./DotsSlider/index";
 import Button from "../Button/index";

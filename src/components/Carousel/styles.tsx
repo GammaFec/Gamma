@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme, fontSizes } from "../../common/styles/index";
+import { theme, fontSizes } from "../../common/styles/variables";
 
 const StyledLi = styled.li<{ active: boolean }>`
     z-index: ${(props): string => (props.active ? "0" : "-10")};

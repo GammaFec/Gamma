@@ -5,6 +5,7 @@ import Form from "../../Form";
 import PhoneNumber from "../PhoneNumber";
 import { StyledButtonContinue, StyledContainer, StyledSpan } from "./styles";
 import iRequestNumber from "./types";
+import { ReactComponent as Hands } from "../../../assets/img/hands-hhone.svg";
 
 const RequestNumber: React.FC<iRequestNumber> = ({
     handleSubmit,
@@ -30,6 +31,7 @@ const RequestNumber: React.FC<iRequestNumber> = ({
                     Continuar
                 </StyledButtonContinue>
             </Form>
+            <Hands />
         </StyledContainer>
     );
 };

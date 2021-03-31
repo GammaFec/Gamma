@@ -3,11 +3,14 @@ import React, { useState } from "react";
 import { PRIMARY } from "../../../common/constants";
 import CodeVerification from "../CodeVerification";
 import { ReactComponent as Pen } from "../../../assets/pen.svg";
+import { ReactComponent as HandsOk } from "../../../assets/img/hands-phone-ok.svg";
+
 import {
     StyledA,
     StyledButtonContinue,
     StyledFoot,
     StyledForm,
+    StyledHand,
     StyledSpan,
     StyledSub
 } from "./styles";
@@ -24,30 +27,35 @@ const ValidateNumber: React.FC<iValidateNumber> = ({
     // const submit = (): void => handleSubmit(code);
 
     return (
-        <StyledForm>
-            <div>
-                <h3>
-                    Ingresa el
-                    <br /> código que recibiste
-                </h3>
-                <StyledSub>
-                    Fue enviado al número <StyledSpan>+57968069617</StyledSpan>
-                    <Pen />
-                </StyledSub>
-            </div>
-            <div>
-                {/* <button onClick={goBack} type="button">
+        <>
+            <StyledForm>
+                <div>
+                    <h3>
+                        Ingresa el
+                        <br /> código que recibiste
+                    </h3>
+                    <StyledSub>
+                        Fue enviado al número <StyledSpan>+57968069617</StyledSpan>
+                        <Pen />
+                    </StyledSub>
+                </div>
+                <div>
+                    {/* <button onClick={goBack} type="button">
                     {phoneNumber}
                 </button> */}
-                <CodeVerification handleChange={setCode} />
-                <StyledButtonContinue id={buttonId} type="submit" variant={PRIMARY}>
-                    Verificar y proceder
-                </StyledButtonContinue>
-                <StyledFoot>
-                    ¿Aún no te llegó? <StyledA href="http">Reenvíar Código</StyledA>
-                </StyledFoot>
-            </div>
-        </StyledForm>
+                    <CodeVerification handleChange={setCode} />
+                    <StyledButtonContinue id={buttonId} type="submit" variant={PRIMARY}>
+                        Verificar y proceder
+                    </StyledButtonContinue>
+                    <StyledFoot>
+                        ¿Aún no te llegó? <StyledA href="http">Reenvíar Código</StyledA>
+                    </StyledFoot>
+                </div>
+            </StyledForm>
+            <StyledHand>
+                <HandsOk />
+            </StyledHand>
+        </>
     );
 };
 

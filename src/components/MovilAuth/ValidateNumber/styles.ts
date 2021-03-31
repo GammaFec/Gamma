@@ -15,16 +15,24 @@ export const StyledForm = styled(Form)`
         margin: 0;
         transform: translateY(2px);
     }
-`;
-
-export const StyledSub = styled.p`
-    margin-top: 4px;
-    font-size: 10px;
-    font-weight: 300;
-    & svg {
-        transform: translate(1px, 5px);
+    & p {
+        margin-top: 4px;
+        font-size: 10px;
+        font-weight: 300;
+        & svg {
+            transform: translate(1px, 5px);
+        }
     }
 `;
+export const StyledHand = styled.div`
+    svg {
+        display: block;
+        margin: auto;
+        transform: translate(-5px, -6px);
+        width: 74px;
+    }
+`;
+export const StyledSub = styled.p``;
 
 export const StyledFoot = styled.p`
     font-size: ${fontSizes.font10};

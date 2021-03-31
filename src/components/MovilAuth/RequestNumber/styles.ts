@@ -18,6 +18,9 @@ export const StyledContainer = styled.div`
         color: ${colors.lighDarkGray};
         transform: translateY(-3px);
     }
+    & svg {
+        transform: translate(124px, 44px);
+    }
 `;
 
 export const StyledButtonContinue = styled(StyledButton)`

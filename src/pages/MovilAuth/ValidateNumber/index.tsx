@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { PRIMARY } from "../../../common/constants";
 import CodeVerification from "../CodeVerification";
@@ -15,12 +16,12 @@ import iValidateNumber from "./types";
 const ValidateNumber: React.FC<iValidateNumber> = ({
     phoneNumber,
     goBack,
-    buttonId,
-    handleSubmit
-}: iValidateNumber): JSX.Element => {
+    buttonId
+}: // handleSubmit
+iValidateNumber): JSX.Element => {
     const [code, setCode] = useState<string>("");
 
-    const submit = () => handleSubmit(code);
+    // const submit = () => handleSubmit(code);
 
     return (
         <StyledForm>
@@ -35,9 +36,9 @@ const ValidateNumber: React.FC<iValidateNumber> = ({
                 </StyledSub>
             </div>
             <div>
-                {/* <button onClick={goBack} type="button">
+                <button onClick={goBack} type="button">
                     {phoneNumber}
-                </button> */}
+                </button>
                 <CodeVerification handleChange={setCode} />
                 <StyledButtonContinue id={buttonId} type="submit" variant={PRIMARY}>
                     Verificar y proceder

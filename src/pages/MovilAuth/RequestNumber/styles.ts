@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { colors, fonts, fontSizes } from "../../../common/styles";
-import { StyledButton } from "../../Button/styles";
+import { StyledButton } from "../../../components/Button/styles";
 
 export const StyledContainer = styled.div`
     width: 340px;

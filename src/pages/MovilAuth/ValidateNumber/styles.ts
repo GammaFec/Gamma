@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors, fontSizes, fonts } from "../../../common/styles";
-import { StyledButton } from "../../Button/styles";
-import Form from "../../Form";
+import { StyledButton } from "../../../components/Button/styles";
+import Form from "../../../components/Form";
 
 export const StyledForm = styled(Form)`
     margin-top: 116px;

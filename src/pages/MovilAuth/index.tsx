@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-sort-props */
 import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 
 import ButtonBack from "../../components/ButtonBack";
 import Header from "../../components/Header";
-import RequestNumber from "../../components/MovilAuth/RequestNumber";
-import ValidateNumber from "../../components/MovilAuth/ValidateNumber";
+import RequestNumber from "../../pages/MovilAuth/RequestNumber";
+import ValidateNumber from "../../pages/MovilAuth/ValidateNumber";
 import getRecaptcha from "../../services/firebase/auth/getRecaptcha";
 import PhoneValidator from "../../utils/PhoneValidator";
 import sendSMSCode from "../../services/firebase/auth/sendSMSCode";
@@ -52,7 +53,9 @@ export default function index() {
 
     return (
         <StyledContainer>
-            <Header>{/* <ButtonBack /> */}</Header>
+            <Header>
+                <ButtonBack />
+            </Header>
             <StyledMain>
                 {validating ? (
                     <ValidateNumber

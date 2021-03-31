@@ -9,11 +9,11 @@ export const StyledContainer = styled.div`
     & h3 {
         margin: 0;
         text-align: center;
-        font-size: ${fontSizes.font17};
+        font-size: ${fontSizes.font20};
     }
 
     & p {
-        font-size: ${fontSizes.font09};
+        font-size: 11px;
         text-align: center;
         color: ${colors.lighDarkGray};
         transform: translateY(-3px);
@@ -21,7 +21,9 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledButtonContinue = styled(StyledButton)`
-    margin: 0 auto;
+    margin: 24px auto;
+    display: block;
+    width: 320px;
 `;
 
 export const StyledSpan = styled.span`

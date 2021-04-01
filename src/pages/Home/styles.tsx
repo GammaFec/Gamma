@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { fontSizes, theme } from "../../common/styles/index";
+import { fontSizes, theme } from "../../common/styles/variables";
 
 const StyledHome = styled.section`
     font-family: ${theme.fontPrimary};
-    box-sizing: border-box;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -16,12 +15,10 @@ const StyledHome = styled.section`
 const StyledHeader = styled.header`
     max-width: 250px;
     text-align: center;
-    box-sizing: border-box;
     width: 80vw;
 `;
 
 const StyledMain = styled.div`
-    box-sizing: border-box;
     width: 80vw;
     height: 148px;
     display: flex;

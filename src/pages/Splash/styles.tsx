@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fontSizes, theme } from "../../common/styles/variables";
 
 export const StyledContainer = styled.div`
     width: 100%;
@@ -16,8 +17,9 @@ export const StyledImg = styled.img`
 `;
 
 export const StyledParagraph = styled.p`
+    font-family: ${theme.fontPrimary};
     text-align: center;
     margin-top: 30px;
-    font-size: 24px;
+    font-size: ${fontSizes.font24};
     font-weight: 900;
 `;

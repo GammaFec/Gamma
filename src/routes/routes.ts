@@ -4,6 +4,7 @@ import IRoute from "./types";
 
 const Splash = React.lazy(() => import("../pages/Splash"));
 const NotFound = React.lazy(() => import("../pages/NotFound"));
+const MovilAuth = React.lazy(() => import("../pages/MovilAuth"));
 const Login = React.lazy(() => import("../pages/Login"));
 const Home = React.lazy(() => import("../pages/Home"));
 const Onboarding = React.lazy(() => import("../pages/Onboarding"));
@@ -34,6 +35,13 @@ const ROUTES: IRoute[] = [
         path: PATHS.Onboarding,
         component: Onboarding,
         name: "Carousel",
+        exact: true,
+        isPrivate: false
+    },
+    {
+        path: PATHS.MovilAuth,
+        component: MovilAuth,
+        name: "MovilAuth",
         exact: true,
         isPrivate: false
     },

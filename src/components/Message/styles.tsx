@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as userAvatar } from "../../assets/img/user_avatar.svg";
-import { colors, fontSizes, theme } from "../../common/styles";
+import { colors, fontSizes, theme } from "../../common/styles/variables";
 
 export const StyledMessageContainer = styled.div`
     font-family: ${theme.fontPrimary};

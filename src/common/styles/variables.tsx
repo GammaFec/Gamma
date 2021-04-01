@@ -26,7 +26,8 @@ export const fontSizes = {
     font18: "18px",
     font20: "20px",
     font21: "21px",
-    font30: "30px"
+    font30: "30px",
+    font24: "24px"
 };
 
 //theme

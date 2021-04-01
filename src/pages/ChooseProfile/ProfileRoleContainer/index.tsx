@@ -6,11 +6,11 @@ import { IRoleData, ISelectedRol } from "./types";
 
 const ProfileRoleContainer: React.FC = (): JSX.Element => {
     const Data: IRoleData[] = rolesData;
-    const [Selected, setSelected] = useState<ISelectedRol | null>(null);
-    const [ButtonDisabled, setButtonDisabled] = useState(true);
+    const [selected, setSelected] = useState<ISelectedRol | null>(null);
+    const [buttonDisabled, setButtonDisabled] = useState(true);
 
     const handleClick = (id: string, path: string): void => {
-        if (id === Selected?.id) {
+        if (id === selected?.id) {
             setSelected(null);
             setButtonDisabled(true);
         } else {
@@ -26,15 +26,15 @@ const ProfileRoleContainer: React.FC = (): JSX.Element => {
                     <ProfileRole
                         handleClick={(): void => handleClick(id, path)}
                         key={i}
-                        selected={Selected?.id === id}
+                        selected={selected?.id === id}
                         variant={variant}>
                         <p>{name}</p>
                     </ProfileRole>
                 ))}
             </StyledProfileRoleContainer>
             <StyledButton
-                className={`${ButtonDisabled && "disabled"}`}
-                disabled={ButtonDisabled}
+                className={`${buttonDisabled && "disabled"}`}
+                disabled={buttonDisabled}
                 variant="primary">
                 Continuar
             </StyledButton>

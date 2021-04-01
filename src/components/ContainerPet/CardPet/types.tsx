@@ -1,4 +1,5 @@
 export interface ICardPet {
+    id?: number;
     name: string;
     imageUrl: string;
     alt?: string;

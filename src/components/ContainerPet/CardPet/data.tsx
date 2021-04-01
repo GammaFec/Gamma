@@ -5,6 +5,7 @@ import { ICardPet } from "./types";
 
 export const animal: ICardPet[] = [
     {
+        id: 123,
         name: "Roky",
         imageUrl: Rocky,
         alt: "",
@@ -17,6 +18,7 @@ export const animal: ICardPet[] = [
     },
 
     {
+        id: 234,
         name: "Sasha",
         imageUrl: Sasha,
         alt: "",
@@ -28,6 +30,7 @@ export const animal: ICardPet[] = [
         dateOfBirth: "20200105"
     },
     {
+        id: 1254,
         name: "Chikorita",
         imageUrl: Chikorita,
         alt: "",

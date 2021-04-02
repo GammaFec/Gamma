@@ -7,11 +7,13 @@ import { StyledCard, StyledImage, StyledPetInfo } from "./styles";
 import { ICardPet } from "./types";
 
 // Svg
+
 import { ReactComponent as Location } from "../../../assets/img/fluent_location-28-filled.svg";
 import { ReactComponent as Female } from "../../../assets/img/bx_bx-female-sign.svg";
 import { ReactComponent as Male } from "../../../assets/img/gg_gender-male.svg";
 import { useTranslation } from "react-i18next";
 import { ageCalculate } from "../../../utils/ageCalculate";
+import { MALE } from "../../../common/constants";
 
 const CardPet: React.FC<ICardPet> = ({
     name,
@@ -31,7 +33,7 @@ const CardPet: React.FC<ICardPet> = ({
                 <StyledImage alt={alt} src={imageUrl} />
                 <StyledPetInfo>
                     <h2>{name}</h2>
-                    {genre === "male" ? <Male /> : <Female />}
+                    {genre === MALE ? <Male /> : <Female />}
                     <figcaption>
                         <span>
                             {t("CardPet:breed")}: {breed}

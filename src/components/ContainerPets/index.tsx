@@ -15,7 +15,7 @@ const ContainerPets = (): JSX.Element => {
 
     return (
         <StyledContainer>
-            <h1>{t("ContainerCard:title")}</h1>
+            <h1>{t("ContainerPets:title")}</h1>
             {animal.map(
                 ({ id, genre, breed, age, type, name, imageUrl, distance, dateOfBirth }) => (
                     <CardPet

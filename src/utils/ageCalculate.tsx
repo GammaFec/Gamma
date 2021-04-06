@@ -19,7 +19,7 @@ export const ageCalculate = (dateOfBirth: string): string => {
             resultAnimalAge = `1 ${t("CardPet:year")}`;
             break;
         default:
-            resultAnimalAge = `${moment().diff(dateOfBirth, "years")} ${t("CardPet:pluralYears")}`;
+            resultAnimalAge = `${moment().diff(dateOfBirth, "years")} ${t("CardPet:pluralYear")}`;
             break;
     }
     return resultAnimalAge;

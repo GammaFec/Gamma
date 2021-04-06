@@ -1,7 +1,7 @@
-import { LanguageList } from "./../../i18next/config";
 import i18next from "i18next";
+import { LanguageList } from "../../../i18next/config";
 
-i18next.addResources(LanguageList.SPANISH, "ContainerCard", {
+i18next.addResources(LanguageList.SPANISH, "CardPet", {
     title: "Cerca de ti",
     month: "mes",
     year: "año",
@@ -9,7 +9,7 @@ i18next.addResources(LanguageList.SPANISH, "ContainerCard", {
     pluralYear: "años"
 });
 
-i18next.addResources(LanguageList.ENGLISH, "ContainerCard", {
+i18next.addResources(LanguageList.ENGLISH, "CardPet", {
     title: "Around here",
     month: "month",
     year: "year",

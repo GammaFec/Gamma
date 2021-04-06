@@ -10,7 +10,7 @@ import CardPet from "./CardPet";
 // styles
 import { StyledContainer } from "./styles";
 
-const ContainerPet = (): JSX.Element => {
+const ContainerPets = (): JSX.Element => {
     const { t } = useTranslation();
 
     return (
@@ -35,4 +35,4 @@ const ContainerPet = (): JSX.Element => {
     );
 };
 
-export default ContainerPet;
+export default ContainerPets;

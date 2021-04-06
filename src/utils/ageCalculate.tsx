@@ -11,13 +11,15 @@ export const ageCalculate = (dateOfBirth: string): string => {
             resultAnimalAge = `1 ${t("CardPet:month")}`;
             break;
         case monthsOfLife >= 2 && monthsOfLife <= 11:
-            resultAnimalAge = `${moment().diff(dateOfBirth, "months")}  ${t("CardPet:month")}s`;
+            resultAnimalAge = `${moment().diff(dateOfBirth, "months")}  ${t(
+                "CardPet:pluralMonth"
+            )}`;
             break;
         case monthsOfLife >= 12 && monthsOfLife <= 23:
             resultAnimalAge = `1 ${t("CardPet:year")}`;
             break;
         default:
-            resultAnimalAge = `${moment().diff(dateOfBirth, "years")} ${t("CardPet:year")}s`;
+            resultAnimalAge = `${moment().diff(dateOfBirth, "years")} ${t("CardPet:pluralYears")}`;
             break;
     }
     return resultAnimalAge;

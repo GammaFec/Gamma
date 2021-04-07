@@ -47,10 +47,4 @@ const StyledUl = styled.ul`
     font-family: ${theme.fontPrimary};
 `;
 
-const StyledCarouselContainer = styled.main`
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-`;
-
-export { StyledLi, StyledUl, StyledCarouselContainer, StyledLiContainer };
+export { StyledLi, StyledUl, StyledLiContainer };

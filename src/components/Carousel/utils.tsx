@@ -11,18 +11,16 @@ const carouselDataMapped = (
     carouselData: ICarouselData[],
     activeTabIndex: number
 ): React.ReactNode =>
-    carouselData.map(({ id, imageAlt, imageUrl, titleOnPage, text }, index) => {
-        return (
-            <StyledLiContainer active={activeTabIndex === index} key={id}>
-                <StyledLi>
-                    <img alt={imageAlt} src={imageUrl} />
-                    <h2>{titleOnPage}</h2>
-                    {text.map((eachText, index) => (
-                        <p key={index}>{eachText}</p>
-                    ))}
-                </StyledLi>
-            </StyledLiContainer>
-        );
-    });
+    carouselData.map(({ id, imageAlt, imageUrl, titleOnPage, text }, index) => (
+        <StyledLiContainer active={activeTabIndex === index} key={id}>
+            <StyledLi>
+                <img alt={imageAlt} src={imageUrl} />
+                <h2>{titleOnPage}</h2>
+                {text.map((eachText, index) => (
+                    <p key={index}>{eachText}</p>
+                ))}
+            </StyledLi>
+        </StyledLiContainer>
+    ));
 
 export { carouselDataMapped };

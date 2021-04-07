@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme, fontSizes } from "../../common/styles/variables";
+import Button from "../Button";
 
 const StyledLiContainer = styled.section<{ active: boolean }>`
     z-index: ${(props): string => (props.active ? "0" : "-10")};
@@ -47,4 +48,10 @@ const StyledUl = styled.ul`
     font-family: ${theme.fontPrimary};
 `;
 
-export { StyledLi, StyledUl, StyledLiContainer };
+const StyledButton = styled(Button)`
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+`;
+
+export { StyledLi, StyledUl, StyledLiContainer, StyledButton };

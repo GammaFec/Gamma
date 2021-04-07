@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import * as variantType from "../../common/styles/constants";
 
 import DotSlider from "./DotsSlider";
-import Button from "../Button";
 
-import { StyledUl } from "./styles";
+import { StyledUl, StyledButton } from "./styles";
 
 import { carouselDataMapped } from "./utils";
 
@@ -24,9 +23,9 @@ const Carousel: React.FC<ICarousel> = ({ ButtonClick, carouselData }: ICarousel)
                 handleClick={changeActiveTabHandler}
             />
             {activeTabIndex === carouselData.length - 1 && (
-                <Button handleClick={ButtonClick} variant={variantType.PRIMARY}>
+                <StyledButton handleClick={ButtonClick} variant={variantType.PRIMARY}>
                     Continuar
-                </Button>
+                </StyledButton>
             )}
         </>
     );

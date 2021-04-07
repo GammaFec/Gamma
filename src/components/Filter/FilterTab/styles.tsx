@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { theme, fontSizes } from "../../../common/styles/index";
+import { theme, fontSizes } from "../../../common/styles/variables";
 
 const StyledImg = styled.img`
     margin: 0 auto;

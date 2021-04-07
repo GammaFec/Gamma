@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 import RouteItem from "../RouteItem";
 import ROUTES from "../routes";
-
 import Splash from "../../pages/Splash";
 
 const AppRouter = (): JSX.Element => {

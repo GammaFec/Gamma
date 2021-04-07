@@ -4,7 +4,7 @@ import * as variantType from "../../common/styles/constants";
 import DotSlider from "./DotsSlider/index";
 import Button from "../Button/index";
 
-import { StyledUl } from "./styles";
+import { StyledUl, StyledCarouselContainer } from "./styles";
 
 import { carouselDataMapped } from "./utils";
 
@@ -16,19 +16,19 @@ const Carousel: React.FC<ICarousel> = ({ click, carouselData }: ICarousel) => {
     const changeActiveTabHandler = (index: number): void => setActiveTabIndex(index);
 
     return (
-        <>
+        <StyledCarouselContainer>
             <StyledUl>{carouselDataMapped(carouselData, activeTabIndex)}</StyledUl>
             <DotSlider
                 activeTabIndex={activeTabIndex}
                 carouselData={carouselData}
                 handleClick={changeActiveTabHandler}
             />
-            {activeTabIndex === carouselData.length - 1 ? (
+            {activeTabIndex === carouselData.length - 1 && (
                 <Button handleClick={(): void => click()} variant={variantType.PRIMARY}>
                     Continuar
                 </Button>
-            ) : null}
-        </>
+            )}
+        </StyledCarouselContainer>
     );
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { StyledLi } from "./styles";
+import { StyledLi, StyledLiContainer } from "./styles";
 
 import { ICarouselData } from "./types";
 
@@ -13,13 +13,15 @@ const carouselDataMapped = (
 ): React.ReactNode =>
     carouselData.map(({ id, imageAlt, imageUrl, titleOnPage, text }, index) => {
         return (
-            <StyledLi active={activeTabIndex === index} key={id}>
-                <img alt={imageAlt} src={imageUrl} />
-                <h2>{titleOnPage}</h2>
-                {text.map((eachText, index) => (
-                    <p key={"text" + index}>{eachText}</p>
-                ))}
-            </StyledLi>
+            <StyledLiContainer active={activeTabIndex === index} key={id}>
+                <StyledLi>
+                    <img alt={imageAlt} src={imageUrl} />
+                    <h2>{titleOnPage}</h2>
+                    {text.map((eachText, index) => (
+                        <p key={index}>{eachText}</p>
+                    ))}
+                </StyledLi>
+            </StyledLiContainer>
         );
     });
 

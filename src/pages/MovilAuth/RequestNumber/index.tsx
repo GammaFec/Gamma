@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import Form from "../../../components/Form";
 
 import PhoneNumber from "../PhoneNumber";
-import { StyledContainer, StyledSpan } from "./styles";
+import { StyledButtonContinue, StyledContainer, StyledSpan } from "./styles";
 import iRequestNumber from "./types";
+
+import "./styles/index.css";
+import { PRIMARY } from "../../../common/constants";
 
 const RequestNumber: React.FC<iRequestNumber> = ({
     handleSubmit,
-    phoneNumber
+    phoneNumber,
+    buttonId
 }: iRequestNumber): JSX.Element => {
     const [statePhoneNumber, setStatePhoneNumber] = useState<string>(phoneNumber);
 
@@ -25,9 +29,9 @@ const RequestNumber: React.FC<iRequestNumber> = ({
             </p>
             <Form handleSubmit={submit} isContentCentered>
                 <PhoneNumber handleChange={setStatePhoneNumber} value={statePhoneNumber} />
-                {/* <StyledButtonContinue id={buttonId} type="submit" variant={PRIMARY}>
-                    Enviar codigo
-                </StyledButtonContinue> */}
+                <StyledButtonContinue id={buttonId} type="submit" variant={PRIMARY}>
+                    Continuar
+                </StyledButtonContinue>
             </Form>
         </StyledContainer>
     );

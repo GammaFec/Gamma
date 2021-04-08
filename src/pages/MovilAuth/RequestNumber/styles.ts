@@ -21,7 +21,13 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledButtonContinue = styled(StyledButton)`
-    margin: 0 auto;
+    font-family: ${fonts.poppins};
+    font-size: ${fontSizes.font12};
+    margin: 17px auto;
+    min-width: 254px;
+    height: 42px;
+    margin-top: 17px;
+    border-radius: 6px;
 `;
 
 export const StyledSpan = styled.span`

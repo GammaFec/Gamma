@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-console */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { PRIMARY } from "../../common/styles/constants";
 
 import { useDrag } from "react-use-gesture";
@@ -20,18 +18,24 @@ const Carousel: React.FC<ICarousel> = ({ ButtonClick, carouselData }: ICarousel)
 
     const bind = useDrag(({ dragging, movement }) => {
         const X_axis = movement[0];
+
+        // if axis is not 0 and the dragging end (false)
         if (X_axis && !dragging) {
+            // The direction of gesture is left or Right
             const isLeft = NumberIsPositive(X_axis);
 
             const previousSlide = activeTabIndex - 1;
             const nextSlide = activeTabIndex + 1;
 
             if (!isLeft) {
+                // if the previus slide is SMALLER than the limit, end the function
                 if (previousSlide < 0) return;
             }
             if (isLeft) {
+                // if the previus slide is BIGGER than the limit, end the function
                 if (nextSlide >= carouselData.length) return;
             }
+
             changeActiveTabHandler(isLeft ? nextSlide : previousSlide);
         }
     });

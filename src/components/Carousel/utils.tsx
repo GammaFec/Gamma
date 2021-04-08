@@ -23,4 +23,6 @@ const carouselDataMapped = (
         </StyledLiContainer>
     ));
 
-export { carouselDataMapped };
+const NumberIsPositive = (number: number): boolean => (number ? number < 0 : true);
+
+export { carouselDataMapped, NumberIsPositive };

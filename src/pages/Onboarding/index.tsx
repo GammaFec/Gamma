@@ -12,7 +12,7 @@ const CarouselPage: React.FC = () => {
 
     return (
         <StyledMain>
-            <Carrousel ButtonClick={clickOnContinue} carouselData={carrouselData} />
+            <Carrousel carouselData={carrouselData} handleClickOnContinue={clickOnContinue} />
         </StyledMain>
     );
 };

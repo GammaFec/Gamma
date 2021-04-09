@@ -1,6 +1,6 @@
 export interface ICarousel {
     carouselData: ICarouselData[];
-    ButtonClick: () => void;
+    handleClickOnContinue: () => void;
 }
 
 export interface ICarouselData {

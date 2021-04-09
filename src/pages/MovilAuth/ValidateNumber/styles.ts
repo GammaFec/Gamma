@@ -39,6 +39,7 @@ export const StyledButtonContinue = styled(StyledButton)`
     height: 42px;
     transform: translate(1px, 4px);
     font-family: ${fonts.poppins};
+    border-radius: 4px;
 `;
 
 export const StyledA = styled.a`
@@ -49,4 +50,8 @@ export const StyledA = styled.a`
 
 export const StyledSpan = styled.span`
     font-weight: 600;
+`;
+
+export const StyledGoBack = styled.button`
+    display: none;
 `;

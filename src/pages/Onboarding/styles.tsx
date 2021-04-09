@@ -4,7 +4,7 @@ const StyledMain = styled.main`
     display: flex;
     flex-flow: column;
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 90px;
 `;
 
 export { StyledMain };

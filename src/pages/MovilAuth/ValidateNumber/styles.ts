@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import { colors, fontSizes, fonts } from "../../../common/styles";
-import { StyledButton } from "../../Button/styles";
-import Form from "../../Form";
+import { StyledButton } from "../../../components/Button/styles";
+import Form from "../../../components/Form";
 
 export const StyledForm = styled(Form)`
     margin-top: 116px;
-    text-align: center;
     font-family: ${fonts.poppins};
     button {
         margin: 1rem 0.25rem;
@@ -15,24 +14,16 @@ export const StyledForm = styled(Form)`
         margin: 0;
         transform: translateY(2px);
     }
-    & p {
-        margin-top: 4px;
-        font-size: 10px;
-        font-weight: 300;
-        & svg {
-            transform: translate(1px, 5px);
-        }
+`;
+
+export const StyledSub = styled.p`
+    margin-top: 4px;
+    font-size: 10px;
+    font-weight: 300;
+    & svg {
+        transform: translate(1px, 5px);
     }
 `;
-export const StyledHand = styled.div`
-    svg {
-        display: block;
-        margin: auto;
-        transform: translate(-5px, -6px);
-        width: 74px;
-    }
-`;
-export const StyledSub = styled.p``;
 
 export const StyledFoot = styled.p`
     font-size: ${fontSizes.font10};
@@ -48,6 +39,7 @@ export const StyledButtonContinue = styled(StyledButton)`
     height: 42px;
     transform: translate(1px, 4px);
     font-family: ${fonts.poppins};
+    border-radius: 4px;
 `;
 
 export const StyledA = styled.a`
@@ -58,4 +50,8 @@ export const StyledA = styled.a`
 
 export const StyledSpan = styled.span`
     font-weight: 600;
+`;
+
+export const StyledGoBack = styled.button`
+    display: none;
 `;

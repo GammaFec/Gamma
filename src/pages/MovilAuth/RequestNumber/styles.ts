@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { colors, fonts, fontSizes } from "../../../common/styles";
-import { StyledButton } from "../../Button/styles";
+import { StyledButton } from "../../../components/Button/styles";
 
 export const StyledContainer = styled.div`
     width: 340px;
@@ -9,24 +9,24 @@ export const StyledContainer = styled.div`
     & h3 {
         margin: 0;
         text-align: center;
-        font-size: ${fontSizes.font20};
+        font-size: ${fontSizes.font17};
     }
-
     & p {
-        font-size: 11px;
+        font-size: ${fontSizes.font09};
         text-align: center;
         color: ${colors.lighDarkGray};
         transform: translateY(-3px);
     }
-    & svg {
-        transform: translate(124px, 44px);
-    }
 `;
 
 export const StyledButtonContinue = styled(StyledButton)`
-    margin: 24px auto;
-    display: block;
-    width: 320px;
+    font-family: ${fonts.poppins};
+    font-size: ${fontSizes.font12};
+    margin: 17px auto;
+    min-width: 254px;
+    height: 42px;
+    margin-top: 17px;
+    border-radius: 6px;
 `;
 
 export const StyledSpan = styled.span`

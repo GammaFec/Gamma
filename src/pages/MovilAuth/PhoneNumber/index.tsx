@@ -1,37 +1,30 @@
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/material.css";
-
 import React from "react";
+import PhoneInput from "react-phone-input-2";
 import iPhoneNumber from "./types";
-import { colors, fonts, fontSizes } from "../../../common/styles";
+import "react-phone-input-2/lib/material.css";
+import "./styles/index.css";
+import { StyledLine, StyledContainer, StyledDropDown, StyledInput } from "./styles";
+
+import { ReactComponent as Mobile } from "../../../assets/img/bx_bx-mobile-alt.svg";
 
 const PhoneNumber: React.FC<iPhoneNumber> = ({ handleChange, value }: iPhoneNumber) => {
     const change = (value: string): void => handleChange?.(value);
-
     return (
-        <div>
+        <StyledContainer>
+            <Mobile />
+            <StyledLine />
             <PhoneInput
-                buttonStyle={{ paddingLeft: "40px" }}
                 country={"us"}
+                dropdownStyle={StyledDropDown}
                 enableLongNumbers={true}
-                inputStyle={{
-                    backgroundColor: `${colors.lightGray}`,
-                    color: `${colors.gray}`,
-                    fontSize: `${fontSizes.font14}`,
-                    fontFamily: `${fonts.poppins}`,
-                    fontWeight: 600,
-                    border: "none",
-                    paddingLeft: "112px",
-                    width: "321px",
-                    height: "53px"
-                }}
+                inputStyle={StyledInput}
                 masks={{ ar: "... ...-...." }}
                 onChange={change}
                 preferredCountries={["ar"]}
                 prefix="+"
                 value={value}
             />
-        </div>
+        </StyledContainer>
     );
 };
 

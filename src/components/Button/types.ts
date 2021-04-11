@@ -4,5 +4,6 @@ export interface IButton {
     children: React.ReactNode;
     variant: typeof PRIMARY | typeof SECONDARY;
     styles?: string;
+    className?: string;
     handleClick?: React.MouseEventHandler<HTMLButtonElement>;
 }

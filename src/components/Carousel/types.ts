@@ -1,7 +1,6 @@
 export interface ICarousel {
     carouselData: ICarouselData[];
-    click: () => void;
-    children?: JSX.Element;
+    handleClickOnContinue: () => void;
 }
 
 export interface ICarouselData {

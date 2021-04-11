@@ -8,6 +8,7 @@ const MovilAuth = React.lazy(() => import("../pages/MovilAuth"));
 const Login = React.lazy(() => import("../pages/Login"));
 const Home = React.lazy(() => import("../pages/Home"));
 const Onboarding = React.lazy(() => import("../pages/Onboarding"));
+const Feed = React.lazy(() => import("../pages/Feed"));
 
 const ROUTES: IRoute[] = [
     {
@@ -42,6 +43,13 @@ const ROUTES: IRoute[] = [
         path: PATHS.MovilAuth,
         component: MovilAuth,
         name: "MovilAuth",
+        exact: true,
+        isPrivate: false
+    },
+    {
+        path: PATHS.Feed,
+        component: Feed,
+        name: "Feed",
         exact: true,
         isPrivate: false
     },

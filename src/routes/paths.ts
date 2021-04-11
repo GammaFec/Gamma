@@ -4,5 +4,6 @@ export enum PATHS {
     Login = "/login",
     Messages = "/messages",
     MovilAuth = "/movil-auth/:id",
-    Onboarding = "/onboarding"
+    Onboarding = "/onboarding",
+    Feed = "/feed"
 }

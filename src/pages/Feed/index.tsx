@@ -1,6 +1,7 @@
 import React, { useState, ReactElement } from "react";
 
 import Filter from "../../components/Filter/";
+import Nav from "../../components/Nav";
 
 import JsonData from "../../components/Filter/FilterData";
 
@@ -21,7 +22,13 @@ const FeedPage = (): ReactElement => {
 
     return (
         <main>
+            <header>
+                <Nav />
+            </header>
             <Filter clickHandler={filterHandler} data={JsonData} />
+            <section>
+                <h2>Cerca de ti</h2>
+            </section>
         </main>
     );
 };

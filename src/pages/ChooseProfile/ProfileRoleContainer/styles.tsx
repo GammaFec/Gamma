@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontSizes } from "../../../common/styles";
+import { fontSizes } from "../../../common/styles/variables";
 import Button from "../../../components/Button";
 
 export const StyledProfileRoleContainer = styled.ul`

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontSizes, breakpoints } from "../../common/styles";
+import { fontSizes, breakpoints } from "../../common/styles/variables";
 
 export const StyledMain = styled.main`
     align-items: center;

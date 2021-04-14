@@ -1,0 +1,14 @@
+[
+    {
+        "id": "2ba2ae32806b11eb",
+        "name": "Adoptante",
+        "path": "/adoptante",
+        "variant": "primary"
+    },
+    {
+        "id": "94390242ac130002",
+        "name": "Albergue",
+        "path": "/albergue",
+        "variant": "secondary"
+    }
+]

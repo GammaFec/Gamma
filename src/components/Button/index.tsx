@@ -7,10 +7,16 @@ const Button: React.FC<IButton> = ({
     variant,
     styles,
     handleClick,
-    className
+    className,
+    disabled = false
 }: IButton) => {
     return (
-        <StyledButton className={className} onClick={handleClick} styles={styles} variant={variant}>
+        <StyledButton
+            className={className}
+            disabled={disabled}
+            onClick={handleClick}
+            styles={styles}
+            variant={variant}>
             {children}
         </StyledButton>
     );

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-import { fonts, fontSizes } from "../../common/styles";
+import { fontSizes, theme } from "../../common/styles";
 
 export const StyledContainer = styled.div`
     width: 320px;
     min-height: 81px;
     margin: auto;
-    font-family: ${fonts.poppins};
+    font-family: ${theme.fontPrimary};
 
     & h1 {
         font-size: ${fontSizes.font20};

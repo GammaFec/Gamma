@@ -1,5 +1,5 @@
 export interface ICardPet {
-    id?: number;
+    id: number;
     name: string;
     imageUrl: string;
     alt?: string;
@@ -9,4 +9,7 @@ export interface ICardPet {
     genre: string;
     distance: string;
     dateOfBirth: string;
+}
+export interface ICardPetData {
+    animals: ICardPet[];
 }

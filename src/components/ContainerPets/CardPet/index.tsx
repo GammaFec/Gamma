@@ -7,13 +7,15 @@ import { StyledCard, StyledImage, StyledPetInfo } from "./styles";
 // Types
 import { ICardPet } from "./types";
 
-// Svg
-
 import { ageCalculate } from "../../../utils/ageCalculate";
+
 import { MALE } from "../../../common/constants";
+
+// svg
 import { FEMALE_SVG, LOCATION, MALE_SVG } from "../../../common/constants/svgs";
 
 const CardPet: React.FC<ICardPet> = ({
+    id,
     name,
     imageUrl,
     alt,
@@ -25,8 +27,13 @@ const CardPet: React.FC<ICardPet> = ({
 }: ICardPet) => {
     const { t } = useTranslation();
     const resultAnimalAge = ageCalculate(dateOfBirth);
+
+    const handleClick = (): void => {
+        alert(id);
+    };
+
     return (
-        <StyledCard>
+        <StyledCard onClick={handleClick}>
             <StyledImage alt={alt} src={imageUrl} />
             <StyledPetInfo>
                 <h2>{name}</h2>

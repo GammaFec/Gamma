@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fonts, fontSizes } from "../../../common/styles";
+import { fontSizes, theme } from "../../../common/styles";
 
 const StyledCard = styled.figure`
     display: flex;
@@ -7,8 +7,9 @@ const StyledCard = styled.figure`
     margin-bottom: 21px;
     align-items: center;
     width: 360px;
-    font-family: ${fonts.poppins};
+    font-family: ${theme.fontPrimary};
     font-size: ${fontSizes.font12};
+    cursor: pointer;
 `;
 
 const StyledImage = styled.img`
@@ -21,11 +22,9 @@ const StyledPetInfo = styled.div`
     width: 126px;
     height: 76px;
     margin-left: 38px;
-    transform: translateY(-6px);
 
     & h2 {
         font-size: ${fontSizes.font12};
-        transform: translate(-1px, -3px);
     }
 
     & figcaption :first-child {
@@ -38,13 +37,9 @@ const StyledPetInfo = styled.div`
         & span {
             display: block;
         }
-
-        & svg {
-            transform: translate(-3px, 4px);
-        }
     }
 
-    & svg {
+    & > svg {
         transform: translate(125px, -40px);
     }
 `;

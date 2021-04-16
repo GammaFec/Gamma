@@ -1,29 +1,37 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-// data
-import { animal } from "./CardPet/data";
-
 // component
 import CardPet from "./CardPet";
 
 // styles
 import { StyledContainer } from "./styles";
+import { ICardPet, ICardPetData } from "./CardPet/types";
 
-const ContainerPets = (): JSX.Element => {
+const ContainerPets = ({ animals }: ICardPetData): JSX.Element => {
     const { t } = useTranslation();
-
     return (
         <StyledContainer>
             <h1>{t("ContainerPets:title")}</h1>
-            {animal.map(
-                ({ id, genre, breed, age, type, name, imageUrl, distance, dateOfBirth }) => (
+            {animals.map(
+                ({
+                    id,
+                    genre,
+                    breed,
+                    age,
+                    type,
+                    name,
+                    imageUrl,
+                    distance,
+                    dateOfBirth
+                }: ICardPet) => (
                     <CardPet
                         age={age}
                         breed={breed}
                         dateOfBirth={dateOfBirth}
                         distance={distance}
                         genre={genre}
+                        id={id}
                         imageUrl={imageUrl}
                         key={id}
                         name={name}

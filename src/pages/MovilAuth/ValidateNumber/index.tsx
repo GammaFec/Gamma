@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { PRIMARY } from "../../../common/constants";
 import CodeVerification from "../CodeVerification";
-import { ReactComponent as Pen } from "../../../assets/pen.svg";
 import {
     StyledA,
     StyledButtonContinue,
@@ -13,6 +12,7 @@ import {
     StyledSub
 } from "./styles";
 import iValidateNumber from "./types";
+import { HANDSHONE_SVG, HANDSOK_SVG, PEN_SVG } from "../../../common/constants/svgs";
 
 const ValidateNumber: React.FC<iValidateNumber> = ({
     phoneNumber,
@@ -21,19 +21,17 @@ const ValidateNumber: React.FC<iValidateNumber> = ({
     handleSubmit
 }: iValidateNumber): JSX.Element => {
     const [code, setCode] = useState<string>("");
-
-    const submit = (): void => handleSubmit(code);
+    // const submit = (): void => handleSubmit(code);
 
     return (
         <StyledForm>
             <div>
                 <h3>
-                    Ingresa el
-                    <br /> código que recibiste
+                    <span>Ingresa el</span> <span>código que recibiste</span>
                 </h3>
                 <StyledSub>
                     Fue enviado al número <StyledSpan>+57968069617</StyledSpan>
-                    <Pen />
+                    <PEN_SVG />
                 </StyledSub>
             </div>
             <div>
@@ -48,6 +46,7 @@ const ValidateNumber: React.FC<iValidateNumber> = ({
                     ¿Aún no te llegó? <StyledA href="http">Reenvíar Código</StyledA>
                 </StyledFoot>
             </div>
+            <HANDSOK_SVG />
         </StyledForm>
     );
 };

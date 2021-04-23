@@ -8,6 +8,7 @@ import iRequestNumber from "./types";
 
 import "./styles/index.css";
 import { PRIMARY } from "../../../common/constants";
+import { HANDSHONE_SVG } from "../../../common/constants/svgs";
 
 const RequestNumber: React.FC<iRequestNumber> = ({
     handleSubmit,
@@ -21,7 +22,8 @@ const RequestNumber: React.FC<iRequestNumber> = ({
     return (
         <StyledContainer>
             <h3>
-                Ingresa tu <br /> número de telefono
+                <span>Ingresa tu</span>
+                <span>número de telefono</span>
             </h3>
             <p>
                 Pensando en la integridad de las animales <br /> necesitaras un código de
@@ -34,6 +36,7 @@ const RequestNumber: React.FC<iRequestNumber> = ({
                     Continuar
                 </StyledButtonContinue>
             </Form>
+            <HANDSHONE_SVG />
         </StyledContainer>
     );
 };

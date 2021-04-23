@@ -4,18 +4,32 @@ import { StyledButton } from "../../../components/Button/styles";
 
 export const StyledContainer = styled.div`
     width: 340px;
-    margin: 113px auto auto auto;
+    min-height: 100vh;
     font-family: ${fonts.poppins};
+    position: relative;
+    margin: auto;
+
     & h3 {
         margin: 0;
         text-align: center;
         font-size: ${fontSizes.font17};
+        padding-top: 113px;
+
+        & span {
+            display: block;
+        }
     }
+
     & p {
         font-size: ${fontSizes.font09};
         text-align: center;
         color: ${colors.lighDarkGray};
-        transform: translateY(-3px);
+    }
+
+    & > svg {
+        position: absolute;
+        left: 139px;
+        bottom: 0px;
     }
 `;
 

@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 
 import Header from "../../components/Header";
-import RequestNumber from "../../components/MovilAuth/RequestNumber";
-import ValidateNumber from "../../components/MovilAuth/ValidateNumber";
 import getRecaptcha from "../../services/firebase/auth/getRecaptcha";
 import PhoneValidator from "../../utils/PhoneValidator";
 import sendSMSCode from "../../services/firebase/auth/sendSMSCode";
 import verifyCode from "../../services/firebase/auth/verifyCode";
 
 import { StyledContainer, StyledMain } from "./styles";
+import RequestNumber from "./RequestNumber";
+import ValidateNumber from "./ValidateNumber";
 
 const MovilAuth = (): JSX.Element => {
     const [phoneNumber, setPhoneNumber] = useState<string | null>(null);

@@ -2,11 +2,11 @@ import React from "react";
 import { StyledParagraph, StyledList, StyledItemList, StyledSvg } from "./styles";
 import { Icons } from "./icon";
 
-const SocialLogins: React.FC<{ text: string }> = (text) => {
+const SocialLogins: React.FC<{ text: string }> = ({ text }) => {
     return (
         <>
             <StyledParagraph>{text}</StyledParagraph>
-            <StyledList>
+            <StyledList title="Icon list">
                 {Icons.map((icon) => {
                     return (
                         <StyledItemList key={icon.name}>

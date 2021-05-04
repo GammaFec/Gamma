@@ -20,8 +20,8 @@ const LoginMain = (): ReactElement => {
         history.push("/movil-auth/useId");
     };
 
-    const handleGoToRegister = (): void => {
-        history.push("/Register");
+    const handleGoToLogin = (): void => {
+        history.push("/login");
     };
 
     return (
@@ -34,7 +34,7 @@ const LoginMain = (): ReactElement => {
                 <Button handleClick={handleGoToMovilAuth} variant={PRIMARY}>
                     {t("Home:SignUp")}
                 </Button>
-                <Button handleClick={handleGoToRegister} variant={SECONDARY}>
+                <Button handleClick={handleGoToLogin} variant={SECONDARY}>
                     {t("Home:LogIn")}
                 </Button>
             </StyledMain>

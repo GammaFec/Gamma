@@ -5,6 +5,7 @@ import { InputIsValid } from "../../utils/InputValidation";
 import Logo from "../../assets/img/Logo.svg";
 import * as variantType from "../../common/styles/constants";
 import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
+import eye from "../../assets/img/eye.png";
 
 const LoginPage: React.FC = () => {
     const [usernameObj, setUsernameObj] = useState({
@@ -61,16 +62,20 @@ const LoginPage: React.FC = () => {
             </div>
             <StyledForm onSubmit={submitHandler}>
                 <Input
-                    id="LoginUser"
-                    name="LoginUser"
+                    autocomplete="user-name"
+                    doFocus
+                    id="user-name"
+                    name="user-name"
                     onChange={AccountInputHandler}
                     placeholder="Ingresa Tu Cuenta"
                     type="text"
                     value={usernameObj.value}
                 />
                 <Input
-                    id="LoginPassword"
-                    name="LoginPassword"
+                    autocomplete="current-password"
+                    icon={eye}
+                    id="current-password"
+                    name="current-password"
                     onChange={PasswordInputHandler}
                     placeholder="Contraseña"
                     type="password"

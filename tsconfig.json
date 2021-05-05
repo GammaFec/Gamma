@@ -16,7 +16,7 @@
         "noEmit": true,
         "jsx": "react-jsx",
         "typeRoots": ["./types", "./node_modules/@types"],
-        "types": ["cypress", "jest"],
+        "types": ["cypress", "jest", "webpack-env"],
     },
     "include": ["./src/**/*.tsx", "./src/**/*.ts"],
     "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts", "**/*.test.tsx"],

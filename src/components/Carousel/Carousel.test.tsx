@@ -28,7 +28,7 @@ describe("<Carousel />", () => {
         });
     });
 
-    test("Move carousel", () => {
+    test("Move carousel and click in continue", () => {
         const { getByRole, getAllByRole } = render(
             <Carousel carouselData={carouselData} handleClickOnContinue={mockHandler} />
         );

@@ -1,6 +1,6 @@
 import React from "react";
 import ButtonSocial from "./";
-import { Icons } from "./icon"
+import { Icons } from "./icon";
 import "@testing-library/jest-dom/extend-expect";
 import { render } from "@testing-library/react";
 
@@ -22,10 +22,12 @@ describe("<ButtonSocial />", () => {
         const { getAllByRole } = render(<ButtonSocial text={ButtonText} />);
 
         const IconsUrl = Icons.map(({ url }) => url);
-        const ItemsList = getAllByRole('link');
+        const ItemsList = getAllByRole("link");
 
-        const ItemListHrefValue = ItemsList.map(({ attributes }) => attributes.getNamedItem("href").value);
+        const ItemListHrefValue = ItemsList.map(
+            ({ attributes }) => attributes.getNamedItem("href").value
+        );
 
         expect(ItemListHrefValue).toEqual(IconsUrl);
-    })
+    });
 });

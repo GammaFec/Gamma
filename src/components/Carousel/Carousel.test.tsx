@@ -39,9 +39,11 @@ describe("<Carousel />", () => {
             DotButtons[i].click();
         });
 
-        expect(getByRole("button", { name: "Continuar" })).toBeInTheDocument();
+        const ContinueButton = getByRole("button", { name: "Continuar" });
 
-        fireEvent.click(getByRole("button", { name: "Continuar" }));
+        expect(ContinueButton).toBeInTheDocument();
+
+        fireEvent.click(ContinueButton);
         expect(mockHandler).toHaveBeenCalledTimes(1);
     });
 });

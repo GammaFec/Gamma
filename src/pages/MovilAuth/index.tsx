@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 
 import Header from "../../components/Header";
-import RequestNumber from "../../components/MovilAuth/RequestNumber";
-import ValidateNumber from "../../components/MovilAuth/ValidateNumber";
+import RequestNumber from "./MovilAuth/RequestNumber";
+import ValidateNumber from "./MovilAuth/ValidateNumber";
 import getRecaptcha from "../../services/firebase/auth/getRecaptcha";
-import PhoneValidator from "../../utils/PhoneValidator";
+import PhoneValidator from "./utils";
 import sendSMSCode from "../../services/firebase/auth/sendSMSCode";
 import verifyCode from "../../services/firebase/auth/verifyCode";
 

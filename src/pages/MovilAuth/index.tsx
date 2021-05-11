@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 
 import Header from "../../components/Header";
-import RequestNumber from "./MovilAuth/RequestNumber";
-import ValidateNumber from "./MovilAuth/ValidateNumber";
+import RequestNumber from "./RequestNumber";
+import ValidateNumber from "./ValidateNumber";
 import getRecaptcha from "../../services/firebase/auth/getRecaptcha";
 import PhoneValidator from "./utils";
 import sendSMSCode from "../../services/firebase/auth/sendSMSCode";

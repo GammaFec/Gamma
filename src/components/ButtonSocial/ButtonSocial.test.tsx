@@ -8,7 +8,7 @@ describe("<ButtonSocial />", () => {
     const ButtonText = "Test";
     const ListTitle = "Icon list";
 
-    test("Render Paragrap", () => {
+    test("Render Paragraph", () => {
         const { getByText } = render(<ButtonSocial text={ButtonText} />);
         getByText(ButtonText);
     });

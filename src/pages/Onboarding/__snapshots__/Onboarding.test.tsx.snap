@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Onboarding /> Render 1`] = `
+<DocumentFragment>
+  <main
+    class="sc-iCoGMd kfUBOt"
+  >
+    <ul
+      class="sc-jSFjdj eXCDtD"
+    >
+      <section
+        class="sc-hKFxyN iByppM"
+      >
+        <li
+          class="sc-eCApnc bUWETU"
+        >
+          <img
+            alt="Person with a cat"
+            src="CarouselImage01.svg"
+          />
+          <h2>
+            Elige tu compañero ideal
+          </h2>
+          <p>
+            Aquí el amor a primera vista si existe
+          </p>
+          <p>
+            Descubre tu compañero perfecto y vive muchas historias junto a ellos.
+          </p>
+        </li>
+      </section>
+      <section
+        class="sc-hKFxyN jrVFHM"
+      >
+        <li
+          class="sc-eCApnc bUWETU"
+        >
+          <img
+            alt="Person with a dog"
+            src="CarouselImage02.svg"
+          />
+          <h2>
+            Conversa con Albergues
+          </h2>
+          <p>
+            Heroes sin capa día a día brindan atención, haz match con alguna de las mascotas listas en adopción y define el proceso de adopción.
+          </p>
+        </li>
+      </section>
+      <section
+        class="sc-hKFxyN jrVFHM"
+      >
+        <li
+          class="sc-eCApnc bUWETU"
+        >
+          <img
+            alt="Person with a bird"
+            src="CarouselImage03.svg"
+          />
+          <h2>
+            Recuerda siempre
+          </h2>
+          <p>
+            Cuida, protege y dale amor a quien con solo verte se emociona sin límites.
+          </p>
+        </li>
+      </section>
+    </ul>
+    <ul
+      class="sc-gtsrHT eYqfwW"
+    >
+      <button
+        class="sc-bdnxRM kWgKwT"
+      />
+      <button
+        class="sc-bdnxRM hqtfmP"
+      />
+      <button
+        class="sc-bdnxRM hqtfmP"
+      />
+    </ul>
+  </main>
+</DocumentFragment>
+`;

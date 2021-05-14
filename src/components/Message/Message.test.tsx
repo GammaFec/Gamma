@@ -39,34 +39,6 @@ describe("<Message />", () => {
         getByAltText(Name);
     });
 
-    test("UserAvatar is NOT show", () => {
-        const { getByTitle } = render(
-            <Message
-                count={Count}
-                creationDate={creationDate}
-                isRead={false}
-                name={Name}
-                text={Text}
-            />
-        );
-
-        getByTitle("defaultUser");
-    });
-
-    test("NumberOfMessage is show", () => {
-        const { getByText } = render(
-            <Message
-                count={Count}
-                creationDate={creationDate}
-                isRead={false}
-                name={Name}
-                text={Text}
-            />
-        );
-
-        getByText(Count);
-    });
-
     test("NumberOfMessage NOT show", async () => {
         const { queryByText } = render(
             <Message
@@ -83,7 +55,7 @@ describe("<Message />", () => {
     });
 
     test("Render all childrens", () => {
-        const { getByText } = render(
+        const { getByText, getByTitle } = render(
             <Message
                 count={Count}
                 creationDate={creationDate}
@@ -93,6 +65,8 @@ describe("<Message />", () => {
             />
         );
 
+        getByTitle("defaultUser");
+        getByText(Count);
         getByText(Name);
         getByText(Text);
         getByText(TimeAgo(creationDate));

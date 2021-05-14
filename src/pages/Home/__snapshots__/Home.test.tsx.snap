@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> Render 1`] = `
+<DocumentFragment>
+  <section
+    class="sc-bdnxRM dkVZJw"
+  >
+    <header
+      class="sc-gtsrHT ezvPLu"
+    >
+      <img
+        alt="ImageAlt"
+        class="sc-hKFxyN kCkgGK"
+        src="Logo.svg"
+      />
+      <h1
+        class="sc-eCApnc ipYFjT"
+      >
+        Title
+      </h1>
+    </header>
+    <div
+      class="sc-dlnjwi bfswLG"
+    >
+      <button
+        class="sc-jSFjdj eNfmAC"
+      >
+        SignUp
+      </button>
+      <button
+        class="sc-jSFjdj kRtxbG"
+      >
+        LogIn
+      </button>
+    </div>
+  </section>
+</DocumentFragment>
+`;

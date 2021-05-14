@@ -14,10 +14,10 @@ import { useHistory } from "react-router-dom";
 
 const LoginMain = (): ReactElement => {
     const history = useHistory();
-    const { t } = useTranslation();
+    const { t } = useTranslation("Home");
 
     const handleGoToMovilAuth = (): void => {
-        history.push("/movil-auth/useId");
+        history.push("/movil-auth/:id");
     };
 
     const handleGoToLogin = (): void => {
@@ -27,15 +27,15 @@ const LoginMain = (): ReactElement => {
     return (
         <StyledHome>
             <StyledHeader>
-                <StyledImg alt={t("Home:ImageAlt")} src={Logo} />
-                <StyledH1>{t("Home:Title")}</StyledH1>
+                <StyledImg alt={t("ImageAlt")} src={Logo} />
+                <StyledH1>{t("Title")}</StyledH1>
             </StyledHeader>
             <StyledMain>
                 <Button handleClick={handleGoToMovilAuth} variant={PRIMARY}>
-                    {t("Home:SignUp")}
+                    {t("SignUp")}
                 </Button>
                 <Button handleClick={handleGoToLogin} variant={SECONDARY}>
-                    {t("Home:LogIn")}
+                    {t("LogIn")}
                 </Button>
             </StyledMain>
         </StyledHome>

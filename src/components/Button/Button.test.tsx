@@ -37,6 +37,5 @@ describe("<Button />", () => {
         fireEvent.click(button);
 
         expect(mockHandler).toHaveBeenCalledTimes(0);
-        expect(button).toHaveAttribute("disabled");
     });
 });

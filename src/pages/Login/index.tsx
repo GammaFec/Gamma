@@ -5,8 +5,11 @@ import { InputIsValid } from "../../utils/InputValidation";
 import Logo from "../../assets/img/Logo.svg";
 import * as variantType from "../../common/styles/constants";
 import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
+import { useTranslation } from "react-i18next";
 
 const LoginPage: React.FC = () => {
+    const { t } = useTranslation("Login");
+
     const [usernameObj, setUsernameObj] = useState({
         value: "",
         valid: false
@@ -57,7 +60,7 @@ const LoginPage: React.FC = () => {
         <StyledMainWrapper>
             <div>
                 <img alt="logo" src={Logo}></img>
-                <StyledP>Encuentra tu compañero ideal</StyledP>
+                <StyledP>{t("Title")}</StyledP>
             </div>
             <StyledForm onSubmit={submitHandler}>
                 <Input
@@ -79,7 +82,7 @@ const LoginPage: React.FC = () => {
                 <Button
                     handleClick={(): void => loginButtonClicked()}
                     variant={variantType.PRIMARY}>
-                    Ingresar
+                    {t("Login")}
                 </Button>
             </StyledForm>
         </StyledMainWrapper>

@@ -19,7 +19,7 @@ describe("<Nav />", () => {
 
     test("Render", () => {
         const { getByAltText } = render(<Nav />);
-        getByAltText("Nav:MenuAlt");
+        getByAltText("MenuAlt");
     });
 
     test("Handle go to splash", () => {
@@ -29,7 +29,7 @@ describe("<Nav />", () => {
             </Router>
         );
 
-        const Button = getByAltText("Nav:LogoAlt");
+        const Button = getByAltText("LogoAlt");
 
         fireEvent.click(Button);
 
@@ -43,7 +43,7 @@ describe("<Nav />", () => {
             </Router>
         );
 
-        const Button = getByAltText("Nav:MessagesAlt");
+        const Button = getByAltText("MessagesAlt");
 
         fireEvent.click(Button);
 

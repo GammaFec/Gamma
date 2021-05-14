@@ -12,7 +12,7 @@ import MsgBtn from "../../assets/img/bx-message.png";
 
 const Nav: React.FC = () => {
     const history = useHistory();
-    const { t } = useTranslation();
+    const { t } = useTranslation("Nav");
 
     const handleGoToSplash = (): void => {
         history.push(PATHS.Splash);
@@ -24,9 +24,9 @@ const Nav: React.FC = () => {
 
     return (
         <StyledNav>
-            <StyledIcon alt={t("Nav:MenuAlt")} src={MenuBtn} />
-            <StyledIcon alt={t("Nav:LogoAlt")} onClick={handleGoToSplash} src={Logo} />
-            <StyledIcon alt={t("Nav:MessagesAlt")} onClick={handleGoToMessages} src={MsgBtn} />
+            <StyledIcon alt={t("MenuAlt")} src={MenuBtn} />
+            <StyledIcon alt={t("LogoAlt")} onClick={handleGoToSplash} src={Logo} />
+            <StyledIcon alt={t("MessagesAlt")} onClick={handleGoToMessages} src={MsgBtn} />
         </StyledNav>
     );
 };

@@ -5,12 +5,12 @@ import ProfileRoleContainer from "./ProfileRoleContainer";
 import { StyledContainer, StyledMain, StyledText, StyledTitle } from "./styles";
 
 const ChooseProfile: React.FC = (): JSX.Element => {
-    const { t } = useTranslation();
+    const { t } = useTranslation("ChooseProfile");
     return (
         <StyledMain>
             <StyledContainer>
-                <StyledTitle>{t("ChooseProfile:title")}</StyledTitle>
-                <StyledText>{t("ChooseProfile:description")}</StyledText>
+                <StyledTitle>{t("title")}</StyledTitle>
+                <StyledText>{t("description")}</StyledText>
                 <ProfileRoleContainer />
             </StyledContainer>
         </StyledMain>

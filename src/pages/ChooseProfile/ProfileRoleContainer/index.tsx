@@ -9,7 +9,7 @@ const ProfileRoleContainer: React.FC = (): JSX.Element => {
     const Data: IRoleData[] = rolesData;
     const [selected, setSelected] = useState<ISelectedRol | null>(null);
     const [buttonDisabled, setButtonDisabled] = useState(true);
-    const { t } = useTranslation();
+    const { t } = useTranslation("ProfileRole");
 
     const handleClick = (id: string, path: string): void => {
         if (id === selected?.id) {
@@ -38,7 +38,7 @@ const ProfileRoleContainer: React.FC = (): JSX.Element => {
                 className={`${buttonDisabled && "disabled"}`}
                 disabled={buttonDisabled}
                 variant="primary">
-                {t("ProfileRole:continue")}
+                {t("continue")}
             </StyledButton>
         </>
     );

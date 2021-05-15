@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 
@@ -31,15 +30,12 @@ const MovilAuth = (): JSX.Element => {
     const openValidation = (formPhoneNumber: string): void => {
         if (PhoneValidator(formPhoneNumber) && recaptcha) {
             setPhoneNumber(formPhoneNumber);
-            sendSMSCode(formPhoneNumber, recaptcha)
-                .then((result: firebase.auth.ConfirmationResult) => {
-                    console.log("a");
+            sendSMSCode(formPhoneNumber, recaptcha).then(
+                (result: firebase.auth.ConfirmationResult) => {
                     setVerificationResult(result);
                     setValidating(true);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
+                }
+            );
         }
     };
 

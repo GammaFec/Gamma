@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CodeVerification from "../CodeVerification";
+import CodeVerification from "./CodeVerification";
 import { StyledButtonContinue, StyledForm } from "./styles";
 import iValidateNumber from "./types";
 

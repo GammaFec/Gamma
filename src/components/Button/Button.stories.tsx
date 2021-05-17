@@ -6,8 +6,15 @@ import Button from ".";
 import { IButton } from "./types";
 
 export default {
-    title: "Button",
-    component: Button
+    title: "Components/Button",
+    component: Button,
+    parameters: {
+        docs: {
+            description: {
+                component: "Main button"
+            }
+        }
+    }
 } as Meta;
 
 const Template: Story<IButton> = (args) => <Button {...args} />;

@@ -3,8 +3,8 @@ import { StyledButton } from "./styles";
 import { IButton } from "./types";
 
 const Button: React.FC<IButton> = ({
-    children,
-    variant,
+    children = "Click",
+    variant = "primary",
     styles,
     handleClick,
     className,

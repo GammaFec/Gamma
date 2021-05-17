@@ -12,7 +12,7 @@ import { ageCalculate } from "../../../utils/ageCalculate";
 import { MALE } from "../../../common/constants";
 
 // svg
-import { FEMALE_SVG, LOCATION, MALE_SVG } from "../../../common/constants/svgs";
+import { FEMALE_SVG, LOCATION, MALE_SVG } from "../../../common/styles/svgs";
 
 const CardPet: React.FC<ICardPet> = ({
     id,

@@ -84,7 +84,8 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": ">=4",
     "lint-staged": ">=10",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "react-docgen-typescript": "^1.22.0"
   },
   "husky": {
     "hooks": {

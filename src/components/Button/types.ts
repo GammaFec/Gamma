@@ -1,6 +1,6 @@
 import { PRIMARY, SECONDARY } from "../../common/styles/constants";
-
 export interface IButton {
+    /** Text or component label */
     children: React.ReactNode;
     variant: typeof PRIMARY | typeof SECONDARY;
     styles?: string;

@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-empty-function */
 import React from "react";
 import { Story, Meta } from "@storybook/react";
 
@@ -16,12 +16,12 @@ export const Primary = Template.bind({});
 Primary.args = {
     variant: "primary",
     children: "Primary",
-    handleClick: console.log
+    handleClick: (): void => {}
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
     variant: "secondary",
     children: "Secondary",
-    handleClick: console.log
+    handleClick: (): void => {}
 };

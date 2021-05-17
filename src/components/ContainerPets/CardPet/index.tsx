@@ -9,7 +9,7 @@ import { ICardPet } from "./types";
 
 import { ageCalculate } from "../../../utils/ageCalculate";
 
-import { MALE } from "../../../common/constants";
+import { MALE } from "../../../common/styles/constants";
 
 // svg
 import { FEMALE_SVG, LOCATION, MALE_SVG } from "../../../common/styles/svgs";

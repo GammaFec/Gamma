@@ -1,8 +1,9 @@
 export enum PATHS {
-    Splash = "/Splash",
+    Splash = "/",
     Home = "/home",
     Login = "/login",
-    Messages = "/messages",
+    ChooseProfile = "/choose-profile",
     MovilAuth = "/movil-auth/:id",
+    Messages = "/messages",
     Onboarding = "/onboarding"
 }

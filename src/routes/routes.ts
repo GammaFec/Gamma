@@ -4,8 +4,10 @@ import IRoute from "./types";
 
 const Splash = React.lazy(() => import("../pages/Splash"));
 const NotFound = React.lazy(() => import("../pages/NotFound"));
+const MovilAuth = React.lazy(() => import("../pages/MovilAuth"));
 const Login = React.lazy(() => import("../pages/Login"));
 const Home = React.lazy(() => import("../pages/Home"));
+const ChooseProfile = React.lazy(() => import("../pages/ChooseProfile"));
 const Onboarding = React.lazy(() => import("../pages/Onboarding"));
 
 const ROUTES: IRoute[] = [
@@ -31,9 +33,23 @@ const ROUTES: IRoute[] = [
         isPrivate: false
     },
     {
+        path: PATHS.ChooseProfile,
+        component: ChooseProfile,
+        name: "ChooseProfile",
+        exact: true,
+        isPrivate: false
+    },
+    {
         path: PATHS.Onboarding,
         component: Onboarding,
         name: "Carousel",
+        exact: true,
+        isPrivate: false
+    },
+    {
+        path: PATHS.MovilAuth,
+        component: MovilAuth,
+        name: "MovilAuth",
         exact: true,
         isPrivate: false
     },

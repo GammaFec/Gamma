@@ -3,7 +3,7 @@ import { Redirect, Route } from "react-router-dom";
 import { PATHS } from "../paths";
 import IRoute from "../types";
 
-function RouteItem({ component: Component, ...rest }: IRoute): JSX.Element {
+const RouteItem = ({ component: Component, ...rest }: IRoute): JSX.Element => {
     const someLoginValidation = (): boolean => true;
 
     return someLoginValidation() ? (
@@ -11,6 +11,6 @@ function RouteItem({ component: Component, ...rest }: IRoute): JSX.Element {
     ) : (
         <Redirect to={PATHS.Login} />
     );
-}
+};
 
 export default RouteItem;

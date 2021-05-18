@@ -19,9 +19,9 @@ const Input: React.FC<IInput> = ({
     onChange
 }: IInput) => {
     const isText = type === "text" ? true : false;
-    const [inputShow, setPasswordVisibility] = useState(isText);
+    const [inputShow, setInputShow] = useState(isText);
     const togglePasswordVisibility = (): void => {
-        setPasswordVisibility(!inputShow);
+        setInputShow(!inputShow);
     };
 
     return (
@@ -32,7 +32,6 @@ const Input: React.FC<IInput> = ({
                 </StyledIconBox>
             )}
             <StyledInput
-                // autoComplete={isLogin ? "current-password" : "new-password"}
                 autoFocus={doFocus}
                 autocomplete={autocomplete}
                 id={id}

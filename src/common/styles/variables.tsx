@@ -29,6 +29,7 @@ export const fontSizes = {
     font18: "18px",
     font20: "20px",
     font21: "21px",
+    font30: "30px",
     font24: "24px"
 };
 
@@ -38,4 +39,11 @@ export const theme = {
     colorSecondary: colors.green,
     colorWhite: colors.white,
     fontPrimary: fonts.poppins
+};
+
+//breakpoints
+export const breakpoints = {
+    desktop: "1024px",
+    tablet: "720px",
+    mobile: "520px"
 };

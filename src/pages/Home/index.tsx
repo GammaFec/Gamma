@@ -6,7 +6,7 @@ import { StyledContainer } from "./styles";
 // Components
 import Image from "../../components/Image/index";
 import Button from "../../components/Button";
-import { PRIMARY, SECONDARY } from "../../common/constants";
+import { PRIMARY, SECONDARY } from "../../common/styles/constants";
 import { useHistory } from "react-router-dom";
 
 const LoginMain = (): ReactElement => {

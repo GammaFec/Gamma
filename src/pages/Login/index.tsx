@@ -3,7 +3,7 @@ import Button from "../../components/Button";
 import Input from "../../components/Input";
 import { InputIsValid } from "../../utils/InputValidation";
 import Logo from "../../img/Logo.svg";
-import * as variantType from "../../common/constants";
+import * as variantType from "../../common/styles/constants";
 import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
 
 const LoginPage: React.FC = () => {

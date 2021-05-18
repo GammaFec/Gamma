@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
-import { PRIMARY } from "../../../common/constants";
+import { PRIMARY } from "../../../common/styles/constants";
 import CodeVerification from "../CodeVerification";
 import {
     StyledA,
@@ -12,7 +12,7 @@ import {
     StyledSub
 } from "./styles";
 import iValidateNumber from "./types";
-import { HANDSHONE_SVG, HANDSOK_SVG, PEN_SVG } from "../../../common/constants/svgs";
+import { HANDSHONE_SVG, HANDSOK_SVG, PEN_SVG } from "../../../common/styles/svgs";
 
 const ValidateNumber: React.FC<iValidateNumber> = ({
     phoneNumber,

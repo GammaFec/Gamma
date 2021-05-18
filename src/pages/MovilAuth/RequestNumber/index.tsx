@@ -7,8 +7,8 @@ import { StyledButtonContinue, StyledContainer, StyledSpan } from "./styles";
 import iRequestNumber from "./types";
 
 import "./styles/index.css";
-import { PRIMARY } from "../../../common/constants";
-import { HANDSHONE_SVG } from "../../../common/constants/svgs";
+import { PRIMARY } from "../../../common/styles/constants";
+import { HANDSHONE_SVG } from "../../../common/styles/svgs";
 
 const RequestNumber: React.FC<iRequestNumber> = ({
     handleSubmit,

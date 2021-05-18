@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { IInput } from "./types";
-import { theme, fontSizes, colors } from "../../common/styles";
+import { theme, fontSizes, colors } from "../../common/styles/variables";
 
 export const StyledInputContainer = styled.div`
     background-color: ${colors.lightGray};

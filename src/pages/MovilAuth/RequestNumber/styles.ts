@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, fonts, fontSizes } from "../../../common/styles";
+import { colors, fonts, fontSizes } from "../../../common/styles/variables";
 import { StyledButton } from "../../../components/Button/styles";
 
 export const StyledContainer = styled.div`

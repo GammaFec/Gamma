@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, fontSizes, theme } from "../../../common/styles";
+import { colors, fontSizes, theme } from "../../../common/styles/variables";
 import { StyledButton } from "../../../components/Button/styles";
 import Form from "../../../components/Form";
 

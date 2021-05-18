@@ -1,4 +1,4 @@
-export default interface iValidateNumber {
+export default interface IValidateNumber {
     phoneNumber: string;
     goBack: () => void;
     buttonId?: string;

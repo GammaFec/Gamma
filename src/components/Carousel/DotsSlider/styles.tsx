@@ -18,6 +18,7 @@ const StyledUl = styled.ul`
     display: flex;
     justify-content: center;
     margin-top: 24px;
+    margin-bottom: 24px;
 `;
 
 export { StyledDot, StyledUl };

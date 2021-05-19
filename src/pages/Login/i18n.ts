@@ -3,10 +3,14 @@ import i18next from "i18next";
 
 i18next.addResources(LanguageList.SPANISH, "Login", {
     Title: "Encuentra tu compañero ideal",
-    Login: "Ingresar"
+    Login: "Ingresar",
+    AccountInputPlaceholder: "Ingresa Tu Cuenta",
+    PasswordInputPlaceholder: "Contraseña"
 });
 
 i18next.addResources(LanguageList.ENGLISH, "Login", {
     Title: "Find your ideal buddy",
-    Login: "Log in"
+    Login: "Log in",
+    AccountInputPlaceholder: "Enter Your Account",
+    PasswordInputPlaceholder: "Password"
 });

@@ -71,7 +71,7 @@ const LoginPage: React.FC = () => {
                     id="user-name"
                     name="user-name"
                     onChange={AccountInputHandler}
-                    placeholder="Ingresa Tu Cuenta"
+                    placeholder={t("AccountInputPlaceholder")}
                     type="text"
                     value={usernameObj.value}
                 />
@@ -81,7 +81,7 @@ const LoginPage: React.FC = () => {
                     id="current-password"
                     name="current-password"
                     onChange={PasswordInputHandler}
-                    placeholder="Contraseña"
+                    placeholder={t("PasswordInputPlaceholder")}
                     type="password"
                     value={passwordObj.value}
                 />

@@ -11,3 +11,8 @@ export interface ISelectedRol {
     id: string | null;
     path: string;
 }
+
+export interface IProfileRoleContainer {
+    Data: IRoleData[];
+    handleSubmit: (path?: string) => void;
+}

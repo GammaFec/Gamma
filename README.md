@@ -25,7 +25,6 @@ After the PR is approved and you merged the `hotfix/really-important-fix` into `
 We should create a folder for each component in the components folder like this:
 
 -   components
-
     -   ComponentName <- Using PascalCase
         -   index.tsx <- The component
         -   style.tsx <- All the styling should be here

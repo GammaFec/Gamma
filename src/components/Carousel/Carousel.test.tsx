@@ -3,6 +3,7 @@ import Carousel from "./";
 import CarouselData from "./CarouselData";
 import "@testing-library/jest-dom/extend-expect";
 import { fireEvent, render } from "@testing-library/react";
+import "jest-styled-components";
 
 describe("<Carousel />", () => {
     const mockHandler = jest.fn();

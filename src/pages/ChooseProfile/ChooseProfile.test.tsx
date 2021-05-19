@@ -1,24 +1,25 @@
 import React from "react";
-import Splash from "./";
-import { render } from "@testing-library/react";
+import ChooseProfile from "./";
 import "@testing-library/jest-dom/extend-expect";
+import { render } from "@testing-library/react";
 import "jest-styled-components";
 
 jest.mock("react-i18next", () => ({
     useTranslation: (): { t: (key: string) => string } => ({ t: (key: string): string => key })
 }));
 
-describe("<Splash />", () => {
+describe("<ChooseProfile />", () => {
     test("Render", () => {
-        const { asFragment } = render(<Splash />);
+        const { asFragment } = render(<ChooseProfile />);
 
         expect(asFragment()).toMatchSnapshot();
     });
 
     test("Render all childrens", () => {
-        const { getByText, getByAltText } = render(<Splash />);
+        const { getByText } = render(<ChooseProfile />);
 
-        getByAltText("ImageAlt");
-        getByText("Adogtemos");
+        getByText("title");
+        getByText("description");
+        getByText("continue");
     });
 });

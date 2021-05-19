@@ -2,33 +2,161 @@
 
 exports[`<Home /> Render 1`] = `
 <DocumentFragment>
-  <section
-    class="sc-bdnxRM dkVZJw"
+  .c0 {
+  font-family: 'Poppins','sans-serif';
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 69px 16px;
+}
+
+.c1 {
+  max-width: 250px;
+  text-align: center;
+  width: 80vw;
+}
+
+.c4 {
+  width: 80vw;
+  height: 148px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  width: 110.76px;
+}
+
+.c3 {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 31.5px;
+  -webkit-letter-spacing: -0.44px;
+  -moz-letter-spacing: -0.44px;
+  -ms-letter-spacing: -0.44px;
+  letter-spacing: -0.44px;
+}
+
+.c5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'Poppins','sans-serif';
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.7rem 3rem;
+  margin: 0.2rem;
+  min-width: 243px;
+  height: 48px;
+  cursor: pointer;
+  background-color: #FF7B28;
+  border: #FF7B28 solid 2px;
+  color: #FFFFFF;
+}
+
+.c5:hover {
+  opacity: 0.6;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'Poppins','sans-serif';
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.7rem 3rem;
+  margin: 0.2rem;
+  min-width: 243px;
+  height: 48px;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border: #00A59E solid 2px;
+  color: #00A59E;
+}
+
+.c6:hover {
+  opacity: 0.6;
+}
+
+<section
+    class="c0"
   >
     <header
-      class="sc-gtsrHT ezvPLu"
+      class="c1"
     >
       <img
         alt="ImageAlt"
-        class="sc-hKFxyN kCkgGK"
+        class="c2"
         src="Logo.svg"
       />
       <h1
-        class="sc-eCApnc ipYFjT"
+        class="c3"
       >
         Title
       </h1>
     </header>
     <div
-      class="sc-dlnjwi bfswLG"
+      class="c4"
     >
       <button
-        class="sc-jSFjdj eNfmAC"
+        class="c5"
       >
         SignUp
       </button>
       <button
-        class="sc-jSFjdj kRtxbG"
+        class="c6"
       >
         LogIn
       </button>

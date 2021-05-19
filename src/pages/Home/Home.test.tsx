@@ -5,6 +5,7 @@ import "@testing-library/jest-dom/extend-expect";
 import { createMemoryHistory } from "history";
 import { Router } from "react-router";
 import { PATHS } from "../../routes/paths";
+import "jest-styled-components";
 
 jest.mock("react-i18next", () => ({
     useTranslation: (): { t: (key: string) => string } => ({ t: (key: string): string => key })

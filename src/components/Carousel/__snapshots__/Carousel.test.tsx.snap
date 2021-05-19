@@ -2,14 +2,97 @@
 
 exports[`<Carousel /> Render all items 1`] = `
 <DocumentFragment>
-  <ul
-    class="sc-jSFjdj eXCDtD"
+  .c1 {
+  z-index: 0;
+  opacity: 1;
+  position: relative;
+  top: 0;
+  -webkit-transition: 0.5s cubic-bezier(0,0.84,0.81,1.01);
+  transition: 0.5s cubic-bezier(0,0.84,0.81,1.01);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.c3 {
+  z-index: -10;
+  opacity: 0;
+  position: absolute;
+  top: -30px;
+  -webkit-transition: 0.5s cubic-bezier(0,0.84,0.81,1.01);
+  transition: 0.5s cubic-bezier(0,0.84,0.81,1.01);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.c2 {
+  overflow: hidden;
+  list-style: none;
+  width: 100%;
+  -webkit-letter-spacing: -0.44px;
+  -moz-letter-spacing: -0.44px;
+  -ms-letter-spacing: -0.44px;
+  letter-spacing: -0.44px;
+}
+
+.c2 > h2 {
+  font-size: 21px;
+  margin: 0;
+  margin-bottom: 21px;
+}
+
+.c2 > img {
+  width: 70%;
+  max-width: 202px;
+  height: auto;
+  padding: 16px;
+  margin-bottom: 11px;
+}
+
+.c2 > p {
+  font-size: 12px;
+  max-width: 272px;
+  margin: auto;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 435px;
+  font-family: 'Poppins','sans-serif';
+}
+
+<ul
+    class="c0"
   >
     <section
-      class="sc-hKFxyN iByppM"
+      class="c1"
     >
       <li
-        class="sc-eCApnc bUWETU"
+        class="c2"
       >
         <img
           alt="Person with a cat"
@@ -27,10 +110,10 @@ exports[`<Carousel /> Render all items 1`] = `
       </li>
     </section>
     <section
-      class="sc-hKFxyN jrVFHM"
+      class="c3"
     >
       <li
-        class="sc-eCApnc bUWETU"
+        class="c2"
       >
         <img
           alt="Person with a dog"
@@ -45,10 +128,10 @@ exports[`<Carousel /> Render all items 1`] = `
       </li>
     </section>
     <section
-      class="sc-hKFxyN jrVFHM"
+      class="c3"
     >
       <li
-        class="sc-eCApnc bUWETU"
+        class="c2"
       >
         <img
           alt="Person with a bird"
@@ -63,17 +146,57 @@ exports[`<Carousel /> Render all items 1`] = `
       </li>
     </section>
   </ul>
-  <ul
-    class="sc-gtsrHT eYqfwW"
+  .c1 {
+  padding: 0;
+  height: 4px;
+  width: 20px;
+  border-radius: 10px;
+  border: none;
+  margin: auto 3px;
+  background-color: #FF7B28;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
+  cursor: pointer;
+}
+
+.c2 {
+  padding: 0;
+  height: 8px;
+  width: 8px;
+  border-radius: 10px;
+  border: none;
+  margin: auto 3px;
+  background-color: #FFC7A3;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  cursor: pointer;
+}
+
+.c0 {
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+<ul
+    class="c0"
   >
     <button
-      class="sc-bdnxRM kWgKwT"
+      class="c1"
     />
     <button
-      class="sc-bdnxRM hqtfmP"
+      class="c2"
     />
     <button
-      class="sc-bdnxRM hqtfmP"
+      class="c2"
     />
   </ul>
 </DocumentFragment>

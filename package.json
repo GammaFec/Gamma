@@ -69,6 +69,7 @@
         "eslint-plugin-react": "^7.22.0",
         "eslint-plugin-react-hooks": "^4.2.0",
         "husky": ">=4",
+        "jest-styled-components": "^7.0.4",
         "lint-staged": ">=10",
         "prettier": "^2.2.1"
     },

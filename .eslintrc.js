@@ -30,6 +30,7 @@ module.exports = {
     plugins: ["@typescript-eslint"],
     rules: {
         "react/jsx-sort-props": 2,
+        "no-console": 2,
         "prettier/prettier": ["error", {}, { usePrettierrc: true }], // Use our .prettierrc file as source
         "@typescript-eslint/explicit-module-boundary-types": ["error"],
         "@typescript-eslint/no-explicit-any": ["error"],
@@ -42,6 +43,17 @@ module.exports = {
                 allowHigherOrderFunctions: true,
                 allowDirectConstAssertionInArrowFunctions: true,
                 allowConciseArrowFunctionExpressionsStartingWithVoid: true
+            }
+        ],
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                selector: "interface",
+                format: ["PascalCase"],
+                custom: {
+                    regex: "^I[A-Z]",
+                    match: true
+                }
             }
         ]
     }

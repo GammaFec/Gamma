@@ -32,6 +32,14 @@ We should create a folder for each component in the components folder like this:
         -   utils.txs <- All the utility functions should be here
         -   hooks.tsx <- All the custom hooks should be here
 
+-   pages
+    -   PageName <- Using PascalCase
+        -   i18n.ts <- All text and translates
+        -   index.tsx <- The page
+        -   styles.tsx <- All the styling should be here
+        -   utils.txs <- All the utility functions should be here
+        -   types.ts
+
 ## Typescript
 
 We will code in Typescript. All the types and interfaces should be in a separate file named `types.tsx` inside the component folder.

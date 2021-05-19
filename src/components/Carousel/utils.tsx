@@ -1,6 +1,6 @@
 import React from "react";
 
-import { StyledLi } from "./styles";
+import { StyledLi, StyledLiContainer } from "./styles";
 
 import { ICarouselData } from "./types";
 
@@ -11,14 +11,18 @@ const carouselDataMapped = (
     carouselData: ICarouselData[],
     activeTabIndex: number
 ): React.ReactNode =>
-    carouselData.map((dataObj, index) => {
-        return (
-            <StyledLi active={activeTabIndex === index} key={dataObj.id}>
-                <img alt={dataObj.imageAlt} src={dataObj.imageUrl} />
-                <h2>{dataObj.titleOnPage}</h2>
-                <p>{dataObj.text}</p>
+    carouselData.map(({ id, imageAlt, imageUrl, titleOnPage, text }, index) => (
+        <StyledLiContainer active={activeTabIndex === index} key={id}>
+            <StyledLi>
+                <img alt={imageAlt} src={imageUrl} />
+                <h2>{titleOnPage}</h2>
+                {text.map((eachText, index) => (
+                    <p key={index}>{eachText}</p>
+                ))}
             </StyledLi>
-        );
-    });
+        </StyledLiContainer>
+    ));
 
-export { carouselDataMapped };
+const NumberIsPositive = (number: number): boolean => (number ? number < 0 : true);
+
+export { carouselDataMapped, NumberIsPositive };

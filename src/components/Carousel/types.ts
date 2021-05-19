@@ -1,7 +1,6 @@
 export interface ICarousel {
     carouselData: ICarouselData[];
-    click: () => void;
-    children?: JSX.Element;
+    handleClickOnContinue: () => void;
 }
 
 export interface ICarouselData {
@@ -9,5 +8,5 @@ export interface ICarouselData {
     imageUrl: string;
     imageAlt: string;
     titleOnPage: string;
-    text: string;
+    text: string[];
 }

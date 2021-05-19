@@ -6,7 +6,6 @@ export const StyledInputContainer = styled.div`
     background-color: ${colors.lightGray};
     margin: 20px 0;
     width: 100%;
-    box-sizing: border-box;
     height: 48px;
     display: flex;
     justify-content: space-between;

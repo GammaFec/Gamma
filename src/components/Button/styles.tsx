@@ -3,11 +3,13 @@ import { IButton } from "./types";
 import { theme, fontSizes } from "../../common/styles/variables";
 
 export const StyledButton = styled.button<IButton>`
+    align-items: center;
     font-size: ${fontSizes.font16};
     font-family: ${theme.fontPrimary};
     border-radius: 10px;
-    outline-style: none;
-    text-align: center;
+    display: flex;
+    line-height: 24px;
+    justify-content: center;
     text-decoration: none;
     padding: 0.7rem 3rem;
     margin: 0.2rem;
@@ -16,8 +18,16 @@ export const StyledButton = styled.button<IButton>`
     cursor: pointer;
     ${({ variant }): FlattenSimpleInterpolation => variants[variant]}
     ${({ styles }): string | undefined => styles}
-     
-      &:hover {
+    ${({ disabled }): FlattenSimpleInterpolation | false | undefined =>
+        disabled &&
+        css`
+            &.disabled {
+                cursor: not-allowed;
+                opacity: 0.6;
+            }
+        `}
+
+    &:hover {
         opacity: 0.6;
     }
 `;

@@ -1,21 +1,24 @@
 import styled from "styled-components";
-import { colors } from "../../../common/styles/index";
+import { colors } from "../../../common/styles/variables";
 
 const StyledDot = styled.button<{ active: boolean }>`
     padding: 0;
-    height: ${({ active }): string => (active ? "8px" : "12px")};
-    width: ${({ active }): string => (active ? "30px" : "14px")};
+    height: ${({ active }): string => (active ? "4px" : "8px")};
+    width: ${({ active }): string => (active ? "20px" : "8px")};
     border-radius: 10px;
     border: none;
-    margin: 0 20px;
+    margin: auto 3px;
     background-color: ${({ active }): string => (active ? colors.orange : colors.lightOrange)};
     transition: ${({ active }): string => (active ? "2s" : "1s")} ease;
     cursor: pointer;
 `;
 
 const StyledUl = styled.ul`
-    width: 100%;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
 `;
 
 export { StyledDot, StyledUl };

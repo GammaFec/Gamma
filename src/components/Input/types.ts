@@ -10,4 +10,6 @@ export interface IInput {
     minlength?: string;
     maxlength?: string;
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    doFocus?: boolean;
+    autocomplete?: string;
 }

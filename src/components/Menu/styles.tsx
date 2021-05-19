@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme, fontSizes, colors } from "../../common/styles";
+import { theme, fontSizes, colors } from "../../common/styles/variables";
 
 export const StyledMenu = styled.nav<{ isOpen: boolean }>`
     box-sizing: border-box;

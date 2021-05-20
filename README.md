@@ -9,6 +9,7 @@ We should name the branches as follows:
 -   feature/feature-or-component-name
 -   bug/bug-name
 -   hotfix/hotfix-name
+-   test/PageName-or-ComponentName
 
 ## Gitflow
 
@@ -26,6 +27,8 @@ We should create a folder for each component in the components folder like this:
 
 -   components
     -   ComponentName <- Using PascalCase
+        -   i18n.ts <- All text and translates
+        -   ComponentName.test.tsx <- Component testing
         -   index.tsx <- The component
         -   style.tsx <- All the styling should be here
         -   types.ts <- All the interfaces/types should be here
@@ -34,6 +37,7 @@ We should create a folder for each component in the components folder like this:
 
 -   pages
     -   PageName <- Using PascalCase
+        -   PageName.test.tsx <- Page testing
         -   i18n.ts <- All text and translates
         -   index.tsx <- The page
         -   styles.tsx <- All the styling should be here

@@ -46,4 +46,3 @@ export const breakpoints = {
     tablet: "720px",
     mobile: "520px"
 };
-

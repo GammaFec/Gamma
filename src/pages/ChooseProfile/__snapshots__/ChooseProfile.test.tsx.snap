@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChooseProfile /> Render 1`] = `
+<DocumentFragment>
+  .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 148px;
+  height: 153px;
+  background-color: #FF7B28;
+  border-radius: 7px;
+  box-shadow: 1px 5px 20px -4px rgba(0,0,0,0.67);
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  -webkit-transition: transform 0.1s linear;
+  transition: transform 0.1s linear;
+  cursor: pointer;
+  font-weight: lighter;
+}
+
+.c5:hover {
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+
+.c5 * {
+  margin: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  background-color: rgba(0,0,0,0.2);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.c5.selected {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.c5:not(.selected) {
+  opacity: 0.9;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 148px;
+  height: 153px;
+  background-color: #00A59E;
+  border-radius: 7px;
+  box-shadow: 1px 5px 20px -4px rgba(0,0,0,0.67);
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  -webkit-transition: transform 0.1s linear;
+  transition: transform 0.1s linear;
+  cursor: pointer;
+  font-weight: lighter;
+}
+
+.c6:hover {
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+
+.c6 * {
+  margin: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  background-color: rgba(0,0,0,0.2);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.c6.selected {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.c6:not(.selected) {
+  opacity: 0.9;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'Poppins','sans-serif';
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.7rem 3rem;
+  margin: 0.2rem;
+  min-width: 243px;
+  height: 48px;
+  cursor: pointer;
+  background-color: #FF7B28;
+  border: #FF7B28 solid 2px;
+  color: #FFFFFF;
+}
+
+.c7.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.c7:hover {
+  opacity: 0.6;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 30px;
+  margin-top: 1rem;
+  padding: 0;
+  width: 100%;
+}
+
+.c8 {
+  font-size: 18px;
+  font-weight: lighter;
+  margin: auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.c1 {
+  max-width: 90%;
+  text-align: center;
+}
+
+.c2 {
+  font-size: 21px;
+  line-height: 31.5px;
+  margin-bottom: 20px;
+}
+
+.c3 {
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 45px;
+}
+
+@media (min-width:720px) {
+  .c2 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width:720px) {
+  .c3 {
+    font-size: 16px;
+  }
+}
+
+<main
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <h1
+        class="c2"
+      >
+        title
+      </h1>
+      <p
+        class="c3"
+      >
+        description
+      </p>
+      <ul
+        class="c4"
+      >
+        <div
+          class="c5 false"
+          color="primary"
+        >
+          <p>
+            Adoptante
+          </p>
+        </div>
+        <div
+          class="c6 false"
+          color="secondary"
+        >
+          <p>
+            Albergue
+          </p>
+        </div>
+      </ul>
+      <button
+        class="c7 c8 disabled"
+        disabled=""
+      >
+        continue
+      </button>
+    </div>
+  </main>
+</DocumentFragment>
+`;

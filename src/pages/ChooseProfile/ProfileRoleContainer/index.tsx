@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import ProfileRole from "./ProfileRole";
 import { StyledButton, StyledProfileRoleContainer } from "./styles";
-import rolesData from "./rolesData.json";
-import { IRoleData, ISelectedRol } from "./types";
+import { ISelectedRol, IProfileRoleContainer } from "./types";
+import { useTranslation } from "react-i18next";
 
-const ProfileRoleContainer: React.FC = (): JSX.Element => {
-    const Data: IRoleData[] = rolesData;
+const ProfileRoleContainer: React.FC<IProfileRoleContainer> = ({
+    Data,
+    handleSubmit
+}: IProfileRoleContainer): JSX.Element => {
     const [selected, setSelected] = useState<ISelectedRol | null>(null);
     const [buttonDisabled, setButtonDisabled] = useState(true);
+    const { t } = useTranslation("ProfileRole");
 
     const handleClick = (id: string, path: string): void => {
         if (id === selected?.id) {
@@ -35,8 +38,9 @@ const ProfileRoleContainer: React.FC = (): JSX.Element => {
             <StyledButton
                 className={`${buttonDisabled && "disabled"}`}
                 disabled={buttonDisabled}
+                handleClick={(): void => handleSubmit(selected?.path)}
                 variant="primary">
-                Continuar
+                {t("continue")}
             </StyledButton>
         </>
     );

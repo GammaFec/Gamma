@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Onboarding /> Render 1`] = `
+<DocumentFragment>
+  .c6 {
+  padding: 0;
+  height: 4px;
+  width: 20px;
+  border-radius: 10px;
+  border: none;
+  margin: auto 3px;
+  background-color: #FF7B28;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
+  cursor: pointer;
+}
+
+.c7 {
+  padding: 0;
+  height: 8px;
+  width: 8px;
+  border-radius: 10px;
+  border: none;
+  margin: auto 3px;
+  background-color: #FFC7A3;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  cursor: pointer;
+}
+
+.c5 {
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.c2 {
+  z-index: 0;
+  opacity: 1;
+  position: relative;
+  top: 0;
+  -webkit-transition: 0.5s cubic-bezier(0,0.84,0.81,1.01);
+  transition: 0.5s cubic-bezier(0,0.84,0.81,1.01);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.c4 {
+  z-index: -10;
+  opacity: 0;
+  position: absolute;
+  top: -30px;
+  -webkit-transition: 0.5s cubic-bezier(0,0.84,0.81,1.01);
+  transition: 0.5s cubic-bezier(0,0.84,0.81,1.01);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.c3 {
+  overflow: hidden;
+  list-style: none;
+  width: 100%;
+  -webkit-letter-spacing: -0.44px;
+  -moz-letter-spacing: -0.44px;
+  -ms-letter-spacing: -0.44px;
+  letter-spacing: -0.44px;
+}
+
+.c3 > h2 {
+  font-size: 21px;
+  margin: 0;
+  margin-bottom: 21px;
+}
+
+.c3 > img {
+  width: 70%;
+  max-width: 202px;
+  height: auto;
+  padding: 16px;
+  margin-bottom: 11px;
+}
+
+.c3 > p {
+  font-size: 12px;
+  max-width: 272px;
+  margin: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 435px;
+  font-family: 'Poppins','sans-serif';
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  text-align: center;
+  margin-top: 90px;
+}
+
+<main
+    class="c0"
+  >
+    <ul
+      class="c1"
+    >
+      <section
+        class="c2"
+      >
+        <li
+          class="c3"
+        >
+          <img
+            alt="Person with a cat"
+            src="CarouselImage01.svg"
+          />
+          <h2>
+            Elige tu compañero ideal
+          </h2>
+          <p>
+            Aquí el amor a primera vista si existe
+          </p>
+          <p>
+            Descubre tu compañero perfecto y vive muchas historias junto a ellos.
+          </p>
+        </li>
+      </section>
+      <section
+        class="c4"
+      >
+        <li
+          class="c3"
+        >
+          <img
+            alt="Person with a dog"
+            src="CarouselImage02.svg"
+          />
+          <h2>
+            Conversa con Albergues
+          </h2>
+          <p>
+            Heroes sin capa día a día brindan atención, haz match con alguna de las mascotas listas en adopción y define el proceso de adopción.
+          </p>
+        </li>
+      </section>
+      <section
+        class="c4"
+      >
+        <li
+          class="c3"
+        >
+          <img
+            alt="Person with a bird"
+            src="CarouselImage03.svg"
+          />
+          <h2>
+            Recuerda siempre
+          </h2>
+          <p>
+            Cuida, protege y dale amor a quien con solo verte se emociona sin límites.
+          </p>
+        </li>
+      </section>
+    </ul>
+    <ul
+      class="c5"
+    >
+      <button
+        class="c6"
+      />
+      <button
+        class="c7"
+      />
+      <button
+        class="c7"
+      />
+    </ul>
+  </main>
+</DocumentFragment>
+`;

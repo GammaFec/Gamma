@@ -46,8 +46,20 @@ We should create a folder for each component in the components folder like this:
 
 ## Typescript
 
-We will code in Typescript. All the types and interfaces should be in a separate file named `types.tsx` inside the component folder.
-The interfaces and types should be named in PascalCase with an Capital I followd by a descriptive name, .i.e. `ICarousel`.
+We will code in Typescript.
+
+- All the types and interfaces should be in a separate file named `types.tsx` inside the component folder.
+
+- The interfaces and types should be named in PascalCase with an Capital I followd by a descriptive name, .i.e. `ICarousel`.
+
+- We prefer to use FC instead of FunctionComponent when we type a component, i.e. `const Component: React.FC = () => {}`
+
+- We use arrow functions instead of functions
+
+- Use hypens for route names if they have more than one word
+i.e. `choose-profile`.
+
+- Use <> instead of Fragment
 
 ## Styled Components
 

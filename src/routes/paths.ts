@@ -8,6 +8,6 @@ export enum PATHS {
     Match = "/match",
     GiveUp = "/give-up",
     Favorites = "/favorites",
-    Config = "/configuration"
-    Messages = "/messages",
+    Config = "/configuration",
+    Messages = "/messages"
 }

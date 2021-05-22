@@ -13,18 +13,25 @@ export const StyledInputContainer = styled.div`
     border: ${colors.lightGray} solid 2px;
     border-radius: 7px;
     padding-left: 10px;
+    position: relative;
 `;
 
 export const StyledIconBox = styled.div`
-    padding-left: 5px;
-    border-right: 2px solid ${colors.gray};
+    background-color: ${colors.lightGray};
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 50px;
+    cursor: pointer;
 `;
 
 export const StyledImg = styled.img`
     display: block;
-    width: auto;
-    height: 19px;
-    margin-right: 10px;
+    transform: translate(-1px, -5px);
 `;
 
 export const StyledInput = styled.input<IInput>`

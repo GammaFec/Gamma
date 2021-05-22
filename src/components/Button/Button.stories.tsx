@@ -17,7 +17,7 @@ export default {
     }
 } as Meta;
 
-const Template: Story<IButton> = (args) => <Button {...args} />;
+const Template: Story<IButton> = (args: IButton) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

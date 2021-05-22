@@ -86,7 +86,8 @@
     "lint-staged": ">=10",
     "prettier": "^2.2.1",
     "react-docgen-typescript": "^1.22.0",
-    "react-docgen-typescript-plugin": "^0.7.1"
+    "react-docgen-typescript-plugin": "^0.7.1",
+    "storybook-react-router": "^1.0.8"
   },
   "husky": {
     "hooks": {

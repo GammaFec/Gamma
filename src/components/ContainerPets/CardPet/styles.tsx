@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontSizes, theme } from "../../../common/styles";
+import { fontSizes, theme } from "../../../common/styles/variables";
 
 const StyledCard = styled.figure`
     display: flex;

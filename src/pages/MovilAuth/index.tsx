@@ -15,10 +15,7 @@ const MovilAuth = (): JSX.Element => {
     const [phoneNumber, setPhoneNumber] = useState<string | null>(null);
     const [validating, setValidating] = useState<boolean>(false);
     const [recaptcha, setRecaptcha] = useState<firebase.auth.RecaptchaVerifier | null>();
-    const [
-        verificationResult,
-        setVerificationResult
-    ] = useState<firebase.auth.ConfirmationResult | null>();
+    const [veriResult, setVeriResult] = useState<firebase.auth.ConfirmationResult | null>();
     const ID = "MovilAuth";
 
     useEffect(() => {
@@ -32,7 +29,7 @@ const MovilAuth = (): JSX.Element => {
             setPhoneNumber(formPhoneNumber);
             sendSMSCode(formPhoneNumber, recaptcha).then(
                 (result: firebase.auth.ConfirmationResult) => {
-                    setVerificationResult(result);
+                    setVeriResult(result);
                     setValidating(true);
                 }
             );
@@ -40,8 +37,8 @@ const MovilAuth = (): JSX.Element => {
     };
 
     const validateNumberFirebase = async (code: string): Promise<boolean> => {
-        if (verificationResult) {
-            const result = await verifyCode(code, verificationResult);
+        if (veriResult) {
+            const result = await verifyCode(code, veriResult);
             if (result) alert("Logueadisimo!");
             return result;
         }

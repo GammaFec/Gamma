@@ -11,7 +11,7 @@ const Splash: React.FC = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            history.push(PATHS.Home);
+            history.push(PATHS.PreLogin);
         }, 3000);
     }, []);
 

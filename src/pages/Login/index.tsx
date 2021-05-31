@@ -8,7 +8,6 @@ import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
 import eye from "../../assets/img/eye.png";
 import { useTranslation } from "react-i18next";
 
-
 const LoginPage: React.FC = () => {
     const { t } = useTranslation("Login");
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 
-import Header from "../../components/Header";
 import getRecaptcha from "../../services/firebase/auth/getRecaptcha";
 import PhoneValidator from "../../utils/PhoneValidator";
 import sendSMSCode from "../../services/firebase/auth/sendSMSCode";
@@ -48,7 +47,7 @@ const MovilAuth = (): JSX.Element => {
 
     return (
         <StyledContainer>
-            <Header>{/* <ButtonBack /> */}</Header>
+            {/* <Header><ButtonBack /></Header> */}
             <StyledMain>
                 {validating ? (
                     <ValidateNumber

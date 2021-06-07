@@ -13,7 +13,7 @@ export const StyledForm = styled(Form)`
     box-sizing: border-box;
 
     button {
-        margin: 16px 4px;
+        margin: 16px 0 16px 47px;
     }
 
     & h3 {

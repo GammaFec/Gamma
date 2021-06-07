@@ -4,10 +4,12 @@ export enum PATHS {
     Login = "/login",
     ChooseProfile = "/choose-profile",
     MovilAuth = "/movil-auth/:id",
-    Onboarding = "/onboarding",
+    Onboarding = "/onboarding/:id",
     Match = "/match",
     GiveUp = "/give-up",
     Favorites = "/favorites",
     Config = "/configuration",
-    Messages = "/messages"
+    Messages = "/messages",
+    PreLogin = "/pre-login",
+    Register = "/register"
 }

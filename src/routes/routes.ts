@@ -6,7 +6,7 @@ const Splash = React.lazy(() => import("../pages/Splash"));
 const NotFound = React.lazy(() => import("../pages/NotFound"));
 const MovilAuth = React.lazy(() => import("../pages/MovilAuth"));
 const Login = React.lazy(() => import("../pages/Login"));
-const Home = React.lazy(() => import("../pages/Home"));
+const PreLogin = React.lazy(() => import("../pages/PreLogin"));
 const ChooseProfile = React.lazy(() => import("../pages/ChooseProfile"));
 const Onboarding = React.lazy(() => import("../pages/Onboarding"));
 
@@ -26,9 +26,9 @@ const ROUTES: IRoute[] = [
         isPrivate: false
     },
     {
-        path: PATHS.Home,
-        component: Home,
-        name: "Home",
+        path: PATHS.PreLogin,
+        component: PreLogin,
+        name: "PreLogin",
         exact: true,
         isPrivate: false
     },

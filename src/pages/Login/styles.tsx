@@ -8,6 +8,7 @@ const StyledMainWrapper = styled.main`
     padding: 64px 20px 0px;
     text-align: center;
     max-width: 500px;
+    user-select: none;
 `;
 
 const StyledP = styled.p`

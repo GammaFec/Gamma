@@ -41,7 +41,6 @@ export const theme = {
     fontPrimary: fonts.poppins
 };
 
-//breakpoints
 export const breakpoints = {
     desktop: "1024px",
     tablet: "720px",

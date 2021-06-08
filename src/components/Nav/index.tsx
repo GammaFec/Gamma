@@ -7,8 +7,8 @@ import { useTranslation } from "react-i18next";
 import { StyledNav, StyledIcon } from "./styles";
 //images
 import Logo from "../../assets/img/Logo.svg";
-import MenuBtn from "../../assets/img/gg_menu-left.png";
-import MsgBtn from "../../assets/img/bx-message.png";
+import MenuBtn from "../../assets/img/menu.svg";
+import MsgBtn from "../../assets/img/message.svg";
 
 const Nav: React.FC = () => {
     const history = useHistory();

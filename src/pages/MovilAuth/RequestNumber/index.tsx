@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import Form from "../../../components/Form";
 
@@ -15,7 +14,7 @@ const RequestNumber: React.FC<iRequestNumber> = ({
     phoneNumber,
     buttonId
 }: iRequestNumber): JSX.Element => {
-    const [statePhoneNumber, setStatePhoneNumber] = useState<string>((phoneNumber = "2"));
+    const [statePhoneNumber, setStatePhoneNumber] = useState<string>(phoneNumber);
 
     const submit = (): void => handleSubmit?.(statePhoneNumber);
 

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { PRIMARY } from "../../../common/styles/constants";
 import CodeVerification from "../CodeVerification";
@@ -12,7 +11,7 @@ import {
     StyledSub
 } from "./styles";
 import iValidateNumber from "./types";
-import { HANDSHONE_SVG, HANDSOK_SVG, PEN_SVG } from "../../../common/styles/svgs";
+import { HANDSOK_SVG, PEN_SVG } from "../../../common/styles/svgs";
 
 const ValidateNumber: React.FC<iValidateNumber> = ({
     phoneNumber,
@@ -21,10 +20,13 @@ const ValidateNumber: React.FC<iValidateNumber> = ({
     handleSubmit
 }: iValidateNumber): JSX.Element => {
     const [code, setCode] = useState<string>("");
-    // const submit = (): void => handleSubmit(code);
+    const submit = (): void => handleSubmit(code);
 
     return (
-        <StyledForm>
+        <StyledForm handleSubmit={submit}>
+            <button onClick={goBack} type="button">
+                {phoneNumber}
+            </button>
             <div>
                 <h3>
                     <span>Ingresa el</span> <span>código que recibiste</span>

@@ -9,6 +9,10 @@ const StyledContainer = styled.div`
         top: 14px;
         z-index: 10;
     }
+
+    .react-tel-input .selected-flag {
+        padding-left: 77px;
+    }
 `;
 
 const StyledLine = styled.div`

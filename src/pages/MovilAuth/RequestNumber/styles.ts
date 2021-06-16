@@ -31,6 +31,13 @@ export const StyledContainer = styled.div`
         left: 139px;
         bottom: 0px;
     }
+
+    .react-tel-input .special-label {
+        display: none;
+    }
+    .arrow {
+        display: none;
+    }
 `;
 
 export const StyledButtonContinue = styled(StyledButton)`

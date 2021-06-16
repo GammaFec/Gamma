@@ -1,18 +1,20 @@
 import React from "react";
 import ReactCodeInput from "react-verification-code-input";
 import iCodeVerification from "./types";
-import "./styles/index.css";
+import { StyledInput } from "./styles";
 
 const CodeVerification: React.FC<iCodeVerification> = ({
     handleComplete,
     handleChange
 }: iCodeVerification): JSX.Element => {
     return (
-        <ReactCodeInput
-            className="input-container"
-            onChange={handleChange}
-            onComplete={handleComplete}
-        />
+        <StyledInput>
+            <ReactCodeInput
+                className="input-container"
+                onChange={handleChange}
+                onComplete={handleComplete}
+            />
+        </StyledInput>
     );
 };
 

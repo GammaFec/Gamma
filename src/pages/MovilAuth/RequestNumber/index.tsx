@@ -5,7 +5,6 @@ import PhoneNumber from "../PhoneNumber";
 import { StyledButtonContinue, StyledContainer, StyledSpan } from "./styles";
 import iRequestNumber from "./types";
 
-import "./styles/index.css";
 import { PRIMARY } from "../../../common/styles/constants";
 import { HANDSHONE_SVG } from "../../../common/styles/svgs";
 

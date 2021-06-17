@@ -5,6 +5,7 @@ export interface IInput {
     value?: string;
     ref?: React.RefObject<HTMLInputElement>;
     icon?: string;
+    iconPositionLeft?: boolean;
     alt?: string;
     placeholder?: string;
     minlength?: string;

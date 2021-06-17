@@ -16,17 +16,18 @@ export const StyledInputContainer = styled.div`
     position: relative;
 `;
 
-export const StyledLeftIconBox = styled.div`
+export const StyledIconBox = styled.div<{ iconPositionLeft: boolean }>`
     background-color: ${colors.lightGray};
     position: absolute;
     z-index: 10;
-    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 32px;
     width: 50px;
     cursor: pointer;
+
+    ${`iconPositionLeft => iconPositionLeft ? "left: 0;" : "right: 0;"`};
 `;
 
 export const StyledRightIconBox = styled.div`

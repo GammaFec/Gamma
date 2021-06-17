@@ -1,6 +1,12 @@
 /* eslint-disable jsx-a11y/no-autofocus */
 import React, { useState } from "react";
-import { StyledInput, StyledImg, StyledInputContainer, StyledIconBox } from "./styles";
+import {
+    StyledInput,
+    StyledImg,
+    StyledInputContainer,
+    StyledLeftIconBox,
+    StyledRightIconBox
+} from "./styles";
 import { IInput } from "./types";
 
 const Input: React.FC<IInput> = ({
@@ -8,7 +14,7 @@ const Input: React.FC<IInput> = ({
     name,
     id,
     icon,
-    iconPositionLeft,
+    iconPositionLeft = false,
     alt,
     value,
     ref,
@@ -27,12 +33,15 @@ const Input: React.FC<IInput> = ({
 
     return (
         <StyledInputContainer>
-            {icon && (
-                <StyledIconBox
-                    iconPositionLeft={iconPositionLeft}
-                    onClick={(): void => togglePasswordVisibility()}>
+            {icon && iconPositionLeft && (
+                <StyledLeftIconBox onClick={(): void => togglePasswordVisibility()}>
                     <StyledImg alt={alt} src={icon} />
-                </StyledIconBox>
+                </StyledLeftIconBox>
+            )}
+            {icon && !iconPositionLeft && (
+                <StyledRightIconBox onClick={(): void => togglePasswordVisibility()}>
+                    <StyledImg alt={alt} src={icon} />
+                </StyledRightIconBox>
             )}
             <StyledInput
                 autoFocus={doFocus}

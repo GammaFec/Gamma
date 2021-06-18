@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { IInput } from "./types";
 import { theme, fontSizes, colors } from "../../common/styles/variables";
 
-export const StyledInputContainer = styled.div`
+export const StyledInputContainer = styled.div<{ iconPosition: string }>`
     background-color: ${colors.lightGray};
     margin: 20px 0;
     width: 100%;
@@ -14,11 +14,12 @@ export const StyledInputContainer = styled.div`
     border-radius: 7px;
     padding-left: 10px;
     position: relative;
+    flex-direction: ${(props): string => (props.iconPosition === "left" ? "row" : "row-reverse")};
 `;
 
-export const StyledIconBox = styled.div<{ iconPositionLeft: boolean }>`
+export const StyledIconBox = styled.div`
     background-color: ${colors.lightGray};
-    position: absolute;
+    position: static;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -26,8 +27,7 @@ export const StyledIconBox = styled.div<{ iconPositionLeft: boolean }>`
     height: 32px;
     width: 50px;
     cursor: pointer;
-
-    ${`iconPositionLeft => iconPositionLeft ? "left: 0;" : "right: 0;"`};
+    flex-direction: row-reverse;
 `;
 
 export const StyledRightIconBox = styled.div`

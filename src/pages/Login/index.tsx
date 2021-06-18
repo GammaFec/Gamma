@@ -67,7 +67,6 @@ const LoginPage: React.FC = () => {
                 <Input
                     autocomplete="user-name"
                     doFocus
-                    iconPositionLeft={false}
                     id="user-name"
                     name="user-name"
                     onChange={AccountInputHandler}
@@ -78,7 +77,6 @@ const LoginPage: React.FC = () => {
                 <Input
                     autocomplete="current-password"
                     icon={eye}
-                    iconPositionLeft={false}
                     id="current-password"
                     name="current-password"
                     onChange={PasswordInputHandler}

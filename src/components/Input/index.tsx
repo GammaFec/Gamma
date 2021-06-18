@@ -8,7 +8,7 @@ const Input: React.FC<IInput> = ({
     name,
     id,
     icon,
-    iconPosition,
+    iconPositionLeft,
     alt,
     value,
     ref,
@@ -26,7 +26,8 @@ const Input: React.FC<IInput> = ({
     };
 
     return (
-        <StyledInputContainer iconPosition={iconPosition !== undefined ? iconPosition : "right"}>
+        <StyledInputContainer
+            iconPositionLeft={iconPositionLeft !== undefined ? iconPositionLeft : false}>
             {icon && (
                 <StyledIconBox onClick={(): void => togglePasswordVisibility()}>
                     <StyledImg alt={alt} src={icon} />

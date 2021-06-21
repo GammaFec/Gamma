@@ -45,6 +45,10 @@ const LoginPage: React.FC = () => {
         return setPasswordObj(newState);
     };
 
+    const [inputShow, setInputShow] = useState(false);
+    const togglePasswordVisibility = (): void => {
+        setInputShow(!inputShow);
+    };
     const submitHandler = (event: React.ChangeEvent<HTMLFormElement>): void =>
         event.preventDefault();
 
@@ -80,8 +84,9 @@ const LoginPage: React.FC = () => {
                     id="current-password"
                     name="current-password"
                     onChange={PasswordInputHandler}
+                    onIconClick={togglePasswordVisibility}
                     placeholder={t("PasswordInputPlaceholder")}
-                    type="password"
+                    type={inputShow ? "text" : "password"}
                     value={passwordObj.value}
                 />
                 <Button

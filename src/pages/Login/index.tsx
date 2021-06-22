@@ -23,11 +23,11 @@ const LoginPage: React.FC = () => {
 
     const AccountInputHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const newValue = event.target.value.trim();
-        const vadidInput = InputIsValid(newValue, true);
+        const validInput = InputIsValid(newValue, true);
         const newState = {
             ...usernameObj,
             value: newValue,
-            valid: vadidInput
+            valid: validInput
         };
 
         return setUsernameObj(newState);
@@ -35,11 +35,11 @@ const LoginPage: React.FC = () => {
 
     const PasswordInputHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const newValue = event.target.value.trim();
-        const vadidInput = InputIsValid(newValue);
+        const validInput = InputIsValid(newValue);
         const newState = {
             ...passwordObj,
             value: newValue,
-            valid: vadidInput
+            valid: validInput
         };
 
         return setPasswordObj(newState);

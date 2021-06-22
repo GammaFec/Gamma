@@ -20,12 +20,6 @@ const Input: React.FC<IInput> = ({
     onChange,
     onIconClick
 }: IInput) => {
-    // const isText = type === "text" ? true : false;
-    // const [inputShow, setInputShow] = useState(isText);
-    // const togglePasswordVisibility = (): void => {
-    //     setInputShow(!inputShow);
-    // };
-
     return (
         <StyledInputContainer
             iconPositionLeft={iconPositionLeft !== undefined ? iconPositionLeft : false}>

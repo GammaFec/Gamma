@@ -4,7 +4,7 @@ import Input from "../../components/Input";
 import Logo from "../../assets/img/Logo.svg";
 import * as variantType from "../../common/styles/constants";
 import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
-import eye from "../../assets/img/eye.png";
+import eye from "../../assets/img/eye.svg";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "../../services/firebase/email-auth";

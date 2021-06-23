@@ -4,10 +4,8 @@ import firebase from "firebase";
 import Header from "../../components/Header";
 import RequestNumber from "../../components/MovilAuth/RequestNumber";
 import ValidateNumber from "../../components/MovilAuth/ValidateNumber";
-import getRecaptcha from "../../services/firebase/auth/getRecaptcha";
 import PhoneValidator from "../../utils/PhoneValidator";
-import sendSMSCode from "../../services/firebase/auth/sendSMSCode";
-import verifyCode from "../../services/firebase/auth/verifyCode";
+import { sendSMSCode, verifyCode, getRecaptcha } from "../../services/firebase/phone-auth";
 
 import { StyledContainer, StyledMain } from "./styles";
 

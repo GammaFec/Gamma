@@ -6,11 +6,13 @@ const ProfileRole: React.FC<IProfileRole> = ({
     variant,
     handleClick,
     selected,
-    children
+    children,
+    image
 }: IProfileRole): JSX.Element => (
     <StyledProfileRole
         className={`${selected && "selected"}`}
         color={variant}
+        image={image}
         onClick={handleClick}>
         {children}
     </StyledProfileRole>

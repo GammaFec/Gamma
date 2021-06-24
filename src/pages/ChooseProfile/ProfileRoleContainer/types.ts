@@ -5,6 +5,7 @@ export interface IRoleData {
     name: string;
     path: string;
     variant: typeof PRIMARY | typeof SECONDARY | string;
+    image: string;
 }
 
 export interface ISelectedRol {

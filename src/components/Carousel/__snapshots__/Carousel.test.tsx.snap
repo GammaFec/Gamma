@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Carousel /> Render all items 1`] = `
+exports[`<Carousel /> Render Carousel and childrens 1`] = `
 <DocumentFragment>
   .c1 {
   z-index: 0;

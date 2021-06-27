@@ -5,7 +5,7 @@ import { InputIsValid } from "../../utils/InputValidation";
 import Logo from "../../assets/img/Logo.svg";
 import * as variantType from "../../common/styles/constants";
 import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
-import eye from "../../assets/img/eye.png";
+import eye from "../../assets/img/eye.svg";
 import { useTranslation } from "react-i18next";
 
 const LoginPage: React.FC = () => {
@@ -23,11 +23,11 @@ const LoginPage: React.FC = () => {
 
     const AccountInputHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const newValue = event.target.value.trim();
-        const vadidInput = InputIsValid(newValue, true);
+        const validInput = InputIsValid(newValue, true);
         const newState = {
             ...usernameObj,
             value: newValue,
-            valid: vadidInput
+            valid: validInput
         };
 
         return setUsernameObj(newState);
@@ -35,16 +35,20 @@ const LoginPage: React.FC = () => {
 
     const PasswordInputHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const newValue = event.target.value.trim();
-        const vadidInput = InputIsValid(newValue);
+        const validInput = InputIsValid(newValue);
         const newState = {
             ...passwordObj,
             value: newValue,
-            valid: vadidInput
+            valid: validInput
         };
 
         return setPasswordObj(newState);
     };
 
+    const [inputShow, setInputShow] = useState(false);
+    const togglePasswordVisibility = (): void => {
+        setInputShow(!inputShow);
+    };
     const submitHandler = (event: React.ChangeEvent<HTMLFormElement>): void =>
         event.preventDefault();
 
@@ -80,8 +84,9 @@ const LoginPage: React.FC = () => {
                     id="current-password"
                     name="current-password"
                     onChange={PasswordInputHandler}
+                    onIconClick={togglePasswordVisibility}
                     placeholder={t("PasswordInputPlaceholder")}
-                    type="password"
+                    type={inputShow ? "text" : "password"}
                     value={passwordObj.value}
                 />
                 <Button

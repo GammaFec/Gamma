@@ -4,10 +4,8 @@ import firebase from "firebase";
 import Header from "../../components/Header";
 import RequestNumber from "./RequestNumber";
 import ValidateNumber from "./ValidateNumber";
-import getRecaptcha from "../../services/firebase/auth/getRecaptcha";
+import { getRecaptcha, sendSMSCode, verifyCode } from "../../services/firebase/phone-auth";
 import PhoneValidator from "./utils";
-import sendSMSCode from "../../services/firebase/auth/sendSMSCode";
-import verifyCode from "../../services/firebase/auth/verifyCode";
 
 import { StyledContainer, StyledMain } from "./styles";
 

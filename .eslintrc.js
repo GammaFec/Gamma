@@ -16,8 +16,7 @@ module.exports = {
     env: {
         browser: true, // Enables browser globals like window and document
         amd: true, // Enables require() and define() as global variables as per the amd spec.
-        node: true, // Enables Node.js global variables and Node.js scoping.
-        "cypress/globals": true
+        node: true // Enables Node.js global variables and Node.js scoping.
     },
     extends: [
         "eslint:recommended",
@@ -26,10 +25,9 @@ module.exports = {
         "plugin:prettier/recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "prettier/@typescript-eslint",
-        "plugin:cypress/recommended"
+        "prettier/@typescript-eslint"
     ],
-    plugins: ["@typescript-eslint", "cypress"],
+    plugins: ["@typescript-eslint"],
     rules: {
         "react/jsx-sort-props": 2,
         "no-console": 2,

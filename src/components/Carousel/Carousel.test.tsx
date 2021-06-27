@@ -10,23 +10,17 @@ describe("<Carousel />", () => {
 
     const carouselData = CarouselData.adopterData;
 
-    test("Render Carousel", () => {
-        const { getByAltText } = render(
+    test("Render Carousel and childrens", () => {
+        const { getByAltText, asFragment } = render(
             <Carousel carouselData={carouselData} handleClickOnContinue={mockHandler} />
         );
 
         getByAltText("Person with a cat");
-    });
-
-    test("Render all items", () => {
-        const { asFragment, getByAltText } = render(
-            <Carousel carouselData={carouselData} handleClickOnContinue={mockHandler} />
-        );
-        expect(asFragment()).toMatchSnapshot();
-
         carouselData.forEach(({ imageAlt }) => {
             getByAltText(imageAlt);
         });
+
+        expect(asFragment()).toMatchSnapshot();
     });
 
     test("Move carousel and click in continue", () => {

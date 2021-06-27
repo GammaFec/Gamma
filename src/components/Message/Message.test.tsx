@@ -11,7 +11,7 @@ describe("<Message />", () => {
     const creationDate = new Date("22/7/2020");
 
     test("Render", () => {
-        const { getByText } = render(
+        const { getByText, getByTitle } = render(
             <Message
                 count={Count}
                 creationDate={creationDate}
@@ -22,6 +22,11 @@ describe("<Message />", () => {
         );
 
         getByText("name");
+        getByTitle("defaultUser");
+        getByText(Count);
+        getByText(Name);
+        getByText(Text);
+        getByText(TimeAgo(creationDate));
     });
 
     test("UserAvatar is show", () => {
@@ -52,24 +57,6 @@ describe("<Message />", () => {
         await waitFor(() => {
             expect(queryByText(Count)).not.toBeInTheDocument();
         });
-    });
-
-    test("Render all childrens", () => {
-        const { getByText, getByTitle } = render(
-            <Message
-                count={Count}
-                creationDate={creationDate}
-                isRead={false}
-                name={Name}
-                text={Text}
-            />
-        );
-
-        getByTitle("defaultUser");
-        getByText(Count);
-        getByText(Name);
-        getByText(Text);
-        getByText(TimeAgo(creationDate));
     });
 
     test("HandleClick", () => {

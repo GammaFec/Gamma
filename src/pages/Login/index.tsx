@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from "react";
+import React, { useState } from "react";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 import { InputIsValid } from "../../utils/InputValidation";
@@ -7,12 +7,9 @@ import * as variantType from "../../common/styles/constants";
 import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
 import eye from "../../assets/img/eye.svg";
 import { useTranslation } from "react-i18next";
-import { signInWithEmailAndPassword } from "../../services/firebase/email-auth";
-import { useHistory } from "react-router-dom";
 
-const LoginPage: React.FC = (): JSX.Element => {
+const LoginPage: React.FC = () => {
     const { t } = useTranslation("Login");
-    const { push } = useHistory();
 
     const [usernameObj, setUsernameObj] = useState({
         value: "",
@@ -52,17 +49,15 @@ const LoginPage: React.FC = (): JSX.Element => {
     const togglePasswordVisibility = (): void => {
         setInputShow(!inputShow);
     };
+    const submitHandler = (event: React.ChangeEvent<HTMLFormElement>): void =>
+        event.preventDefault();
 
-    const submitHandler = (event?: FormEvent<HTMLFormElement>): void => {
-        event?.preventDefault();
+    const loginButtonClicked = (): void => {
         if (usernameObj.valid && passwordObj.valid) {
-            signInWithEmailAndPassword(usernameObj.value, passwordObj.value)
-                .then((/*data*/) => {
-                    push("home");
-                })
-                .catch((error) => alert(error.message));
+            //do something with the form Data
+            alert("clicked!!! The user and the password ARE valid");
         } else {
-            alert("The username and password are not valid");
+            return alert("clicked!! The user OR the password IS NOT valid");
         }
     };
 
@@ -94,7 +89,9 @@ const LoginPage: React.FC = (): JSX.Element => {
                     type={inputShow ? "text" : "password"}
                     value={passwordObj.value}
                 />
-                <Button handleClick={(): void => submitHandler()} variant={variantType.PRIMARY}>
+                <Button
+                    handleClick={(): void => loginButtonClicked()}
+                    variant={variantType.PRIMARY}>
                     {t("Login")}
                 </Button>
             </StyledForm>

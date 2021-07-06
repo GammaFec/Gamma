@@ -9,6 +9,7 @@ We should name the branches as follows:
 -   feature/feature-or-component-name
 -   bug/bug-name
 -   hotfix/hotfix-name
+-   test/PageName-or-ComponentName
 
 ## Gitflow
 
@@ -26,6 +27,8 @@ We should create a folder for each component in the components folder like this:
 
 -   components
     -   ComponentName <- Using PascalCase
+        -   i18n.ts <- All text and translates
+        -   ComponentName.test.tsx <- Component testing
         -   index.tsx <- The component
         -   style.tsx <- All the styling should be here
         -   types.ts <- All the interfaces/types should be here
@@ -34,6 +37,7 @@ We should create a folder for each component in the components folder like this:
 
 -   pages
     -   PageName <- Using PascalCase
+        -   PageName.test.tsx <- Page testing
         -   i18n.ts <- All text and translates
         -   index.tsx <- The page
         -   styles.tsx <- All the styling should be here
@@ -42,8 +46,20 @@ We should create a folder for each component in the components folder like this:
 
 ## Typescript
 
-We will code in Typescript. All the types and interfaces should be in a separate file named `types.tsx` inside the component folder.
-The interfaces and types should be named in PascalCase with an Capital I followd by a descriptive name, .i.e. `ICarousel`.
+We will code in Typescript.
+
+- All the types and interfaces should be in a separate file named `types.tsx` inside the component folder.
+
+- The interfaces and types should be named in PascalCase with an Capital I followd by a descriptive name, .i.e. `ICarousel`.
+
+- We prefer to use FC instead of FunctionComponent when we type a component, i.e. `const Component: React.FC = () => {}`
+
+- We use arrow functions instead of functions
+
+- Use hypens for route names if they have more than one word
+i.e. `choose-profile`.
+
+- Use <> instead of Fragment
 
 ## Styled Components
 

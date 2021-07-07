@@ -3,7 +3,7 @@ import Button from "../../components/Button";
 import Input from "../../components/Input";
 import Logo from "../../assets/img/Logo.svg";
 import * as variantType from "../../common/styles/constants";
-import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
+import { StyledMainWrapper, StyledP, StyledForm, StyledImg } from "./styles";
 import eye from "../../assets/img/eye.svg";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
@@ -42,10 +42,10 @@ const RegisterPage: React.FC = () => {
 
     return (
         <StyledMainWrapper>
-            <div>
-                <img alt="logo" src={Logo}></img>
+            <>
+                <StyledImg alt="logo" src={Logo}></StyledImg>
                 <StyledP>{t("Title")}</StyledP>
-            </div>
+            </>
             <StyledForm onSubmit={handleFormSubmit}>
                 <Input
                     autocomplete="email"

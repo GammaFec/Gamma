@@ -20,10 +20,6 @@ export const StyledProfileRole = styled.div<{ color: string; image: string }>`
     cursor: pointer;
     font-weight: lighter;
 
-    &:hover {
-        transform: rotate(5deg);
-    }
-
     * {
         margin: 0;
         padding-top: 0.5rem;

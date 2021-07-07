@@ -5,7 +5,8 @@ const NotFound: React.FC = () => {
     // return <div>Not Found</div>;
     return (
         <div>
-            <Modal>Contenido del modal</Modal>
+            {/* <Modal isShown={true} title="Título del modal"> */}
+            <Modal title="Título del modal">Contenido del modal</Modal>
         </div>
     );
 };

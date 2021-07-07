@@ -94,9 +94,7 @@ const LoginPage: React.FC = (): JSX.Element => {
                     type={inputShow ? "text" : "password"}
                     value={passwordObj.value}
                 />
-                <Button handleClick={(): void => submitHandler()} variant={variantType.PRIMARY}>
-                    {t("Login")}
-                </Button>
+                <Button variant={variantType.PRIMARY}>{t("Login")}</Button>
             </StyledForm>
         </StyledMainWrapper>
     );

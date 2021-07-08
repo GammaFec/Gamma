@@ -8,12 +8,14 @@ const Button: React.FC<IButton> = ({
     styles,
     handleClick,
     className,
-    disabled = false
+    disabled = false,
+    isSmall = false
 }: IButton) => {
     return (
         <StyledButton
             className={className}
             disabled={disabled}
+            isSmall={isSmall}
             onClick={handleClick}
             styles={styles}
             variant={variant}>

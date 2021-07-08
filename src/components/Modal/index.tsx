@@ -1,6 +1,13 @@
 import React from "react";
 import Button from "../Button";
-import { StyledModal, StyledButtonsWrapper, StyledModalHeader, StyledModalMain } from "./styles";
+import {
+    StyledModal,
+    StyledModalContent,
+    StyledButtonsWrapper,
+    StyledModalHeader,
+    StyledCloseButton,
+    StyledModalMain
+} from "./styles";
 import { IModal } from "./types";
 import * as variantType from "../../common/styles/constants";
 //Translate - i18next
@@ -20,22 +27,29 @@ const Modal: React.FC<IModal> = ({ title, children }: IModal) => {
     const { t } = useTranslation();
 
     return (
-        // <StyledModal className={`${isShown && "isShown"}`}>
-        // <StyledModal isShown={isShown}>
+        // <StyledModal  isShown={isShown}>
         <StyledModal>
-            <StyledModalHeader>
-                {title}
-                <button onClick={handleClose}>X</button>
-            </StyledModalHeader>
-            <StyledModalMain>{children}</StyledModalMain>
-            <StyledButtonsWrapper>
-                <Button handleClick={handleClose} variant={variantType.SECONDARY}>
-                    {t("Modal:Close")}
-                </Button>
-                <Button handleClick={handleOkAction} variant={variantType.PRIMARY}>
-                    {t("Modal:Ok")}
-                </Button>
-            </StyledButtonsWrapper>
+            <StyledModalContent>
+                <StyledModalHeader>
+                    {title}
+                    <StyledCloseButton onClick={handleClose}>X</StyledCloseButton>
+                </StyledModalHeader>
+                <StyledModalMain>{children}</StyledModalMain>
+                <StyledButtonsWrapper>
+                    <Button
+                        handleClick={handleClose}
+                        isSmall={true}
+                        variant={variantType.SECONDARY}>
+                        {t("Modal:Close")}
+                    </Button>
+                    <Button
+                        handleClick={handleOkAction}
+                        isSmall={true}
+                        variant={variantType.PRIMARY}>
+                        {t("Modal:Ok")}
+                    </Button>
+                </StyledButtonsWrapper>
+            </StyledModalContent>
         </StyledModal>
     );
 };

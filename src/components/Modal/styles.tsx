@@ -1,54 +1,49 @@
 import styled, { css } from "styled-components";
 import { IModal } from "./types";
-import { theme, fontSizes } from "../../common/styles/variables";
+// import { theme, fontSizes } from "../../common/styles/variables";
+import { theme } from "../../common/styles/variables";
 
 //Revisar posición del modal
-// export const StyledModal = styled.div<{ isShown: boolean }>`
-export const StyledModal = styled.div`
-    position: fixed;
-    top: 30%;
-    left: 30%;
-    align-items: center;
-    font-size: ${fontSizes.font16};
-    font-family: ${theme.fontPrimary};
-    border-radius: 10px;
-    flex-direction: column;
-    line-height: 24px;
-    justify-content: center;
-    text-decoration: none;
-    padding: 1rem;
-    margin: 0.2rem;
-    min-width: 243px;
-    max-width: 70%;
-    height: 200px;
-    border: solid 1px red;
+export const StyledModal = styled.div<IModal>`
+    display: flex; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 `;
-//display: ${(props): string => (props.isShown ? "block" : "none")};
-// export const StyledModal = styled.div`
-//     position: fixed;
-//     top: 30%;
-//     left: 30%;
-//     align-items: center;
-//     font-size: ${fontSizes.font16};
-//     font-family: ${theme.fontPrimary};
-//     border-radius: 10px;
-//     display: flex;
-//     flex-direction: column;
-//     line-height: 24px;
-//     justify-content: center;
-//     text-decoration: none;
-//     padding: 1rem;
-//     margin: 0.2rem;
-//     min-width: 243px;
-//     max-width: 70%;
-//     height: 200px;
-//     border: solid 1px red;
-// `;
+
+export const StyledModalContent = styled.div`
+    background-color: #fefefe;
+    margin: auto;
+    border-radius: 5px;
+    width: 80%;
+    min-height: 100px;
+    height: auto;
+`;
 
 export const StyledModalHeader = styled.div<IModal>`
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    padding: 1rem;
+    justify-content: space-between;
+    border-bottom: solid 0.2px;
+    border-color: black;
+`;
+
+export const StyledCloseButton = styled.div<IModal>`
+    color: #aaaaaa;
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.6;
+    }
 `;
 
 export const StyledModalMain = styled.div<IModal>`
@@ -56,11 +51,14 @@ export const StyledModalMain = styled.div<IModal>`
     height: 150px;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 0.5rem;
 `;
 
 export const StyledButtonsWrapper = styled.div<IModal>`
     display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
 `;
 
 export const variants = {

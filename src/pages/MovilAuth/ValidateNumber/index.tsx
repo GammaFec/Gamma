@@ -3,15 +3,16 @@ import { PRIMARY } from "../../../common/styles/constants";
 import CodeVerification from "../CodeVerification";
 import {
     StyledA,
-    StyledButtonContinue,
     StyledFoot,
     StyledForm,
     StyledGoBack,
     StyledSpan,
-    StyledSub
+    StyledSub,
+    styles
 } from "./styles";
 import iValidateNumber from "./types";
 import { HANDSOK_SVG, PEN_SVG } from "../../../common/styles/svgs";
+import Button from "../../../components/Button";
 
 const ValidateNumber: React.FC<iValidateNumber> = ({
     phoneNumber,
@@ -24,9 +25,9 @@ const ValidateNumber: React.FC<iValidateNumber> = ({
 
     return (
         <StyledForm handleSubmit={submit}>
-            <button onClick={goBack} type="button">
+            <Button handleClick={goBack} type="button" variant={PRIMARY}>
                 {phoneNumber}
-            </button>
+            </Button>
             <div>
                 <h3>
                     <span>Ingresa el</span> <span>código que recibiste</span>
@@ -41,9 +42,9 @@ const ValidateNumber: React.FC<iValidateNumber> = ({
                     {phoneNumber}
                 </StyledGoBack>
                 <CodeVerification handleChange={setCode} />
-                <StyledButtonContinue id={buttonId} type="submit" variant={PRIMARY}>
+                <Button id={buttonId} styles={styles} type="submit" variant={PRIMARY}>
                     Verificar y proceder
-                </StyledButtonContinue>
+                </Button>
                 <StyledFoot>
                     ¿Aún no te llegó? <StyledA href="http">Reenvíar Código</StyledA>
                 </StyledFoot>

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { colors, fontSizes, theme } from "../../../common/styles/variables";
-import { StyledButton } from "../../../components/Button/styles";
 import Form from "../../../components/Form";
 
 export const StyledForm = styled(Form)`
@@ -11,10 +10,6 @@ export const StyledForm = styled(Form)`
     min-height: 100vh;
     position: relative;
     box-sizing: border-box;
-
-    button {
-        margin: 16px 0 16px 47px;
-    }
 
     & h3 {
         font-size: ${fontSizes.font16};
@@ -43,14 +38,8 @@ export const StyledFoot = styled.p`
     font-weight: 300;
 `;
 
-export const StyledButtonContinue = styled(StyledButton)`
-    font-size: ${fontSizes.font12};
-    font-weight: 500;
-    width: 253px;
-    height: 42px;
-    font-family: ${theme.fontPrimary};
-    border-radius: 4px;
-`;
+export const styles =
+    "font-size: 12px; font-weight: 500;width: 253px;height: 42px;border-radius: 4px; margin: 16px 0 16px 47px;";
 
 export const StyledA = styled.a`
     color: ${colors.green};

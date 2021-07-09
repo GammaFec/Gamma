@@ -16,41 +16,53 @@ import { useTranslation } from "react-i18next";
 // Props: title, children, action
 // Agregar X y Botón Close y Botón ok con acción
 // Formato del modal
-const Modal: React.FC<IModal> = ({ title, children }: IModal) => {
-    // const Modal: React.FC<IModal> = ({ title, children, isShown }: IModal) => {
-    const handleOkAction = (): void => {
-        alert("click Ok");
+const Modal: React.FC<IModal> = ({
+    show = false,
+    setShow,
+    title,
+    children,
+    handleAccept
+}: IModal) => {
+    /*     const [isShown, SetIsShown] = useState(show); */
+
+    const handleAcceptAction = (): void => {
+        handleAccept && handleAccept;
+        handleClose();
     };
     const handleClose = (): void => {
+        setShow && setShow(false);
         alert("click close");
     };
     const { t } = useTranslation();
 
     return (
-        // <StyledModal  isShown={isShown}>
-        <StyledModal>
-            <StyledModalContent>
-                <StyledModalHeader>
-                    {title}
-                    <StyledCloseButton onClick={handleClose}>X</StyledCloseButton>
-                </StyledModalHeader>
-                <StyledModalMain>{children}</StyledModalMain>
-                <StyledButtonsWrapper>
-                    <Button
-                        handleClick={handleClose}
-                        isSmall={true}
-                        variant={variantType.SECONDARY}>
-                        {t("Modal:Close")}
-                    </Button>
-                    <Button
-                        handleClick={handleOkAction}
-                        isSmall={true}
-                        variant={variantType.PRIMARY}>
-                        {t("Modal:Ok")}
-                    </Button>
-                </StyledButtonsWrapper>
-            </StyledModalContent>
-        </StyledModal>
+        <>
+            {show && (
+                <StyledModal>
+                    <StyledModalContent>
+                        <StyledModalHeader>
+                            {title}
+                            <StyledCloseButton onClick={handleClose}>X</StyledCloseButton>
+                        </StyledModalHeader>
+                        <StyledModalMain>{children}</StyledModalMain>
+                        <StyledButtonsWrapper>
+                            <Button
+                                handleClick={handleClose}
+                                isSmall={true}
+                                variant={variantType.SECONDARY}>
+                                {t("Modal:Close")}
+                            </Button>
+                            <Button
+                                handleClick={handleAcceptAction}
+                                isSmall={true}
+                                variant={variantType.PRIMARY}>
+                                {t("Modal:Ok")}
+                            </Button>
+                        </StyledButtonsWrapper>
+                    </StyledModalContent>
+                </StyledModal>
+            )}
+        </>
     );
 };
 

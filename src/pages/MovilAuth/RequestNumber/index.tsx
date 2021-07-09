@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Form from "../../../components/Form";
 
 import PhoneNumber from "../PhoneNumber";
-import { StyledButtonContinue, StyledContainer, StyledSpan } from "./styles";
+import { StyledContainer, StyledSpan, styles } from "./styles";
 import iRequestNumber from "./types";
 
 import { PRIMARY } from "../../../common/styles/constants";
 import { HANDSHONE_SVG } from "../../../common/styles/svgs";
+import Button from "../../../components/Button";
 
 const RequestNumber: React.FC<iRequestNumber> = ({
     handleSubmit,
@@ -30,9 +31,9 @@ const RequestNumber: React.FC<iRequestNumber> = ({
             </p>
             <Form handleSubmit={submit} isContentCentered>
                 <PhoneNumber handleChange={setStatePhoneNumber} value={statePhoneNumber} />
-                <StyledButtonContinue id={buttonId} type="submit" variant={PRIMARY}>
+                <Button id={buttonId} styles={styles} type="submit" variant={PRIMARY}>
                     Continuar
-                </StyledButtonContinue>
+                </Button>
             </Form>
             <HANDSHONE_SVG />
         </StyledContainer>

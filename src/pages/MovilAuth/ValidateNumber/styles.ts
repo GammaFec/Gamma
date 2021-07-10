@@ -38,8 +38,7 @@ export const StyledFoot = styled.p`
     font-weight: 300;
 `;
 
-export const styles =
-    "font-size: 12px; font-weight: 500;width: 253px;height: 42px;border-radius: 4px; margin: 16px 0 16px 47px;";
+export const styles = `font-size: ${fontSizes.font12}; font-weight: 500;width: 253px;height: 42px;border-radius: 4px; margin: 16px 0 16px 47px;`;
 
 export const StyledA = styled.a`
     color: ${colors.green};

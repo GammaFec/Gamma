@@ -44,5 +44,4 @@ export const StyledSpan = styled.span`
     font-weight: 700;
 `;
 
-export const styles =
-    "margin: 17px auto; min-width: 254px;height: 42px; margin-top: 17px; border-radius: 6px; font-size: 12px ;";
+export const styles = `margin: 17px auto; min-width: 254px;height: 42px; margin-top: 17px; border-radius: 6px; font-size: ${fontSizes.font12} ;`;

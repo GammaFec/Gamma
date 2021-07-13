@@ -11,7 +11,6 @@ export const StyledMain = styled.main`
     align-self: flex-end;
     display: grid;
     justify-content: center;
-    padding-bottom: 40vh;
     & > * {
         margin-bottom: 1.5rem;
     }

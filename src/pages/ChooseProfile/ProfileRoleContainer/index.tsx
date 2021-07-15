@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProfileRole from "./ProfileRole";
 import { StyledButton, StyledProfileRoleContainer } from "./styles";
-import rolesData from "./rolesData.json";
+import rolesData from "./rolesData";
 import { IRoleData, ISelectedRol } from "./types";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
@@ -33,9 +33,10 @@ const ProfileRoleContainer: React.FC = (): JSX.Element => {
     return (
         <>
             <StyledProfileRoleContainer>
-                {Data.map(({ id, path, variant, name }, i) => (
+                {Data.map(({ id, path, variant, name, image }, i) => (
                     <ProfileRole
                         handleClick={(): void => handleRoleClick(id, path)}
+                        image={image}
                         key={i}
                         selected={selected?.id === id}
                         variant={variant}>

@@ -8,4 +8,5 @@ export interface IProfileRole {
     key: number;
     handleClick?: React.MouseEventHandler<HTMLDivElement>;
     variant: typeof PRIMARY | typeof SECONDARY | string;
+    image: string;
 }

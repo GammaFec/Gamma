@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import { fontSizes, colors } from "../../../../common/styles/variables";
 
-export const StyledProfileRole = styled.div<{ color?: string }>`
+export const StyledProfileRole = styled.div<{ color: string; image: string }>`
     display: flex;
     width: 148px;
     height: 153px;
     background-color: ${({ color }): string =>
         color === "primary" ? colors.orange : colors.green};
+    background-image: url(${({ image }): string => `${image}`});
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: right;
     border-radius: 7px;
     box-shadow: 1px 5px 20px -4px rgba(0, 0, 0, 0.67);
     align-items: flex-end;
@@ -15,10 +19,6 @@ export const StyledProfileRole = styled.div<{ color?: string }>`
     transition: transform 0.1s linear;
     cursor: pointer;
     font-weight: lighter;
-
-    &:hover {
-        transform: rotate(5deg);
-    }
 
     * {
         margin: 0;
@@ -32,7 +32,7 @@ export const StyledProfileRole = styled.div<{ color?: string }>`
     }
 
     &.selected {
-        transform: scale(1.05);
+        transform: scale(1.05) rotate(5deg);
     }
     &:not(.selected) {
         opacity: 0.9;

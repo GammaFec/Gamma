@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 import { IModal } from "./types";
-// import { theme, fontSizes } from "../../common/styles/variables";
-import { theme } from "../../common/styles/variables";
+import { colors, theme } from "../../common/styles/variables";
 
 //Revisar posición del modal
 export const StyledModal = styled.div<IModal>`
@@ -22,7 +21,7 @@ export const StyledModalContent = styled.div`
     background-color: #fefefe;
     margin: auto;
     border-radius: 5px;
-    width: 80%;
+    width: 400px;
     min-height: 100px;
     height: auto;
 `;
@@ -32,7 +31,7 @@ export const StyledModalHeader = styled.div<IModal>`
     display: flex;
     padding: 1rem;
     justify-content: space-between;
-    border-bottom: solid 0.2px;
+    border-bottom: 0.2px solid ${colors.lightGray};
     border-color: black;
 `;
 

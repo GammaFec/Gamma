@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "../../components/Button";
-//import Modal from "../../components/Modal";
+import Modal from "../../components/Modal";
 import Input from "../../components/Input";
 import { InputIsValid } from "../../utils/InputValidation";
 import Logo from "../../assets/img/Logo.svg";
@@ -11,6 +11,14 @@ import { useTranslation } from "react-i18next";
 
 const LoginPage: React.FC = () => {
     const { t } = useTranslation("Login");
+
+    const [show, setShow] = useState(false);
+    // const handleClick = (): void => {
+    //     alert("holis");
+    // };
+    const handleShow = (): void => {
+        setShow(true);
+    };
 
     const [usernameObj, setUsernameObj] = useState({
         value: "",
@@ -65,6 +73,9 @@ const LoginPage: React.FC = () => {
                 <StyledP>{t("Title")}</StyledP>
             </div>
             <StyledForm onSubmit={submitHandler}>
+                <button onClick={handleShow} onKeyDown={handleShow}>
+                    Show Modal
+                </button>
                 <Input
                     autocomplete="user-name"
                     doFocus
@@ -91,6 +102,13 @@ const LoginPage: React.FC = () => {
                     {t("Login")}
                 </Button>
             </StyledForm>
+            <Modal
+                // handleAccept={handleClick}
+                setShow={setShow}
+                show={show}
+                title="Título del modal">
+                Contenido del modal
+            </Modal>
         </StyledMainWrapper>
     );
 };

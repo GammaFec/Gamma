@@ -10,28 +10,20 @@ import {
 } from "./styles";
 import { IModal } from "./types";
 import * as variantType from "../../common/styles/constants";
-//Translate - i18next
 import { useTranslation } from "react-i18next";
 
-// Props: title, children, action
-// Agregar X y Botón Close y Botón ok con acción
-// Formato del modal
 const Modal: React.FC<IModal> = ({
     show = false,
     setShow,
     title,
-    children,
-    handleAccept
-}: IModal) => {
-    /*     const [isShown, SetIsShown] = useState(show); */
-
+    children
+}: // handleAccept
+IModal) => {
     const handleAcceptAction = (): void => {
-        handleAccept && handleAccept;
-        handleClose();
+        setShow && setShow(false);
     };
     const handleClose = (): void => {
         setShow && setShow(false);
-        alert("click close");
     };
     const { t } = useTranslation();
 

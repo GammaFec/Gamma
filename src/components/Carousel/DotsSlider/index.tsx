@@ -1,8 +1,7 @@
 import React from "react";
 
-import { IDotsSlider } from "./types";
-
 import { StyledDot, StyledUl } from "./styles";
+import { IDotsSlider } from "./types";
 
 const DotsSlider: React.FC<IDotsSlider> = ({
     carouselData,

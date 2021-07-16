@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { IInput } from "./types";
+
 import { theme, fontSizes, colors } from "../../common/styles/variables";
+import { IInput } from "./types";
 
 export const StyledInputContainer = styled.div<{ iconPositionLeft: boolean }>`
     background-color: ${colors.lightGray};

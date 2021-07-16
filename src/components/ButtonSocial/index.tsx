@@ -1,6 +1,7 @@
 import React from "react";
-import { StyledParagraph, StyledList, StyledItemList, StyledSvg } from "./styles";
+
 import { Icons } from "./icon";
+import { StyledParagraph, StyledList, StyledItemList, StyledSvg } from "./styles";
 
 const SocialLogins: React.FC<{ text: string }> = (text) => {
     return (

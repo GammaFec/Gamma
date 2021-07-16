@@ -1,4 +1,5 @@
 import React from "react";
+
 import { PATHS } from "./paths";
 import IRoute from "./types";
 

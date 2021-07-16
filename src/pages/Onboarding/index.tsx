@@ -1,10 +1,11 @@
 import React from "react";
 
+import { useHistory } from "react-router-dom";
+
 import Carrousel from "../../components/Carousel";
 import data from "../../components/Carousel/CarouselData";
-import { StyledMain } from "./styles";
-import { useHistory } from "react-router-dom";
 import { PATHS } from "../../routes/paths";
+import { StyledMain } from "./styles";
 
 const CarouselPage: React.FC = () => {
     const history = useHistory();

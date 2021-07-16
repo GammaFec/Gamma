@@ -1,5 +1,6 @@
-import FirebaseApp from "../config";
 import firebase from "firebase";
+
+import FirebaseApp from "../config";
 
 /**
  * Generate a Firebase recaptcha for an HTML element

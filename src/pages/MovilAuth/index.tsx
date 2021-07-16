@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
+
 import firebase from "firebase";
 
 import Header from "../../components/Header";
-import PhoneValidator from "../../utils/PhoneValidator";
 import { sendSMSCode, verifyCode, getRecaptcha } from "../../services/firebase/phone-auth";
-
-import { StyledContainer, StyledMain } from "./styles";
+import PhoneValidator from "../../utils/PhoneValidator";
 import RequestNumber from "./RequestNumber";
+import { StyledContainer, StyledMain } from "./styles";
 import ValidateNumber from "./ValidateNumber";
 
 const MovilAuth = (): JSX.Element => {

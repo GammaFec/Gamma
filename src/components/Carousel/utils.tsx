@@ -1,7 +1,6 @@
 import React from "react";
 
 import { StyledLi, StyledLiContainer } from "./styles";
-
 import { ICarouselData } from "./types";
 
 /**Map the Data used in the carousel to build as many Tabs as nedded.

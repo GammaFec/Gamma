@@ -1,6 +1,7 @@
 import styled, { css, FlattenSimpleInterpolation } from "styled-components";
-import { IButton } from "./types";
+
 import { theme, fontSizes } from "../../common/styles/variables";
+import { IButton } from "./types";
 
 export const StyledButton = styled.button<IButton>`
     align-items: center;

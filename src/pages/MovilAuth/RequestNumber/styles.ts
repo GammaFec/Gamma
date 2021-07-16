@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { colors, fonts, fontSizes } from "../../../common/styles/variables";
 
 export const StyledContainer = styled.div`

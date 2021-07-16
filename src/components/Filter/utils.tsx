@@ -1,7 +1,6 @@
 import React from "react";
 
 import FilterTab from "./FilterTab";
-
 import { IFilterData } from "./types";
 
 /**

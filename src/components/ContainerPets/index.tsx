@@ -1,12 +1,10 @@
 import React from "react";
+
 import { useTranslation } from "react-i18next";
 
-// component
 import CardPet from "./CardPet";
-
-// styles
-import { StyledContainer } from "./styles";
 import { ICardPet, ICardPetData } from "./CardPet/types";
+import { StyledContainer } from "./styles";
 
 const ContainerPets = ({ animals }: ICardPetData): JSX.Element => {
     const { t } = useTranslation();

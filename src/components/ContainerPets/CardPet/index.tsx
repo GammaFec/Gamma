@@ -1,18 +1,12 @@
 import React from "react";
+
 import { useTranslation } from "react-i18next";
 
-// Styles
-import { StyledCard, StyledImage, StyledPetInfo } from "./styles";
-
-// Types
-import { ICardPet } from "./types";
-
-import { ageCalculate } from "../../../utils/ageCalculate";
-
 import { MALE } from "../../../common/styles/constants";
-
-// svg
 import { FEMALE_SVG, LOCATION, MALE_SVG } from "../../../common/styles/svgs";
+import { ageCalculate } from "../../../utils/ageCalculate";
+import { StyledCard, StyledImage, StyledPetInfo } from "./styles";
+import { ICardPet } from "./types";
 
 const CardPet: React.FC<ICardPet> = ({
     id,

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+
 import { PRIMARY } from "../../../common/styles/constants";
+import { HANDSOK_SVG, PEN_SVG } from "../../../common/styles/svgs";
+import Button from "../../../components/Button";
 import CodeVerification from "../CodeVerification";
 import {
     StyledA,
@@ -11,8 +14,6 @@ import {
     styles
 } from "./styles";
 import iValidateNumber from "./types";
-import { HANDSOK_SVG, PEN_SVG } from "../../../common/styles/svgs";
-import Button from "../../../components/Button";
 
 const ValidateNumber: React.FC<iValidateNumber> = ({
     phoneNumber,

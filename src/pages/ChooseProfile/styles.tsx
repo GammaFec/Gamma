@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { fontSizes, breakpoints } from "../../common/styles/variables";
+
 import { ReactComponent as BlueDog } from "../../assets/img/blue_dog.svg";
+import { fontSizes, breakpoints } from "../../common/styles/variables";
 
 export const StyledBlueDog = styled(BlueDog)`
     position: fixed;

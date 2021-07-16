@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { colors } from "../../common/styles/variables";
 
 export const StyledNav = styled.header`

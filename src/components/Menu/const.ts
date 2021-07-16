@@ -1,13 +1,13 @@
-import { PATHS } from "../../routes/paths";
 //Translate - i18next
 import i18n from "i18next";
-//Images
+
+import Msg from "../../assets/img/bxs-message.svg";
+import LogOut from "../../assets/img/close.svg";
+import Config from "../../assets/img/config.svg";
 import Heart from "../../assets/img/heart-filled.svg";
 import House from "../../assets/img/home-heart.svg";
-import Msg from "../../assets/img/bxs-message.svg";
 import Fav from "../../assets/img/star.svg";
-import Config from "../../assets/img/config.svg";
-import LogOut from "../../assets/img/close.svg";
+import { PATHS } from "../../routes/paths";
 
 const menuOptions = [
     {

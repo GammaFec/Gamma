@@ -1,8 +1,10 @@
 import React from "react";
+
 import ReactDOM from "react-dom";
+
 import "./i18next";
-import AppRouter from "./routes/AppRouter";
 import GlobalStyle from "./common/styles/globalStyles";
+import AppRouter from "./routes/AppRouter";
 
 ReactDOM.render(
     <React.StrictMode>

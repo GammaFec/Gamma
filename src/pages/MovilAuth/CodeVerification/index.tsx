@@ -1,7 +1,9 @@
 import React from "react";
+
 import ReactCodeInput from "react-verification-code-input";
-import iCodeVerification from "./types";
+
 import { StyledInput } from "./styles";
+import iCodeVerification from "./types";
 
 const CodeVerification: React.FC<iCodeVerification> = ({
     handleComplete,

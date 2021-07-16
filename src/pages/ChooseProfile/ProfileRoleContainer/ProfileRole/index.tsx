@@ -1,4 +1,5 @@
 import React from "react";
+
 import { StyledProfileRole } from "./styles";
 import { IProfileRole } from "./types";
 

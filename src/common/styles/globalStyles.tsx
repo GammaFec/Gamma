@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+
 import { theme } from "./variables";
 
 //global styles

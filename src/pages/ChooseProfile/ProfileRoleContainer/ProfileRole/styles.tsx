@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { fontSizes, colors } from "../../../../common/styles/variables";
 
 export const StyledProfileRole = styled.div<{ color: string; image: string }>`

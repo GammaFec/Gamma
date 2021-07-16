@@ -1,15 +1,12 @@
 import React, { useState } from "react";
-import { PRIMARY } from "../../common/styles/constants";
 
 import { useDrag } from "react-use-gesture";
 
+import { PRIMARY } from "../../common/styles/constants";
 import DotSlider from "./DotsSlider";
-
 import { StyledUl, StyledButton } from "./styles";
-
-import { carouselDataMapped, NumberIsPositive } from "./utils";
-
 import { ICarousel } from "./types";
+import { carouselDataMapped, NumberIsPositive } from "./utils";
 
 const Carousel: React.FC<ICarousel> = ({ handleClickOnContinue, carouselData }: ICarousel) => {
     const [activeTabIndex, setActiveTabIndex] = useState(0);

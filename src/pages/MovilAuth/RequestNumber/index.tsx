@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import Form from "../../../components/Form";
-
-import PhoneNumber from "../PhoneNumber";
-import { StyledContainer, StyledSpan, styles } from "./styles";
-import iRequestNumber from "./types";
 
 import { PRIMARY } from "../../../common/styles/constants";
 import { HANDSHONE_SVG } from "../../../common/styles/svgs";
 import Button from "../../../components/Button";
+import Form from "../../../components/Form";
+import PhoneNumber from "../PhoneNumber";
+import { StyledContainer, StyledSpan, styles } from "./styles";
+import iRequestNumber from "./types";
 
 const RequestNumber: React.FC<iRequestNumber> = ({
     handleSubmit,

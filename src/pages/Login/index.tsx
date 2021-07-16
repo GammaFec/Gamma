@@ -1,14 +1,16 @@
 import React, { useState, FormEvent } from "react";
-import Button from "../../components/Button";
-import Input from "../../components/Input";
-import { InputIsValid } from "../../utils/InputValidation";
+
+import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
+
+import eye from "../../assets/img/eye.svg";
 import Logo from "../../assets/img/Logo.svg";
 import * as variantType from "../../common/styles/constants";
-import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
-import eye from "../../assets/img/eye.svg";
-import { useTranslation } from "react-i18next";
+import Button from "../../components/Button";
+import Input from "../../components/Input";
 import { signInWithEmailAndPassword } from "../../services/firebase/email-auth";
-import { useHistory } from "react-router-dom";
+import { InputIsValid } from "../../utils/InputValidation";
+import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
 
 const LoginPage: React.FC = (): JSX.Element => {
     const { t } = useTranslation("Login");

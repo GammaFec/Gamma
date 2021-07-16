@@ -1,4 +1,5 @@
 import { RouteProps } from "react-router-dom";
+
 import { PATHS } from "./paths";
 
 interface IRoute {

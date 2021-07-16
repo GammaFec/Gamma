@@ -1,5 +1,5 @@
-import Rocky from "../../../assets/img/Rocky.svg";
 import Chikorita from "../../../assets/img/Chikorita.svg";
+import Rocky from "../../../assets/img/Rocky.svg";
 import Sasha from "../../../assets/img/Sasha.svg";
 import { ICardPet } from "./types";
 

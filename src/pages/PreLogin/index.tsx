@@ -1,17 +1,13 @@
 import React, { ReactElement } from "react";
 
-//Translate - i18next
 import { useTranslation } from "react-i18next";
-
-// Styled-components
-import { StyledHome, StyledHeader, StyledMain, StyledImg, StyledH1 } from "./styles";
-
-// Components
-import Logo from "../../assets/img/Logo.svg";
-import Button from "../../components/Button";
-import { PRIMARY, SECONDARY } from "../../common/styles/constants";
 import { useHistory } from "react-router-dom";
+
+import Logo from "../../assets/img/Logo.svg";
+import { PRIMARY, SECONDARY } from "../../common/styles/constants";
+import Button from "../../components/Button";
 import { PATHS } from "../../routes/paths";
+import { StyledHome, StyledHeader, StyledMain, StyledImg, StyledH1 } from "./styles";
 
 const PreLogin = (): ReactElement => {
     const history = useHistory();

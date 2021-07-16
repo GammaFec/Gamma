@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/no-autofocus */
 import React, { useState } from "react";
-import Input from "../Input";
-import loupe from "../../assets/img/search-icon.svg";
-//Translate - i18next
+
 import { useTranslation } from "react-i18next";
+
+import loupe from "../../assets/img/search-icon.svg";
+import Input from "../Input";
+//Translate - i18next
 
 const SearchInput = (): JSX.Element => {
     const { t } = useTranslation();

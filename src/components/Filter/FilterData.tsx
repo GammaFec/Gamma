@@ -1,6 +1,6 @@
-import FilterTabDog from "../../assets/img/FilterTabDog.svg";
 import FilterTabAdultDog from "../../assets/img/FilterTabAdultDog.svg";
 import FilterTabCat from "../../assets/img/FilterTabCat.svg";
+import FilterTabDog from "../../assets/img/FilterTabDog.svg";
 import FilterTabPuppyDog from "../../assets/img/FilterTabPuppyDog.svg";
 
 const Data = [

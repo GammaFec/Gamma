@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
     StyledMessageContainer,
     StyledMessageText,
@@ -10,7 +11,6 @@ import {
     StyledNumberOfMessage,
     StyledUserAvatar
 } from "./styles";
-
 import { IMessage } from "./types";
 import { TimeAgo } from "./utils";
 

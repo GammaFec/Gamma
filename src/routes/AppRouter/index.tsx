@@ -1,9 +1,10 @@
 import React, { Suspense } from "react";
+
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 
+import Splash from "../../pages/Splash";
 import RouteItem from "../RouteItem";
 import ROUTES from "../routes";
-import Splash from "../../pages/Splash";
 
 const AppRouter = (): JSX.Element => {
     return (

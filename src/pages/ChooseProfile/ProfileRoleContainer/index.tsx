@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import ProfileRole from "./ProfileRole";
-import { StyledButton, StyledProfileRoleContainer } from "./styles";
-import rolesData from "./rolesData";
-import { IRoleData, ISelectedRol } from "./types";
+
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+
+import ProfileRole from "./ProfileRole";
+import rolesData from "./rolesData";
+import { StyledButton, StyledProfileRoleContainer } from "./styles";
+import { IRoleData, ISelectedRol } from "./types";
 
 const ProfileRoleContainer: React.FC = (): JSX.Element => {
     const Data: IRoleData[] = rolesData;

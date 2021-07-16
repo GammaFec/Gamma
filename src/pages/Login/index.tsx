@@ -15,10 +15,6 @@ const LoginPage: React.FC = () => {
     const [show, setShow] = useState(false);
     const [modalMessage, setModalMessage] = useState("");
 
-    const handleShow = (): void => {
-        setShow(true);
-    };
-
     const [usernameObj, setUsernameObj] = useState({
         value: "",
         valid: false
@@ -63,7 +59,7 @@ const LoginPage: React.FC = () => {
         } else {
             setModalMessage("clicked!! The user OR the password IS NOT valid");
         }
-        handleShow();
+        setShow(true);
     };
 
     return (

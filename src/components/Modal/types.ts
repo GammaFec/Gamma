@@ -4,8 +4,7 @@ export interface IModal {
     handleAccept?: () => void;
     show?: boolean;
     setShow?: React.Dispatch<React.SetStateAction<boolean>>;
-    styles?: string;
     title?: string;
-    message: string;
+    message: string | number;
     variant?: typeof PRIMARY | typeof SECONDARY;
 }

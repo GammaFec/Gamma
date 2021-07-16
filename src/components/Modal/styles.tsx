@@ -20,7 +20,7 @@ export const StyledModalContent = styled.div`
     background-color: #fefefe;
     margin: auto;
     border-radius: 5px;
-    width: 400px;
+    width: auto;
     min-height: 100px;
     height: auto;
 `;
@@ -50,11 +50,11 @@ export const StyledCloseButton = styled.div`
 
 export const StyledModalMain = styled.div`
     width: 100%;
-    height: 150px;
+    min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
+    padding: 1.5rem;
 `;
 
 export const StyledButtonsWrapper = styled.div`

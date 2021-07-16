@@ -6,6 +6,5 @@ export interface IButton {
     styles?: string;
     className?: string;
     disabled?: boolean;
-    isSmall?: boolean;
     handleClick?: React.MouseEventHandler<HTMLButtonElement>;
 }

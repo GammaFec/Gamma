@@ -13,9 +13,8 @@ const LoginPage: React.FC = () => {
     const { t } = useTranslation("Login");
 
     const [show, setShow] = useState(false);
-    // const handleClick = (): void => {
-    //     alert("holis");
-    // };
+    const [modalMessage, setModalMessage] = useState("");
+
     const handleShow = (): void => {
         setShow(true);
     };
@@ -60,10 +59,11 @@ const LoginPage: React.FC = () => {
     const loginButtonClicked = (): void => {
         if (usernameObj.valid && passwordObj.valid) {
             //do something with the form Data
-            alert("clicked!!! The user and the password ARE valid");
+            setModalMessage("clicked!!! The user and the password ARE valid");
         } else {
-            return alert("clicked!! The user OR the password IS NOT valid");
+            setModalMessage("clicked!! The user OR the password IS NOT valid");
         }
+        handleShow();
     };
 
     return (
@@ -73,9 +73,6 @@ const LoginPage: React.FC = () => {
                 <StyledP>{t("Title")}</StyledP>
             </div>
             <StyledForm onSubmit={submitHandler}>
-                <button onClick={handleShow} onKeyDown={handleShow}>
-                    Show Modal
-                </button>
                 <Input
                     autocomplete="user-name"
                     doFocus
@@ -102,13 +99,7 @@ const LoginPage: React.FC = () => {
                     {t("Login")}
                 </Button>
             </StyledForm>
-            <Modal
-                // handleAccept={handleClick}
-                setShow={setShow}
-                show={show}
-                title="Título del modal">
-                Contenido del modal
-            </Modal>
+            <Modal message={modalMessage} setShow={setShow} show={show}></Modal>
         </StyledMainWrapper>
     );
 };

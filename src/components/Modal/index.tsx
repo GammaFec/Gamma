@@ -5,6 +5,7 @@ import {
     StyledModalContent,
     StyledButtonsWrapper,
     StyledModalHeader,
+    StyledModalTitle,
     StyledCloseButton,
     StyledModalMain
 } from "./styles";
@@ -16,10 +17,11 @@ const Modal: React.FC<IModal> = ({
     show = false,
     setShow,
     title,
-    children
-}: // handleAccept
-IModal) => {
+    message,
+    handleAccept
+}: IModal) => {
     const handleAcceptAction = (): void => {
+        handleAccept && handleAccept();
         setShow && setShow(false);
     };
     const handleClose = (): void => {
@@ -33,20 +35,22 @@ IModal) => {
                 <StyledModal>
                     <StyledModalContent>
                         <StyledModalHeader>
-                            {title}
+                            <StyledModalTitle>{title}</StyledModalTitle>
                             <StyledCloseButton onClick={handleClose}>X</StyledCloseButton>
                         </StyledModalHeader>
-                        <StyledModalMain>{children}</StyledModalMain>
+                        <StyledModalMain>{message}</StyledModalMain>
                         <StyledButtonsWrapper>
-                            <Button
-                                handleClick={handleClose}
-                                isSmall={true}
-                                variant={variantType.SECONDARY}>
-                                {t("Modal:Close")}
-                            </Button>
+                            {handleAccept && (
+                                <Button
+                                    handleClick={handleClose}
+                                    styles={"width: 100px;"}
+                                    variant={variantType.SECONDARY}>
+                                    {t("Modal:Close")}
+                                </Button>
+                            )}
                             <Button
                                 handleClick={handleAcceptAction}
-                                isSmall={true}
+                                styles={"width: 100px;"}
                                 variant={variantType.PRIMARY}>
                                 {t("Modal:Ok")}
                             </Button>

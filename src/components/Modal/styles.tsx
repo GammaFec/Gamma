@@ -1,9 +1,8 @@
 import styled, { css } from "styled-components";
-import { IModal } from "./types";
+// import { IModal } from "./types";
 import { colors, theme } from "../../common/styles/variables";
 
-//Revisar posición del modal
-export const StyledModal = styled.div<IModal>`
+export const StyledModal = styled.div`
     display: flex; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -26,7 +25,11 @@ export const StyledModalContent = styled.div`
     height: auto;
 `;
 
-export const StyledModalHeader = styled.div<IModal>`
+export const StyledModalTitle = styled.div`
+    width: 95%;
+`;
+
+export const StyledModalHeader = styled.div`
     width: 100%;
     display: flex;
     padding: 1rem;
@@ -35,7 +38,7 @@ export const StyledModalHeader = styled.div<IModal>`
     border-color: black;
 `;
 
-export const StyledCloseButton = styled.div<IModal>`
+export const StyledCloseButton = styled.div`
     color: #aaaaaa;
     float: right;
     font-weight: bold;
@@ -45,7 +48,7 @@ export const StyledCloseButton = styled.div<IModal>`
     }
 `;
 
-export const StyledModalMain = styled.div<IModal>`
+export const StyledModalMain = styled.div`
     width: 100%;
     height: 150px;
     display: flex;
@@ -54,7 +57,7 @@ export const StyledModalMain = styled.div<IModal>`
     padding: 0.5rem;
 `;
 
-export const StyledButtonsWrapper = styled.div<IModal>`
+export const StyledButtonsWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
     padding: 1rem;

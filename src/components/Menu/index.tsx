@@ -8,9 +8,6 @@ import UserPic from "../../assets/img/user-avatar.svg";
 import menuOptions from "./const";
 import { StyledDiv, StyledMenu, StyledOptions, StyledUser } from "./styles";
 import { IMenu } from "./types";
-//Translate - i18next
-//styles components
-//images
 
 const Menu: React.FC<IMenu> = ({ isOpen, handleClick, userName, userType }: IMenu) => {
     const { t } = useTranslation();

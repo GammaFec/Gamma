@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 
 import loupe from "../../assets/img/search-icon.svg";
 import Input from "../Input";
-//Translate - i18next
 
 const SearchInput = (): JSX.Element => {
     const { t } = useTranslation();

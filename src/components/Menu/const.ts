@@ -1,7 +1,6 @@
 //Translate - i18next
 import i18n from "i18next";
 
-//Images
 import Msg from "../../assets/img/bxs-message.svg";
 import LogOut from "../../assets/img/close.svg";
 import Config from "../../assets/img/config.svg";

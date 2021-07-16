@@ -27,7 +27,7 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "prettier/@typescript-eslint"
     ],
-    plugins: ["@typescript-eslint"],
+    plugins: ["@typescript-eslint", "eslint-plugin-import"],
     rules: {
         "react/jsx-sort-props": 2,
         "no-console": 2,
@@ -53,6 +53,25 @@ module.exports = {
                 custom: {
                     regex: "^I[A-Z]",
                     match: true
+                }
+            }
+        ],
+        "import/order": [
+            "error",
+            {
+                groups: ["builtin", "external", "internal"],
+                pathGroups: [
+                    {
+                        pattern: "react",
+                        group: "external",
+                        position: "before"
+                    }
+                ],
+                pathGroupsExcludedImportTypes: ["react"],
+                "newlines-between": "always",
+                alphabetize: {
+                    order: "asc",
+                    caseInsensitive: true
                 }
             }
         ]

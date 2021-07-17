@@ -41,14 +41,14 @@ const MovilAuth = (): JSX.Element => {
         if (veriResult) {
             const result = await verifyCode(code, veriResult);
             if (result) setModalMessage("Logueadisimo!");
-            setShow(true);
+            setShowModal(true);
             return result;
         }
 
         return false;
     };
 
-    const [show, setShow] = useState(false);
+    const [showModal, setShowModal] = useState(false);
     const [modalMessage, setModalMessage] = useState("");
 
     return (
@@ -69,7 +69,7 @@ const MovilAuth = (): JSX.Element => {
                     />
                 )}
             </StyledMain>
-            <Modal message={modalMessage} setShow={setShow} show={show}></Modal>
+            <Modal message={modalMessage} setShow={setShowModal} show={showModal}></Modal>
         </StyledContainer>
     );
 };

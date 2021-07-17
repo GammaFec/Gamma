@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 const LoginPage: React.FC = () => {
     const { t } = useTranslation("Login");
 
-    const [show, setShow] = useState(false);
+    const [showModal, setShowModal] = useState(false);
     const [modalMessage, setModalMessage] = useState("");
 
     const [usernameObj, setUsernameObj] = useState({
@@ -59,7 +59,7 @@ const LoginPage: React.FC = () => {
         } else {
             setModalMessage("clicked!! The user OR the password IS NOT valid");
         }
-        setShow(true);
+        setShowModal(true);
     };
 
     return (
@@ -95,7 +95,7 @@ const LoginPage: React.FC = () => {
                     {t("Login")}
                 </Button>
             </StyledForm>
-            <Modal message={modalMessage} setShow={setShow} show={show}></Modal>
+            <Modal message={modalMessage} setShow={setShowModal} show={showModal}></Modal>
         </StyledMainWrapper>
     );
 };

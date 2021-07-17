@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import FirebaseApp from "../config";
 import firebase from "firebase";
 
@@ -5,12 +6,16 @@ import firebase from "firebase";
  * Generate a Firebase recaptcha for an HTML element
  * @param elementId The id of element that the recaptcha validate
  */
-export const getRecaptcha = (elementId: string): firebase.auth.RecaptchaVerifier => {
-    const firebaseApp = FirebaseApp.getInstance();
+export const getRecaptcha = (elementId: string): firebase.auth.RecaptchaVerifier | undefined => {
+    try {
+        const firebaseApp = FirebaseApp.getInstance();
 
-    return new firebaseApp.auth.RecaptchaVerifier(elementId, {
-        size: "invisible"
-    });
+        return new firebaseApp.auth.RecaptchaVerifier(elementId, {
+            size: "invisible"
+        });
+    } catch (e) {
+        console.log(e);
+    }
 };
 
 /**
@@ -21,8 +26,15 @@ export const getRecaptcha = (elementId: string): firebase.auth.RecaptchaVerifier
 export const sendSMSCode = async (
     phoneNumber: string,
     appVerifier: firebase.auth.RecaptchaVerifier
-): Promise<firebase.auth.ConfirmationResult> =>
-    FirebaseApp.getInstance().auth().signInWithPhoneNumber(`+${phoneNumber}`, appVerifier);
+): Promise<firebase.auth.ConfirmationResult | undefined> => {
+    try {
+        return FirebaseApp.getInstance()
+            .auth()
+            .signInWithPhoneNumber(`+${phoneNumber}`, appVerifier);
+    } catch (e) {
+        console.log(e);
+    }
+};
 
 /**
  * Validate a code to authenticate a phone number
@@ -33,8 +45,11 @@ export const sendSMSCode = async (
 export const verifyCode = async (
     code: string,
     confirmationResult: firebase.auth.ConfirmationResult
-): Promise<boolean> => {
-    const user = await confirmationResult.confirm(code);
-
-    return user ? true : false;
+): Promise<boolean | undefined> => {
+    try {
+        const user = await confirmationResult.confirm(code);
+        return user ? true : false;
+    } catch (e) {
+        console.log("aca", e);
+    }
 };

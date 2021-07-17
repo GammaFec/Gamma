@@ -50,6 +50,6 @@ export const verifyCode = async (
         const user = await confirmationResult.confirm(code);
         return user ? true : false;
     } catch (e) {
-        console.log("aca", e);
+        console.log(e);
     }
 };

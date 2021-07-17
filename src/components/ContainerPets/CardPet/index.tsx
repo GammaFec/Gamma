@@ -24,10 +24,10 @@ const CardPet: React.FC<ICardPet> = ({
 }: ICardPet) => {
     const { t } = useTranslation();
     const resultAnimalAge = ageCalculate(dateOfBirth);
-    const [show, setShow] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
     return (
-        <StyledCard onClick={(): void => setShow(true)}>
+        <StyledCard onClick={(): void => setShowModal(true)}>
             <StyledImage alt={alt} src={imageUrl} />
             <StyledPetInfo>
                 <h2>{name}</h2>
@@ -42,7 +42,7 @@ const CardPet: React.FC<ICardPet> = ({
                     <LOCATION /> {t("CardPet:distance")}: {distance}
                 </figcaption>
             </StyledPetInfo>
-            <Modal message={id} setShow={setShow} show={show}></Modal>
+            <Modal message={id} setShow={setShowModal} show={showModal}></Modal>
         </StyledCard>
     );
 };

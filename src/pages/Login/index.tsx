@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, FormEvent } from "react";
 import Button from "../../components/Button";
 import Modal from "../../components/Modal";
 import Input from "../../components/Input";
@@ -6,11 +6,14 @@ import { InputIsValid } from "../../utils/InputValidation";
 import Logo from "../../assets/img/Logo.svg";
 import * as variantType from "../../common/styles/constants";
 import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
-import eye from "../../assets/img/eye.png";
+import eye from "../../assets/img/eye.svg";
 import { useTranslation } from "react-i18next";
+import { signInWithEmailAndPassword } from "../../services/firebase/email-auth";
+import { useHistory } from "react-router-dom";
 
-const LoginPage: React.FC = () => {
+const LoginPage: React.FC = (): JSX.Element => {
     const { t } = useTranslation("Login");
+    const { push } = useHistory();
 
     const [showModal, setShowModal] = useState(false);
     const [modalMessage, setModalMessage] = useState("");
@@ -27,11 +30,11 @@ const LoginPage: React.FC = () => {
 
     const AccountInputHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const newValue = event.target.value.trim();
-        const vadidInput = InputIsValid(newValue, true);
+        const validInput = InputIsValid(newValue, true);
         const newState = {
             ...usernameObj,
             value: newValue,
-            valid: vadidInput
+            valid: validInput
         };
 
         return setUsernameObj(newState);
@@ -39,25 +42,31 @@ const LoginPage: React.FC = () => {
 
     const PasswordInputHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const newValue = event.target.value.trim();
-        const vadidInput = InputIsValid(newValue);
+        const validInput = InputIsValid(newValue);
         const newState = {
             ...passwordObj,
             value: newValue,
-            valid: vadidInput
+            valid: validInput
         };
 
         return setPasswordObj(newState);
     };
 
-    const submitHandler = (event: React.ChangeEvent<HTMLFormElement>): void =>
-        event.preventDefault();
+    const [inputShow, setInputShow] = useState(false);
+    const togglePasswordVisibility = (): void => {
+        setInputShow(!inputShow);
+    };
 
-    const loginButtonClicked = (): void => {
+    const submitHandler = (event?: FormEvent<HTMLFormElement>): void => {
+        event?.preventDefault();
         if (usernameObj.valid && passwordObj.valid) {
-            //do something with the form Data
-            setModalMessage("clicked!!! The user and the password ARE valid");
+            signInWithEmailAndPassword(usernameObj.value, passwordObj.value)
+                .then((/*data*/) => {
+                    push("home");
+                })
+                .catch((error) => setModalMessage(error.message));
         } else {
-            setModalMessage("clicked!! The user OR the password IS NOT valid");
+            setModalMessage("The username and password are not valid");
         }
         setShowModal(true);
     };
@@ -85,15 +94,12 @@ const LoginPage: React.FC = () => {
                     id="current-password"
                     name="current-password"
                     onChange={PasswordInputHandler}
+                    onIconClick={togglePasswordVisibility}
                     placeholder={t("PasswordInputPlaceholder")}
-                    type="password"
+                    type={inputShow ? "text" : "password"}
                     value={passwordObj.value}
                 />
-                <Button
-                    handleClick={(): void => loginButtonClicked()}
-                    variant={variantType.PRIMARY}>
-                    {t("Login")}
-                </Button>
+                <Button variant={variantType.PRIMARY}>{t("Login")}</Button>
             </StyledForm>
             <Modal message={modalMessage} setShow={setShowModal} show={showModal}></Modal>
         </StyledMainWrapper>

@@ -9,6 +9,7 @@ const Login = React.lazy(() => import("../pages/Login"));
 const PreLogin = React.lazy(() => import("../pages/PreLogin"));
 const ChooseProfile = React.lazy(() => import("../pages/ChooseProfile"));
 const Onboarding = React.lazy(() => import("../pages/Onboarding"));
+const Register = React.lazy(() => import("../pages/Register"));
 
 const ROUTES: IRoute[] = [
     {
@@ -29,6 +30,13 @@ const ROUTES: IRoute[] = [
         path: PATHS.PreLogin,
         component: PreLogin,
         name: "PreLogin",
+        exact: true,
+        isPrivate: false
+    },
+    {
+        path: PATHS.Register,
+        component: Register,
+        name: "Register",
         exact: true,
         isPrivate: false
     },

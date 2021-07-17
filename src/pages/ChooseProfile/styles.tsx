@@ -1,5 +1,12 @@
 import styled from "styled-components";
 import { fontSizes, breakpoints } from "../../common/styles/variables";
+import { ReactComponent as BlueDog } from "../../assets/img/blue_dog.svg";
+
+export const StyledBlueDog = styled(BlueDog)`
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+`;
 
 export const StyledMain = styled.main`
     align-items: center;

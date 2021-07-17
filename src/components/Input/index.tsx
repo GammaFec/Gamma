@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-autofocus */
-import React, { useState } from "react";
+import React from "react";
 import { StyledInput, StyledImg, StyledInputContainer, StyledIconBox } from "./styles";
 import { IInput } from "./types";
 
@@ -8,6 +8,7 @@ const Input: React.FC<IInput> = ({
     name,
     id,
     icon,
+    iconPositionLeft,
     alt,
     value,
     ref,
@@ -16,18 +17,14 @@ const Input: React.FC<IInput> = ({
     placeholder,
     doFocus,
     autocomplete,
-    onChange
+    onChange,
+    onIconClick
 }: IInput) => {
-    const isText = type === "text" ? true : false;
-    const [inputShow, setInputShow] = useState(isText);
-    const togglePasswordVisibility = (): void => {
-        setInputShow(!inputShow);
-    };
-
     return (
-        <StyledInputContainer>
+        <StyledInputContainer
+            iconPositionLeft={iconPositionLeft !== undefined ? iconPositionLeft : false}>
             {icon && (
-                <StyledIconBox onClick={(): void => togglePasswordVisibility()}>
+                <StyledIconBox onClick={onIconClick}>
                     <StyledImg alt={alt} src={icon} />
                 </StyledIconBox>
             )}
@@ -41,7 +38,7 @@ const Input: React.FC<IInput> = ({
                 onChange={onChange}
                 placeholder={placeholder}
                 ref={ref}
-                type={inputShow ? "text" : "password"}
+                type={type}
                 value={value}
             />
         </StyledInputContainer>

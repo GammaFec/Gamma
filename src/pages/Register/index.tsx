@@ -66,7 +66,11 @@ const RegisterPage: React.FC = () => {
                     type="password"
                     value={password}
                 />
-                <Button variant={variantType.PRIMARY}>{t("Register")}</Button>
+                <Button
+                    disabled={email === "" || password === "" ? true : false}
+                    variant={variantType.PRIMARY}>
+                    {t("Register")}
+                </Button>
             </StyledForm>
         </StyledMainWrapper>
     );

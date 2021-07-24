@@ -94,7 +94,11 @@ const LoginPage: React.FC = (): JSX.Element => {
                     type={inputShow ? "text" : "password"}
                     value={passwordObj.value}
                 />
-                <Button variant={variantType.PRIMARY}>{t("Login")}</Button>
+                <Button
+                    disabled={usernameObj.value === "" || passwordObj.value === "" ? true : false}
+                    variant={variantType.PRIMARY}>
+                    {t("Login")}
+                </Button>
             </StyledForm>
         </StyledMainWrapper>
     );

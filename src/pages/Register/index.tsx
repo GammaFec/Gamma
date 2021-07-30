@@ -25,7 +25,15 @@ const RegisterPage: React.FC = () => {
 
     const handleFormSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
         event.preventDefault();
-        createUserWithEmailAndPassword(email, password)
+        createUserWithEmailAndPassword(email, password, {
+            aboutUs: "Yo",
+            address: "Al lado de mi vecino",
+            lastName: " Laaaaaaaast Nombre",
+            name: "The game",
+            phone: "1923444-1",
+            profilePic: "si.com",
+            role: "Alberge"
+        })
             .then(() => {
                 history.push("/movil-auth/123345");
             })
@@ -35,6 +43,8 @@ const RegisterPage: React.FC = () => {
                 } else if (error.code.includes("auth/email-already-in")) {
                     alert("El correo ingresado ya se encuentra en uso");
                 } else {
+                    // eslint-disable-next-line no-console
+                    console.log(error);
                     alert("No se puede registrar. Por favor intente de nuevo más tarde");
                 }
             });

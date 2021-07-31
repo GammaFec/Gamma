@@ -1,0 +1,39 @@
+import React from "react";
+import { StyledMainWrapper, StyledHeader, StyledIconBox, StyledImg } from "./styles";
+import { useTranslation } from "react-i18next";
+// import { useHistory } from "react-router-dom";
+import leftMenu from "../../assets/img/gg_menu-left.svg";
+import messagesIcon from "../../assets/img/bx_bx-message-detail.svg";
+// import ContainerPets from "../../components/ContainerPets";
+const LoginPage: React.FC = (): JSX.Element => {
+    const { t } = useTranslation("Login");
+    // const { push } = useHistory();
+
+    // const animals = {
+    //     id: 1,
+    //     genre: "female",
+    //     breed: "Dalmata",
+    //     age: 4,
+    //     type: "dog",
+    //     name: "Rocky",
+    //     imageUrl: "notimage",
+    //     distance: "2km",
+    //     dateOfBirth: "01/01/2018"
+    // };
+
+    return (
+        <StyledMainWrapper>
+            <StyledHeader>
+                <StyledIconBox>
+                    <StyledImg alt={"ícono-alt"} src={leftMenu} />
+                </StyledIconBox>
+                {t("Home")}
+                <StyledIconBox>
+                    <StyledImg alt={"ícono-alt"} src={messagesIcon} />
+                </StyledIconBox>
+            </StyledHeader>
+        </StyledMainWrapper>
+    );
+};
+
+export default LoginPage;

@@ -11,5 +11,6 @@ export enum PATHS {
     Config = "/configuration",
     Messages = "/messages",
     PreLogin = "/pre-login",
-    Register = "/register"
+    Register = "/register",
+    Feed = "/feed"
 }

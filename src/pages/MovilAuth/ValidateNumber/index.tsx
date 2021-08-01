@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PRIMARY } from "../../../common/styles/constants";
+import { PRIMARY } from "../../../common/constants";
 import CodeVerification from "../CodeVerification";
 import {
     StyledA,
@@ -11,7 +11,7 @@ import {
     buttonStyles
 } from "./styles";
 import iValidateNumber from "./types";
-import { HANDSOK_SVG, PEN_SVG } from "../../../common/styles/svgs";
+import { HANDSOK_SVG, PEN_SVG } from "../../../common/svgs";
 import Button from "../../../components/Button";
 
 const ValidateNumber: React.FC<iValidateNumber> = ({

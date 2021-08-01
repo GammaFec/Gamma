@@ -5,8 +5,8 @@ import PhoneNumber from "../PhoneNumber";
 import { StyledContainer, StyledSpan, buttonStyles } from "./styles";
 import iRequestNumber from "./types";
 
-import { PRIMARY } from "../../../common/styles/constants";
-import { HANDSHONE_SVG } from "../../../common/styles/svgs";
+import { PRIMARY } from "../../../common/constants";
+import { HANDSHONE_SVG } from "../../../common/svgs";
 import Button from "../../../components/Button";
 
 const RequestNumber: React.FC<iRequestNumber> = ({

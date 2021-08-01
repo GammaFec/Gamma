@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PRIMARY } from "../../common/styles/constants";
+import { PRIMARY } from "../../common/constants";
 
 import { useDrag } from "react-use-gesture";
 

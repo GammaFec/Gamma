@@ -10,7 +10,7 @@ import { StyledHome, StyledHeader, StyledMain, StyledImg, StyledH1, buttonStyles
 import Logo from "../../assets/img/Logo.svg";
 import Button from "../../components/Button";
 import Layout from "../../components/Layout";
-import { PRIMARY, SECONDARY } from "../../common/styles/constants";
+import { PRIMARY, SECONDARY } from "../../common/constants";
 import { useHistory } from "react-router-dom";
 import { PATHS } from "../../routes/paths";
 

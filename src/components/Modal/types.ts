@@ -1,4 +1,4 @@
-import { PRIMARY, SECONDARY } from "../../common/styles/constants";
+import { PRIMARY, SECONDARY } from "../../common/constants";
 
 export interface IModal {
     handleAccept?: () => void;

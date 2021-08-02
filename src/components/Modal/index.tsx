@@ -10,7 +10,7 @@ import {
     StyledModalMain
 } from "./styles";
 import { IModal } from "./types";
-import * as variantType from "../../common/styles/constants";
+import * as variantType from "../../common/constants";
 import { useTranslation } from "react-i18next";
 
 const Modal: React.FC<IModal> = ({

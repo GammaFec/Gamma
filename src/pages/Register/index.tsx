@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
+import Modal from "../../components/Modal";
 import Logo from "../../assets/img/Logo.svg";
 import * as variantType from "../../common/constants";
 import { StyledMainWrapper, StyledP, StyledForm, StyledImg } from "./styles";
@@ -13,6 +14,8 @@ const RegisterPage: React.FC = () => {
     const { t } = useTranslation("Register");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [showModal, setShowModal] = useState(false);
+    const [modalMessage, setModalMessage] = useState("");
     const history = useHistory();
 
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -31,12 +34,13 @@ const RegisterPage: React.FC = () => {
             })
             .catch((error) => {
                 if (error.code.includes("auth/weak-password")) {
-                    alert("Por favor ingresa una contraseña más segura");
+                    setModalMessage("Por favor ingresa una contraseña más segura");
                 } else if (error.code.includes("auth/email-already-in")) {
-                    alert("El correo ingresado ya se encuentra en uso");
+                    setModalMessage("El correo ingresado ya se encuentra en uso");
                 } else {
-                    alert("No se puede registrar. Por favor intente de nuevo más tarde");
+                    setModalMessage("No se puede registrar. Por favor intente de nuevo más tarde");
                 }
+                setShowModal(true);
             });
     };
 
@@ -68,6 +72,7 @@ const RegisterPage: React.FC = () => {
                 />
                 <Button variant={variantType.PRIMARY}>{t("Register")}</Button>
             </StyledForm>
+            <Modal message={modalMessage} setShow={setShowModal} show={showModal}></Modal>
         </StyledMainWrapper>
     );
 };

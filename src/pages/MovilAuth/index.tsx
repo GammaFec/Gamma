@@ -26,16 +26,14 @@ const MovilAuth = (): JSX.Element => {
     const openValidation = (formPhoneNumber: string): void => {
         if (PhoneValidator(formPhoneNumber) && recaptcha) {
             setPhoneNumber(formPhoneNumber);
-            sendSMSCode(formPhoneNumber, recaptcha).then(
-                (result: firebase.auth.ConfirmationResult) => {
-                    setVeriResult(result);
-                    setValidating(true);
-                }
-            );
+            sendSMSCode(formPhoneNumber, recaptcha).then((result) => {
+                setVeriResult(result);
+                setValidating(true);
+            });
         }
     };
 
-    const validateNumberFirebase = async (code: string): Promise<boolean> => {
+    const validateNumberFirebase = async (code: string): Promise<boolean | undefined> => {
         if (veriResult) {
             const result = await verifyCode(code, veriResult);
             if (result) setModalMessage("Logueadisimo!");

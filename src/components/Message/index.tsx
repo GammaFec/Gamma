@@ -28,7 +28,7 @@ const Message: React.FC<IMessage> = ({
             {profileIcon ? (
                 <StyledUserAvatar alt={name} src={profileIcon} />
             ) : (
-                <StyledDefaultAvatar />
+                <StyledDefaultAvatar title="Default user" />
             )}
             <StyledTextContainer>
                 <StyledName>{name}</StyledName>

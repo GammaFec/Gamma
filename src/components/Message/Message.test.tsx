@@ -11,8 +11,7 @@ describe("<Message />", () => {
     const creationDate = new Date("22/7/2020");
 
     test("Render", () => {
-        // const { getByText, getByTitle } = render(
-        const { getByText } = render(
+        const { getByText, getByTitle } = render(
             <Message
                 count={Count}
                 creationDate={creationDate}
@@ -22,8 +21,7 @@ describe("<Message />", () => {
             />
         );
 
-        // getByText("name");
-        // getByTitle("defaultUser");
+        getByTitle("Default user");
         getByText(Count);
         getByText(Name);
         getByText(Text);

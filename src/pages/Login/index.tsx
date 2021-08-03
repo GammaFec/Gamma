@@ -6,6 +6,7 @@ import Logo from "../../assets/img/Logo.svg";
 import * as variantType from "../../common/constants";
 import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
 import eye from "../../assets/img/eye.svg";
+import hiddenEye from "../../assets/img/eye-hidden.svg";
 import { useTranslation } from "react-i18next";
 import { signInWithEmailAndPassword } from "../../services/firebase/email-auth";
 import { useHistory } from "react-router-dom";
@@ -49,8 +50,10 @@ const LoginPage: React.FC = (): JSX.Element => {
     };
 
     const [inputShow, setInputShow] = useState(false);
+    const [eyeIcon, setEyeIcon] = useState(eye);
     const togglePasswordVisibility = (): void => {
         setInputShow(!inputShow);
+        setEyeIcon(inputShow ? eye : hiddenEye);
     };
 
     const submitHandler = (event?: FormEvent<HTMLFormElement>): void => {
@@ -85,7 +88,7 @@ const LoginPage: React.FC = (): JSX.Element => {
                 />
                 <Input
                     autocomplete="current-password"
-                    icon={eye}
+                    icon={eyeIcon}
                     id="current-password"
                     name="current-password"
                     onChange={PasswordInputHandler}

@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-// import { IModal } from "./types";
 import { colors, theme } from "../../common/styles/variables";
 
 export const StyledModal = styled.div`

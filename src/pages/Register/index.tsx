@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 import Logo from "../../assets/img/Logo.svg";
-import * as variantType from "../../common/styles/constants";
+import * as variantType from "../../common/constants";
 import { StyledMainWrapper, StyledP, StyledForm, StyledImg } from "./styles";
 import eye from "../../assets/img/eye.svg";
 import { useTranslation } from "react-i18next";
@@ -66,7 +66,11 @@ const RegisterPage: React.FC = () => {
                     type="password"
                     value={password}
                 />
-                <Button variant={variantType.PRIMARY}>{t("Register")}</Button>
+                <Button
+                    disabled={email === "" || password === "" ? true : false}
+                    variant={variantType.PRIMARY}>
+                    {t("Register")}
+                </Button>
             </StyledForm>
         </StyledMainWrapper>
     );

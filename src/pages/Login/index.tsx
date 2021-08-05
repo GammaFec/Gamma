@@ -4,7 +4,7 @@ import Modal from "../../components/Modal";
 import Input from "../../components/Input";
 import { InputIsValid } from "../../utils/InputValidation";
 import Logo from "../../assets/img/Logo.svg";
-import * as variantType from "../../common/styles/constants";
+import * as variantType from "../../common/constants";
 import { StyledMainWrapper, StyledP, StyledForm } from "./styles";
 import eye from "../../assets/img/eye.svg";
 import { useTranslation } from "react-i18next";
@@ -99,7 +99,11 @@ const LoginPage: React.FC = (): JSX.Element => {
                     type={inputShow ? "text" : "password"}
                     value={passwordObj.value}
                 />
-                <Button variant={variantType.PRIMARY}>{t("Login")}</Button>
+                <Button
+                    disabled={usernameObj.value === "" || passwordObj.value === "" ? true : false}
+                    variant={variantType.PRIMARY}>
+                    {t("Login")}
+                </Button>
             </StyledForm>
             <Modal message={modalMessage} setShow={setShowModal} show={showModal}></Modal>
         </StyledMainWrapper>

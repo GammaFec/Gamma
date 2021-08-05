@@ -6,5 +6,5 @@ i18next.addResources(LanguageList.SPANISH, "Feed", {
 });
 
 i18next.addResources(LanguageList.ENGLISH, "Feed", {
-    Homme: "Home"
+    Home: "Home"
 });

@@ -3,7 +3,7 @@ import Chikorita from "../../../assets/img/Chikorita.svg";
 import Sasha from "../../../assets/img/Sasha.svg";
 import { ICardPet } from "./types";
 
-export const animal: ICardPet[] = [
+export const animals: ICardPet[] = [
     {
         id: 123,
         name: "Roky",

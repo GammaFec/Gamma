@@ -1,12 +1,12 @@
 import React from "react";
-import { StyledMainWrapper, StyledHeader, StyledIconBox, StyledImg } from "./styles";
-import { useTranslation } from "react-i18next";
+import { StyledMainWrapper, StyledHeader } from "./styles";
+// import { useTranslation } from "react-i18next";
 // import { useHistory } from "react-router-dom";
-import leftMenu from "../../assets/img/gg_menu-left.svg";
-import messagesIcon from "../../assets/img/bx_bx-message-detail.svg";
-// import ContainerPets from "../../components/ContainerPets";
+import Nav from "../../components/Nav";
+import ContainerPets from "../../components/ContainerPets";
+import { animals } from "../../components/ContainerPets/CardPet/data";
 const LoginPage: React.FC = (): JSX.Element => {
-    const { t } = useTranslation("Login");
+    // const { t } = useTranslation("Feed");
     // const { push } = useHistory();
 
     // const animals = {
@@ -24,14 +24,9 @@ const LoginPage: React.FC = (): JSX.Element => {
     return (
         <StyledMainWrapper>
             <StyledHeader>
-                <StyledIconBox>
-                    <StyledImg alt={"ícono-alt"} src={leftMenu} />
-                </StyledIconBox>
-                {t("Home")}
-                <StyledIconBox>
-                    <StyledImg alt={"ícono-alt"} src={messagesIcon} />
-                </StyledIconBox>
+                <Nav />
             </StyledHeader>
+            <ContainerPets animals={animals} />
         </StyledMainWrapper>
     );
 };

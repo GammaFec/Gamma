@@ -16,7 +16,7 @@ import { useTranslation } from "react-i18next";
 const Modal: React.FC<IModal> = ({
     show = false,
     setShow,
-    title,
+    title = "¡Atención!",
     message,
     handleAccept
 }: IModal) => {

@@ -26,6 +26,7 @@ export const StyledModalContent = styled.div`
 
 export const StyledModalTitle = styled.div`
     width: 95%;
+    text-align: left;
 `;
 
 export const StyledModalHeader = styled.div`

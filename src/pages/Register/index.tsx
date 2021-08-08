@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
+import PasswordInput from "../../components/PasswordInput";
 import Logo from "../../assets/img/Logo.svg";
 import * as variantType from "../../common/constants";
 import { StyledMainWrapper, StyledP, StyledForm, StyledImg } from "./styles";
-import eye from "../../assets/img/eye.svg";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "../../services/firebase/email-auth";
@@ -12,20 +12,21 @@ import { createUserWithEmailAndPassword } from "../../services/firebase/email-au
 const RegisterPage: React.FC = () => {
     const { t } = useTranslation("Register");
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    // const [password, setPassword] = useState("");
     const history = useHistory();
 
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
         setEmail(event.target.value);
     };
 
-    const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        setPassword(event.target.value);
-    };
+    // const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    //     setPassword(event.target.value);
+    // };
 
     const handleFormSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
         event.preventDefault();
-        createUserWithEmailAndPassword(email, password)
+        // createUserWithEmailAndPassword(email, password)
+        createUserWithEmailAndPassword(email, "pass")
             .then(() => {
                 history.push("/movil-auth/123345");
             })
@@ -56,18 +57,12 @@ const RegisterPage: React.FC = () => {
                     type="text"
                     value={email}
                 />
-                <Input
-                    autocomplete="password"
-                    icon={eye}
-                    id="password"
-                    name="password"
-                    onChange={handlePasswordChange}
-                    placeholder={t("Password")}
-                    type="password"
-                    value={password}
+                <PasswordInput
+                // handlePasswordChange={handlePasswordChange}
+                // passwordInputHandler={passwordInputHandler}
                 />
                 <Button
-                    disabled={email === "" || password === "" ? true : false}
+                    // disabled={email === "" || password === "" ? true : false}
                     variant={variantType.PRIMARY}>
                     {t("Register")}
                 </Button>

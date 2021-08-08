@@ -3,7 +3,6 @@ import { colors, fonts, fontSizes } from "../../../common/styles/variables";
 
 export const StyledContainer = styled.div`
     width: 340px;
-    min-height: 100vh;
     font-family: ${fonts.poppins};
     position: relative;
     margin: auto;
@@ -26,9 +25,11 @@ export const StyledContainer = styled.div`
     }
 
     & > svg {
-        position: absolute;
-        left: 139px;
-        bottom: 0px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 
     .react-tel-input .special-label {
@@ -44,4 +45,11 @@ export const StyledSpan = styled.span`
     font-weight: 700;
 `;
 
-export const styles = `margin: 17px auto; min-width: 254px;height: 42px; margin-top: 17px; border-radius: 6px; font-size: ${fontSizes.font12} ;`;
+export const buttonStyles = `
+    margin: 17px auto; 
+    width: 254px;
+    height: 42px; 
+    margin-top: 17px; 
+    border-radius: 6px; 
+    font-size: ${fontSizes.font12};
+`;

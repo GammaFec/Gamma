@@ -8,7 +8,7 @@ import {
     StyledGoBack,
     StyledSpan,
     StyledSub,
-    styles
+    buttonStyles
 } from "./styles";
 import iValidateNumber from "./types";
 import { HANDSOK_SVG, PEN_SVG } from "../../../common/svgs";
@@ -42,7 +42,7 @@ const ValidateNumber: React.FC<iValidateNumber> = ({
                     {phoneNumber}
                 </StyledGoBack>
                 <CodeVerification handleChange={setCode} />
-                <Button id={buttonId} styles={styles} type="submit" variant={PRIMARY}>
+                <Button id={buttonId} styles={buttonStyles} type="submit" variant={PRIMARY}>
                     Verificar y proceder
                 </Button>
                 <StyledFoot>

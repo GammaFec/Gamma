@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 
+import Layout from "../../components/Layout";
 import Header from "../../components/Header";
 import PhoneValidator from "../../utils/PhoneValidator";
 import { sendSMSCode, verifyCode, getRecaptcha } from "../../services/firebase/phone-auth";
@@ -43,24 +44,26 @@ const MovilAuth = (): JSX.Element => {
     };
 
     return (
-        <StyledContainer>
-            <Header>{/* <ButtonBack /> */}</Header>
-            <StyledMain>
-                {validating ? (
-                    <ValidateNumber
-                        goBack={closeValidation}
-                        handleSubmit={validateNumberFirebase}
-                        phoneNumber={phoneNumber ?? ""}
-                    />
-                ) : (
-                    <RequestNumber
-                        buttonId={ID}
-                        handleSubmit={openValidation}
-                        phoneNumber={phoneNumber ?? ""}
-                    />
-                )}
-            </StyledMain>
-        </StyledContainer>
+        <Layout>
+            <StyledContainer>
+                <Header>{/* <ButtonBack /> */}</Header>
+                <StyledMain>
+                    {validating ? (
+                        <ValidateNumber
+                            goBack={closeValidation}
+                            handleSubmit={validateNumberFirebase}
+                            phoneNumber={phoneNumber ?? ""}
+                        />
+                    ) : (
+                        <RequestNumber
+                            buttonId={ID}
+                            handleSubmit={openValidation}
+                            phoneNumber={phoneNumber ?? ""}
+                        />
+                    )}
+                </StyledMain>
+            </StyledContainer>
+        </Layout>
     );
 };
 

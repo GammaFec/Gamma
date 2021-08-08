@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Form from "../../../components/Form";
 
 import PhoneNumber from "../PhoneNumber";
-import { StyledContainer, StyledSpan, styles } from "./styles";
+import { StyledContainer, StyledSpan, buttonStyles } from "./styles";
 import iRequestNumber from "./types";
 
 import { PRIMARY } from "../../../common/constants";
@@ -31,7 +31,7 @@ const RequestNumber: React.FC<iRequestNumber> = ({
             </p>
             <Form handleSubmit={submit} isContentCentered>
                 <PhoneNumber handleChange={setStatePhoneNumber} value={statePhoneNumber} />
-                <Button id={buttonId} styles={styles} type="submit" variant={PRIMARY}>
+                <Button id={buttonId} styles={buttonStyles} type="submit" variant={PRIMARY}>
                     Continuar
                 </Button>
             </Form>

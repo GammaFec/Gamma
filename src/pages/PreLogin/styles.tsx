@@ -3,32 +3,31 @@ import { fontSizes, theme } from "../../common/styles/variables";
 
 const StyledHome = styled.section`
     font-family: ${theme.fontPrimary};
-    width: 100%;
-    min-height: 100vh;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    padding: 69px 16px;
 `;
 
 const StyledHeader = styled.header`
-    max-width: 250px;
+    padding: 40px 50px;
     text-align: center;
-    width: 80vw;
+    flex-grow: 2;
 `;
 
 const StyledMain = styled.div`
-    width: 80vw;
-    height: 148px;
+    flex-grow: 0.4;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+`;
+
+const buttonStyles = `
+    margin-bottom: 20px;
 `;
 
 const StyledImg = styled.img`
     width: 110.76px;
+    margin-bottom: 8px;
 `;
 
 const StyledH1 = styled.h1`
@@ -38,4 +37,4 @@ const StyledH1 = styled.h1`
     letter-spacing: -0.44px;
 `;
 
-export { StyledHome, StyledHeader, StyledMain, StyledImg, StyledH1 };
+export { StyledHome, StyledHeader, StyledMain, StyledImg, StyledH1, buttonStyles };

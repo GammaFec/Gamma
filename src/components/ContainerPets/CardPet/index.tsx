@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-
+//components
+import Modal from "../../../components/Modal";
 // Styles
 import { StyledCard, StyledImage, StyledPetInfo } from "./styles";
-
 // Types
 import { ICardPet } from "./types";
-
 import { ageCalculate } from "../../../utils/ageCalculate";
 
 import { MALE } from "../../../common/constants";
@@ -27,13 +26,10 @@ const CardPet: React.FC<ICardPet> = ({
 }: ICardPet) => {
     const { t } = useTranslation();
     const resultAnimalAge = ageCalculate(dateOfBirth);
-
-    const handleClick = (): void => {
-        alert(id);
-    };
+    const [showModal, setShowModal] = useState(false);
 
     return (
-        <StyledCard onClick={handleClick}>
+        <StyledCard onClick={(): void => setShowModal(true)}>
             <StyledImage alt={alt} src={imageUrl} />
             <StyledPetInfo>
                 <h2>{name}</h2>
@@ -48,6 +44,7 @@ const CardPet: React.FC<ICardPet> = ({
                     <LOCATION /> {t("CardPet:distance")}: {distance}
                 </figcaption>
             </StyledPetInfo>
+            <Modal message={id} setShow={setShowModal} show={showModal}></Modal>
         </StyledCard>
     );
 };

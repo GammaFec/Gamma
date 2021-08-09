@@ -20,7 +20,6 @@ export const StyledInputContainer = styled.div<{ iconPositionLeft: boolean }>`
 export const StyledIconBox = styled.div`
     background-color: ${colors.lightGray};
     position: static;
-    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +32,6 @@ export const StyledIconBox = styled.div`
 export const StyledRightIconBox = styled.div`
     background-color: ${colors.lightGray};
     position: absolute;
-    z-index: 10;
     right: 0;
     display: flex;
     justify-content: center;

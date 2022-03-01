@@ -1,46 +1,66 @@
-# Getting Started with Create React App
+# Front End Coding guidelines
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This guidelines aim to provide a solid base for the development of this projects, and a shareable knowledge base for every developer.
 
-## Available Scripts
+## Branching
 
-In the project directory, you can run:
+We should name the branches as follows:
 
-### `yarn start`
+-   feature/feature-or-component-name
+-   bug/bug-name
+-   hotfix/hotfix-name
+-   test/PageName-or-ComponentName
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Gitflow
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+We start working in the `develop` branch and create features branches associated with a trello card that you are working on.
 
-### `yarn test`
+When it comes to reintegrate that, you will send a PR [pull request] from your branch into `develop` and your teammates will review your PR. You will need the approval from two teammates to merge the PR.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If you are working on an urgent feature or a bugfix in production, you should start working with a hotfix from `main`. There you will work on the `hotfix/really-important-fix` and then create a pull request into `main`.
 
-### `yarn build`
+After the PR is approved and you merged the `hotfix/really-important-fix` into `main`, you will need to reintegrate that into develop, so this means that you will create a PR from your hotfix branch into develop.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## File Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+We should create a folder for each component in the components folder like this:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   components
+    -   ComponentName <- Using PascalCase
+        -   i18n.ts <- All text and translates
+        -   ComponentName.test.tsx <- Component testing
+        -   index.tsx <- The component
+        -   style.tsx <- All the styling should be here
+        -   types.ts <- All the interfaces/types should be here
+        -   utils.txs <- All the utility functions should be here
+        -   hooks.tsx <- All the custom hooks should be here
 
-### `yarn eject`
+-   pages
+    -   PageName <- Using PascalCase
+        -   PageName.test.tsx <- Page testing
+        -   i18n.ts <- All text and translates
+        -   index.tsx <- The page
+        -   styles.tsx <- All the styling should be here
+        -   utils.txs <- All the utility functions should be here
+        -   types.ts
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Typescript
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+We will code in Typescript.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- All the types and interfaces should be in a separate file named `types.tsx` inside the component folder.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- The interfaces and types should be named in PascalCase with an Capital I followd by a descriptive name, .i.e. `ICarousel`.
 
-## Learn More
+- We prefer to use FC instead of FunctionComponent when we type a component, i.e. `const Component: React.FC = () => {}`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- We use arrow functions instead of functions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Use hypens for route names if they have more than one word
+i.e. `choose-profile`.
+
+- Use <> instead of Fragment
+
+## Styled Components
+
+We will use Styled Components to style the app. We should name the styled components in PascalCase with the word "Styled" followed by a descriptive name, i.e. StyledTitle, StyledContainer, StyledButton, etc.
